@@ -146,178 +146,121 @@
         ineinander, damit Bild und Ton wie aus einem Guss wirken.
       </p>
 
-      <div class="signal-chain">
-        <article class="flow-step">
-          <p class="step-id">01</p>
-          <h3>Quelle</h3>
-          <p>Streaming und lokale Mediathek liefern den Content ohne Umwege in das System.</p>
-        </article>
-        <article class="flow-step">
-          <p class="step-id">02</p>
-          <h3>Regie</h3>
-          <p>Die Vorstufe verteilt Signale präzise auf alle Ebenen und hält Timing wie Ortung stabil.</p>
-        </article>
-        <article class="flow-step">
-          <p class="step-id">03</p>
-          <h3>Antrieb</h3>
-          <p>Jeder Lautsprecher läuft auf seinem eigenen Endstufenkanal, was Ortung und Pegelfestigkeit klar reproduzierbar hält.</p>
-        </article>
-        <article class="flow-step">
-          <p class="step-id">04</p>
-          <h3>Bildbühne</h3>
-          <p>JVC-NZ7 und die mikroperforierte Gerriets-Leinwand bilden zusammen ein ruhiges, kontraststarkes Frontbild.</p>
-        </article>
-      </div>
-
-      <div class="visual-focus">
-        <p class="visual-focus-eyebrow">Visuelle Bühne</p>
-        <p class="visual-focus-copy">
-          Die Bildkette ist bewusst als eigener Fokus aufgebaut, damit Helligkeit, Kontrast und akustische Integration
-          der Front gemeinsam funktionieren.
+      <div class="system-list-wrap" id="komponenten">
+        <p class="system-list-eyebrow">Signalfluss</p>
+        <p class="system-list-copy">
+          Statt Raumplan jetzt klar und direkt: Wähle eine Komponente an, die Details erscheinen sofort rechts.
         </p>
-        <div class="component-grid visual-grid">
-          <article class="component-card visual-card">
-            <img src="assets/images/reference/jvc-nz7.png" alt="JVC DLA-NZ7 Projektor" width="1280" height="1024" loading="lazy" decoding="async">
-            <div class="component-body">
-              <p class="component-tag">Projektor</p>
-              <h3>JVC DLA-NZ7</h3>
-              <p class="component-role">Native-4K-Laserprojektion für hohe Bildruhe, tiefe Schwarzdarstellung und stabile HDR-Wiedergabe.</p>
-              <p class="component-copy">
-                Der NZ7 spielt die 332-cm-Bildbreite souverän aus und bleibt auch in dunklen Szenen differenziert.
-                So wirkt das Bild groß, ohne unruhig zu werden.
-              </p>
-            </div>
-          </article>
 
-          <article class="component-card visual-card">
-            <img src="assets/images/reference/gerriets-opera-white-2-2-micro.jpg" alt="Gerriets OPERA WEISS MICRO 2.2 Leinwandmaterial" width="1424" height="1424" loading="lazy" decoding="async">
-            <div class="component-body">
-              <p class="component-tag">Leinwand</p>
-              <h3>Gerriets OPERA WHITE 2.2 MICRO</h3>
-              <p class="component-role">Mikroperforierte, akustisch transparente Frontprojektionsfläche für Lautsprecherpositionen hinter dem Bild.</p>
-              <p class="component-copy">
-                Das Material arbeitet mit rund 300.000 Perforationen pro m2
-                (Lochdurchmesser 0,50 mm, Offenfläche ca. 6 %). Die 0,30-mm-PVC-Folie ist 220 cm breit
-                und wird hier für die 332-cm-Leinwandbreite eingesetzt; der Leuchtdichtefaktor ist mit beta 0,9 angegeben.
-              </p>
-            </div>
-          </article>
+        <div class="system-list-layout">
+          <div class="system-list" aria-label="Komponentenliste">
+            <button class="system-list-trigger is-active" type="button" aria-pressed="true"
+              data-step="Schritt 01" data-title="Quellen"
+              data-role="Apple TV 4K und Zappiti speisen Streaming und lokale Mediathek in den Signalweg."
+              data-copy="Die Quellen laufen ohne Umwege in die Vorstufe und bilden den Startpunkt der gesamten Inszenierung."
+              data-lines="Apple TV 4K|Zappiti"
+              data-image="assets/images/reference/apple-tv-4k.png"
+              data-image-alt="Apple TV 4K als Zuspieler">
+              <span class="system-list-step">01</span>
+              <span class="system-list-title">Quellen</span>
+            </button>
+
+            <button class="system-list-trigger" type="button" aria-pressed="false"
+              data-step="Schritt 02" data-title="StormAudio ISP Elite MK2"
+              data-role="Zentrale Schaltstelle für Decodierung, Kanalverteilung und raumbezogene Korrektur."
+              data-copy="Hier wird aus den Quellsignalen ein präzise organisierter Mehrkanal-Mix für alle Lautsprecher- und Höhenebenen."
+              data-lines="24 Kanäle Processing|Dirac Live ART"
+              data-image="assets/images/reference/stormaudio-isp-elite-mk2.webp"
+              data-image-alt="StormAudio ISP Elite MK2">
+              <span class="system-list-step">02</span>
+              <span class="system-list-title">StormAudio</span>
+            </button>
+
+            <button class="system-list-trigger" type="button" aria-pressed="false"
+              data-step="Schritt 03" data-title="Apollon 1ET400A (8ch)"
+              data-role="Treibt Frontachse, Wides und seitliche Surrounds mit hoher Kontrolle."
+              data-copy="Damit bleiben Stimmen und Schwenks in der Hauptbühne stabil verankert."
+              data-lines="L|R|Center (Bi-Amp)|Left Wide|Right Wide|Left Surround|Right Surround"
+              data-image="assets/images/reference/apollon-1et400a.png"
+              data-image-alt="Apollon 1ET400A Mehrkanal-Endstufe">
+              <span class="system-list-step">03</span>
+              <span class="system-list-title">Apollon</span>
+            </button>
+
+            <button class="system-list-trigger" type="button" aria-pressed="false"
+              data-step="Schritt 04" data-title="IOTAVX AVXP 7-230 (7ch)"
+              data-role="Übernimmt Back- und Height-Kanäle für die hintere und obere Raumabbildung."
+              data-copy="Die Höhen- und Rückkanäle schließen die 3D-Kuppel räumlich sauber."
+              data-lines="Left Back|Right Back|Center Front Height|Left Front Height|Right Front Height|Left Surround Height|Right Surround Height"
+              data-image="assets/images/reference/iotavx-avxp-7-230.png"
+              data-image-alt="IOTAVX AVXP 7-230 Endstufe">
+              <span class="system-list-step">04</span>
+              <span class="system-list-title">IOTAVX 7-230</span>
+            </button>
+
+            <button class="system-list-trigger" type="button" aria-pressed="false"
+              data-step="Schritt 05" data-title="IOTA AVXP1 (7ch)"
+              data-role="Ergänzt die oberen Rückkanäle und den oberen Centerpunkt."
+              data-copy="Damit erhält die Höhenebene einen klaren Abschluss nach hinten."
+              data-lines="Voice of God|Height Surround Back Left|Height Surround Back Right"
+              data-image="assets/images/reference/iota-avxp1-transparent.png"
+              data-image-alt="IOTA AVXP1 Endstufe">
+              <span class="system-list-step">05</span>
+              <span class="system-list-title">IOTA AVXP1</span>
+            </button>
+
+            <button class="system-list-trigger" type="button" aria-pressed="false"
+              data-step="Schritt 06" data-title="DBA-Endstufen"
+              data-role="Vier TSA 4-700 stellen 16 separate Tieftonkanäle für das komplette DBA."
+              data-copy="Jeder der 16 DBA-Subwoofer läuft auf einem eigenen Endstufenkanal."
+              data-lines="4x the t.amp TSA 4-700|16 DBA-Kanäle"
+              data-image="assets/images/reference/tsa-4-700.png"
+              data-image-alt="the t.amp TSA 4-700">
+              <span class="system-list-step">06</span>
+              <span class="system-list-title">DBA-Endstufen</span>
+            </button>
+
+            <button class="system-list-trigger" type="button" aria-pressed="false"
+              data-step="Schritt 07" data-title="Bildbühne"
+              data-role="JVC DLA-NZ7 und Gerriets OPERA WHITE 2.2 MICRO bilden gemeinsam die visuelle Front."
+              data-copy="Die 332-cm-Leinwand bleibt akustisch transparent, während der NZ7 Kontrast und Bildruhe liefert."
+              data-lines="JVC DLA-NZ7|332 cm Bildbreite|Gerriets OPERA WHITE 2.2 MICRO"
+              data-image="assets/images/reference/jvc-nz7.png"
+              data-image-alt="JVC DLA-NZ7 Projektor">
+              <span class="system-list-step">07</span>
+              <span class="system-list-title">Bildbühne</span>
+            </button>
+
+            <button class="system-list-trigger" type="button" aria-pressed="false"
+              data-step="Schritt 08" data-title="Stromversorgung"
+              data-role="Die Oehlbach Powerstation 909 strukturiert die Stromverteilung im Rack."
+              data-copy="Sie bildet die stabile Basis für reproduzierbares Verhalten der gesamten Kette."
+              data-lines="Oehlbach Powerstation 909"
+              data-image="assets/images/reference/oehlbach-powerstation-909.png"
+              data-image-alt="Oehlbach Powerstation 909">
+              <span class="system-list-step">08</span>
+              <span class="system-list-title">Stromversorgung</span>
+            </button>
+          </div>
+
+          <aside class="system-detail-panel" aria-live="polite">
+            <figure class="system-detail-media">
+              <img id="system-detail-image" class="system-detail-image" src="assets/images/reference/apple-tv-4k.png" alt="Apple TV 4K als Zuspieler" loading="lazy" decoding="async">
+            </figure>
+            <p class="system-detail-step" id="system-detail-step">Schritt 01</p>
+            <h3 class="system-detail-title" id="system-detail-title">Quellen</h3>
+            <p class="system-detail-role" id="system-detail-role">
+              Apple TV 4K und Zappiti speisen Streaming und lokale Mediathek in den Signalweg.
+            </p>
+            <p class="system-detail-copy" id="system-detail-copy">
+              Die Quellen laufen ohne Umwege in die Vorstufe und bilden den Startpunkt der gesamten Inszenierung.
+            </p>
+            <ul class="system-detail-list" id="system-detail-list">
+              <li>Apple TV 4K</li>
+              <li>Zappiti</li>
+            </ul>
+          </aside>
         </div>
-      </div>
-
-      <div class="system-bridge" id="komponenten">
-        <p class="system-bridge-eyebrow">Komponenten mit klarer Aufgabe</p>
-        <p class="system-bridge-copy">
-          Die Hardware wird nicht als Einzelteile gedacht, sondern als Ensemble.
-          Jede Komponente hat eine definierte Rolle im Ablauf - vom ersten Input bis zur finalen Wirkung im Raum.
-        </p>
-      </div>
-
-      <div class="component-grid tech-grid">
-        <article class="component-card">
-          <img src="assets/images/reference/stormaudio-isp-elite-mk2.webp" alt="StormAudio ISP Elite MK2" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Signalprozessor</p>
-            <h3>StormAudio ISP Elite MK2</h3>
-            <p class="component-role">Dekodierung, Kanalverteilung und raumbezogene Korrektur als zentrale Schaltstelle.</p>
-            <p class="component-copy">
-              Die StormAudio bildet das Zentrum des Setups und verteilt bis zu 24 Kanäle mit hoher Präzision.
-              Sie übernimmt Decoding, Upmixing und die Dirac-gestützte Feinabstimmung des Raums.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/apollon-1et400a.png" alt="Apollon Purifi 1ET400A Multichannel Amplifier" width="1080" height="617" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Haupt-Endstufe</p>
-            <h3>Apollon 1ET400A (8ch)</h3>
-            <p class="component-role">Belegt mit L, R, Center im Bi-Amping sowie Left/Right Wide und Left/Right Surround.</p>
-            <p class="component-copy">
-              Damit übernimmt die Apollon die komplette Frontachse plus seitliche Breite und zentrale Surround-Ebene.
-              Stimmen und Effektschwenks bleiben auch bei Pegel stabil verankert.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/iotavx-avxp-7-230.png" alt="IOTAVX AVXP 7-230" width="1280" height="640" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Haupt-Endstufe</p>
-            <h3>IOTAVX AVXP 7-230 (7ch)</h3>
-            <p class="component-role">Belegt mit Left/Right Back sowie Center/Left/Right Front Height und Left/Right Surround Height.</p>
-            <p class="component-copy">
-              Diese Endstufe trägt den Großteil der Höhen- und Back-Kanäle und schließt die 3D-Kuppel nach hinten sauber.
-              Räumliche Bewegungen bleiben dadurch geschlossen und präzise.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/iota-avxp1-transparent.png" alt="IOTAVX AVXP1" width="1280" height="640" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Haupt-Endstufe</p>
-            <h3>IOTA AVXP1 (7ch)</h3>
-            <p class="component-role">Aktuell belegt mit Voice of God sowie Height Surround Back Left und Height Surround Back Right.</p>
-            <p class="component-copy">
-              Sie ergänzt die oberen Rückkanäle im Layout punktgenau und lässt der Höhenebene einen klaren Abschluss nach hinten.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/apple-tv-4k.png" alt="Apple TV 4K" width="281" height="404" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Zuspieler</p>
-            <h3>Apple TV 4K</h3>
-            <p class="component-role">Primäre Streaming-Quelle mit direkter Übergabe an die Vorstufe.</p>
-            <p class="component-copy">
-              Der Apple TV 4K ist die Streaming-Quelle für den Alltag und bringt moderne Video- und Audioformate
-              direkt in den Signalweg des Kinos.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <div class="component-visual">
-            <span>Zappiti Player</span>
-          </div>
-          <div class="component-body">
-            <p class="component-tag">Zuspieler</p>
-            <h3>Zappiti Player</h3>
-            <p class="component-role">Lokale Filmarchive nahtlos als zweite Quellplattform integriert.</p>
-            <p class="component-copy">
-              Als zweite Quellplattform übernimmt Zappiti die lokale Mediathek
-              und ergänzt das Streaming um direkten Zugriff auf Filmarchive.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/tsa-4-700.png" alt="the t.amp TSA 4-700" width="420" height="228" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">DBA-Endstufe</p>
-            <h3>the t.amp TSA 4-700</h3>
-            <p class="component-role">Vier DBA-Endstufen mit insgesamt 16 separaten Tieftonkanälen.</p>
-            <p class="component-copy">
-              Im Setup arbeiten vier TSA 4-700 für das Double Bass Array.
-              Dadurch läuft jeder der 16 DBA-Subwoofer auf einem eigenen Endstufenkanal.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/oehlbach-powerstation-909.png" alt="Oehlbach Powerstation 909" width="1500" height="1500" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Stromversorgung</p>
-            <h3>Oehlbach Powerstation 909</h3>
-            <p class="component-role">Geordnete Stromverteilung als stabile Basis für das gesamte Rack.</p>
-            <p class="component-copy">
-              Die Powerstation strukturiert die Stromversorgung im Rack und hält die Anlage alltagstauglich organisiert.
-              Sie ist der ruhige Unterbau hinter der sichtbaren Performance.
-            </p>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -574,6 +517,67 @@
           closeLightbox();
         }
       });
+
+      const systemListTriggers = Array.from(document.querySelectorAll(".system-list-trigger"));
+      if (systemListTriggers.length > 0) {
+        const panelStep = document.getElementById("system-detail-step");
+        const panelTitle = document.getElementById("system-detail-title");
+        const panelRole = document.getElementById("system-detail-role");
+        const panelCopy = document.getElementById("system-detail-copy");
+        const panelList = document.getElementById("system-detail-list");
+        const panelImage = document.getElementById("system-detail-image");
+
+        const setSystemDetailState = (trigger) => {
+          systemListTriggers.forEach((item) => {
+            const isActive = item === trigger;
+            item.classList.toggle("is-active", isActive);
+            item.setAttribute("aria-pressed", isActive ? "true" : "false");
+          });
+
+          if (panelStep) panelStep.textContent = trigger.dataset.step || "";
+          if (panelTitle) panelTitle.textContent = trigger.dataset.title || trigger.textContent || "";
+          if (panelRole) panelRole.textContent = trigger.dataset.role || "";
+          if (panelCopy) panelCopy.textContent = trigger.dataset.copy || "";
+          if (panelImage) {
+            const imageSrc = trigger.dataset.image || "";
+            const imageAlt = trigger.dataset.imageAlt || trigger.dataset.title || "";
+            if (imageSrc) {
+              panelImage.src = imageSrc;
+              panelImage.alt = imageAlt;
+              panelImage.hidden = false;
+            } else {
+              panelImage.removeAttribute("src");
+              panelImage.alt = "";
+              panelImage.hidden = true;
+            }
+          }
+
+          if (panelList) {
+            const lines = (trigger.dataset.lines || "")
+              .split("|")
+              .map((line) => line.trim())
+              .filter(Boolean);
+
+            panelList.innerHTML = "";
+            lines.forEach((line) => {
+              const item = document.createElement("li");
+              item.textContent = line;
+              panelList.appendChild(item);
+            });
+
+            panelList.hidden = lines.length === 0;
+          }
+        };
+
+        systemListTriggers.forEach((trigger) => {
+          trigger.addEventListener("click", () => setSystemDetailState(trigger));
+        });
+
+        const initialTrigger = systemListTriggers.find((trigger) => trigger.classList.contains("is-active")) || systemListTriggers[0];
+        if (initialTrigger) {
+          setSystemDetailState(initialTrigger);
+        }
+      }
 
       document.addEventListener("keydown", (event) => {
         if (lightbox.hidden) return;

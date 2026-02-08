@@ -320,6 +320,8 @@ h2 {
 .system-section .signal-chain,
 .system-section .visual-focus,
 .system-section .system-bridge,
+.system-section .system-list-wrap,
+.system-section .system-list-layout,
 .system-section .component-grid,
 .system-section .source-note {
   position: relative;
@@ -383,6 +385,157 @@ h2 {
 .system-bridge-copy {
   margin: 0;
   color: #e4e4e4;
+}
+
+.system-list-wrap {
+  margin: 0.25rem 0 1rem;
+}
+
+.system-list-eyebrow {
+  margin: 0 0 0.25rem;
+  color: var(--accent-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.78rem;
+}
+
+.system-list-copy {
+  margin: 0 0 0.95rem;
+  color: #dfdfdf;
+}
+
+.system-list-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.86fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.system-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.system-list-trigger {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: left;
+  border: 1px solid rgba(255, 211, 137, 0.18);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.025), rgba(0, 0, 0, 0.35)),
+    #0f1218;
+  color: #efefef;
+  cursor: pointer;
+  transition: border-color 0.22s ease, transform 0.22s ease, background 0.22s ease;
+}
+
+.system-list-trigger:hover,
+.system-list-trigger:focus-visible {
+  border-color: rgba(255, 211, 137, 0.48);
+  transform: translateY(-2px);
+}
+
+.system-list-trigger.is-active {
+  border-color: rgba(255, 211, 137, 0.9);
+  background:
+    linear-gradient(140deg, rgba(255, 211, 137, 0.24), rgba(16, 18, 24, 0.98)),
+    #12161f;
+}
+
+.system-list-step {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 211, 137, 0.42);
+  color: var(--accent-soft);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  background: rgba(255, 211, 137, 0.08);
+}
+
+.system-list-title {
+  font-family: "Syne", sans-serif;
+  font-size: 1.03rem;
+  line-height: 1.2;
+}
+
+.system-detail-panel {
+  border: 1px solid rgba(255, 211, 137, 0.3);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background:
+    linear-gradient(165deg, rgba(255, 211, 137, 0.15), rgba(0, 0, 0, 0.34)),
+    #0f1118;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.system-detail-media {
+  margin: 0 0 0.8rem;
+  border: 1px solid rgba(255, 211, 137, 0.22);
+  border-radius: 12px;
+  overflow: hidden;
+  background:
+    radial-gradient(350px 120px at 12% 0%, rgba(255, 211, 137, 0.18), transparent 82%),
+    linear-gradient(140deg, #191919, #0f0f10);
+}
+
+.system-detail-image {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  padding: 0.75rem;
+}
+
+.system-detail-step {
+  margin: 0;
+  color: var(--accent-soft);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-size: 0.79rem;
+}
+
+.system-detail-title {
+  margin: 0.35rem 0 0.55rem;
+  font-family: "Syne", sans-serif;
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+}
+
+.system-detail-role {
+  margin: 0 0 0.55rem;
+  color: #f2dfb8;
+  line-height: 1.5;
+}
+
+.system-detail-copy {
+  margin: 0 0 0.82rem;
+  color: #e2e2e2;
+  line-height: 1.52;
+}
+
+.system-detail-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.42rem;
+}
+
+.system-detail-list li {
+  padding: 0.34rem 0.55rem;
+  border: 1px solid rgba(255, 211, 137, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 211, 137, 0.08);
+  color: #f2ece1;
+  font-size: 0.88rem;
 }
 
 .gallery {
@@ -818,6 +971,10 @@ body.lightbox-open {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .system-list-layout {
+    grid-template-columns: 1fr;
+  }
+
   .system-bridge {
     grid-template-columns: 1fr;
   }
@@ -862,6 +1019,22 @@ body.lightbox-open {
   .system-section {
     padding: 2.15rem 0.9rem 2.35rem;
     border-radius: var(--radius);
+  }
+
+  .system-list {
+    gap: 0.55rem;
+  }
+
+  .system-list-trigger {
+    padding: 0.62rem 0.75rem;
+  }
+
+  .system-list-title {
+    font-size: 0.98rem;
+  }
+
+  .system-detail-image {
+    height: 190px;
   }
 
   .nav-links {
