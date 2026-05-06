@@ -1,683 +1,427 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eclipse Homecinema | Heimkino</title>
-  <meta name="description" content="Eclipse Cinema: privates Heimkino mit großem Bild, präzisem Tiefgang und akustisch inszenierter Raumwirkung.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#090909">
-  <meta property="og:locale" content="de_DE">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Eclipse Cinema | Heimkino">
-  <meta property="og:description" content="Privates Heimkino mit starker Bildwirkung, kontrolliertem Bass und einer Bühne, die den Raum öffnet.">
-  <meta property="og:image" content="assets/images/IMG_4022.avif">
-  <meta property="og:image:alt" content="Frontansicht des Eclipse Cinema Heimkinos">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Eclipse Cinema | Heimkino">
-  <meta name="twitter:description" content="Privates Heimkino mit starker Bildwirkung, kontrolliertem Bass und einer Bühne, die den Raum öffnet.">
-  <meta name="twitter:image" content="assets/images/IMG_4022.avif">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="shortcut icon" href="assets/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="assets/images/IMG_4032.avif" fetchpriority="high">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Eclipse Homecinema",
-      "description": "Privates Heimkino mit immersiver Bild- und Klanginszenierung, kontrolliertem Tiefton und geplanter Raumakustik.",
-      "inLanguage": "de"
-    }
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eclipse — Privates Heimkino</title>
+  <meta name="description" content="Eclipse — ein privates Heimkino mit 24-Kanal-Tonwiedergabe, Double Bass Array und voll behandelter Raumakustik." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
-  <div class="grain" aria-hidden="true"></div>
 
-  <header class="hero" id="top">
-    <div class="hero-media" aria-hidden="true">
-      <img src="assets/images/IMG_4032.avif" alt="" width="8064" height="4536" loading="eager" fetchpriority="high" decoding="async">
-    </div>
-
-    <nav class="top-nav container" aria-label="Hauptnavigation">
-      <div class="brand">Eclipse Homecinema</div>
-      <div class="nav-links">
-        <a href="#galerie">Galerie</a>
-        <a href="#technik">System</a>
-        <a href="#komponenten">Komponenten</a>
-        <a href="#lautsprecher">Lautsprecher</a>
-        <a href="#akustik">Akustik</a>
-      </div>
+  <header class="site-header" id="siteHeader">
+    <a href="#top" class="brand" aria-label="Eclipse Heimkino — Startseite">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">Eclipse</span>
+    </a>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <a href="#konzept">Konzept</a>
+      <a href="#raum">Raum</a>
+      <a href="#klang">Klang</a>
+      <a href="#akustik">Akustik</a>
+      <a href="#technik">Technik</a>
+      <a href="#galerie">Galerie</a>
     </nav>
-
-    <section class="hero-content container">
-      <p class="eyebrow">Privates Heimkino</p>
-      <h1>Wenn Film nicht nur läuft,<br>sondern den Raum übernimmt</h1>
-      <p class="lead">
-        Eclipse ist ein dediziertes Heimkino: große Bühne vorne, ruhige Ortung im gesamten Sitzbereich
-        und ein Bassfundament, das spürbar bleibt, ohne aufzudicken. Technik ist hier Mittel zum Zweck,
-        damit Geschichten körperlich wirken.
-      </p>
-      <a class="cta" href="#galerie">Raum erleben</a>
-
-      <div class="quick-facts">
-        <article>
-          <p class="label">Bildwirkung</p>
-          <p class="value">332 cm auf Gerriets Opera White 2.2 Micro</p>
-        </article>
-        <article>
-          <p class="label">Tiefgang</p>
-          <p class="value">16 Chassis im Double Bass Array</p>
-        </article>
-        <article>
-          <p class="label">Bühne</p>
-          <p class="value">24 Kanäle per StormAudio präzise auf den Raum abgestimmt</p>
-        </article>
-        <article>
-          <p class="label">Feinschliff</p>
-          <p class="value">Dirac Live ART für stabile Wiedergabe auf mehreren Plätzen</p>
-        </article>
-      </div>
-    </section>
   </header>
 
-  <main id="inhalt" tabindex="-1">
-    <section class="section container" id="galerie">
-      <div class="section-head">
-        <p class="eyebrow">Raumeindruck</p>
-        <h2>Galerie</h2>
+  <main id="top">
+
+    <section class="hero">
+      <div class="hero__eclipse" aria-hidden="true">
+        <div class="hero__disc"></div>
+        <div class="hero__corona"></div>
       </div>
-      <p class="section-lead">Klicke oder tippe auf ein Bild und wechsle direkt in die Vollansicht des Raums.</p>
-      <div class="gallery">
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 1 groß ansehen">
-            <img src="assets/images/IMG_4022.avif" alt="Heimkino Ansicht 1" width="8064" height="4536" loading="lazy" decoding="async">
-          </button>
-        </figure>
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 2 groß ansehen">
-            <img src="assets/images/IMG_4023.avif" alt="Heimkino Ansicht 2" width="8064" height="4536" loading="lazy" decoding="async">
-          </button>
-        </figure>
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 3 groß ansehen">
-            <img src="assets/images/IMG_4024.avif" alt="Heimkino Ansicht 3" width="8064" height="4536" loading="lazy" decoding="async">
-          </button>
-        </figure>
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 4 groß ansehen">
-            <img src="assets/images/IMG_4025.avif" alt="Heimkino Ansicht 4" width="8064" height="4536" loading="lazy" decoding="async">
-          </button>
-        </figure>
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 5 groß ansehen">
-            <img src="assets/images/IMG_4028.avif" alt="Heimkino Ansicht 5" width="8064" height="4536" loading="lazy" decoding="async" fetchpriority="low">
-          </button>
-        </figure>
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 6 groß ansehen">
-            <img src="assets/images/IMG_4029.avif" alt="Heimkino Ansicht 6" width="8064" height="4536" loading="lazy" decoding="async" fetchpriority="low">
-          </button>
-        </figure>
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 7 groß ansehen">
-            <img src="assets/images/IMG_4032.avif" alt="Heimkino Ansicht 7" width="8064" height="4536" loading="lazy" decoding="async" fetchpriority="low">
-          </button>
-        </figure>
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 8 groß ansehen">
-            <img src="assets/images/IMG_4033.avif" alt="Heimkino Ansicht 8" width="8064" height="4536" loading="lazy" decoding="async" fetchpriority="low">
-          </button>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section container system-section" id="technik">
-      <div class="section-head">
-        <p class="eyebrow">Systeminszenierung</p>
-        <h2>Komponenten, die gemeinsam Kino formen</h2>
-      </div>
-      <p class="section-lead">
-        Inszenierung und Technik sind hier ein einziger Ablauf: Quelle, Verarbeitung, Antrieb und Wiedergabe greifen
-        ineinander, damit Bild und Ton wie aus einem Guss wirken.
-      </p>
-
-      <div class="system-list-wrap" id="komponenten">
-
-        <div class="system-list-layout">
-          <div class="system-list" aria-label="Komponentenliste">
-            <button class="system-list-trigger is-active" type="button" aria-pressed="true"
-              data-step="Schritt 01" data-title="Quellen"
-              data-role="Apple TV 4K und Zappiti speisen Streaming und lokale Mediathek in den Signalweg."
-              data-copy="Die Quellen laufen ohne Umwege in die Vorstufe und bilden den Startpunkt der gesamten Inszenierung."
-              data-lines="Apple TV 4K|Zappiti"
-              data-image="assets/images/reference/apple-tv-4k.png"
-              data-image-alt="Apple TV 4K als Zuspieler">
-              <span class="system-list-step">01</span>
-              <span class="system-list-title">Quellen</span>
-            </button>
-
-            <button class="system-list-trigger" type="button" aria-pressed="false"
-              data-step="Schritt 02" data-title="StormAudio ISP Elite MK2"
-              data-role="Zentrale Schaltstelle für Decodierung, Kanalverteilung und raumbezogene Korrektur."
-              data-copy="Hier wird aus den Quellsignalen ein präzise organisierter Mehrkanal-Mix für alle Lautsprecher- und Höhenebenen."
-              data-lines="24 Kanäle Processing|Dirac Live ART"
-              data-image="assets/images/reference/stormaudio-isp-elite-mk2.webp"
-              data-image-alt="StormAudio ISP Elite MK2">
-              <span class="system-list-step">02</span>
-              <span class="system-list-title">StormAudio</span>
-            </button>
-
-            <button class="system-list-trigger" type="button" aria-pressed="false"
-              data-step="Schritt 03" data-title="Apollon 1ET400A (8ch)"
-              data-role="Treibt Frontachse, Wides und seitliche Surrounds mit hoher Kontrolle."
-              data-copy="Damit bleiben Stimmen und Schwenks in der Hauptbühne stabil verankert."
-              data-lines="L|R|Center (Bi-Amp)|Left Wide|Right Wide|Left Surround|Right Surround"
-              data-image="assets/images/reference/apollon-1et400a.png"
-              data-image-alt="Apollon 1ET400A Mehrkanal-Endstufe">
-              <span class="system-list-step">03</span>
-              <span class="system-list-title">Apollon</span>
-            </button>
-
-            <button class="system-list-trigger" type="button" aria-pressed="false"
-              data-step="Schritt 04" data-title="IOTAVX AVXP 7-230 (7ch)"
-              data-role="Übernimmt Back- und Height-Kanäle für die hintere und obere Raumabbildung."
-              data-copy="Die Höhen- und Rückkanäle schließen die 3D-Kuppel räumlich sauber."
-              data-lines="Left Back|Right Back|Center Front Height|Left Front Height|Right Front Height|Left Surround Height|Right Surround Height"
-              data-image="assets/images/reference/iotavx-avxp-7-230.png"
-              data-image-alt="IOTAVX AVXP 7-230 Endstufe">
-              <span class="system-list-step">04</span>
-              <span class="system-list-title">IOTAVX 7-230</span>
-            </button>
-
-            <button class="system-list-trigger" type="button" aria-pressed="false"
-              data-step="Schritt 05" data-title="IOTA AVXP1 (7ch)"
-              data-role="Ergänzt die oberen Rückkanäle und den oberen Centerpunkt."
-              data-copy="Damit erhält die Höhenebene einen klaren Abschluss nach hinten."
-              data-lines="Voice of God|Height Surround Back Left|Height Surround Back Right"
-              data-image="assets/images/reference/iota-avxp1-transparent.png"
-              data-image-alt="IOTA AVXP1 Endstufe">
-              <span class="system-list-step">05</span>
-              <span class="system-list-title">IOTA AVXP1</span>
-            </button>
-
-            <button class="system-list-trigger" type="button" aria-pressed="false"
-              data-step="Schritt 06" data-title="DBA-Endstufen"
-              data-role="Vier TSA 4-700 stellen 16 separate Tieftonkanäle für das komplette DBA."
-              data-copy="Jeder der 16 DBA-Subwoofer läuft auf einem eigenen Endstufenkanal."
-              data-lines="4x the t.amp TSA 4-700|16 DBA-Kanäle"
-              data-image="assets/images/reference/tsa-4-700.png"
-              data-image-alt="the t.amp TSA 4-700">
-              <span class="system-list-step">06</span>
-              <span class="system-list-title">DBA-Endstufen</span>
-            </button>
-
-            <button class="system-list-trigger" type="button" aria-pressed="false"
-              data-step="Schritt 07" data-title="Bildbühne"
-              data-role="JVC DLA-NZ7 und Gerriets OPERA WHITE 2.2 MICRO bilden gemeinsam die visuelle Front."
-              data-copy="Die 332-cm-Leinwand bleibt akustisch transparent, während der NZ7 Kontrast und Bildruhe liefert."
-              data-lines="JVC DLA-NZ7|332 cm Bildbreite|Gerriets OPERA WHITE 2.2 MICRO"
-              data-image="assets/images/reference/jvc-nz7.png"
-              data-image-alt="JVC DLA-NZ7 Projektor">
-              <span class="system-list-step">07</span>
-              <span class="system-list-title">Bildbühne</span>
-            </button>
-
-            <button class="system-list-trigger" type="button" aria-pressed="false"
-              data-step="Schritt 08" data-title="Stromversorgung"
-              data-role="Die Oehlbach Powerstation 909 strukturiert die Stromverteilung im Rack."
-              data-copy="Sie bildet die stabile Basis für reproduzierbares Verhalten der gesamten Kette."
-              data-lines="Oehlbach Powerstation 909"
-              data-image="assets/images/reference/oehlbach-powerstation-909.png"
-              data-image-alt="Oehlbach Powerstation 909">
-              <span class="system-list-step">08</span>
-              <span class="system-list-title">Stromversorgung</span>
-            </button>
-          </div>
-
-          <aside class="system-detail-panel" aria-live="polite">
-            <figure class="system-detail-media">
-              <img id="system-detail-image" class="system-detail-image" src="assets/images/reference/apple-tv-4k.png" alt="Apple TV 4K als Zuspieler" loading="lazy" decoding="async">
-            </figure>
-            <p class="system-detail-step" id="system-detail-step">Schritt 01</p>
-            <h3 class="system-detail-title" id="system-detail-title">Quellen</h3>
-            <p class="system-detail-role" id="system-detail-role">
-              Apple TV 4K und Zappiti speisen Streaming und lokale Mediathek in den Signalweg.
-            </p>
-            <p class="system-detail-copy" id="system-detail-copy">
-              Die Quellen laufen ohne Umwege in die Vorstufe und bilden den Startpunkt der gesamten Inszenierung.
-            </p>
-            <ul class="system-detail-list" id="system-detail-list">
-              <li>Apple TV 4K</li>
-              <li>Zappiti</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="lautsprecher">
-      <div class="section-head">
-        <p class="eyebrow">Lautsprecher</p>
-        <h2>Lautsprecher mit klaren Rollen</h2>
-      </div>
-      <p class="section-lead">
-        Jedes Modell übernimmt eine definierte Aufgabe im Raum - vom stabilen Dialoganker bis zur dichten 3D-Hülle.
-      </p>
-
-      <div class="component-grid speaker-grid">
-        <article class="component-card">
-          <img src="assets/images/reference/nubert-nuvero-nova-12.png" alt="Nubert nuVero nova 12" width="434" height="1057" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Center</p>
-            <h3>Nubert nuVero nova 12</h3>
-            <p class="component-copy">
-              Der Center ist der Anker der Frontbühne und hält Stimmen exakt im Bild.
-              Er sorgt dafür, dass Dialoge auch in dichten Szenen verständlich bleiben.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/nubert-nuvero-110.png" alt="Nubert nuVero 110" width="469" height="1280" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Front Left/Right</p>
-            <h3>Nubert nuVero 110</h3>
-            <p class="component-copy">
-              Links und rechts bauen die nuVero 110 Größe, Druck und Räumlichkeit auf.
-              Zusammen mit dem Center entsteht eine belastbare, breite Frontabbildung.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/nuvero-50-transparent.png" alt="Nubert nuVero 50" width="405" height="881" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Front Wide</p>
-            <h3>Nubert nuVero 50</h3>
-            <p class="component-copy">
-              Die Wide-Ebene schließt die Lücke zwischen Front und Surround.
-              Seitliche Bewegungen wirken dadurch flüssiger und glaubwürdiger.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/nuvero-70-transparent.png" alt="Nubert nuVero 70" width="500" height="500" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Surround</p>
-            <h3>Nubert nuVero 70</h3>
-            <p class="component-copy">
-              Die seitlichen Surrounds tragen Atmosphäre und Bewegung in den Raum.
-              Sie sind so eingebunden, dass Effekte präsent bleiben, aber nie aufdringlich wirken.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/nuline-ws-14-transparent.png" alt="Nubert nuLine WS-14" width="536" height="402" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Rear + Height</p>
-            <h3>Nubert nuLine WS-14</h3>
-            <p class="component-copy">
-              Die WS-14 bilden Rückraum und Höhenebene mit insgesamt zehn Positionen ab.
-              Damit entsteht ein geschlossenes 3D-Feld über und hinter dem Hörplatz.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/scan-speak-30w4558t00-transparent.png" alt="Scan Speak 30W/4558T00" width="1200" height="800" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Subwoofer-Chassis</p>
-            <h3>Scan Speak 30W/4558T00</h3>
-            <p class="component-copy">
-              16 Chassis arbeiten als Double Bass Array und verteilen den Tiefbass gleichmäßig im Raum.
-              Das Ergebnis ist Druck mit Struktur statt bloßem Pegel.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container" id="akustik">
-      <div class="section-head">
-        <p class="eyebrow">Raumakustik</p>
-        <h2>Raumakustik mit Absicht</h2>
-      </div>
-      <p class="section-lead">
-        Das Kino arbeitet auf 5,60 x 4,72 x 2,47 m (ca. 26,4 m2 Grundfläche) mit klar getrennten Aufgaben:
-        vorne kontrollierte Absorption und Druckaufbau, rund um den Hörplatz gezielte Diffusion und hinten ein sauber
-        geführtes Ausklingen.
-      </p>
-
-      <div class="acoustic-metrics">
-        <article>
-          <p class="label">Raumgröße</p>
-          <p class="value">5,60 x 4,72 x 2,47 m</p>
-        </article>
-        <article>
-          <p class="label">Front-/Rückbau</p>
-          <p class="value">50 cm Front-Ständerwand, 30 cm Rückwandaufbau</p>
-        </article>
-        <article>
-          <p class="label">DBA-Struktur</p>
-          <p class="value">8 Subwoofer pro Wand, 16 Kanäle einzeln angesteuert</p>
-        </article>
-      </div>
-
-      <div class="acoustic-layout">
-        <figure class="acoustic-figure">
-          <img src="assets/images/front-open.png" alt="Front des Kinos ohne Leinwand mit sichtbaren Akustikmaßnahmen" loading="lazy" decoding="async">
-          <figcaption>Front ohne Leinwand: gut erkennbar sind die tiefe Frontkonstruktion und die akustische Bedämpfung zwischen den Sub-Sektionen.</figcaption>
-        </figure>
-
-        <div class="acoustic-copy-stack">
-          <article class="card">
-            <h3>Frontzone und frühe Reflexionen</h3>
-            <p class="card-copy">
-              Die Front ist als tiefer Arbeitsbereich aufgebaut: 50 cm Ständerwand, darin die vordere DBA-Ebene und
-              definierte Bedämpfung. Zwischen den Front-Subwoofern arbeitet ein bedämpfter Kernbereich, zusätzlich gibt
-              es hinter den Chassis einen weiteren gedämmten Zwischenraum. Seitlich folgen großflächige
-              Erstreflexionsabsorber (120 x 120 x 20 cm), danach zusätzliche 100 x 100 x 20 cm Absorber vor der
-              Surround-Zone.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Hörzone, Seiten und Decke</h3>
-            <p class="card-copy">
-              Im Bodenaufbau laufen beidseitig Absorberstrecken über insgesamt 120 cm Länge und 360 cm Breite. An der
-              Decke bleibt der vordere Meter zunächst frei, danach folgt die Front-Height-Zone und anschließend ein
-              10-cm-Absorberfeld für die frühe Deckenreflexion. Über dem Hörplatz und im hinteren Bereich ergänzen
-              2D-Diffusoren die räumliche Öffnung.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Rückraum und kontrolliertes Ausklingen</h3>
-            <p class="card-copy">
-              Hinter den Surrounds arbeiten vollflächige Slat-Diffusoren; in der zweiten Reihe ergänzen
-              2D-Manhattan-Elemente die Seiten. An der Rückwand kombinieren 1D- und 2D-Strukturen die gezielte
-              Streuung mit der hinteren DBA-Ebene. Teppich bis kurz hinter den Haupt-Hörplatz, danach harter Boden
-              und akustisch transparente Bespannungen sorgen für ein kontrolliertes, aber nicht trockenes Nachklingen.
-            </p>
-          </article>
-        </div>
-      </div>
-
-      <div class="cards two">
-        <article class="card">
-          <h3>Licht- und Oberflächenführung</h3>
-          <p class="card-copy">
-            Dunkle, reflexionsarme Oberflächen im Front- und Deckenbereich reduzieren Restlicht auf dem Bild deutlich.
-            Seitliche Vorhänge und die Bespannung im Sichtfeld unterstützen den Kontrast und halten die Wahrnehmung
-            auf Leinwand und Bühne.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Materialstrategie</h3>
-          <p class="card-copy">
-            Absorber mit unterschiedlichen Strömungswiderständen werden je nach Zone gezielt eingesetzt, statt überall
-            gleich. Dadurch bleibt die Front präzise im Timing, während der hintere Raum mehr Tiefe und Bewegung
-            vermittelt.
-          </p>
-        </article>
-      </div>
-
-      <article class="calibration">
-        <h3>Kalibrierung</h3>
-        <p>
-          Eingemessen wird mit <strong>Dirac Live Active Room Treatment (ART)</strong> auf der StormAudio-Plattform.
-          Als Grundlage dienen die StormAudio-Zielkurven; die ART-Konfiguration folgt den Dirac-Richtlinien für
-          unterstützende Lautsprecher. Ziel bleibt ein belastbares, stimmiges Klangbild auf mehreren Sitzplätzen.
+      <div class="hero__content">
+        <p class="hero__eyebrow">Privates Heimkino</p>
+        <h1 class="hero__title">Eclipse</h1>
+        <p class="hero__subtitle">
+          Ein Raum, kompromisslos auf Mehrkanal-Kinoton ausgelegt.
+          24 Kanäle, Double Bass Array, vollflächig behandelte Akustik.
         </p>
-      </article>
+        <a href="#konzept" class="hero__cta">Eintreten</a>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span></span>
+      </div>
     </section>
+
+    <section id="konzept" class="section section--narrow">
+      <div class="section__head">
+        <span class="section__kicker">01 — Konzept</span>
+        <h2 class="section__title">Mehrkanal-Kinoton, ohne Kompromiss.</h2>
+      </div>
+      <div class="section__lead">
+        <p>
+          Eclipse ist auf eine einzige Aufgabe optimiert: die bestmögliche Wiedergabe
+          von Mehrkanal-Kinoton am Hörplatz. Stereo spielt keine Rolle — jeder Quadratmeter,
+          jede Wandkonstruktion und jeder Lautsprecher dient diesem Ziel.
+        </p>
+        <p>
+          Der Hörplatz ist die erste Reihe. Sie ist die Referenz für jede akustische,
+          elektrische und optische Entscheidung im Raum.
+        </p>
+      </div>
+    </section>
+
+    <section id="raum" class="section">
+      <div class="section__head">
+        <span class="section__kicker">02 — Raum</span>
+        <h2 class="section__title">Maße &amp; Sitzplätze</h2>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat__value">5,60 × 4,72 × 2,47 m</div>
+          <div class="stat__label">Rohmaße bis Beton — ca. 65 m³</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">4,80 × 3,90 × 2,10 m</div>
+          <div class="stat__label">Freier Luftraum — ca. 39 m³</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">3,32 m</div>
+          <div class="stat__label">Leinwandbreite, 21:9, mikroperforiert</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">3,00 m / 4,80 m</div>
+          <div class="stat__label">Sitzabstand Reihe 1 / Reihe 2</div>
+        </div>
+      </div>
+
+      <div class="seating">
+        <div class="seating__row">
+          <h3>Reihe 1 — Referenz</h3>
+          <p>
+            Zwei Stressless Reno L Sessel, symmetrisch links und rechts der Mittelachse.
+            Bewusst kein Sitzplatz exakt mittig — Dirac ART misst die zwei realen
+            Hörpositionen ein.
+          </p>
+        </div>
+        <div class="seating__row">
+          <h3>Reihe 2 — Besucher</h3>
+          <p>
+            Vier Hollywood Zuhause Pasadena Sitze auf einem 45 cm hohen Podest
+            (267 × 168 cm). Optimiert wird ausschließlich auf Reihe 1.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="klang" class="section section--dark">
+      <div class="section__head">
+        <span class="section__kicker">03 — Klang</span>
+        <h2 class="section__title">24-Kanal-Lautsprecher-Setup</h2>
+        <p class="section__sub">
+          17 Lautsprecher in der Hauptebene und Decke, ergänzt um ein Double Bass
+          Array mit 16 Subwoofern.
+        </p>
+      </div>
+
+      <div class="speakers">
+        <div class="speaker-group">
+          <h3 class="speaker-group__title">Hauptebene</h3>
+          <ul class="speaker-list">
+            <li><span>Center</span><em>Nubert nuVero Nova 12</em></li>
+            <li><span>Left / Right</span><em>Nubert nuVero 110</em></li>
+            <li><span>Front Wide L/R</span><em>Nubert nuVero 50</em></li>
+            <li><span>Surround L/R</span><em>Nubert nuVero 70</em></li>
+            <li><span>Back Surround L/R</span><em>Nubert nuLine WS-14</em></li>
+          </ul>
+        </div>
+
+        <div class="speaker-group">
+          <h3 class="speaker-group__title">Deckenlautsprecher</h3>
+          <ul class="speaker-list">
+            <li><span>Center Height</span><em>Nubert nuLine WS-14</em></li>
+            <li><span>Front Height L/R</span><em>Nubert nuLine WS-14</em></li>
+            <li><span>Height Surround L/R</span><em>Nubert nuLine WS-14</em></li>
+            <li><span>Voice of God</span><em>Nubert nuLine WS-14</em></li>
+            <li><span>Height Surround Back L/R</span><em>Nubert nuLine WS-14</em></li>
+          </ul>
+        </div>
+
+        <div class="speaker-group speaker-group--bass">
+          <h3 class="speaker-group__title">Double Bass Array</h3>
+          <p class="speaker-group__lead">
+            8 Subwoofer pro Wand, vorne wie hinten — Chassis: Scan-Speak 30W/4558T00.
+            Vordere Ständerwand 50 cm tief, hintere 30 cm. Ankopplung über
+            3.000 Pa·s/m² Dämmung zwischen den Subwoofern, 10.000 Pa·s/m² zur Betonwand.
+          </p>
+        </div>
+      </div>
+
+      <div class="component-strip" aria-label="Lautsprecher-Komponenten">
+        <figure>
+          <img src="assets/images/reference/nubert-nuvero-nova-12.png" alt="Nubert nuVero Nova 12" loading="lazy" />
+          <figcaption>nuVero Nova 12 · Center</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/reference/nubert-nuvero-110.png" alt="Nubert nuVero 110" loading="lazy" />
+          <figcaption>nuVero 110 · L / R</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/reference/nuvero-50-transparent.png" alt="Nubert nuVero 50" loading="lazy" />
+          <figcaption>nuVero 50 · Front Wide</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/reference/nuvero-70-transparent.png" alt="Nubert nuVero 70" loading="lazy" />
+          <figcaption>nuVero 70 · Surround</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/reference/nuline-ws-14-transparent.png" alt="Nubert nuLine WS-14" loading="lazy" />
+          <figcaption>nuLine WS-14 · Decke &amp; Back Surround</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/reference/scan-speak-30w4558t00-transparent.png" alt="Scan-Speak 30W/4558T00" loading="lazy" />
+          <figcaption>Scan-Speak 30W/4558T00 · DBA</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="akustik" class="section">
+      <div class="section__head">
+        <span class="section__kicker">04 — Akustik</span>
+        <h2 class="section__title">Vollflächig behandelt.</h2>
+        <p class="section__sub">
+          Jede Wand, die Decke und der Boden sind nach einem klaren akustischen
+          Konzept aufgebaut: Absorber dort, wo Energie weg muss; Diffusor und
+          Reflektor dort, wo sie erhalten bleiben soll.
+        </p>
+      </div>
+
+      <div class="acoustic-grid">
+        <article class="acoustic">
+          <h3>Vordere Ständerwand</h3>
+          <p>
+            50 cm tief, vorne offen, vollständig um Center und Subwoofer mit
+            Dämmmaterial gefüllt. Lautsprecher bündig eingebaut; Center mit
+            2–3 cm Abstand zur mikroperforierten Leinwand.
+          </p>
+        </article>
+
+        <article class="acoustic">
+          <h3>Erstreflektions-Absorber</h3>
+          <p>
+            Direkt vor der Front links und rechts: 120 × 120 × 20 cm,
+            Ursa-Glaswolle, Unkrautvlies. Dahinter Front Wide, dann ein
+            zweites 100 × 100 × 20 cm Element.
+          </p>
+        </article>
+
+        <article class="acoustic">
+          <h3>Slat-Elemente</h3>
+          <p>
+            Hinter den Surrounds: 60 cm breite Vollholz-Slats (32–58 mm,
+            45 mm Tiefe). Reflektierend mit aufgebrochener Phase — Energie­erhaltung
+            im hinteren Halbraum, kein Diffusor. Auf Hörebene davor ein
+            t.akustik Highline A1 Silver Spruce gegen direkte Rückreflektion.
+          </p>
+        </article>
+
+        <article class="acoustic">
+          <h3>Diffusoren</h3>
+          <p>
+            Auf Höhe Reihe 2 seitlich 2D-Manhattan-Diffusoren aus EPS,
+            60 × 180 cm. An der Rückwand zwei 1D-Diffusoren à 100 × 50 × 10 cm
+            zwischen den Subwoofern.
+          </p>
+        </article>
+
+        <article class="acoustic">
+          <h3>Bodenabsorber</h3>
+          <p>
+            120 × 360 cm direkt vor dem Hörplatz. Erste Lage 10 cm dick auf dem
+            Boden, danach 10 cm dick mit 10 cm Luft darunter. Material 6.000 Pa·s/m².
+          </p>
+        </article>
+
+        <article class="acoustic">
+          <h3>Deckenbehandlung</h3>
+          <p>
+            Vorne 100 cm angewinkelte 10-cm-Absorber. Anschließend 120 cm
+            Erstreflektions-Absorber 20 cm dick (6.000 Pa·s/m²) über die volle
+            Raumbreite. Ab Hörplatz 16 Module 2D-Diffusor, 5,76 m² durchgehend.
+          </p>
+        </article>
+
+        <article class="acoustic">
+          <h3>Bodenbelag</h3>
+          <p class="acoustic__floorline">
+            <span><b>20 cm</b> Teppich</span>
+            <span class="dot"></span>
+            <span><b>120 cm</b> Bodenabsorber</span>
+            <span class="dot"></span>
+            <span><b>150 cm</b> Teppich</span>
+            <span class="dot"></span>
+            <span><b>190 cm</b> Laminat</span>
+          </p>
+          <p class="acoustic__small">Verlauf von der Leinwand zur Rückwand.</p>
+        </article>
+
+        <article class="acoustic">
+          <h3>Bespannung &amp; Optik</h3>
+          <p>
+            Bodenabsorber und vordere Deckenfläche (260 cm) mit Adamantium Audio
+            Dark Reference bespannt. Vor den Decken-Diffusoren sowie ab 100 cm
+            an Seiten- und Rückwand: Adamantium Audio Invisible — akustisch
+            transparent.
+          </p>
+        </article>
+      </div>
+
+      <div class="calibration">
+        <div>
+          <h3>Einmessung — Dirac ART</h3>
+          <p>
+            Eingemessen wird mit Dirac ART auf der Storm Audio ISP Elite MK2
+            (Storm-Audio-Zielkurven, Konfiguration nach Dirac-ART-Support).
+            Erster Messpunkt exakt mittig zwischen den beiden Sesseln; danach
+            jeweils acht Punkte rund um die zwei Hörplätze der ersten Reihe.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="technik" class="section section--dark">
+      <div class="section__head">
+        <span class="section__kicker">05 — Technik</span>
+        <h2 class="section__title">Signalkette.</h2>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech">
+          <h3>Bild</h3>
+          <ul>
+            <li><span>Beamer</span><em>JVC NZ7</em></li>
+            <li><span>Leinwand</span><em>Opera Weiß 2.2 Micro · 21:9 · 332 cm</em></li>
+            <li><span>Quellen</span><em>Apple TV 4K · Zappiti Player</em></li>
+          </ul>
+        </div>
+
+        <div class="tech">
+          <h3>Vorstufe</h3>
+          <ul>
+            <li><span>Prozessor</span><em>Storm Audio ISP Elite MK2 · 24 ch</em></li>
+            <li><span>Einmessung</span><em>Dirac ART</em></li>
+            <li><span>Power-Konditionierung</span><em>Oehlbach Powerstation 909</em></li>
+          </ul>
+        </div>
+
+        <div class="tech">
+          <h3>Endstufen</h3>
+          <ul>
+            <li><span>Apollon 1ET400A · 8 ch</span><em>LCR · Surround · Front Wide</em></li>
+            <li><span>IOTAVX 7-230 · 7 ch</span><em>Back Surround · Front Heights · Height Surrounds</em></li>
+            <li><span>IOTAVX AVXP1 · 7 ch</span><em>Voice of God · Height Surround Back</em></li>
+            <li><span>4× Thomann TSA 4-700</span><em>Double Bass Array</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="component-strip">
+        <figure>
+          <img src="assets/images/reference/jvc-nz7.png" alt="JVC NZ7" loading="lazy" />
+          <figcaption>JVC NZ7</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/reference/gerriets-opera-white-2-2-micro.jpg" alt="Gerriets Opera White 2.2 Micro" loading="lazy" />
+          <figcaption>Opera 2.2 Micro</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/reference/apple-tv-4k.png" alt="Apple TV 4K" loading="lazy" />
+          <figcaption>Apple TV 4K</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/reference/stormaudio-isp-elite-mk2.webp" alt="Storm Audio ISP Elite MK2" loading="lazy" />
+          <figcaption>Storm Audio ISP Elite MK2</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/reference/apollon-1et400a.png" alt="Apollon 1ET400A" loading="lazy" />
+          <figcaption>Apollon 1ET400A</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/reference/iotavx-avxp-7-230.png" alt="IOTAVX AVXP 7-230" loading="lazy" />
+          <figcaption>IOTAVX 7-230</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/reference/iota-avxp1-transparent.png" alt="IOTAVX AVXP1" loading="lazy" />
+          <figcaption>IOTAVX AVXP1</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/reference/tsa-4-700.png" alt="Thomann TSA 4-700" loading="lazy" />
+          <figcaption>Thomann TSA 4-700</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/reference/oehlbach-powerstation-909.png" alt="Oehlbach Powerstation 909" loading="lazy" />
+          <figcaption>Powerstation 909</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="galerie" class="section">
+      <div class="section__head">
+        <span class="section__kicker">06 — Galerie</span>
+        <h2 class="section__title">Einblicke.</h2>
+      </div>
+
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--wide">
+          <img src="assets/images/IMG_3766.PNG" alt="Vordere Ständerwand mit Subwoofern und Center, vor der Bespannung" loading="lazy" />
+          <figcaption>Vordere Ständerwand · DBA &amp; Center vor Bespannung</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/images/IMG_4022.avif" alt="Eclipse Heimkino — Innenraum" loading="lazy" />
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/images/IMG_4023.avif" alt="Eclipse Heimkino — Innenraum" loading="lazy" />
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/images/IMG_4024.avif" alt="Eclipse Heimkino — Innenraum" loading="lazy" />
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/images/IMG_4025.avif" alt="Eclipse Heimkino — Innenraum" loading="lazy" />
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/images/IMG_4028.avif" alt="Eclipse Heimkino — Innenraum" loading="lazy" />
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/images/IMG_4029.avif" alt="Eclipse Heimkino — Innenraum" loading="lazy" />
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/images/IMG_4032.avif" alt="Eclipse Heimkino — Innenraum" loading="lazy" />
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/images/IMG_4033.avif" alt="Eclipse Heimkino — Innenraum" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
   </main>
 
-  <div class="lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Galerie Vollansicht" aria-describedby="lightbox-caption" hidden aria-hidden="true" tabindex="-1">
-    <button class="lightbox-close" type="button" aria-label="Galerie schließen">×</button>
-    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Vorheriges Bild">‹</button>
-    <img class="lightbox-image" src="" alt="">
-    <button class="lightbox-nav lightbox-next" type="button" aria-label="Nächstes Bild">›</button>
-    <p class="lightbox-caption" id="lightbox-caption" aria-live="polite"></p>
-  </div>
-
-  <footer class="footer">
-    <div class="container footer-content">
-      <p class="footer-brand">Eclipse Cinema</p>
-      <nav class="footer-links" aria-label="Footer Navigation">
-        <a href="#top">Start</a>
-        <a href="#technik">System</a>
-        <a href="#komponenten">Komponenten</a>
-        <a href="#lautsprecher">Lautsprecher</a>
-        <a href="#akustik">Akustik</a>
-      </nav>
-      <p class="footer-note">Kontakt: <a href="mailto:markuscmueller7@googlemail.com">markuscmueller7@googlemail.com</a></p>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="brand">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__name">Eclipse</span>
+      </div>
+      <p class="site-footer__line">Privates Heimkino · eclipse-homecinema.de</p>
+      <p class="site-footer__small">© <span id="year">2026</span> Eclipse Home Cinema</p>
     </div>
   </footer>
 
   <script>
-    (() => {
-      const externalLinks = Array.from(document.querySelectorAll('a[target="_blank"]'));
-      externalLinks.forEach((link) => {
-        if (!link.hasAttribute("aria-label")) {
-          const label = link.textContent?.trim() || "Externer Link";
-          link.setAttribute("aria-label", `${label} (öffnet in neuem Tab)`);
-        }
-        if (!link.hasAttribute("title")) {
-          link.setAttribute("title", "Öffnet in neuem Tab");
-        }
-      });
+    // Header shadow on scroll
+    const header = document.getElementById('siteHeader');
+    const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
 
-      const gallery = document.querySelector("#galerie .gallery");
-      if (!gallery) return;
-
-      const triggers = Array.from(gallery.querySelectorAll(".gallery-trigger"));
-      const images = triggers
-        .map((trigger) => trigger.querySelector("img"))
-        .filter(Boolean);
-      if (images.length === 0) return;
-
-      const lightbox = document.getElementById("gallery-lightbox");
-      const lightboxImage = lightbox?.querySelector(".lightbox-image");
-      const lightboxCaption = lightbox?.querySelector(".lightbox-caption");
-      const closeButton = lightbox?.querySelector(".lightbox-close");
-      const prevButton = lightbox?.querySelector(".lightbox-prev");
-      const nextButton = lightbox?.querySelector(".lightbox-next");
-
-      if (!lightbox || !lightboxImage || !lightboxCaption || !closeButton || !prevButton || !nextButton) return;
-
-      const focusableSelector = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      const pageRoots = [
-        document.querySelector("header.hero"),
-        document.querySelector("main"),
-        document.querySelector("footer.footer")
-      ].filter(Boolean);
-
-      let currentIndex = 0;
-      let lastFocusedElement = null;
-
-      const setBackgroundState = (isOpen) => {
-        pageRoots.forEach((root) => {
-          if ("inert" in root) {
-            root.inert = isOpen;
-          }
-          if (isOpen) {
-            root.setAttribute("aria-hidden", "true");
-          } else {
-            root.removeAttribute("aria-hidden");
-          }
-        });
-      };
-
-      const getFocusableElements = () => {
-        return Array.from(lightbox.querySelectorAll(focusableSelector)).filter((element) => {
-          if (element.hasAttribute("disabled")) return false;
-          if (element.getAttribute("aria-hidden") === "true") return false;
-          return true;
-        });
-      };
-
-      const setSlide = (index) => {
-        currentIndex = (index + images.length) % images.length;
-        const sourceImage = images[currentIndex];
-        lightboxImage.src = sourceImage.currentSrc || sourceImage.src;
-        lightboxImage.alt = sourceImage.alt || "Galeriebild";
-        lightboxCaption.textContent = sourceImage.alt || "";
-      };
-
-      const openLightbox = (index, triggerElement) => {
-        lastFocusedElement = triggerElement || document.activeElement;
-        setSlide(index);
-        lightbox.hidden = false;
-        lightbox.setAttribute("aria-hidden", "false");
-        setBackgroundState(true);
-        document.body.classList.add("lightbox-open");
-        closeButton.focus();
-      };
-
-      const closeLightbox = () => {
-        lightbox.hidden = true;
-        lightbox.setAttribute("aria-hidden", "true");
-        lightboxImage.removeAttribute("src");
-        lightboxCaption.textContent = "";
-        setBackgroundState(false);
-        document.body.classList.remove("lightbox-open");
-        if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
-          lastFocusedElement.focus();
-        }
-      };
-
-      triggers.forEach((trigger, index) => {
-        trigger.addEventListener("click", () => openLightbox(index, trigger));
-      });
-
-      closeButton.addEventListener("click", closeLightbox);
-      nextButton.addEventListener("click", () => setSlide(currentIndex + 1));
-      prevButton.addEventListener("click", () => setSlide(currentIndex - 1));
-
-      lightbox.addEventListener("click", (event) => {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
-      });
-
-      const systemListTriggers = Array.from(document.querySelectorAll(".system-list-trigger"));
-      if (systemListTriggers.length > 0) {
-        const panelStep = document.getElementById("system-detail-step");
-        const panelTitle = document.getElementById("system-detail-title");
-        const panelRole = document.getElementById("system-detail-role");
-        const panelCopy = document.getElementById("system-detail-copy");
-        const panelList = document.getElementById("system-detail-list");
-        const panelImage = document.getElementById("system-detail-image");
-
-        const setSystemDetailState = (trigger) => {
-          systemListTriggers.forEach((item) => {
-            const isActive = item === trigger;
-            item.classList.toggle("is-active", isActive);
-            item.setAttribute("aria-pressed", isActive ? "true" : "false");
-          });
-
-          if (panelStep) panelStep.textContent = trigger.dataset.step || "";
-          if (panelTitle) panelTitle.textContent = trigger.dataset.title || trigger.textContent || "";
-          if (panelRole) panelRole.textContent = trigger.dataset.role || "";
-          if (panelCopy) panelCopy.textContent = trigger.dataset.copy || "";
-          if (panelImage) {
-            const imageSrc = trigger.dataset.image || "";
-            const imageAlt = trigger.dataset.imageAlt || trigger.dataset.title || "";
-            if (imageSrc) {
-              panelImage.src = imageSrc;
-              panelImage.alt = imageAlt;
-              panelImage.hidden = false;
-            } else {
-              panelImage.removeAttribute("src");
-              panelImage.alt = "";
-              panelImage.hidden = true;
-            }
-          }
-
-          if (panelList) {
-            const lines = (trigger.dataset.lines || "")
-              .split("|")
-              .map((line) => line.trim())
-              .filter(Boolean);
-
-            panelList.innerHTML = "";
-            lines.forEach((line) => {
-              const item = document.createElement("li");
-              item.textContent = line;
-              panelList.appendChild(item);
-            });
-
-            panelList.hidden = lines.length === 0;
-          }
-        };
-
-        systemListTriggers.forEach((trigger) => {
-          trigger.addEventListener("click", () => setSystemDetailState(trigger));
-        });
-
-        const initialTrigger = systemListTriggers.find((trigger) => trigger.classList.contains("is-active")) || systemListTriggers[0];
-        if (initialTrigger) {
-          setSystemDetailState(initialTrigger);
-        }
-      }
-
-      document.addEventListener("keydown", (event) => {
-        if (lightbox.hidden) return;
-
-        if (event.key === "Escape") {
-          closeLightbox();
-          return;
-        }
-
-        if (event.key === "ArrowRight") {
-          setSlide(currentIndex + 1);
-          return;
-        }
-
-        if (event.key === "ArrowLeft") {
-          setSlide(currentIndex - 1);
-          return;
-        }
-
-        if (event.key === "Tab") {
-          const focusableElements = getFocusableElements();
-          if (focusableElements.length === 0) {
-            event.preventDefault();
-            return;
-          }
-
-          const firstElement = focusableElements[0];
-          const lastElement = focusableElements[focusableElements.length - 1];
-          const activeElement = document.activeElement;
-
-          if (!lightbox.contains(activeElement)) {
-            event.preventDefault();
-            firstElement.focus();
-            return;
-          }
-
-          if (event.shiftKey && activeElement === firstElement) {
-            event.preventDefault();
-            lastElement.focus();
-            return;
-          }
-
-          if (!event.shiftKey && activeElement === lastElement) {
-            event.preventDefault();
-            firstElement.focus();
-          }
-        }
-      });
-    })();
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
