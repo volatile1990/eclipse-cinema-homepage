@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Skill(update-config)",
-      "Skill(update-config:*)"
+      "Skill(update-config:*)",
+      "Bash(pip --version)",
+      "Bash(pdftotext \"d:/Projects/eclipse-cinema-homepage/assets/Heimkino.pdf\" -)"
     ]
   }
 }
