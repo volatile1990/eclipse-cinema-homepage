@@ -1,683 +1,1070 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eclipse Homecinema | Heimkino</title>
-  <meta name="description" content="Eclipse Cinema: privates Heimkino mit großem Bild, präzisem Tiefgang und akustisch inszenierter Raumwirkung.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#090909">
-  <meta property="og:locale" content="de_DE">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Eclipse Cinema | Heimkino">
-  <meta property="og:description" content="Privates Heimkino mit starker Bildwirkung, kontrolliertem Bass und einer Bühne, die den Raum öffnet.">
-  <meta property="og:image" content="assets/images/IMG_4022.avif">
-  <meta property="og:image:alt" content="Frontansicht des Eclipse Cinema Heimkinos">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Eclipse Cinema | Heimkino">
-  <meta name="twitter:description" content="Privates Heimkino mit starker Bildwirkung, kontrolliertem Bass und einer Bühne, die den Raum öffnet.">
-  <meta name="twitter:image" content="assets/images/IMG_4022.avif">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="shortcut icon" href="assets/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="assets/images/IMG_4032.avif" fetchpriority="high">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Eclipse Homecinema",
-      "description": "Privates Heimkino mit immersiver Bild- und Klanginszenierung, kontrolliertem Tiefton und geplanter Raumakustik.",
-      "inLanguage": "de"
-    }
-  </script>
-</head>
-<body>
-  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
-  <div class="grain" aria-hidden="true"></div>
-
-  <header class="hero" id="top">
-    <div class="hero-media" aria-hidden="true">
-      <img src="assets/images/IMG_4032.avif" alt="" width="8064" height="4536" loading="eager" fetchpriority="high" decoding="async">
-    </div>
-
-    <nav class="top-nav container" aria-label="Hauptnavigation">
-      <div class="brand">Eclipse Homecinema</div>
-      <div class="nav-links">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>eclipse homecinema</title>
+    <meta
+      name="description"
+      content="eclipse ist ein privates Heimkino mit 332 cm Cinemascope-Leinwand, 24-Kanal-Ton, Double Bass Array und vollständig geplantem Akustikraum."
+    />
+    <meta name="theme-color" content="#05070b" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="eclipse homecinema" />
+    <meta
+      property="og:description"
+      content="Ein privates Heimkino mit 21:9-Leinwand, immersivem 24-Kanal-Ton, 16 Subwoofern und interaktiver Raumtour."
+    />
+    <meta property="og:image" content="assets/images/site/hero-room.webp" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="900" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="eclipse homecinema" />
+    <meta
+      name="twitter:description"
+      content="Ein privates Heimkino mit 21:9-Leinwand, immersivem 24-Kanal-Ton, 16 Subwoofern und interaktiver Raumtour."
+    />
+    <meta name="twitter:image" content="assets/images/site/hero-room.webp" />
+    <link rel="canonical" href="https://eclipse-homecinema.de/" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="mask-icon" href="assets/icons/favicon.svg" color="#6bd8ff" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#top">Zum Inhalt springen</a>
+    <header class="site-header" aria-label="Hauptnavigation">
+      <a class="brand" href="#top" aria-label="eclipse homecinema Start">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>eclipse</span>
+      </a>
+      <nav class="main-nav" aria-label="Seitenbereiche">
+        <a href="#raumtour">Raumtour</a>
+        <a href="#erlebnis">Erlebnis</a>
+        <a href="#technik">Technik</a>
         <a href="#galerie">Galerie</a>
-        <a href="#technik">System</a>
-        <a href="#komponenten">Komponenten</a>
-        <a href="#lautsprecher">Lautsprecher</a>
-        <a href="#akustik">Akustik</a>
-      </div>
-    </nav>
-
-    <section class="hero-content container">
-      <p class="eyebrow">Privates Heimkino</p>
-      <h1>Wenn Film nicht nur läuft,<br>sondern den Raum übernimmt</h1>
-      <p class="lead">
-        Eclipse ist ein dediziertes Heimkino: große Bühne vorne, ruhige Ortung im gesamten Sitzbereich
-        und ein Bassfundament, das spürbar bleibt, ohne aufzudicken. Technik ist hier Mittel zum Zweck,
-        damit Geschichten körperlich wirken.
-      </p>
-      <a class="cta" href="#galerie">Raum erleben</a>
-
-      <div class="quick-facts">
-        <article>
-          <p class="label">Bildwirkung</p>
-          <p class="value">332 cm auf Gerriets Opera White 2.2 Micro</p>
-        </article>
-        <article>
-          <p class="label">Tiefgang</p>
-          <p class="value">16 Chassis im Double Bass Array</p>
-        </article>
-        <article>
-          <p class="label">Bühne</p>
-          <p class="value">24 Kanäle per StormAudio präzise auf den Raum abgestimmt</p>
-        </article>
-        <article>
-          <p class="label">Feinschliff</p>
-          <p class="value">Dirac Live ART für stabile Wiedergabe auf mehreren Plätzen</p>
-        </article>
-      </div>
-    </section>
-  </header>
-
-  <main id="inhalt" tabindex="-1">
-    <section class="section container" id="galerie">
-      <div class="section-head">
-        <p class="eyebrow">Raumeindruck</p>
-        <h2>Galerie</h2>
-      </div>
-      <p class="section-lead">Klicke oder tippe auf ein Bild und wechsle direkt in die Vollansicht des Raums.</p>
-      <div class="gallery">
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 1 groß ansehen">
-            <img src="assets/images/IMG_4022.avif" alt="Heimkino Ansicht 1" width="8064" height="4536" loading="lazy" decoding="async">
-          </button>
-        </figure>
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 2 groß ansehen">
-            <img src="assets/images/IMG_4023.avif" alt="Heimkino Ansicht 2" width="8064" height="4536" loading="lazy" decoding="async">
-          </button>
-        </figure>
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 3 groß ansehen">
-            <img src="assets/images/IMG_4024.avif" alt="Heimkino Ansicht 3" width="8064" height="4536" loading="lazy" decoding="async">
-          </button>
-        </figure>
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 4 groß ansehen">
-            <img src="assets/images/IMG_4025.avif" alt="Heimkino Ansicht 4" width="8064" height="4536" loading="lazy" decoding="async">
-          </button>
-        </figure>
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 5 groß ansehen">
-            <img src="assets/images/IMG_4028.avif" alt="Heimkino Ansicht 5" width="8064" height="4536" loading="lazy" decoding="async" fetchpriority="low">
-          </button>
-        </figure>
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 6 groß ansehen">
-            <img src="assets/images/IMG_4029.avif" alt="Heimkino Ansicht 6" width="8064" height="4536" loading="lazy" decoding="async" fetchpriority="low">
-          </button>
-        </figure>
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 7 groß ansehen">
-            <img src="assets/images/IMG_4032.avif" alt="Heimkino Ansicht 7" width="8064" height="4536" loading="lazy" decoding="async" fetchpriority="low">
-          </button>
-        </figure>
-        <figure>
-          <button class="gallery-trigger" type="button" aria-label="Heimkino Ansicht 8 groß ansehen">
-            <img src="assets/images/IMG_4033.avif" alt="Heimkino Ansicht 8" width="8064" height="4536" loading="lazy" decoding="async" fetchpriority="low">
-          </button>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section container system-section" id="technik">
-      <div class="section-head">
-        <p class="eyebrow">Systeminszenierung</p>
-        <h2>Komponenten, die gemeinsam Kino formen</h2>
-      </div>
-      <p class="section-lead">
-        Inszenierung und Technik sind hier ein einziger Ablauf: Quelle, Verarbeitung, Antrieb und Wiedergabe greifen
-        ineinander, damit Bild und Ton wie aus einem Guss wirken.
-      </p>
-
-      <div class="system-list-wrap" id="komponenten">
-
-        <div class="system-list-layout">
-          <div class="system-list" aria-label="Komponentenliste">
-            <button class="system-list-trigger is-active" type="button" aria-pressed="true"
-              data-step="Schritt 01" data-title="Quellen"
-              data-role="Apple TV 4K und Zappiti speisen Streaming und lokale Mediathek in den Signalweg."
-              data-copy="Die Quellen laufen ohne Umwege in die Vorstufe und bilden den Startpunkt der gesamten Inszenierung."
-              data-lines="Apple TV 4K|Zappiti"
-              data-image="assets/images/reference/apple-tv-4k.png"
-              data-image-alt="Apple TV 4K als Zuspieler">
-              <span class="system-list-step">01</span>
-              <span class="system-list-title">Quellen</span>
-            </button>
-
-            <button class="system-list-trigger" type="button" aria-pressed="false"
-              data-step="Schritt 02" data-title="StormAudio ISP Elite MK2"
-              data-role="Zentrale Schaltstelle für Decodierung, Kanalverteilung und raumbezogene Korrektur."
-              data-copy="Hier wird aus den Quellsignalen ein präzise organisierter Mehrkanal-Mix für alle Lautsprecher- und Höhenebenen."
-              data-lines="24 Kanäle Processing|Dirac Live ART"
-              data-image="assets/images/reference/stormaudio-isp-elite-mk2.webp"
-              data-image-alt="StormAudio ISP Elite MK2">
-              <span class="system-list-step">02</span>
-              <span class="system-list-title">StormAudio</span>
-            </button>
-
-            <button class="system-list-trigger" type="button" aria-pressed="false"
-              data-step="Schritt 03" data-title="Apollon 1ET400A (8ch)"
-              data-role="Treibt Frontachse, Wides und seitliche Surrounds mit hoher Kontrolle."
-              data-copy="Damit bleiben Stimmen und Schwenks in der Hauptbühne stabil verankert."
-              data-lines="L|R|Center (Bi-Amp)|Left Wide|Right Wide|Left Surround|Right Surround"
-              data-image="assets/images/reference/apollon-1et400a.png"
-              data-image-alt="Apollon 1ET400A Mehrkanal-Endstufe">
-              <span class="system-list-step">03</span>
-              <span class="system-list-title">Apollon</span>
-            </button>
-
-            <button class="system-list-trigger" type="button" aria-pressed="false"
-              data-step="Schritt 04" data-title="IOTAVX AVXP 7-230 (7ch)"
-              data-role="Übernimmt Back- und Height-Kanäle für die hintere und obere Raumabbildung."
-              data-copy="Die Höhen- und Rückkanäle schließen die 3D-Kuppel räumlich sauber."
-              data-lines="Left Back|Right Back|Center Front Height|Left Front Height|Right Front Height|Left Surround Height|Right Surround Height"
-              data-image="assets/images/reference/iotavx-avxp-7-230.png"
-              data-image-alt="IOTAVX AVXP 7-230 Endstufe">
-              <span class="system-list-step">04</span>
-              <span class="system-list-title">IOTAVX 7-230</span>
-            </button>
-
-            <button class="system-list-trigger" type="button" aria-pressed="false"
-              data-step="Schritt 05" data-title="IOTA AVXP1 (7ch)"
-              data-role="Ergänzt die oberen Rückkanäle und den oberen Centerpunkt."
-              data-copy="Damit erhält die Höhenebene einen klaren Abschluss nach hinten."
-              data-lines="Voice of God|Height Surround Back Left|Height Surround Back Right"
-              data-image="assets/images/reference/iota-avxp1-transparent.png"
-              data-image-alt="IOTA AVXP1 Endstufe">
-              <span class="system-list-step">05</span>
-              <span class="system-list-title">IOTA AVXP1</span>
-            </button>
-
-            <button class="system-list-trigger" type="button" aria-pressed="false"
-              data-step="Schritt 06" data-title="DBA-Endstufen"
-              data-role="Vier TSA 4-700 stellen 16 separate Tieftonkanäle für das komplette DBA."
-              data-copy="Jeder der 16 DBA-Subwoofer läuft auf einem eigenen Endstufenkanal."
-              data-lines="4x the t.amp TSA 4-700|16 DBA-Kanäle"
-              data-image="assets/images/reference/tsa-4-700.png"
-              data-image-alt="the t.amp TSA 4-700">
-              <span class="system-list-step">06</span>
-              <span class="system-list-title">DBA-Endstufen</span>
-            </button>
-
-            <button class="system-list-trigger" type="button" aria-pressed="false"
-              data-step="Schritt 07" data-title="Bildbühne"
-              data-role="JVC DLA-NZ7 und Gerriets OPERA WHITE 2.2 MICRO bilden gemeinsam die visuelle Front."
-              data-copy="Die 332-cm-Leinwand bleibt akustisch transparent, während der NZ7 Kontrast und Bildruhe liefert."
-              data-lines="JVC DLA-NZ7|332 cm Bildbreite|Gerriets OPERA WHITE 2.2 MICRO"
-              data-image="assets/images/reference/jvc-nz7.png"
-              data-image-alt="JVC DLA-NZ7 Projektor">
-              <span class="system-list-step">07</span>
-              <span class="system-list-title">Bildbühne</span>
-            </button>
-
-            <button class="system-list-trigger" type="button" aria-pressed="false"
-              data-step="Schritt 08" data-title="Stromversorgung"
-              data-role="Die Oehlbach Powerstation 909 strukturiert die Stromverteilung im Rack."
-              data-copy="Sie bildet die stabile Basis für reproduzierbares Verhalten der gesamten Kette."
-              data-lines="Oehlbach Powerstation 909"
-              data-image="assets/images/reference/oehlbach-powerstation-909.png"
-              data-image-alt="Oehlbach Powerstation 909">
-              <span class="system-list-step">08</span>
-              <span class="system-list-title">Stromversorgung</span>
-            </button>
-          </div>
-
-          <aside class="system-detail-panel" aria-live="polite">
-            <figure class="system-detail-media">
-              <img id="system-detail-image" class="system-detail-image" src="assets/images/reference/apple-tv-4k.png" alt="Apple TV 4K als Zuspieler" loading="lazy" decoding="async">
-            </figure>
-            <p class="system-detail-step" id="system-detail-step">Schritt 01</p>
-            <h3 class="system-detail-title" id="system-detail-title">Quellen</h3>
-            <p class="system-detail-role" id="system-detail-role">
-              Apple TV 4K und Zappiti speisen Streaming und lokale Mediathek in den Signalweg.
-            </p>
-            <p class="system-detail-copy" id="system-detail-copy">
-              Die Quellen laufen ohne Umwege in die Vorstufe und bilden den Startpunkt der gesamten Inszenierung.
-            </p>
-            <ul class="system-detail-list" id="system-detail-list">
-              <li>Apple TV 4K</li>
-              <li>Zappiti</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="lautsprecher">
-      <div class="section-head">
-        <p class="eyebrow">Lautsprecher</p>
-        <h2>Lautsprecher mit klaren Rollen</h2>
-      </div>
-      <p class="section-lead">
-        Jedes Modell übernimmt eine definierte Aufgabe im Raum - vom stabilen Dialoganker bis zur dichten 3D-Hülle.
-      </p>
-
-      <div class="component-grid speaker-grid">
-        <article class="component-card">
-          <img src="assets/images/reference/nubert-nuvero-nova-12.png" alt="Nubert nuVero nova 12" width="434" height="1057" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Center</p>
-            <h3>Nubert nuVero nova 12</h3>
-            <p class="component-copy">
-              Der Center ist der Anker der Frontbühne und hält Stimmen exakt im Bild.
-              Er sorgt dafür, dass Dialoge auch in dichten Szenen verständlich bleiben.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/nubert-nuvero-110.png" alt="Nubert nuVero 110" width="469" height="1280" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Front Left/Right</p>
-            <h3>Nubert nuVero 110</h3>
-            <p class="component-copy">
-              Links und rechts bauen die nuVero 110 Größe, Druck und Räumlichkeit auf.
-              Zusammen mit dem Center entsteht eine belastbare, breite Frontabbildung.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/nuvero-50-transparent.png" alt="Nubert nuVero 50" width="405" height="881" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Front Wide</p>
-            <h3>Nubert nuVero 50</h3>
-            <p class="component-copy">
-              Die Wide-Ebene schließt die Lücke zwischen Front und Surround.
-              Seitliche Bewegungen wirken dadurch flüssiger und glaubwürdiger.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/nuvero-70-transparent.png" alt="Nubert nuVero 70" width="500" height="500" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Surround</p>
-            <h3>Nubert nuVero 70</h3>
-            <p class="component-copy">
-              Die seitlichen Surrounds tragen Atmosphäre und Bewegung in den Raum.
-              Sie sind so eingebunden, dass Effekte präsent bleiben, aber nie aufdringlich wirken.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/nuline-ws-14-transparent.png" alt="Nubert nuLine WS-14" width="536" height="402" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Rear + Height</p>
-            <h3>Nubert nuLine WS-14</h3>
-            <p class="component-copy">
-              Die WS-14 bilden Rückraum und Höhenebene mit insgesamt zehn Positionen ab.
-              Damit entsteht ein geschlossenes 3D-Feld über und hinter dem Hörplatz.
-            </p>
-          </div>
-        </article>
-
-        <article class="component-card">
-          <img src="assets/images/reference/scan-speak-30w4558t00-transparent.png" alt="Scan Speak 30W/4558T00" width="1200" height="800" loading="lazy" decoding="async">
-          <div class="component-body">
-            <p class="component-tag">Subwoofer-Chassis</p>
-            <h3>Scan Speak 30W/4558T00</h3>
-            <p class="component-copy">
-              16 Chassis arbeiten als Double Bass Array und verteilen den Tiefbass gleichmäßig im Raum.
-              Das Ergebnis ist Druck mit Struktur statt bloßem Pegel.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container" id="akustik">
-      <div class="section-head">
-        <p class="eyebrow">Raumakustik</p>
-        <h2>Raumakustik mit Absicht</h2>
-      </div>
-      <p class="section-lead">
-        Das Kino arbeitet auf 5,60 x 4,72 x 2,47 m (ca. 26,4 m2 Grundfläche) mit klar getrennten Aufgaben:
-        vorne kontrollierte Absorption und Druckaufbau, rund um den Hörplatz gezielte Diffusion und hinten ein sauber
-        geführtes Ausklingen.
-      </p>
-
-      <div class="acoustic-metrics">
-        <article>
-          <p class="label">Raumgröße</p>
-          <p class="value">5,60 x 4,72 x 2,47 m</p>
-        </article>
-        <article>
-          <p class="label">Front-/Rückbau</p>
-          <p class="value">50 cm Front-Ständerwand, 30 cm Rückwandaufbau</p>
-        </article>
-        <article>
-          <p class="label">DBA-Struktur</p>
-          <p class="value">8 Subwoofer pro Wand, 16 Kanäle einzeln angesteuert</p>
-        </article>
-      </div>
-
-      <div class="acoustic-layout">
-        <figure class="acoustic-figure">
-          <img src="assets/images/front-open.png" alt="Front des Kinos ohne Leinwand mit sichtbaren Akustikmaßnahmen" loading="lazy" decoding="async">
-          <figcaption>Front ohne Leinwand: gut erkennbar sind die tiefe Frontkonstruktion und die akustische Bedämpfung zwischen den Sub-Sektionen.</figcaption>
-        </figure>
-
-        <div class="acoustic-copy-stack">
-          <article class="card">
-            <h3>Frontzone und frühe Reflexionen</h3>
-            <p class="card-copy">
-              Die Front ist als tiefer Arbeitsbereich aufgebaut: 50 cm Ständerwand, darin die vordere DBA-Ebene und
-              definierte Bedämpfung. Zwischen den Front-Subwoofern arbeitet ein bedämpfter Kernbereich, zusätzlich gibt
-              es hinter den Chassis einen weiteren gedämmten Zwischenraum. Seitlich folgen großflächige
-              Erstreflexionsabsorber (120 x 120 x 20 cm), danach zusätzliche 100 x 100 x 20 cm Absorber vor der
-              Surround-Zone.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Hörzone, Seiten und Decke</h3>
-            <p class="card-copy">
-              Im Bodenaufbau laufen beidseitig Absorberstrecken über insgesamt 120 cm Länge und 360 cm Breite. An der
-              Decke bleibt der vordere Meter zunächst frei, danach folgt die Front-Height-Zone und anschließend ein
-              10-cm-Absorberfeld für die frühe Deckenreflexion. Über dem Hörplatz und im hinteren Bereich ergänzen
-              2D-Diffusoren die räumliche Öffnung.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Rückraum und kontrolliertes Ausklingen</h3>
-            <p class="card-copy">
-              Hinter den Surrounds arbeiten vollflächige Slat-Diffusoren; in der zweiten Reihe ergänzen
-              2D-Manhattan-Elemente die Seiten. An der Rückwand kombinieren 1D- und 2D-Strukturen die gezielte
-              Streuung mit der hinteren DBA-Ebene. Teppich bis kurz hinter den Haupt-Hörplatz, danach harter Boden
-              und akustisch transparente Bespannungen sorgen für ein kontrolliertes, aber nicht trockenes Nachklingen.
-            </p>
-          </article>
-        </div>
-      </div>
-
-      <div class="cards two">
-        <article class="card">
-          <h3>Licht- und Oberflächenführung</h3>
-          <p class="card-copy">
-            Dunkle, reflexionsarme Oberflächen im Front- und Deckenbereich reduzieren Restlicht auf dem Bild deutlich.
-            Seitliche Vorhänge und die Bespannung im Sichtfeld unterstützen den Kontrast und halten die Wahrnehmung
-            auf Leinwand und Bühne.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Materialstrategie</h3>
-          <p class="card-copy">
-            Absorber mit unterschiedlichen Strömungswiderständen werden je nach Zone gezielt eingesetzt, statt überall
-            gleich. Dadurch bleibt die Front präzise im Timing, während der hintere Raum mehr Tiefe und Bewegung
-            vermittelt.
-          </p>
-        </article>
-      </div>
-
-      <article class="calibration">
-        <h3>Kalibrierung</h3>
-        <p>
-          Eingemessen wird mit <strong>Dirac Live Active Room Treatment (ART)</strong> auf der StormAudio-Plattform.
-          Als Grundlage dienen die StormAudio-Zielkurven; die ART-Konfiguration folgt den Dirac-Richtlinien für
-          unterstützende Lautsprecher. Ziel bleibt ein belastbares, stimmiges Klangbild auf mehreren Sitzplätzen.
-        </p>
-      </article>
-    </section>
-  </main>
-
-  <div class="lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Galerie Vollansicht" aria-describedby="lightbox-caption" hidden aria-hidden="true" tabindex="-1">
-    <button class="lightbox-close" type="button" aria-label="Galerie schließen">×</button>
-    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Vorheriges Bild">‹</button>
-    <img class="lightbox-image" src="" alt="">
-    <button class="lightbox-nav lightbox-next" type="button" aria-label="Nächstes Bild">›</button>
-    <p class="lightbox-caption" id="lightbox-caption" aria-live="polite"></p>
-  </div>
-
-  <footer class="footer">
-    <div class="container footer-content">
-      <p class="footer-brand">Eclipse Cinema</p>
-      <nav class="footer-links" aria-label="Footer Navigation">
-        <a href="#top">Start</a>
-        <a href="#technik">System</a>
-        <a href="#komponenten">Komponenten</a>
-        <a href="#lautsprecher">Lautsprecher</a>
-        <a href="#akustik">Akustik</a>
       </nav>
-      <p class="footer-note">Kontakt: <a href="mailto:markuscmueller7@googlemail.com">markuscmueller7@googlemail.com</a></p>
-    </div>
-  </footer>
+    </header>
 
-  <script>
-    (() => {
-      const externalLinks = Array.from(document.querySelectorAll('a[target="_blank"]'));
-      externalLinks.forEach((link) => {
-        if (!link.hasAttribute("aria-label")) {
-          const label = link.textContent?.trim() || "Externer Link";
-          link.setAttribute("aria-label", `${label} (öffnet in neuem Tab)`);
-        }
-        if (!link.hasAttribute("title")) {
-          link.setAttribute("title", "Öffnet in neuem Tab");
-        }
-      });
+    <main id="top">
+      <section class="hero" aria-label="eclipse Heimkino">
+        <img
+          class="hero-image"
+          src="assets/images/site/hero-room.webp"
+          alt="Blick in das eclipse Heimkino mit zwei Sesselreihen und blau-warmem Licht"
+          fetchpriority="high"
+        />
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="hero-kicker">Privates Heimkino</p>
+          <h1>eclipse</h1>
+          <p>
+            Ein privates Heimkino, das wie ein kleiner Kinosaal wirkt:
+            Cinemascope-Leinwand, kontrolliertes Licht, immersiver Mehrkanalton
+            und ein Bassfundament, das unsichtbar in den Wänden arbeitet.
+          </p>
+          <div class="hero-actions" aria-label="Seitensprünge">
+            <a class="button primary" href="#raumtour">Raumtour öffnen</a>
+            <a class="button secondary" href="#galerie">Zur Galerie</a>
+          </div>
+        </div>
+      </section>
 
-      const gallery = document.querySelector("#galerie .gallery");
-      if (!gallery) return;
+      <section class="facts" aria-label="Kurzprofil" data-reveal>
+        <dl>
+          <div>
+            <dt>Leinwand</dt>
+            <dd>332 cm</dd>
+            <span>21:9, mikroperforiert</span>
+          </div>
+          <div>
+            <dt>Ton</dt>
+            <dd>24 ch</dd>
+            <span>StormAudio mit Dirac ART</span>
+          </div>
+          <div>
+            <dt>Bass</dt>
+            <dd>16 Subs</dd>
+            <span>Double Bass Array</span>
+          </div>
+          <div>
+            <dt>Plätze</dt>
+            <dd>6</dd>
+            <span>Lounge vorne, Podest hinten</span>
+          </div>
+        </dl>
+      </section>
 
-      const triggers = Array.from(gallery.querySelectorAll(".gallery-trigger"));
-      const images = triggers
-        .map((trigger) => trigger.querySelector("img"))
-        .filter(Boolean);
-      if (images.length === 0) return;
+      <section class="section intro-section" data-reveal>
+        <div class="section-copy">
+          <p class="section-label">Konzept</p>
+          <h2>Ein Raum, der Filmton ernst nimmt.</h2>
+          <p>
+            eclipse ist kein Wohnzimmer mit großer Leinwand, sondern ein
+            dedizierter Kinoraum. Bild, Licht, Sitzpositionen, Lautsprecher und
+            Akustik wurden gemeinsam gedacht, damit der Raum beim Filmstart in
+            den Hintergrund tritt.
+          </p>
+          <p>
+            Die technischen Details sind bewusst größtenteils versteckt: hinter
+            Stoff, hinter der Leinwand, in Wandaufbauten und in der Decke.
+            Sichtbar bleiben Atmosphäre, Proportionen und die klare Ausrichtung
+            auf Kino.
+          </p>
+        </div>
+        <figure class="feature-media">
+          <img
+            src="assets/images/site/front-seats.webp"
+            alt="Vordere Lounge-Sessel mit Blick auf die 21:9-Leinwand"
+            loading="lazy"
+          />
+          <figcaption>
+            Vordere Sitzreihe mit direktem Blick auf die Cinemascope-Front
+          </figcaption>
+        </figure>
+      </section>
 
-      const lightbox = document.getElementById("gallery-lightbox");
-      const lightboxImage = lightbox?.querySelector(".lightbox-image");
-      const lightboxCaption = lightbox?.querySelector(".lightbox-caption");
-      const closeButton = lightbox?.querySelector(".lightbox-close");
-      const prevButton = lightbox?.querySelector(".lightbox-prev");
-      const nextButton = lightbox?.querySelector(".lightbox-next");
+      <section class="section explorer-section" id="raumtour" data-reveal>
+        <div class="section-heading">
+          <p class="section-label">Raumtour</p>
+          <h2>Den Kinoraum interaktiv erkunden.</h2>
+          <p>
+            Wechsle zwischen Draufsicht, Front- und Rückwand, blende Layer ein oder
+            aus und tippe auf einzelne Elemente, um Details zu sehen — Sitze,
+            Lautsprecher, Bassarrays, Akustikzonen und Materialien sind direkt
+            im Plan markiert.
+          </p>
+        </div>
 
-      if (!lightbox || !lightboxImage || !lightboxCaption || !closeButton || !prevButton || !nextButton) return;
+        <div class="room-tour" data-tour data-view="top">
+          <div class="tour-controls">
+            <div class="tour-views" role="tablist" aria-label="Ansicht wechseln">
+              <button type="button" role="tab" data-view="top" class="is-active" aria-selected="true">Draufsicht</button>
+              <button type="button" role="tab" data-view="front" aria-selected="false">Frontwand</button>
+              <button type="button" role="tab" data-view="rear" aria-selected="false">Rückwand</button>
+              <button type="button" role="tab" data-view="side-left" aria-selected="false">Seite L</button>
+              <button type="button" role="tab" data-view="side-right" aria-selected="false">Seite R</button>
+              <button type="button" role="tab" data-view="ceiling" aria-selected="false">Decke</button>
+            </div>
+            <div class="tour-layers" aria-label="Layer ein- und ausblenden">
+              <button type="button" data-layer="seats" aria-pressed="true">
+                <span class="dot dot-seats" aria-hidden="true"></span>Sitze
+              </button>
+              <button type="button" data-layer="speakers" aria-pressed="true">
+                <span class="dot dot-speakers" aria-hidden="true"></span>Lautsprecher
+              </button>
+              <button type="button" data-layer="bass" aria-pressed="true">
+                <span class="dot dot-bass" aria-hidden="true"></span>Bass
+              </button>
+              <button type="button" data-layer="acoustics" aria-pressed="true">
+                <span class="dot dot-acoustics" aria-hidden="true"></span>Akustik
+              </button>
+            </div>
+          </div>
 
-      const focusableSelector = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      const pageRoots = [
-        document.querySelector("header.hero"),
-        document.querySelector("main"),
-        document.querySelector("footer.footer")
-      ].filter(Boolean);
+          <svg width="0" height="0" class="tour-defs" aria-hidden="true" focusable="false">
+            <defs>
+              <pattern id="hatch-floor" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <rect width="8" height="8" fill="rgba(105,211,124,0.05)"/>
+                <line x1="0" y1="0" x2="0" y2="8" stroke="rgba(105,211,124,0.5)" stroke-width="1.1"/>
+              </pattern>
+              <pattern id="hatch-slats" width="6" height="6" patternUnits="userSpaceOnUse">
+                <rect width="6" height="6" fill="rgba(241,153,194,0.14)"/>
+                <line x1="0" y1="3" x2="6" y2="3" stroke="rgba(241,153,194,0.7)" stroke-width="0.9"/>
+              </pattern>
+              <pattern id="hatch-diff" width="9" height="9" patternUnits="userSpaceOnUse">
+                <rect width="9" height="9" fill="rgba(105,211,124,0.08)"/>
+                <rect x="0" y="0" width="3" height="3" fill="rgba(105,211,124,0.55)"/>
+                <rect x="5" y="5" width="3" height="3" fill="rgba(105,211,124,0.55)"/>
+              </pattern>
+              <radialGradient id="sub-grad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(107,216,255,0.6)"/>
+                <stop offset="60%" stop-color="rgba(36,90,140,0.85)"/>
+                <stop offset="100%" stop-color="#06121d"/>
+              </radialGradient>
+              <mask id="front-insulation-cutouts" maskUnits="userSpaceOnUse" x="-40" y="-40" width="640" height="640">
+                <rect x="0" y="0" width="472" height="235" fill="white"/>
+                <rect x="34" y="21" width="50" height="70" fill="black"/>
+                <rect x="152" y="21" width="50" height="70" fill="black"/>
+                <rect x="270" y="21" width="50" height="70" fill="black"/>
+                <rect x="388" y="21" width="50" height="70" fill="black"/>
+                <rect x="34" y="144" width="50" height="70" fill="black"/>
+                <rect x="152" y="144" width="50" height="70" fill="black"/>
+                <rect x="270" y="144" width="50" height="70" fill="black"/>
+                <rect x="388" y="144" width="50" height="70" fill="black"/>
+              </mask>
+              <mask id="rear-insulation-cutouts" maskUnits="userSpaceOnUse" x="-40" y="-40" width="640" height="640">
+                <rect x="0" y="0" width="472" height="235" fill="white"/>
+                <rect x="24" y="31" width="70" height="50" fill="black"/>
+                <rect x="142" y="31" width="70" height="50" fill="black"/>
+                <rect x="260" y="31" width="70" height="50" fill="black"/>
+                <rect x="378" y="31" width="70" height="50" fill="black"/>
+                <rect x="24" y="154" width="70" height="50" fill="black"/>
+                <rect x="142" y="154" width="70" height="50" fill="black"/>
+                <rect x="260" y="154" width="70" height="50" fill="black"/>
+                <rect x="378" y="154" width="70" height="50" fill="black"/>
+                <rect x="56" y="93" width="100" height="50" fill="black"/>
+                <rect x="316" y="93" width="100" height="50" fill="black"/>
+                <rect x="34" y="89" width="22" height="58" fill="black"/>
+                <rect x="416" y="89" width="22" height="58" fill="black"/>
+                <rect x="216" y="60" width="40" height="42" fill="black"/>
+              </mask>
+              <pattern id="hatch-binary" width="10" height="10" patternUnits="userSpaceOnUse">
+                <rect width="10" height="10" fill="rgba(217,84,255,0.1)"/>
+                <rect x="0" y="0" width="4" height="4" fill="rgba(217,84,255,0.6)"/>
+                <rect x="6" y="6" width="4" height="4" fill="rgba(217,84,255,0.6)"/>
+                <rect x="6" y="0" width="3" height="3" fill="rgba(217,84,255,0.35)"/>
+              </pattern>
+              <pattern id="hatch-ceil-front" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-20)">
+                <rect width="8" height="8" fill="rgba(105,211,124,0.04)"/>
+                <line x1="0" y1="0" x2="0" y2="8" stroke="rgba(105,211,124,0.4)" stroke-width="0.9"/>
+              </pattern>
+              <pattern id="hatch-ceil-mid" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <rect width="6" height="6" fill="rgba(105,211,124,0.06)"/>
+                <line x1="0" y1="0" x2="0" y2="6" stroke="rgba(105,211,124,0.6)" stroke-width="1"/>
+              </pattern>
+            </defs>
+          </svg>
 
-      let currentIndex = 0;
-      let lastFocusedElement = null;
+          <div class="tour-stage">
+            <div class="tour-canvas">
+              <svg
+                class="plan plan-top is-visible"
+                data-plan="top"
+                viewBox="-32 -28 540 632"
+                preserveAspectRatio="xMidYMid meet"
+                role="img"
+                aria-label="Draufsicht des Heimkinos mit Sitzen, Lautsprechern, Bassarrays und Akustikzonen"
+              >
+                <g class="plan-base">
+                  <rect x="0" y="0" width="472" height="560" rx="3" class="wall-concrete"/>
+                  <rect x="0" y="0" width="472" height="50" class="wall-stud"/>
+                  <rect x="0" y="530" width="472" height="30" class="wall-stud"/>
+                  <rect x="41" y="50" width="390" height="480" class="wall-interior"/>
+                  <line x1="236" y1="50" x2="236" y2="530" class="axis"/>
+                </g>
 
-      const setBackgroundState = (isOpen) => {
-        pageRoots.forEach((root) => {
-          if ("inert" in root) {
-            root.inert = isOpen;
-          }
-          if (isOpen) {
-            root.setAttribute("aria-hidden", "true");
-          } else {
-            root.removeAttribute("aria-hidden");
-          }
-        });
-      };
+                <g class="plan-layer" data-layer="acoustics">
+                  <g class="hit" data-info="floor-absorbers" role="button" tabindex="0" aria-label="Bodenabsorber">
+                    <rect x="56" y="60" width="360" height="120" fill="url(#hatch-floor)" class="hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="early-reflection" role="button" tabindex="0" aria-label="Erstreflektions-Absorber">
+                    <rect x="21" y="50" width="20" height="120" class="acoustic-block hit-shape"/>
+                    <rect x="431" y="50" width="20" height="120" class="acoustic-block hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="side-absorbers" role="button" tabindex="0" aria-label="Seitliche Absorber">
+                    <rect x="21" y="200" width="20" height="100" class="acoustic-block hit-shape"/>
+                    <rect x="431" y="200" width="20" height="100" class="acoustic-block hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="slats" role="button" tabindex="0" aria-label="Slat-Elemente">
+                    <rect x="16" y="320" width="25" height="60" fill="url(#hatch-slats)" class="hit-shape acoustic-outline"/>
+                    <rect x="431" y="320" width="25" height="60" fill="url(#hatch-slats)" class="hit-shape acoustic-outline"/>
+                  </g>
+                  <g class="hit" data-info="manhattan" role="button" tabindex="0" aria-label="Manhattan-Diffusoren">
+                    <rect x="21" y="420" width="20" height="60" fill="url(#hatch-diff)" class="hit-shape acoustic-outline"/>
+                    <rect x="431" y="420" width="20" height="60" fill="url(#hatch-diff)" class="hit-shape acoustic-outline"/>
+                  </g>
+                  <g class="hit" data-info="rear-diffusers" role="button" tabindex="0" aria-label="1D-Diffusoren Rückwand">
+                    <rect x="56" y="535" width="100" height="20" fill="url(#hatch-diff)" class="hit-shape acoustic-outline"/>
+                    <rect x="316" y="535" width="100" height="20" fill="url(#hatch-diff)" class="hit-shape acoustic-outline"/>
+                  </g>
+                </g>
 
-      const getFocusableElements = () => {
-        return Array.from(lightbox.querySelectorAll(focusableSelector)).filter((element) => {
-          if (element.hasAttribute("disabled")) return false;
-          if (element.getAttribute("aria-hidden") === "true") return false;
-          return true;
-        });
-      };
+                <g class="plan-layer" data-layer="bass">
+                  <g class="hit" data-info="bass-front" role="button" tabindex="0" aria-label="Front-DBA mit acht Subwoofern">
+                    <circle cx="59" cy="12.5" r="10" class="sub"/>
+                    <circle cx="177" cy="12.5" r="10" class="sub"/>
+                    <circle cx="295" cy="12.5" r="10" class="sub"/>
+                    <circle cx="413" cy="12.5" r="10" class="sub"/>
+                    <circle cx="59" cy="37.5" r="10" class="sub"/>
+                    <circle cx="177" cy="37.5" r="10" class="sub"/>
+                    <circle cx="295" cy="37.5" r="10" class="sub"/>
+                    <circle cx="413" cy="37.5" r="10" class="sub"/>
+                  </g>
+                  <g class="hit" data-info="bass-rear" role="button" tabindex="0" aria-label="Rück-DBA mit acht Subwoofern">
+                    <circle cx="59" cy="537.5" r="7" class="sub"/>
+                    <circle cx="177" cy="537.5" r="7" class="sub"/>
+                    <circle cx="295" cy="537.5" r="7" class="sub"/>
+                    <circle cx="413" cy="537.5" r="7" class="sub"/>
+                    <circle cx="59" cy="552.5" r="7" class="sub"/>
+                    <circle cx="177" cy="552.5" r="7" class="sub"/>
+                    <circle cx="295" cy="552.5" r="7" class="sub"/>
+                    <circle cx="413" cy="552.5" r="7" class="sub"/>
+                  </g>
+                </g>
 
-      const setSlide = (index) => {
-        currentIndex = (index + images.length) % images.length;
-        const sourceImage = images[currentIndex];
-        lightboxImage.src = sourceImage.currentSrc || sourceImage.src;
-        lightboxImage.alt = sourceImage.alt || "Galeriebild";
-        lightboxCaption.textContent = sourceImage.alt || "";
-      };
+                <g class="plan-layer" data-layer="seats">
+                  <g class="hit" data-info="podium" role="button" tabindex="0" aria-label="Podest">
+                    <rect x="103" y="362" width="266" height="168" rx="3" class="podium hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="row1" role="button" tabindex="0" aria-label="Erste Reihe Stressless Reno L">
+                    <rect x="125" y="260" width="80" height="95" rx="14" class="seat-row1 hit-shape"/>
+                    <rect x="267" y="260" width="80" height="95" rx="14" class="seat-row1 hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="row2" role="button" tabindex="0" aria-label="Zweite Reihe Pasadena">
+                    <rect x="113" y="470" width="55" height="50" rx="9" class="seat-row2 hit-shape"/>
+                    <rect x="178" y="470" width="55" height="50" rx="9" class="seat-row2 hit-shape"/>
+                    <rect x="243" y="470" width="55" height="50" rx="9" class="seat-row2 hit-shape"/>
+                    <rect x="308" y="470" width="55" height="50" rx="9" class="seat-row2 hit-shape"/>
+                  </g>
+                </g>
 
-      const openLightbox = (index, triggerElement) => {
-        lastFocusedElement = triggerElement || document.activeElement;
-        setSlide(index);
-        lightbox.hidden = false;
-        lightbox.setAttribute("aria-hidden", "false");
-        setBackgroundState(true);
-        document.body.classList.add("lightbox-open");
-        closeButton.focus();
-      };
+                <g class="plan-layer" data-layer="speakers">
+                  <g class="hit" data-info="lcr" role="button" tabindex="0" aria-label="Front L, Center, R">
+                    <rect x="44" y="14" width="22" height="34" rx="2" class="speaker-floor hit-shape" transform="rotate(-112 40 41)"/>
+                    <rect x="220" y="32" width="32" height="14" rx="2" class="speaker-floor hit-shape"/>
+                    <rect x="406" y="14" width="22" height="34" rx="2" class="speaker-floor hit-shape" transform="rotate(112 430 41)"/>
+                  </g>
+                  <g class="hit" data-info="front-wide" role="button" tabindex="0" aria-label="Front Wide L und R">
+                    <rect x="22" y="180" width="20" height="14" rx="2" class="speaker-floor hit-shape"/>
+                    <rect x="430" y="180" width="20" height="14" rx="2" class="speaker-floor hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="surround" role="button" tabindex="0" aria-label="Surround L und R">
+                    <rect x="22" y="305" width="20" height="14" rx="2" class="speaker-floor hit-shape"/>
+                    <rect x="430" y="305" width="20" height="14" rx="2" class="speaker-floor hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="back-surround" role="button" tabindex="0" aria-label="Back Surround L und R">
+                    <rect x="34" y="540" width="22" height="12" rx="2" class="speaker-floor hit-shape"/>
+                    <rect x="416" y="540" width="22" height="12" rx="2" class="speaker-floor hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="height-front" role="button" tabindex="0" aria-label="Front Heights">
+                    <circle cx="60" cy="115" r="9" class="speaker-ceiling hit-shape"/>
+                    <circle cx="236" cy="115" r="9" class="speaker-ceiling hit-shape"/>
+                    <circle cx="412" cy="115" r="9" class="speaker-ceiling hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="height-side" role="button" tabindex="0" aria-label="Top Side L und R">
+                    <circle cx="60" cy="310" r="9" class="speaker-ceiling hit-shape"/>
+                    <circle cx="412" cy="310" r="9" class="speaker-ceiling hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="vog" role="button" tabindex="0" aria-label="Voice of God">
+                    <circle cx="236" cy="310" r="11" class="speaker-ceiling speaker-vog hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="height-rear" role="button" tabindex="0" aria-label="Top Surround Back L und R">
+                    <circle cx="60" cy="505" r="9" class="speaker-ceiling hit-shape"/>
+                    <circle cx="412" cy="505" r="9" class="speaker-ceiling hit-shape"/>
+                  </g>
+                </g>
 
-      const closeLightbox = () => {
-        lightbox.hidden = true;
-        lightbox.setAttribute("aria-hidden", "true");
-        lightboxImage.removeAttribute("src");
-        lightboxCaption.textContent = "";
-        setBackgroundState(false);
-        document.body.classList.remove("lightbox-open");
-        if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
-          lastFocusedElement.focus();
-        }
-      };
+                <g class="plan-annotations" aria-hidden="true">
+                  <g class="hit" data-info="screen" role="button" tabindex="0" aria-label="Cinemascope-Leinwand">
+                    <rect x="70" y="48" width="332" height="3.5" class="screen-line hit-shape"/>
+                  </g>
+                  <g class="dim">
+                    <line x1="-14" y1="50" x2="-14" y2="300"/>
+                    <line x1="-17" y1="50" x2="-11" y2="50"/>
+                    <line x1="-17" y1="300" x2="-11" y2="300"/>
+                    <text x="-20" y="178" text-anchor="end">3,0 m</text>
+                  </g>
+                  <g class="dim">
+                    <line x1="486" y1="50" x2="486" y2="480"/>
+                    <line x1="483" y1="50" x2="489" y2="50"/>
+                    <line x1="483" y1="480" x2="489" y2="480"/>
+                    <text x="492" y="268">4,8 m</text>
+                  </g>
+                  <g class="dim">
+                    <line x1="41" y1="582" x2="431" y2="582"/>
+                    <line x1="41" y1="579" x2="41" y2="585"/>
+                    <line x1="431" y1="579" x2="431" y2="585"/>
+                    <text x="236" y="598" text-anchor="middle">3,9 m</text>
+                  </g>
+                  <text x="6" y="-8" class="plan-text-label">Leinwandseite</text>
+                  <text x="6" y="576" class="plan-text-label">Rückwand</text>
+                </g>
+              </svg>
 
-      triggers.forEach((trigger, index) => {
-        trigger.addEventListener("click", () => openLightbox(index, trigger));
-      });
+              <svg
+                class="plan plan-front"
+                data-plan="front"
+                viewBox="-32 -32 540 412"
+                preserveAspectRatio="xMidYMid meet"
+                role="img"
+                aria-label="Frontansicht der Frontwand mit Leinwand, Dämmung, Lautsprechern und Subwoofern"
+              >
+                <g class="plan-base">
+                  <rect x="0" y="0" width="472" height="235" rx="3" class="wall-concrete"/>
+                  <line x1="-12" y1="235" x2="484" y2="235" class="floor-line"/>
+                </g>
 
-      closeButton.addEventListener("click", closeLightbox);
-      nextButton.addEventListener("click", () => setSlide(currentIndex + 1));
-      prevButton.addEventListener("click", () => setSlide(currentIndex - 1));
+                <g class="plan-layer" data-layer="acoustics">
+                  <g class="hit" data-info="front-wall-insulation" role="button" tabindex="0" aria-label="Dämmung in der Frontständerwand" mask="url(#front-insulation-cutouts)">
+                    <rect x="0" y="0" width="472" height="235" class="front-insulation hit-shape"/>
+                  </g>
+                </g>
 
-      lightbox.addEventListener("click", (event) => {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
-      });
+                <g class="plan-layer" data-layer="bass">
+                  <g class="hit" data-info="bass-front" role="button" tabindex="0" aria-label="Front-DBA mit acht Subwoofern in 50 mal 70 Zentimeter Gehäusen">
+                    <rect x="34" y="21" width="50" height="70" class="sub-cabinet hit-shape"/>
+                    <rect x="152" y="21" width="50" height="70" class="sub-cabinet hit-shape"/>
+                    <rect x="270" y="21" width="50" height="70" class="sub-cabinet hit-shape"/>
+                    <rect x="388" y="21" width="50" height="70" class="sub-cabinet hit-shape"/>
+                    <rect x="34" y="144" width="50" height="70" class="sub-cabinet hit-shape"/>
+                    <rect x="152" y="144" width="50" height="70" class="sub-cabinet hit-shape"/>
+                    <rect x="270" y="144" width="50" height="70" class="sub-cabinet hit-shape"/>
+                    <rect x="388" y="144" width="50" height="70" class="sub-cabinet hit-shape"/>
+                    <circle cx="59" cy="56" r="14" class="sub"/>
+                    <circle cx="177" cy="56" r="14" class="sub"/>
+                    <circle cx="295" cy="56" r="14" class="sub"/>
+                    <circle cx="413" cy="56" r="14" class="sub"/>
+                    <circle cx="59" cy="179" r="14" class="sub"/>
+                    <circle cx="177" cy="179" r="14" class="sub"/>
+                    <circle cx="295" cy="179" r="14" class="sub"/>
+                    <circle cx="413" cy="179" r="14" class="sub"/>
+                  </g>
+                </g>
 
-      const systemListTriggers = Array.from(document.querySelectorAll(".system-list-trigger"));
-      if (systemListTriggers.length > 0) {
-        const panelStep = document.getElementById("system-detail-step");
-        const panelTitle = document.getElementById("system-detail-title");
-        const panelRole = document.getElementById("system-detail-role");
-        const panelCopy = document.getElementById("system-detail-copy");
-        const panelList = document.getElementById("system-detail-list");
-        const panelImage = document.getElementById("system-detail-image");
+                <g class="plan-layer" data-layer="speakers">
+                  <g class="hit" data-info="lcr" role="button" tabindex="0" aria-label="Front L seitlich, Center hinter der Leinwand, Front R seitlich">
+                    <rect x="5" y="125" width="25" height="110" rx="2" class="speaker-tall hit-shape"/>
+                    <rect x="220" y="125" width="25" height="110" rx="2" class="speaker-tall hit-shape"/>
+                    <rect x="442" y="125" width="25" height="110" rx="2" class="speaker-tall hit-shape"/>
+                  </g>
+                </g>
 
-        const setSystemDetailState = (trigger) => {
-          systemListTriggers.forEach((item) => {
-            const isActive = item === trigger;
-            item.classList.toggle("is-active", isActive);
-            item.setAttribute("aria-pressed", isActive ? "true" : "false");
-          });
+                <g class="plan-annotations" aria-hidden="true">
+                  <g class="hit" data-info="screen" role="button" tabindex="0" aria-label="Cinemascope-Leinwand 332 cm">
+                    <rect x="70" y="80" width="332" height="139" rx="2" class="screen-front hit-shape"/>
+                  </g>
+                  <text x="236" y="-12" class="plan-text-label" text-anchor="middle">Frontwand</text>
+                  <text x="236" y="276" class="plan-text-label" text-anchor="middle">Boden</text>
+                  <g class="dim">
+                    <line x1="-14" y1="0" x2="-14" y2="235"/>
+                    <line x1="-17" y1="0" x2="-11" y2="0"/>
+                    <line x1="-17" y1="235" x2="-11" y2="235"/>
+                    <text x="-20" y="122" text-anchor="end">2,35 m</text>
+                  </g>
+                  <g class="dim">
+                    <line x1="70" y1="293" x2="402" y2="293"/>
+                    <line x1="70" y1="290" x2="70" y2="296"/>
+                    <line x1="402" y1="290" x2="402" y2="296"/>
+                    <text x="236" y="308" text-anchor="middle">3,32 m Leinwand</text>
+                  </g>
+                  <g class="dim">
+                    <line x1="0" y1="323" x2="472" y2="323"/>
+                    <line x1="0" y1="320" x2="0" y2="326"/>
+                    <line x1="472" y1="320" x2="472" y2="326"/>
+                    <text x="236" y="338" text-anchor="middle">4,72 m Wandbreite</text>
+                  </g>
+                </g>
+              </svg>
 
-          if (panelStep) panelStep.textContent = trigger.dataset.step || "";
-          if (panelTitle) panelTitle.textContent = trigger.dataset.title || trigger.textContent || "";
-          if (panelRole) panelRole.textContent = trigger.dataset.role || "";
-          if (panelCopy) panelCopy.textContent = trigger.dataset.copy || "";
-          if (panelImage) {
-            const imageSrc = trigger.dataset.image || "";
-            const imageAlt = trigger.dataset.imageAlt || trigger.dataset.title || "";
-            if (imageSrc) {
-              panelImage.src = imageSrc;
-              panelImage.alt = imageAlt;
-              panelImage.hidden = false;
-            } else {
-              panelImage.removeAttribute("src");
-              panelImage.alt = "";
-              panelImage.hidden = true;
-            }
-          }
+              <svg
+                class="plan plan-rear"
+                data-plan="rear"
+                viewBox="-32 -32 540 412"
+                preserveAspectRatio="xMidYMid meet"
+                role="img"
+                aria-label="Rückansicht der Rückwand mit Rück-DBA, Back Surrounds, Projektor-Durchbruch, Absorbern und 1D-Diffusoren"
+              >
+                <g class="plan-base">
+                  <rect x="0" y="0" width="472" height="235" rx="3" class="wall-concrete"/>
+                  <line x1="-12" y1="235" x2="484" y2="235" class="floor-line"/>
+                </g>
 
-          if (panelList) {
-            const lines = (trigger.dataset.lines || "")
-              .split("|")
-              .map((line) => line.trim())
-              .filter(Boolean);
+                <g class="plan-layer" data-layer="acoustics">
+                  <g class="hit" data-info="rear-wall-absorbers" role="button" tabindex="0" aria-label="Durchgehende Dämmung der Rückwand" mask="url(#rear-insulation-cutouts)">
+                    <rect x="0" y="0" width="472" height="235" class="rear-absorber hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="rear-diffusers" role="button" tabindex="0" aria-label="Zwei seitliche 1D-Diffusoren auf der Rückwand">
+                    <rect x="56" y="93" width="100" height="50" fill="url(#hatch-diff)" class="hit-shape acoustic-outline"/>
+                    <rect x="316" y="93" width="100" height="50" fill="url(#hatch-diff)" class="hit-shape acoustic-outline"/>
+                  </g>
+                  <g class="hit" data-info="projector-port" role="button" tabindex="0" aria-label="Projektor-Durchbruch in der Rückwand">
+                    <rect x="216" y="60" width="40" height="42" rx="2" class="projector-port hit-shape"/>
+                    <circle cx="236" cy="81" r="8" class="port-hole"/>
+                    <text x="236" y="54" class="plan-small-label" text-anchor="middle">Projektor</text>
+                  </g>
+                </g>
 
-            panelList.innerHTML = "";
-            lines.forEach((line) => {
-              const item = document.createElement("li");
-              item.textContent = line;
-              panelList.appendChild(item);
-            });
+                <g class="plan-layer" data-layer="bass">
+                  <g class="hit" data-info="bass-rear" role="button" tabindex="0" aria-label="Rück-DBA mit acht Subwoofern in 70 mal 50 Zentimeter Gehäusen">
+                    <rect x="24" y="31" width="70" height="50" class="sub-cabinet hit-shape"/>
+                    <rect x="142" y="31" width="70" height="50" class="sub-cabinet hit-shape"/>
+                    <rect x="260" y="31" width="70" height="50" class="sub-cabinet hit-shape"/>
+                    <rect x="378" y="31" width="70" height="50" class="sub-cabinet hit-shape"/>
+                    <rect x="24" y="154" width="70" height="50" class="sub-cabinet hit-shape"/>
+                    <rect x="142" y="154" width="70" height="50" class="sub-cabinet hit-shape"/>
+                    <rect x="260" y="154" width="70" height="50" class="sub-cabinet hit-shape"/>
+                    <rect x="378" y="154" width="70" height="50" class="sub-cabinet hit-shape"/>
+                    <circle cx="59" cy="56" r="14" class="sub"/>
+                    <circle cx="177" cy="56" r="14" class="sub"/>
+                    <circle cx="295" cy="56" r="14" class="sub"/>
+                    <circle cx="413" cy="56" r="14" class="sub"/>
+                    <circle cx="59" cy="179" r="14" class="sub"/>
+                    <circle cx="177" cy="179" r="14" class="sub"/>
+                    <circle cx="295" cy="179" r="14" class="sub"/>
+                    <circle cx="413" cy="179" r="14" class="sub"/>
+                  </g>
+                </g>
 
-            panelList.hidden = lines.length === 0;
-          }
-        };
+                <g class="plan-layer" data-layer="speakers">
+                  <g class="hit" data-info="back-surround" role="button" tabindex="0" aria-label="Back Surround Left und Right auf der Rückwand">
+                    <rect x="34" y="89" width="22" height="58" rx="2" class="speaker-tall hit-shape"/>
+                    <rect x="416" y="89" width="22" height="58" rx="2" class="speaker-tall hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="height-rear" role="button" tabindex="0" aria-label="Top Surround Back L und R nahe der Rückwand">
+                    <circle cx="100" cy="30" r="9" class="speaker-ceiling hit-shape"/>
+                    <circle cx="372" cy="30" r="9" class="speaker-ceiling hit-shape"/>
+                  </g>
+                </g>
 
-        systemListTriggers.forEach((trigger) => {
-          trigger.addEventListener("click", () => setSystemDetailState(trigger));
-        });
+                <g class="plan-annotations" aria-hidden="true">
+                  <text x="236" y="-12" class="plan-text-label" text-anchor="middle">Rückwand</text>
+                  <text x="236" y="276" class="plan-text-label" text-anchor="middle">Boden / Podestseite</text>
+                  <g class="dim">
+                    <line x1="-14" y1="0" x2="-14" y2="235"/>
+                    <line x1="-17" y1="0" x2="-11" y2="0"/>
+                    <line x1="-17" y1="235" x2="-11" y2="235"/>
+                    <text x="-20" y="122" text-anchor="end">2,35 m</text>
+                  </g>
+                  <g class="dim">
+                    <line x1="0" y1="323" x2="472" y2="323"/>
+                    <line x1="0" y1="320" x2="0" y2="326"/>
+                    <line x1="472" y1="320" x2="472" y2="326"/>
+                    <text x="236" y="338" text-anchor="middle">4,72 m Wandbreite</text>
+                  </g>
+                </g>
+              </svg>
 
-        const initialTrigger = systemListTriggers.find((trigger) => trigger.classList.contains("is-active")) || systemListTriggers[0];
-        if (initialTrigger) {
-          setSystemDetailState(initialTrigger);
-        }
-      }
+              <svg
+                class="plan plan-side"
+                data-plan="side-left"
+                viewBox="-40 -40 640 340"
+                preserveAspectRatio="xMidYMid meet"
+                role="img"
+                aria-label="Linke Seitenwand von innen — Front rechts, Rückwand links"
+              >
+                <g class="plan-base">
+                  <rect x="0" y="0" width="560" height="247" rx="3" class="wall-concrete"/>
+                  <rect x="510" y="0" width="50" height="247" class="wall-stud"/>
+                  <rect x="0" y="0" width="30" height="247" class="wall-stud"/>
+                  <rect x="0" y="0" width="560" height="37" class="wall-stud"/>
+                  <line x1="-12" y1="247" x2="572" y2="247" class="floor-line"/>
+                </g>
 
-      document.addEventListener("keydown", (event) => {
-        if (lightbox.hidden) return;
+                <g class="plan-layer" data-layer="acoustics">
+                  <g class="hit" data-info="early-reflection" role="button" tabindex="0" aria-label="Erstreflektions-Absorber 120 mal 120">
+                    <rect x="390" y="70" width="120" height="120" class="acoustic-block hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="side-absorbers" role="button" tabindex="0" aria-label="Seitliche 100 mal 100 Absorber">
+                    <rect x="240" y="90" width="100" height="100" class="acoustic-block hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="slats" role="button" tabindex="0" aria-label="Slat-Element">
+                    <rect x="135" y="40" width="60" height="180" fill="url(#hatch-slats)" class="hit-shape acoustic-outline"/>
+                  </g>
+                  <g class="hit" data-info="manhattan" role="button" tabindex="0" aria-label="Manhattan-Diffusor 60 mal 180">
+                    <rect x="50" y="40" width="60" height="180" fill="url(#hatch-diff)" class="hit-shape acoustic-outline"/>
+                  </g>
+                  <g class="hit" data-info="heater" role="button" tabindex="0" aria-label="Heizkörperverkleidung mit Binary Diffusor">
+                    <rect x="200" y="190" width="200" height="57" fill="url(#hatch-binary)" class="hit-shape acoustic-heater"/>
+                    <line x1="200" y1="196" x2="400" y2="196" class="heater-slot"/>
+                    <line x1="200" y1="241" x2="400" y2="241" class="heater-slot"/>
+                  </g>
+                  <g class="hit" data-info="floor-absorbers" role="button" tabindex="0" aria-label="Bodenabsorber">
+                    <rect x="380" y="240" width="120" height="7" fill="url(#hatch-floor)" class="hit-shape acoustic-outline"/>
+                  </g>
+                </g>
 
-        if (event.key === "Escape") {
-          closeLightbox();
-          return;
-        }
+                <g class="plan-layer" data-layer="speakers">
+                  <g class="hit" data-info="front-wide" role="button" tabindex="0" aria-label="Front Wide Lautsprecher Nubert nuVero 50">
+                    <rect x="350" y="142" width="32" height="48" rx="2" class="speaker-tall hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="surround" role="button" tabindex="0" aria-label="Surround Lautsprecher Nubert nuVero 70">
+                    <rect x="200" y="132" width="32" height="58" rx="2" class="speaker-tall hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="height-front" role="button" tabindex="0" aria-label="Front Height Left">
+                    <circle cx="440" cy="22" r="9" class="speaker-ceiling hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="height-side" role="button" tabindex="0" aria-label="Top Side Left">
+                    <circle cx="260" cy="22" r="9" class="speaker-ceiling hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="height-rear" role="button" tabindex="0" aria-label="Top Surround Back Left">
+                    <circle cx="70" cy="22" r="9" class="speaker-ceiling hit-shape"/>
+                  </g>
+                </g>
 
-        if (event.key === "ArrowRight") {
-          setSlide(currentIndex + 1);
-          return;
-        }
+                <g class="plan-annotations" aria-hidden="true">
+                  <text x="6" y="-14" class="plan-text-label">Linke Wand · von innen</text>
+                  <text x="20" y="-2" class="plan-text-label">Hinten</text>
+                  <text x="540" y="-2" class="plan-text-label" text-anchor="end">Vorne</text>
+                  <g class="dim">
+                    <line x1="-18" y1="0" x2="-18" y2="247"/>
+                    <line x1="-21" y1="0" x2="-15" y2="0"/>
+                    <line x1="-21" y1="247" x2="-15" y2="247"/>
+                    <text x="-24" y="128" text-anchor="end">2,47 m</text>
+                  </g>
+                  <g class="dim">
+                    <line x1="30" y1="270" x2="510" y2="270"/>
+                    <line x1="30" y1="267" x2="30" y2="273"/>
+                    <line x1="510" y1="267" x2="510" y2="273"/>
+                    <text x="270" y="285" text-anchor="middle">4,8 m freier Innenraum</text>
+                  </g>
+                </g>
+              </svg>
 
-        if (event.key === "ArrowLeft") {
-          setSlide(currentIndex - 1);
-          return;
-        }
+              <svg
+                class="plan plan-side"
+                data-plan="side-right"
+                viewBox="-40 -40 640 340"
+                preserveAspectRatio="xMidYMid meet"
+                role="img"
+                aria-label="Rechte Seitenwand von innen — akustisch symmetrisch zur linken, mit Tür im hinteren Bereich"
+              >
+                <g class="plan-base">
+                  <rect x="0" y="0" width="560" height="247" rx="3" class="wall-concrete"/>
+                  <rect x="0" y="0" width="50" height="247" class="wall-stud"/>
+                  <rect x="530" y="0" width="30" height="247" class="wall-stud"/>
+                  <rect x="0" y="0" width="560" height="37" class="wall-stud"/>
+                  <line x1="-12" y1="247" x2="572" y2="247" class="floor-line"/>
+                </g>
 
-        if (event.key === "Tab") {
-          const focusableElements = getFocusableElements();
-          if (focusableElements.length === 0) {
-            event.preventDefault();
-            return;
-          }
+                <g class="hit" data-info="door" role="button" tabindex="0" aria-label="Tür im hinteren Bereich der rechten Wand">
+                  <rect x="440" y="42" width="80" height="205" class="door hit-shape"/>
+                  <line x1="460" y1="42" x2="440" y2="247" class="door-frame"/>
+                  <circle cx="450" cy="145" r="2.5" class="door-handle"/>
+                </g>
 
-          const firstElement = focusableElements[0];
-          const lastElement = focusableElements[focusableElements.length - 1];
-          const activeElement = document.activeElement;
+                <g class="plan-layer" data-layer="acoustics">
+                  <g class="hit" data-info="early-reflection" role="button" tabindex="0" aria-label="Erstreflektions-Absorber">
+                    <rect x="50" y="70" width="120" height="120" class="acoustic-block hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="side-absorbers" role="button" tabindex="0" aria-label="Seitliche 100 mal 100 Absorber">
+                    <rect x="220" y="90" width="100" height="100" class="acoustic-block hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="slats" role="button" tabindex="0" aria-label="Slat-Element">
+                    <rect x="370" y="40" width="60" height="180" fill="url(#hatch-slats)" class="hit-shape acoustic-outline"/>
+                  </g>
+                  <g class="hit" data-info="manhattan" role="button" tabindex="0" aria-label="Manhattan-Diffusoren auf der Tür">
+                    <rect x="450" y="40" width="60" height="180" fill="url(#hatch-diff)" class="hit-shape acoustic-outline"/>
+                  </g>
+                  <g class="hit" data-info="heater" role="button" tabindex="0" aria-label="Akustikverkleidung im unteren Bereich, symmetrisch zur linken Wand">
+                    <rect x="160" y="190" width="200" height="57" fill="url(#hatch-binary)" class="hit-shape acoustic-heater"/>
+                    <line x1="160" y1="196" x2="350" y2="196" class="heater-slot"/>
+                    <line x1="160" y1="241" x2="350" y2="241" class="heater-slot"/>
+                  </g>
+                  <g class="hit" data-info="floor-absorbers" role="button" tabindex="0" aria-label="Bodenabsorber">
+                    <rect x="60" y="240" width="120" height="7" fill="url(#hatch-floor)" class="hit-shape acoustic-outline"/>
+                  </g>
+                </g>
 
-          if (!lightbox.contains(activeElement)) {
-            event.preventDefault();
-            firstElement.focus();
-            return;
-          }
+                <g class="plan-layer" data-layer="speakers">
+                  <g class="hit" data-info="front-wide" role="button" tabindex="0" aria-label="Front Wide Right">
+                    <rect x="178" y="142" width="32" height="48" rx="2" class="speaker-tall hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="surround" role="button" tabindex="0" aria-label="Surround Right">
+                    <rect x="328" y="132" width="32" height="58" rx="2" class="speaker-tall hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="height-front" role="button" tabindex="0" aria-label="Front Height Right">
+                    <circle cx="120" cy="22" r="9" class="speaker-ceiling hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="height-side" role="button" tabindex="0" aria-label="Top Side Right">
+                    <circle cx="300" cy="22" r="9" class="speaker-ceiling hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="height-rear" role="button" tabindex="0" aria-label="Top Surround Back Right">
+                    <circle cx="490" cy="22" r="9" class="speaker-ceiling hit-shape"/>
+                  </g>
+                </g>
 
-          if (event.shiftKey && activeElement === firstElement) {
-            event.preventDefault();
-            lastElement.focus();
-            return;
-          }
+                <g class="plan-annotations" aria-hidden="true">
+                  <text x="6" y="-14" class="plan-text-label">Rechte Wand · von innen</text>
+                  <text x="20" y="-2" class="plan-text-label">Vorne</text>
+                  <text x="540" y="-2" class="plan-text-label" text-anchor="end">Hinten</text>
+                  <g class="dim">
+                    <line x1="-18" y1="0" x2="-18" y2="247"/>
+                    <line x1="-21" y1="0" x2="-15" y2="0"/>
+                    <line x1="-21" y1="247" x2="-15" y2="247"/>
+                    <text x="-24" y="128" text-anchor="end">2,47 m</text>
+                  </g>
+                  <g class="dim">
+                    <line x1="50" y1="270" x2="530" y2="270"/>
+                    <line x1="50" y1="267" x2="50" y2="273"/>
+                    <line x1="530" y1="267" x2="530" y2="273"/>
+                    <text x="290" y="285" text-anchor="middle">4,8 m freier Innenraum</text>
+                  </g>
+                </g>
+              </svg>
 
-          if (!event.shiftKey && activeElement === lastElement) {
-            event.preventDefault();
-            firstElement.focus();
-          }
-        }
-      });
-    })();
-  </script>
-</body>
+              <svg
+                class="plan plan-ceiling"
+                data-plan="ceiling"
+                viewBox="-32 -28 540 632"
+                preserveAspectRatio="xMidYMid meet"
+                role="img"
+                aria-label="Decke von unten gesehen mit Absorbern, 2D-Diffusor-Feld und Deckenlautsprechern"
+              >
+                <g class="plan-base">
+                  <rect x="0" y="0" width="472" height="560" rx="3" class="wall-concrete"/>
+                  <rect x="0" y="0" width="472" height="50" class="wall-stud"/>
+                  <rect x="0" y="530" width="472" height="30" class="wall-stud"/>
+                  <rect x="41" y="50" width="390" height="480" class="wall-interior"/>
+                  <line x1="236" y1="50" x2="236" y2="530" class="axis"/>
+                </g>
+
+                <g class="plan-layer" data-layer="acoustics">
+                  <g class="hit" data-info="ceiling-front" role="button" tabindex="0" aria-label="Angewinkelter Front-Absorber 100 cm">
+                    <rect x="41" y="50" width="390" height="100" fill="url(#hatch-ceil-front)" class="hit-shape acoustic-outline"/>
+                  </g>
+                  <g class="hit" data-info="ceiling-reflection" role="button" tabindex="0" aria-label="Decken-Erstreflexionsabsorber 120 cm">
+                    <rect x="41" y="150" width="390" height="120" fill="url(#hatch-ceil-mid)" class="hit-shape acoustic-outline"/>
+                  </g>
+                  <g class="hit" data-info="ceiling-diffuser" role="button" tabindex="0" aria-label="Sechzehn 60 mal 60 cm 2D-Diffusoren">
+                    <rect x="116" y="270" width="240" height="240" fill="url(#hatch-diff)" class="hit-shape acoustic-outline"/>
+                    <line x1="176" y1="270" x2="176" y2="510" class="grid-fine"/>
+                    <line x1="236" y1="270" x2="236" y2="510" class="grid-fine"/>
+                    <line x1="296" y1="270" x2="296" y2="510" class="grid-fine"/>
+                    <line x1="116" y1="330" x2="356" y2="330" class="grid-fine"/>
+                    <line x1="116" y1="390" x2="356" y2="390" class="grid-fine"/>
+                    <line x1="116" y1="450" x2="356" y2="450" class="grid-fine"/>
+                  </g>
+                </g>
+
+                <g class="plan-layer" data-layer="speakers">
+                  <g class="hit" data-info="height-front" role="button" tabindex="0" aria-label="Front Heights Decke">
+                    <circle cx="60" cy="115" r="10" class="speaker-ceiling speaker-ceiling-up hit-shape"/>
+                    <circle cx="236" cy="115" r="10" class="speaker-ceiling speaker-ceiling-up hit-shape"/>
+                    <circle cx="412" cy="115" r="10" class="speaker-ceiling speaker-ceiling-up hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="height-side" role="button" tabindex="0" aria-label="Top Side L und R">
+                    <circle cx="60" cy="310" r="10" class="speaker-ceiling speaker-ceiling-up hit-shape"/>
+                    <circle cx="412" cy="310" r="10" class="speaker-ceiling speaker-ceiling-up hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="vog" role="button" tabindex="0" aria-label="Voice of God">
+                    <circle cx="236" cy="310" r="12" class="speaker-ceiling speaker-vog speaker-ceiling-up hit-shape"/>
+                  </g>
+                  <g class="hit" data-info="height-rear" role="button" tabindex="0" aria-label="Top Surround Back L und R">
+                    <circle cx="60" cy="505" r="10" class="speaker-ceiling speaker-ceiling-up hit-shape"/>
+                    <circle cx="412" cy="505" r="10" class="speaker-ceiling speaker-ceiling-up hit-shape"/>
+                  </g>
+                </g>
+
+                <g class="plan-annotations" aria-hidden="true">
+                  <text x="6" y="-8" class="plan-text-label">Frontwand</text>
+                  <text x="6" y="576" class="plan-text-label">Rückwand</text>
+                  <g class="dim">
+                    <line x1="486" y1="50" x2="486" y2="150"/>
+                    <line x1="483" y1="50" x2="489" y2="50"/>
+                    <line x1="483" y1="150" x2="489" y2="150"/>
+                    <text x="492" y="103">100 cm</text>
+                  </g>
+                  <g class="dim">
+                    <line x1="486" y1="150" x2="486" y2="270"/>
+                    <line x1="483" y1="150" x2="489" y2="150"/>
+                    <line x1="483" y1="270" x2="489" y2="270"/>
+                    <text x="492" y="213">120 cm</text>
+                  </g>
+                  <g class="dim">
+                    <line x1="486" y1="270" x2="486" y2="510"/>
+                    <line x1="483" y1="270" x2="489" y2="270"/>
+                    <line x1="483" y1="510" x2="489" y2="510"/>
+                    <text x="492" y="393">240 cm</text>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <aside class="tour-info" aria-live="polite">
+              <span class="info-kicker" data-info-kicker>Draufsicht</span>
+              <h3 class="info-title" data-info-title>Der Raum als Kinosaal</h3>
+              <p class="info-text" data-info-text>
+                Sitze, Lautsprecher, Bassarrays und Akustikelemente sind
+                einzeln markiert. Tippe ein Element an, um Details und Maße
+                zu sehen — Layer lassen sich oben einzeln ein- und ausblenden.
+              </p>
+              <dl class="info-specs" data-info-specs></dl>
+              <p class="info-hint" data-info-hint>
+                Aktuelle Ansicht: <strong>Draufsicht</strong>
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section experience-section" id="erlebnis" data-reveal>
+        <div class="section-heading">
+          <p class="section-label">Erlebnis</p>
+          <h2>Was den Raum ausmacht.</h2>
+          <p>
+            Die Seite soll das Kino zeigen, nicht die Materialliste erklären.
+            Deshalb stehen die erlebbaren Qualitäten im Vordergrund: großes
+            Bild, präziser Ton, ruhige Akustik und die besondere Lichtstimmung.
+          </p>
+        </div>
+
+        <div class="experience-grid">
+          <article class="experience-card">
+            <img
+              src="assets/images/site/screen-glow.webp"
+              alt="21:9-Leinwand mit blau-violetter Lichtstimmung"
+              loading="lazy"
+            />
+            <div>
+              <h3>Cinemascope-Front</h3>
+              <p>
+                Die 332 cm breite 21:9-Leinwand prägt den Raum. Durch die
+                mikroperforierte Fläche kann der Center direkt aus dem Bild
+                spielen, ohne optisch sichtbar zu sein.
+              </p>
+            </div>
+          </article>
+          <article class="experience-card">
+            <img
+              src="assets/images/site/front-open.webp"
+              alt="Geöffnete Frontwand mit Lautsprechern und Subwoofern"
+              loading="lazy"
+            />
+            <div>
+              <h3>Unsichtbarer Aufwand</h3>
+              <p>
+                Hinter der fertigen Oberfläche steckt eine komplette Frontwand
+                mit Lautsprechern, Subwoofern und akustischer Behandlung. Im
+                fertigen Raum bleibt davon nur der Eindruck von Ruhe und
+                Kontrolle.
+              </p>
+            </div>
+          </article>
+          <article class="experience-card">
+            <img
+              src="assets/images/site/rear-row.webp"
+              alt="Zweite Sitzreihe auf dem Podest mit farbiger Beleuchtung"
+              loading="lazy"
+            />
+            <div>
+              <h3>Zwei Ebenen, sechs Plätze</h3>
+              <p>
+                Vorne stehen zwei komfortable Lounge-Sessel, hinten vier
+                zusätzliche Kinositze auf einem Podest. So funktioniert der Raum
+                allein, zu zweit oder mit Gästen.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section acoustic-section" id="akustik" data-reveal>
+        <figure class="feature-media">
+          <img
+            src="assets/images/site/diffuser-detail.webp"
+            alt="Seitliches Detail mit Diffusor-Struktur und magentafarbenem Licht"
+            loading="lazy"
+          />
+          <figcaption>
+            Akustische Elemente verschwinden hinter Stoff, Struktur und Licht
+          </figcaption>
+        </figure>
+        <div class="section-copy">
+          <p class="section-label">Akustik</p>
+          <h2>Kontrolle, ohne dass der Raum steril wirkt.</h2>
+          <p>
+            Absorber, Diffusoren, Slat-Elemente und Bespannungen sind so
+            verteilt, dass frühe Reflexionen kontrolliert und der hintere
+            Raumbereich lebendig bleibt. Das Ergebnis soll nicht trocken wirken,
+            sondern groß, stabil und klar.
+          </p>
+          <div class="detail-list">
+            <article>
+              <h3>Front hinter der Leinwand</h3>
+              <p>
+                Center, Hauptlautsprecher und das vordere Bassarray sitzen in
+                einer tiefen Frontkonstruktion und arbeiten durch die Leinwand.
+              </p>
+            </article>
+            <article>
+              <h3>Seiten und Decke</h3>
+              <p>
+                Die relevanten Reflexionsbereiche sind behandelt, ohne den Raum
+                optisch mit sichtbaren Akustikplatten zu überladen.
+              </p>
+            </article>
+            <article>
+              <h3>Restlicht und Oberfläche</h3>
+              <p>
+                Dunkle Stoffe im Frontbereich reduzieren Streulicht; akustisch
+                transparenter Stoff kaschiert die Technik an Seiten, Rückwand
+                und Decke.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section spec-band" aria-label="Kino Eckdaten" data-reveal>
+        <div>
+          <span>Bild</span>
+          <strong>JVC NZ7 auf 332 cm Cinemascope-Leinwand</strong>
+        </div>
+        <div>
+          <span>Ton</span>
+          <strong>StormAudio Vorstufe, Dirac ART und 24-Kanal-Ausbau</strong>
+        </div>
+        <div>
+          <span>Bass</span>
+          <strong>16 Subwoofer als Double Bass Array vorne und hinten</strong>
+        </div>
+      </section>
+
+      <section class="section tech-section" id="technik" data-reveal>
+        <div class="section-heading">
+          <p class="section-label">Technik</p>
+          <h2>Die Technik hinter dem Kino.</h2>
+          <p>
+            Die Komponenten sind nicht Selbstzweck, sondern bilden die Grundlage
+            für ein kontrolliertes, immersives Setup: Verarbeitung, Projektion,
+            Lautsprecher, Endstufen und Basssystem greifen ineinander.
+          </p>
+        </div>
+
+        <div class="component-grid">
+          <article class="component-card wide">
+            <img
+              src="assets/images/reference/stormaudio-isp-elite-mk2.webp"
+              alt="StormAudio ISP Elite MK2 24-Kanal Vorstufe"
+              loading="lazy"
+            />
+            <div>
+              <span>Signalzentrale</span>
+              <h3>StormAudio ISP Elite MK2 24ch</h3>
+              <p>
+                Verarbeitet das Mehrkanal-Setup und übernimmt die Einmessung mit
+                Dirac ART.
+              </p>
+            </div>
+          </article>
+          <article class="component-card">
+            <img
+              src="assets/images/reference/jvc-nz7.png"
+              alt="JVC NZ7 Projektor"
+              loading="lazy"
+            />
+            <div>
+              <span>Bild</span>
+              <h3>JVC NZ7</h3>
+              <p>Projektor für die breite Cinemascope-Front.</p>
+            </div>
+          </article>
+          <article class="component-card">
+            <img
+              src="assets/images/reference/nubert-nuvero-110.png"
+              alt="Nubert nuVero 110 Lautsprecher"
+              loading="lazy"
+            />
+            <div>
+              <span>Front L/R</span>
+              <h3>Nubert nuVero 110</h3>
+              <p>Hauptlautsprecher links und rechts der Leinwand.</p>
+            </div>
+          </article>
+          <article class="component-card">
+            <img
+              src="assets/images/reference/nubert-nuvero-nova-12.png"
+              alt="Nubert nuVero Nova 12 Center"
+              loading="lazy"
+            />
+            <div>
+              <span>Center</span>
+              <h3>nuVero Nova 12</h3>
+              <p>Spielt direkt hinter der mikroperforierten Leinwand.</p>
+            </div>
+          </article>
+          <article class="component-card">
+            <img
+              src="assets/images/reference/nuvero-70-transparent.png"
+              alt="Nubert nuVero 70 Surroundlautsprecher"
+              loading="lazy"
+            />
+            <div>
+              <span>Surround</span>
+              <h3>nuVero 70</h3>
+              <p>Seitliche Kanäle für die räumliche Hülle.</p>
+            </div>
+          </article>
+          <article class="component-card">
+            <img
+              src="assets/images/reference/scan-speak-30w4558t00-transparent.png"
+              alt="Scan-Speak 30W/4558T00 Subwoofer-Chassis"
+              loading="lazy"
+            />
+            <div>
+              <span>DBA</span>
+              <h3>Scan-Speak 30W/4558T00</h3>
+              <p>16 Chassis arbeiten als Bassarray in Front- und Rückwand.</p>
+            </div>
+          </article>
+          <article class="component-card wide">
+            <img
+              src="assets/images/reference/apollon-1et400a.png"
+              alt="Apollon 1ET400A Endstufe"
+              loading="lazy"
+            />
+            <div>
+              <span>Endstufen</span>
+              <h3>Apollon, IOTAVX und TSA 4-700</h3>
+              <p>
+                Getrennte Verstärkung für Front, Surrounds, Höhenkanäle und das
+                komplette Double Bass Array.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="galerie" data-reveal>
+        <div class="section-heading compact">
+          <p class="section-label">Galerie</p>
+          <h2>Einblicke in den fertigen Raum.</h2>
+        </div>
+        <div class="gallery-grid">
+          <figure>
+            <img
+              src="assets/images/site/hero-room.webp"
+              alt="Blick durch das Heimkino auf Podest und vordere Sessel"
+              loading="lazy"
+            />
+            <figcaption>Raumwirkung mit zwei Sitzebenen</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="assets/images/site/warm-screen.webp"
+              alt="Warme Lichtstimmung an der Leinwand"
+              loading="lazy"
+            />
+            <figcaption>Warme Frontstimmung</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="assets/images/site/screen-glow.webp"
+              alt="Leinwand mit blau-violetter Lichtstimmung"
+              loading="lazy"
+            />
+            <figcaption>21:9-Leinwand</figcaption>
+          </figure>
+          <figure class="portrait">
+            <img
+              src="assets/images/site/entry-detail.webp"
+              alt="Eingangsdetail mit JVC-Poster und blauer Beleuchtung"
+              loading="lazy"
+            />
+            <figcaption>Eingangsdetail</figcaption>
+          </figure>
+          <figure class="portrait">
+            <img
+              src="assets/images/site/diffuser-detail.webp"
+              alt="Seitliche Diffusor-Struktur mit Lichtstimmung"
+              loading="lazy"
+            />
+            <figcaption>Struktur und Licht</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#top" aria-label="Zurück zum Anfang">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>eclipse</span>
+      </a>
+      <div>
+        <p>Privates Heimkino · eclipse-homecinema.de</p>
+      </div>
+    </footer>
+  </body>
 </html>

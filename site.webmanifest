@@ -1,0 +1,24 @@
+{
+  "name": "eclipse homecinema",
+  "short_name": "eclipse",
+  "description": "Privates Heimkino mit Cinemascope-Leinwand, 24-Kanal-Ton und Double Bass Array.",
+  "lang": "de",
+  "start_url": "/",
+  "scope": "/",
+  "display": "minimal-ui",
+  "theme_color": "#05070b",
+  "background_color": "#05070b",
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "assets/icons/favicon-maskable.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "maskable"
+    }
+  ]
+}

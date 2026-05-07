@@ -3,8 +3,24 @@
     "allow": [
       "Skill(update-config)",
       "Skill(update-config:*)",
-      "Bash(pip --version)",
-      "Bash(pdftotext \"d:/Projects/eclipse-cinema-homepage/assets/Heimkino.pdf\" -)"
+      "Bash(where pdftoppm *)",
+      "Bash(where pdftotext *)",
+      "Bash(where pdf2txt *)",
+      "Bash(pdftotext -layout \"d:/Projects/eclipse-cinema-homepage/assets/Heimkino.pdf\" -)",
+      "Bash(where python *)",
+      "Bash(\"C:\\\\Users\\\\marku\\\\AppData\\\\Local\\\\Python\\\\bin\\\\python.exe\" -m http.server 8765 --directory \"d:/Projects/eclipse-cinema-homepage\")",
+      "Bash(curl -sf \"http://127.0.0.1:8765/index.html\" -o /dev/null)",
+      "Bash(node --check \"d:/Projects/eclipse-cinema-homepage/script.js\")",
+      "Bash(echo \"exit=$?\")",
+      "Bash(curl -s \"http://127.0.0.1:8765/index.html\" -o /tmp/page.html)",
+      "Bash(node -e ' *)",
+      "Bash(node \"d:/Projects/eclipse-cinema-homepage/.tagcheck.cjs\")",
+      "Bash(curl -s \"http://127.0.0.1:8765/index.html\")",
+      "Bash(curl -s -o NUL -w \"html=%{http_code} \" \"http://127.0.0.1:8765/index.html\")",
+      "Bash(curl -s -o NUL -w \"css=%{http_code} \" \"http://127.0.0.1:8765/styles.css\")",
+      "Bash(curl -s -o NUL -w \"js=%{http_code}\\\\n\" \"http://127.0.0.1:8765/script.js\")"
     ]
-  }
+  },
+  "model": "claude-opus-4-7",
+  "alwaysThinkingEnabled": true
 }
