@@ -26,14 +26,14 @@
     />
     <meta name="twitter:image" content="assets/images/site/hero-room.webp" />
     <link rel="canonical" href="https://eclipse-homecinema.de/" />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%236bd8ff'/%3E%3Cstop offset='0.5' stop-color='%23d954ff'/%3E%3Cstop offset='1' stop-color='%23f0a144'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='6' fill='%2305070b'/%3E%3Ccircle cx='16' cy='16' r='9' fill='url(%23g)'/%3E%3Ccircle cx='19' cy='14' r='6' fill='%2305070b'/%3E%3C/svg%3E"
-    />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="mask-icon" href="assets/icons/favicon.svg" color="#6bd8ff" />
+    <link rel="manifest" href="site.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
+    <a class="skip-link" href="#top">Zum Inhalt springen</a>
     <header class="site-header" aria-label="Hauptnavigation">
       <a class="brand" href="#top" aria-label="eclipse homecinema Start">
         <span class="brand-mark" aria-hidden="true"></span>
@@ -57,6 +57,7 @@
         />
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="hero-content">
+          <p class="hero-kicker">Privates Heimkino</p>
           <h1>eclipse</h1>
           <p>
             Ein privates Heimkino, das wie ein kleiner Kinosaal wirkt:
@@ -64,8 +65,8 @@
             und ein Bassfundament, das unsichtbar in den Wänden arbeitet.
           </p>
           <div class="hero-actions" aria-label="Seitensprünge">
-            <a class="button primary" href="#raumtour">Durch den Raum gehen</a>
-            <a class="button secondary" href="#galerie">Wie es aussieht</a>
+            <a class="button primary" href="#raumtour">Raumtour öffnen</a>
+            <a class="button secondary" href="#galerie">Zur Galerie</a>
           </div>
         </div>
       </section>
@@ -139,24 +140,12 @@
         <div class="room-tour" data-tour data-view="top">
           <div class="tour-controls">
             <div class="tour-views" role="tablist" aria-label="Ansicht wechseln">
-              <button type="button" role="tab" data-view="top" class="is-active" aria-selected="true">
-                <span aria-hidden="true">▦</span> Draufsicht
-              </button>
-              <button type="button" role="tab" data-view="front" aria-selected="false">
-                <span aria-hidden="true">▤</span> Frontwand
-              </button>
-              <button type="button" role="tab" data-view="rear" aria-selected="false">
-                <span aria-hidden="true">▥</span> Rückwand
-              </button>
-              <button type="button" role="tab" data-view="side-left" aria-selected="false">
-                <span aria-hidden="true">◧</span> Seite L
-              </button>
-              <button type="button" role="tab" data-view="side-right" aria-selected="false">
-                <span aria-hidden="true">◨</span> Seite R
-              </button>
-              <button type="button" role="tab" data-view="ceiling" aria-selected="false">
-                <span aria-hidden="true">☷</span> Decke
-              </button>
+              <button type="button" role="tab" data-view="top" class="is-active" aria-selected="true">Draufsicht</button>
+              <button type="button" role="tab" data-view="front" aria-selected="false">Frontwand</button>
+              <button type="button" role="tab" data-view="rear" aria-selected="false">Rückwand</button>
+              <button type="button" role="tab" data-view="side-left" aria-selected="false">Seite L</button>
+              <button type="button" role="tab" data-view="side-right" aria-selected="false">Seite R</button>
+              <button type="button" role="tab" data-view="ceiling" aria-selected="false">Decke</button>
             </div>
             <div class="tour-layers" aria-label="Layer ein- und ausblenden">
               <button type="button" data-layer="seats" aria-pressed="true">
@@ -774,17 +763,16 @@
             </div>
 
             <aside class="tour-info" aria-live="polite">
-              <span class="info-kicker" data-info-kicker>Übersicht</span>
-              <h3 class="info-title" data-info-title>Tipp eines an</h3>
+              <span class="info-kicker" data-info-kicker>Draufsicht</span>
+              <h3 class="info-title" data-info-title>Der Raum als Kinosaal</h3>
               <p class="info-text" data-info-text>
-                Sitze, Lautsprecher, Bassarrays und Akustikelemente sind im
-                Plan einzeln markiert. Tippe ein Element an, um Details und
-                Maße zu sehen — Layer lassen sich oben einzeln ein- und
-                ausblenden.
+                Sitze, Lautsprecher, Bassarrays und Akustikelemente sind
+                einzeln markiert. Tippe ein Element an, um Details und Maße
+                zu sehen — Layer lassen sich oben einzeln ein- und ausblenden.
               </p>
               <dl class="info-specs" data-info-specs></dl>
               <p class="info-hint" data-info-hint>
-                Aktuelle Ansicht: <strong>Draufsicht</strong> · 17 Lautsprecher · 16 Subwoofer
+                Aktuelle Ansicht: <strong>Draufsicht</strong>
               </p>
             </aside>
           </div>
