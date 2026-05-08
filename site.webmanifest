@@ -10,12 +10,12 @@
   "background_color": "#05070b",
   "icons": [
     {
-      "src": "assets/icons/favicon.svg",
+      "src": "assets/used/eclipse-favicon.svg",
       "type": "image/svg+xml",
       "sizes": "any"
     },
     {
-      "src": "assets/icons/favicon-maskable.svg",
+      "src": "assets/used/eclipse-favicon-maskable.svg",
       "type": "image/svg+xml",
       "sizes": "any",
       "purpose": "maskable"

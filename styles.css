@@ -144,7 +144,7 @@ button {
 .brand-mark {
   width: 2rem;
   height: 2rem;
-  background: url("assets/icons/favicon.svg") center/contain no-repeat;
+  background: url("assets/used/eclipse-favicon.svg") center/contain no-repeat;
   border-radius: 18.75%;
   box-shadow: 0 0 28px rgba(107, 216, 255, 0.22);
 }
@@ -1121,6 +1121,10 @@ figcaption {
   grid-column: span 2;
 }
 
+.gallery-grid .portrait-pair {
+  grid-column: span 3;
+}
+
 .gallery-grid figure {
   cursor: zoom-in;
 }
@@ -1143,6 +1147,10 @@ figcaption {
 }
 
 .gallery-grid .portrait img {
+  aspect-ratio: 4 / 5;
+}
+
+.gallery-grid .portrait-pair img {
   aspect-ratio: 4 / 5;
 }
 
@@ -1324,7 +1332,8 @@ figcaption {
   .gallery-grid figure,
   .gallery-grid figure:first-child,
   .gallery-grid figure:nth-child(2),
-  .gallery-grid .portrait {
+  .gallery-grid .portrait,
+  .gallery-grid .portrait-pair {
     grid-column: span 1;
   }
 }
@@ -1431,7 +1440,8 @@ figcaption {
   }
 
   .gallery-grid img,
-  .gallery-grid .portrait img {
+  .gallery-grid .portrait img,
+  .gallery-grid .portrait-pair img {
     min-height: 0;
     aspect-ratio: 4 / 3;
   }
