@@ -49,21 +49,21 @@ if (tour) {
     "side-left": {
       kicker: "Linke Wand",
       title: "Akustik-Reihenfolge auf der linken Wand",
-      text: "Von vorne nach hinten: Erstreflektions-Absorber (120×120), Front Wide, 100×100 Absorber, Surround, Slat-Element und Manhattan-Diffusor. Im unteren 60 cm-Bereich sitzt der Heizkörper hinter einer Binary-Diffusor-Verkleidung.",
+      text: "Von vorne nach hinten: Erstreflektions-Absorber (120×120), Front Wide, 100×100 Absorber mit zwei Manhattan-Diffusoren darüber, Surround, Slat-Element und drei gestapelte HOFA 2D-QRD-Diffusoren im hinteren Drittel. Im unteren 60 cm-Bereich sitzt der Heizkörper hinter einer Binary-Diffusor-Verkleidung.",
       specs: {
         "Wandlänge frei": "4,8 m",
-        "Wandhöhe": "2,47 m roh / 2,1 m frei",
+        "Wandhöhe": "2,35 m",
         "Besonderheit": "Heizkörperverkleidung 200×57 cm",
       },
     },
     "side-right": {
       kicker: "Rechte Wand",
       title: "Spiegelbild der linken Wand — mit Tür",
-      text: "Erstreflektions-Absorber, Front Wide, 100×100, Surround und Slat-Element wie links. Statt Manhattan-Diffusor sitzt im hinteren Bereich die Tür ins Kino — sie übernimmt dort den Wandabschnitt.",
+      text: "Erstreflektions-Absorber, Front Wide, 100×100 mit zwei Manhattan-Diffusoren darüber, Surround und Slat-Element wie links. Im hinteren Drittel sitzt die Tür ins Kino — auf ihr drei HOFA 2D-QRD-Diffusoren als Pendant zum HOFA-Feld auf der linken Wand.",
       specs: {
         "Wandlänge frei": "4,8 m",
-        "Wandhöhe": "2,47 m roh / 2,1 m frei",
-        "Besonderheit": "Tür im hinteren Wanddrittel",
+        "Wandhöhe": "2,35 m",
+        "Besonderheit": "Tür im hinteren Wanddrittel mit HOFA-Feld",
       },
     },
     ceiling: {
@@ -267,12 +267,25 @@ if (tour) {
     },
     manhattan: {
       kicker: "Manhattan-Diffusoren",
-      title: "2D-Diffusion auf Höhe Reihe 2",
-      text: "Streuen den Schall horizontal und vertikal. Halten den Klang räumlich groß, ohne den Raum zu dämpfen oder steril wirken zu lassen.",
+      title: "2D-Diffusion über den seitlichen Absorbern",
+      text: "Pro Seite zwei 60 × 60 cm Manhattan-Diffusoren direkt über den 100 × 100 Absorbern. Sie streuen die ankommende Energie horizontal und vertikal und halten den Klang räumlich groß, ohne den Raum zu dämpfen.",
       specs: {
-        "Größe": "60 × 180 cm",
+        "Größe pro Modul": "60 × 60 cm",
+        "Anzahl pro Seite": "2 Stück nebeneinander",
+        "Gesamt pro Seite": "120 × 60 cm",
         "Material": "EPS",
-        "Position": "Seitenwand auf Höhe Reihe 2",
+        "Position": "über den 100 × 100 Absorbern",
+      },
+    },
+    "qrd-rear": {
+      kicker: "HOFA 2D-QRD",
+      title: "QRD-Diffusoren im hinteren Wandbereich",
+      text: "Im hinteren Wanddrittel sitzen je drei HOFA 2D-QRD-Diffusoren à 50 × 50 cm übereinander — links direkt an der Wand, rechts auf der Tür. Pro Seite ergibt das ein 50 × 150 cm hohes Diffusionsfeld.",
+      specs: {
+        "Größe pro Modul": "50 × 50 cm",
+        "Anzahl pro Seite": "3 Stück gestapelt",
+        "Gesamt pro Seite": "50 × 150 cm",
+        "Position": "links hinten / rechts auf der Tür",
       },
     },
     "rear-diffusers": {
@@ -488,4 +501,78 @@ if (prefersReducedMotion || !("IntersectionObserver" in window)) {
     { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
   );
   reveals.forEach((el) => observer.observe(el));
+}
+
+const navLinks = document.querySelectorAll(".main-nav a[href^='#']");
+if (navLinks.length && "IntersectionObserver" in window) {
+  const linksByHash = new Map();
+  const sections = [];
+  navLinks.forEach((link) => {
+    const hash = link.getAttribute("href");
+    if (!hash || hash === "#" || hash === "#top") return;
+    const target = document.querySelector(hash);
+    if (!target) return;
+    linksByHash.set(hash.slice(1), link);
+    sections.push(target);
+  });
+
+  let activeId = null;
+  const setActive = (id) => {
+    if (id === activeId) return;
+    activeId = id;
+    linksByHash.forEach((link, key) => {
+      link.classList.toggle("is-active", key === id);
+    });
+  };
+
+  const spy = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((e) => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      if (visible[0]) setActive(visible[0].target.id);
+    },
+    { rootMargin: "-40% 0px -50% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] },
+  );
+  sections.forEach((s) => spy.observe(s));
+}
+
+const lightbox = document.querySelector("[data-lightbox]");
+const galleryFigures = document.querySelectorAll(".gallery-grid figure");
+if (lightbox && galleryFigures.length && typeof lightbox.showModal === "function") {
+  const lbImg = lightbox.querySelector("[data-lightbox-img]");
+  const lbCaption = lightbox.querySelector("[data-lightbox-caption]");
+
+  const openFor = (figure) => {
+    const img = figure.querySelector("img");
+    const caption = figure.querySelector("figcaption");
+    if (!img) return;
+    lbImg.src = img.currentSrc || img.src;
+    lbImg.alt = img.alt || "";
+    lbCaption.textContent = caption ? caption.textContent.trim() : "";
+    lightbox.showModal();
+  };
+
+  galleryFigures.forEach((figure) => {
+    figure.tabIndex = 0;
+    figure.setAttribute("role", "button");
+    const label = figure.querySelector("figcaption");
+    if (label) figure.setAttribute("aria-label", `${label.textContent.trim()} vergrößern`);
+    figure.addEventListener("click", () => openFor(figure));
+    figure.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openFor(figure);
+      }
+    });
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) lightbox.close();
+  });
+  lightbox.addEventListener("close", () => {
+    lbImg.removeAttribute("src");
+    lbImg.alt = "";
+    lbCaption.textContent = "";
+  });
 }
