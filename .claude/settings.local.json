@@ -20,7 +20,12 @@
       "Bash(curl -s -o NUL -w \"css=%{http_code} \" \"http://127.0.0.1:8765/styles.css\")",
       "Bash(curl -s -o NUL -w \"js=%{http_code}\\\\n\" \"http://127.0.0.1:8765/script.js\")",
       "Bash(node -e \"require\\('fs'\\).readFileSync\\('script.js', 'utf8'\\); new Function\\(require\\('fs'\\).readFileSync\\('script.js', 'utf8'\\)\\);\")",
-      "Bash(node -e \"new Function\\(require\\('fs'\\).readFileSync\\('script.js', 'utf8'\\)\\)\")"
+      "Bash(node -e \"new Function\\(require\\('fs'\\).readFileSync\\('script.js', 'utf8'\\)\\)\")",
+      "PowerShell(magick -version)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "Bash(npm install *)",
+      "Bash(node enhance-images.mjs)"
     ]
   },
   "model": "claude-opus-4-7",
