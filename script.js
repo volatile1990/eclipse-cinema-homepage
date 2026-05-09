@@ -553,7 +553,7 @@ if (lightbox && galleryFigures.length && typeof lightbox.showModal === "function
     const img = figure.querySelector("img");
     const caption = figure.querySelector("figcaption");
     if (!img) return;
-    lbImg.src = img.currentSrc || img.src;
+    lbImg.src = img.dataset.full || img.currentSrc || img.src;
     lbImg.alt = img.alt || "";
     lbCaption.textContent = caption ? caption.textContent.trim() : "";
     currentIndex = index;

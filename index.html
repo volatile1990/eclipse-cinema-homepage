@@ -15,16 +15,16 @@
       property="og:description"
       content="Ein privates Heimkino mit 21:9-Leinwand, immersivem 24-Kanal-Ton, 16 Subwoofern und interaktiver Raumtour."
     />
-    <meta property="og:image" content="assets/used/cinema-room-hero.webp" />
-    <meta property="og:image:width" content="1600" />
-    <meta property="og:image:height" content="900" />
+    <meta property="og:image" content="assets/used/responsive/cinema-room-hero-1200.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="eclipse homecinema" />
     <meta
       name="twitter:description"
       content="Ein privates Heimkino mit 21:9-Leinwand, immersivem 24-Kanal-Ton, 16 Subwoofern und interaktiver Raumtour."
     />
-    <meta name="twitter:image" content="assets/used/cinema-room-hero.webp" />
+    <meta name="twitter:image" content="assets/used/responsive/cinema-room-hero-1200.webp" />
     <link rel="canonical" href="https://eclipse-homecinema.de/" />
     <link rel="icon" type="image/svg+xml" href="assets/used/eclipse-favicon.svg" />
     <link rel="mask-icon" href="assets/used/eclipse-favicon.svg" color="#6bd8ff" />
@@ -49,12 +49,31 @@
 
     <main id="top">
       <section class="hero" aria-label="eclipse Heimkino">
-        <img
-          class="hero-image"
-          src="assets/used/cinema-room-hero.webp"
-          alt="Blick in das eclipse Heimkino mit Lounge-Sesseln, Podest und farbiger Lichtstimmung"
-          fetchpriority="high"
-        />
+        <picture class="hero-image">
+          <source
+            type="image/avif"
+            srcset="
+              assets/used/responsive/cinema-room-hero-1200.avif 1200w,
+              assets/used/responsive/cinema-room-hero-1800.avif 1800w,
+              assets/used/responsive/cinema-room-hero-2560.avif 2560w
+            "
+            sizes="100vw"
+          />
+          <source
+            type="image/webp"
+            srcset="
+              assets/used/responsive/cinema-room-hero-1200.webp 1200w,
+              assets/used/responsive/cinema-room-hero-1800.webp 1800w,
+              assets/used/responsive/cinema-room-hero-2560.webp 2560w
+            "
+            sizes="100vw"
+          />
+          <img
+            src="assets/used/responsive/cinema-room-hero-1800.webp"
+            alt="Blick in das eclipse Heimkino mit Lounge-Sesseln, Podest und farbiger Lichtstimmung"
+            fetchpriority="high"
+          />
+        </picture>
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="hero-content">
           <p class="hero-kicker">Privates Heimkino</p>
@@ -114,11 +133,31 @@
           </p>
         </div>
         <figure class="feature-media">
-          <img
-            src="assets/used/cinema-front-lounge-seats.webp"
-            alt="Seitlicher Blick auf die vorderen Lounge-Sessel und die 21:9-Leinwand"
-            loading="lazy"
-          />
+          <picture>
+            <source
+              type="image/avif"
+              srcset="
+                assets/used/responsive/cinema-front-lounge-seats-900.avif 900w,
+                assets/used/responsive/cinema-front-lounge-seats-1400.avif 1400w,
+                assets/used/responsive/cinema-front-lounge-seats-1800.avif 1800w
+              "
+              sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                assets/used/responsive/cinema-front-lounge-seats-900.webp 900w,
+                assets/used/responsive/cinema-front-lounge-seats-1400.webp 1400w,
+                assets/used/responsive/cinema-front-lounge-seats-1800.webp 1800w
+              "
+              sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+            />
+            <img
+              src="assets/used/responsive/cinema-front-lounge-seats-1400.webp"
+              alt="Seitlicher Blick auf die vorderen Lounge-Sessel und die 21:9-Leinwand"
+              loading="lazy"
+            />
+          </picture>
           <figcaption>
             Vordere Sitzreihe mit direktem Blick auf die Cinemascope-Front
           </figcaption>
@@ -796,11 +835,31 @@
 
         <div class="experience-grid">
           <article class="experience-card">
-            <img
-              src="assets/used/cinema-screen-blue-violet-glow.webp"
-              alt="21:9-Leinwand mit blau-violetter Lichtstimmung"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  assets/used/responsive/cinema-screen-blue-violet-glow-900.avif 900w,
+                  assets/used/responsive/cinema-screen-blue-violet-glow-1200.avif 1200w,
+                  assets/used/responsive/cinema-screen-blue-violet-glow-1800.avif 1800w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 33vw"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  assets/used/responsive/cinema-screen-blue-violet-glow-900.webp 900w,
+                  assets/used/responsive/cinema-screen-blue-violet-glow-1200.webp 1200w,
+                  assets/used/responsive/cinema-screen-blue-violet-glow-1800.webp 1800w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 33vw"
+              />
+              <img
+                src="assets/used/responsive/cinema-screen-blue-violet-glow-900.webp"
+                alt="21:9-Leinwand mit blau-violetter Lichtstimmung"
+                loading="lazy"
+              />
+            </picture>
             <div>
               <h3>Cinemascope-Front</h3>
               <p>
@@ -811,11 +870,29 @@
             </div>
           </article>
           <article class="experience-card">
-            <img
-              src="assets/used/cinema-front-wall-open.webp"
-              alt="Geöffnete Frontwand mit Lautsprechern und Subwoofern"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  assets/used/responsive/cinema-front-wall-open-900.avif 900w,
+                  assets/used/responsive/cinema-front-wall-open-1055.avif 1055w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 33vw"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  assets/used/responsive/cinema-front-wall-open-900.webp 900w,
+                  assets/used/responsive/cinema-front-wall-open-1055.webp 1055w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 33vw"
+              />
+              <img
+                src="assets/used/responsive/cinema-front-wall-open-1055.webp"
+                alt="Geöffnete Frontwand mit Lautsprechern und Subwoofern"
+                loading="lazy"
+              />
+            </picture>
             <div>
               <h3>Unsichtbarer Aufwand</h3>
               <p>
@@ -827,11 +904,31 @@
             </div>
           </article>
           <article class="experience-card">
-            <img
-              src="assets/used/cinema-two-level-seating.webp"
-              alt="Zwei Lounge-Sessel vor der hinteren Sitzreihe mit farbiger Beleuchtung"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  assets/used/responsive/cinema-two-level-seating-900.avif 900w,
+                  assets/used/responsive/cinema-two-level-seating-1200.avif 1200w,
+                  assets/used/responsive/cinema-two-level-seating-1800.avif 1800w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 33vw"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  assets/used/responsive/cinema-two-level-seating-900.webp 900w,
+                  assets/used/responsive/cinema-two-level-seating-1200.webp 1200w,
+                  assets/used/responsive/cinema-two-level-seating-1800.webp 1800w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 33vw"
+              />
+              <img
+                src="assets/used/responsive/cinema-two-level-seating-900.webp"
+                alt="Zwei Lounge-Sessel vor der hinteren Sitzreihe mit farbiger Beleuchtung"
+                loading="lazy"
+              />
+            </picture>
             <div>
               <h3>Zwei Ebenen, sechs Plätze</h3>
               <p>
@@ -846,11 +943,31 @@
 
       <section class="section acoustic-section" id="akustik" data-reveal>
         <figure class="feature-media">
-          <img
-            src="assets/used/cinema-acoustic-side-wall.webp"
-            alt="Seitliche Akustikwand mit indirektem Licht und Lounge-Sesseln"
-            loading="lazy"
-          />
+          <picture>
+            <source
+              type="image/avif"
+              srcset="
+                assets/used/responsive/cinema-acoustic-side-wall-900.avif 900w,
+                assets/used/responsive/cinema-acoustic-side-wall-1400.avif 1400w,
+                assets/used/responsive/cinema-acoustic-side-wall-1800.avif 1800w
+              "
+              sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                assets/used/responsive/cinema-acoustic-side-wall-900.webp 900w,
+                assets/used/responsive/cinema-acoustic-side-wall-1400.webp 1400w,
+                assets/used/responsive/cinema-acoustic-side-wall-1800.webp 1800w
+              "
+              sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+            />
+            <img
+              src="assets/used/responsive/cinema-acoustic-side-wall-1400.webp"
+              alt="Seitliche Akustikwand mit indirektem Licht und Lounge-Sesseln"
+              loading="lazy"
+            />
+          </picture>
           <figcaption>
             Akustische Elemente verschwinden hinter dunklen Flächen und Licht
           </figcaption>
@@ -1032,67 +1149,235 @@
         </div>
         <div class="gallery-grid">
           <figure>
-            <img
-              src="assets/used/cinema-room-hero.webp"
-              alt="Blick in den Kinoraum mit vorderen Lounge-Sesseln und hinterer Sitzreihe"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  assets/used/responsive/cinema-room-hero-1200.avif 1200w,
+                  assets/used/responsive/cinema-room-hero-1800.avif 1800w,
+                  assets/used/responsive/cinema-room-hero-2560.avif 2560w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 66vw"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  assets/used/responsive/cinema-room-hero-1200.webp 1200w,
+                  assets/used/responsive/cinema-room-hero-1800.webp 1800w,
+                  assets/used/responsive/cinema-room-hero-2560.webp 2560w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 66vw"
+              />
+              <img
+                src="assets/used/responsive/cinema-room-hero-1200.webp"
+                data-full="assets/used/responsive/cinema-room-hero-2560.webp"
+                alt="Blick in den Kinoraum mit vorderen Lounge-Sesseln und hinterer Sitzreihe"
+                loading="lazy"
+              />
+            </picture>
             <figcaption>Raumwirkung mit zwei Sitzebenen</figcaption>
           </figure>
           <figure class="portrait">
-            <img
-              src="assets/used/cinema-entry-diffuser-detail.webp"
-              alt="Eingangsbereich mit Diffusor-Struktur und blauer Beleuchtung"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  assets/used/responsive/cinema-entry-diffuser-detail-720.avif 720w,
+                  assets/used/responsive/cinema-entry-diffuser-detail-900.avif 900w,
+                  assets/used/responsive/cinema-entry-diffuser-detail-1200.avif 1200w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 33vw"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  assets/used/responsive/cinema-entry-diffuser-detail-720.webp 720w,
+                  assets/used/responsive/cinema-entry-diffuser-detail-900.webp 900w,
+                  assets/used/responsive/cinema-entry-diffuser-detail-1200.webp 1200w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 33vw"
+              />
+              <img
+                src="assets/used/responsive/cinema-entry-diffuser-detail-900.webp"
+                data-full="assets/used/responsive/cinema-entry-diffuser-detail-1200.webp"
+                alt="Eingangsbereich mit Diffusor-Struktur und blauer Beleuchtung"
+                loading="lazy"
+              />
+            </picture>
             <figcaption>Eingang und Diffusor</figcaption>
           </figure>
           <figure>
-            <img
-              src="assets/used/cinema-front-lounge-seats.webp"
-              alt="Seitlicher Blick über die Lounge-Sessel zur Cinemascope-Leinwand"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  assets/used/responsive/cinema-front-lounge-seats-900.avif 900w,
+                  assets/used/responsive/cinema-front-lounge-seats-1400.avif 1400w,
+                  assets/used/responsive/cinema-front-lounge-seats-1800.avif 1800w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  assets/used/responsive/cinema-front-lounge-seats-900.webp 900w,
+                  assets/used/responsive/cinema-front-lounge-seats-1400.webp 1400w,
+                  assets/used/responsive/cinema-front-lounge-seats-1800.webp 1800w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+              />
+              <img
+                src="assets/used/responsive/cinema-front-lounge-seats-1400.webp"
+                data-full="assets/used/responsive/cinema-front-lounge-seats-1800.webp"
+                alt="Seitlicher Blick über die Lounge-Sessel zur Cinemascope-Leinwand"
+                loading="lazy"
+              />
+            </picture>
             <figcaption>Lounge-Perspektive</figcaption>
           </figure>
           <figure>
-            <img
-              src="assets/used/cinema-screen-blue-violet-glow.webp"
-              alt="21:9-Leinwand mit blau-violetter Lichtstimmung"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  assets/used/responsive/cinema-screen-blue-violet-glow-900.avif 900w,
+                  assets/used/responsive/cinema-screen-blue-violet-glow-1200.avif 1200w,
+                  assets/used/responsive/cinema-screen-blue-violet-glow-1800.avif 1800w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  assets/used/responsive/cinema-screen-blue-violet-glow-900.webp 900w,
+                  assets/used/responsive/cinema-screen-blue-violet-glow-1200.webp 1200w,
+                  assets/used/responsive/cinema-screen-blue-violet-glow-1800.webp 1800w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+              />
+              <img
+                src="assets/used/responsive/cinema-screen-blue-violet-glow-1200.webp"
+                data-full="assets/used/responsive/cinema-screen-blue-violet-glow-1800.webp"
+                alt="21:9-Leinwand mit blau-violetter Lichtstimmung"
+                loading="lazy"
+              />
+            </picture>
             <figcaption>Cinemascope-Front</figcaption>
           </figure>
           <figure>
-            <img
-              src="assets/used/cinema-lounge-depth.webp"
-              alt="Blick entlang der Lounge-Sessel mit magentafarbenem Licht"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  assets/used/responsive/cinema-lounge-depth-900.avif 900w,
+                  assets/used/responsive/cinema-lounge-depth-1200.avif 1200w,
+                  assets/used/responsive/cinema-lounge-depth-1800.avif 1800w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  assets/used/responsive/cinema-lounge-depth-900.webp 900w,
+                  assets/used/responsive/cinema-lounge-depth-1200.webp 1200w,
+                  assets/used/responsive/cinema-lounge-depth-1800.webp 1800w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+              />
+              <img
+                src="assets/used/responsive/cinema-lounge-depth-1200.webp"
+                data-full="assets/used/responsive/cinema-lounge-depth-1800.webp"
+                alt="Blick entlang der Lounge-Sessel mit magentafarbenem Licht"
+                loading="lazy"
+              />
+            </picture>
             <figcaption>Tiefe des Raums</figcaption>
           </figure>
           <figure>
-            <img
-              src="assets/used/cinema-two-level-seating.webp"
-              alt="Vordere Lounge-Sessel mit hinterer Sitzreihe und blauer Lichtstimmung"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  assets/used/responsive/cinema-two-level-seating-900.avif 900w,
+                  assets/used/responsive/cinema-two-level-seating-1200.avif 1200w,
+                  assets/used/responsive/cinema-two-level-seating-1800.avif 1800w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  assets/used/responsive/cinema-two-level-seating-900.webp 900w,
+                  assets/used/responsive/cinema-two-level-seating-1200.webp 1200w,
+                  assets/used/responsive/cinema-two-level-seating-1800.webp 1800w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+              />
+              <img
+                src="assets/used/responsive/cinema-two-level-seating-1200.webp"
+                data-full="assets/used/responsive/cinema-two-level-seating-1800.webp"
+                alt="Vordere Lounge-Sessel mit hinterer Sitzreihe und blauer Lichtstimmung"
+                loading="lazy"
+              />
+            </picture>
             <figcaption>Zwei Ebenen</figcaption>
           </figure>
           <figure class="portrait-pair">
-            <img
-              src="assets/used/cinema-diffuser-magenta-detail.webp"
-              alt="Diffusor-Struktur mit magentafarbenem und blauem Licht"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  assets/used/responsive/cinema-diffuser-magenta-detail-720.avif 720w,
+                  assets/used/responsive/cinema-diffuser-magenta-detail-900.avif 900w,
+                  assets/used/responsive/cinema-diffuser-magenta-detail-1200.avif 1200w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  assets/used/responsive/cinema-diffuser-magenta-detail-720.webp 720w,
+                  assets/used/responsive/cinema-diffuser-magenta-detail-900.webp 900w,
+                  assets/used/responsive/cinema-diffuser-magenta-detail-1200.webp 1200w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+              />
+              <img
+                src="assets/used/responsive/cinema-diffuser-magenta-detail-900.webp"
+                data-full="assets/used/responsive/cinema-diffuser-magenta-detail-1200.webp"
+                alt="Diffusor-Struktur mit magentafarbenem und blauem Licht"
+                loading="lazy"
+              />
+            </picture>
             <figcaption>Struktur und Licht</figcaption>
           </figure>
           <figure class="portrait-pair">
-            <img
-              src="assets/used/cinema-side-seats-cupholders.webp"
-              alt="Seitliche Sitzreihe mit Cupholdern, Laufweg und indirektem Licht"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  assets/used/responsive/cinema-side-seats-cupholders-720.avif 720w,
+                  assets/used/responsive/cinema-side-seats-cupholders-900.avif 900w,
+                  assets/used/responsive/cinema-side-seats-cupholders-1200.avif 1200w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  assets/used/responsive/cinema-side-seats-cupholders-720.webp 720w,
+                  assets/used/responsive/cinema-side-seats-cupholders-900.webp 900w,
+                  assets/used/responsive/cinema-side-seats-cupholders-1200.webp 1200w
+                "
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
+              />
+              <img
+                src="assets/used/responsive/cinema-side-seats-cupholders-900.webp"
+                data-full="assets/used/responsive/cinema-side-seats-cupholders-1200.webp"
+                alt="Seitliche Sitzreihe mit Cupholdern, Laufweg und indirektem Licht"
+                loading="lazy"
+              />
+            </picture>
             <figcaption>Seitliche Sitzreihe</figcaption>
           </figure>
         </div>
