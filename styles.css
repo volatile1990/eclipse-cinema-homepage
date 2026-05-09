@@ -1065,44 +1065,6 @@ figcaption {
   line-height: 1.35;
 }
 
-.spec-band {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  width: 100%;
-  max-width: none;
-  padding: 0;
-  background: var(--line);
-}
-
-.spec-band div {
-  padding: 2.4rem 2.2rem;
-  background:
-    radial-gradient(
-      circle at 92% 18%,
-      rgba(240, 161, 68, 0.1),
-      transparent 22rem
-    ),
-    var(--surface);
-}
-
-.spec-band span {
-  display: block;
-  color: var(--amber);
-  font-size: 0.74rem;
-  font-weight: 820;
-  text-transform: uppercase;
-}
-
-.spec-band strong {
-  display: block;
-  max-width: 22rem;
-  margin-top: 0.7rem;
-  font-size: 1.4rem;
-  font-weight: 720;
-  line-height: 1.25;
-}
-
 .component-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1433,10 +1395,6 @@ figcaption {
     order: 2;
   }
 
-  .spec-band {
-    grid-template-columns: 1fr;
-  }
-
   .component-card.wide {
     grid-column: span 1;
   }
@@ -1532,14 +1490,6 @@ figcaption {
   .tour-views button {
     font-size: 0.78rem;
     padding: 0.35rem 0.7rem;
-  }
-
-  .spec-band div {
-    padding: 1.6rem 1.25rem;
-  }
-
-  .spec-band strong {
-    font-size: 1.2rem;
   }
 
   .experience-card img,

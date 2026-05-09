@@ -15,7 +15,7 @@ if (tour) {
     top: {
       kicker: "Draufsicht",
       title: "Der Raum als Kinosaal",
-      text: "Sitze, Lautsprecher, Bassarrays und Akustikelemente sind einzeln markiert. Tippe ein Element an, um Details und Maße zu sehen — Layer lassen sich oben einzeln ein- und ausblenden.",
+      text: "Sitze, Lautsprecher, Bassarrays und Akustikelemente sind einzeln markiert. Elemente öffnen Details; Layer lassen sich separat ein- und ausblenden.",
       specs: {
         "Freier Innenraum": "4,8 × 3,9 × 2,1 m",
         "Erste Reihe": "3,0 m zur Leinwand",
@@ -25,7 +25,7 @@ if (tour) {
     front: {
       kicker: "Frontwand",
       title: "Was hinter der Leinwand steckt",
-      text: "Eine 50 cm tiefe Ständerwand. Hinter der mikroperforierten Leinwand sitzen Center, L/R, acht Subwoofer des vorderen DBA und die umliegende Dämmung. Tippe Elemente an, um Details zu sehen.",
+      text: "In der 50 cm tiefen Frontwand sitzen Center, L/R, acht Subwoofer des vorderen DBA und die umliegende Dämmung.",
       specs: {
         "Wandtiefe": "50 cm",
         "Höhe": "2,35 m",
@@ -49,7 +49,7 @@ if (tour) {
     "side-left": {
       kicker: "Linke Wand",
       title: "Akustik-Reihenfolge auf der linken Wand",
-      text: "Von vorne nach hinten: Erstreflektions-Absorber (120×120), Front Wide, 100×100 Absorber mit zwei Manhattan-Diffusoren darüber, Surround, Slat-Element und drei gestapelte HOFA 2D-QRD-Diffusoren im hinteren Drittel. Im unteren 60 cm-Bereich sitzt der Heizkörper hinter einer Binary-Diffusor-Verkleidung.",
+      text: "Die linke Wand wechselt von Absorption im vorderen Bereich zu Diffusion im hinteren Drittel. Der Heizkörper sitzt unten hinter einer akustisch angepassten Verkleidung.",
       specs: {
         "Wandlänge frei": "4,8 m",
         "Wandhöhe": "2,35 m",
@@ -59,7 +59,7 @@ if (tour) {
     "side-right": {
       kicker: "Rechte Wand",
       title: "Spiegelbild der linken Wand — mit Tür",
-      text: "Erstreflektions-Absorber, Front Wide, 100×100 mit zwei Manhattan-Diffusoren darüber, Surround und Slat-Element wie links. Im hinteren Drittel sitzt die Tür ins Kino — auf ihr drei HOFA 2D-QRD-Diffusoren als Pendant zum HOFA-Feld auf der linken Wand.",
+      text: "Die rechte Wand folgt dem Aufbau der linken Seite. Im hinteren Drittel ersetzt die Tür einen Wandabschnitt; drei HOFA-Diffusoren auf der Tür führen die Diffusionsfläche weiter.",
       specs: {
         "Wandlänge frei": "4,8 m",
         "Wandhöhe": "2,35 m",
@@ -93,7 +93,7 @@ if (tour) {
     row1: {
       kicker: "Erste Reihe",
       title: "Stressless Reno L",
-      text: "Zwei Lounge-Sessel, symmetrisch links und rechts der Mittelachse. Kein Sitz liegt exakt auf der Achse — das hält den Sweet Spot frei von symmetrischen Auslöschungen.",
+      text: "Zwei Lounge-Sessel flankieren die Mittelachse. Kein Sitz liegt exakt auf der Achse; die Abstimmung bleibt auf die Hörposition zwischen beiden Plätzen ausgerichtet.",
       specs: {
         "Modell": "2× Stressless Reno L",
         "Abstand zur Leinwand": "3,0 m (Hörposition)",
@@ -103,7 +103,7 @@ if (tour) {
     row2: {
       kicker: "Zweite Reihe",
       title: "Pasadena auf Podest",
-      text: "Vier Heimkinositze stehen erhöht auf dem Podest, damit Gäste über die vordere Reihe hinweg schauen können. Diese Reihe ist für Besucher und fast nie besetzt.",
+      text: "Vier zusätzliche Plätze stehen erhöht auf dem Podest. Die Sicht läuft über die vordere Reihe hinweg; die akustische Hauptabstimmung bleibt auf Reihe 1.",
       specs: {
         "Modell": "4× Hollywood Zuhause Pasadena",
         "Abstand zur Leinwand": "4,8 m",
@@ -123,7 +123,7 @@ if (tour) {
     lcr: {
       kicker: "Front L / C / R",
       title: "Hauptlautsprecher in der Frontkonstruktion",
-      text: "Left und Right stehen seitlich neben der Leinwand, leicht zum Hörplatz angewinkelt — verdeckt durch die akustisch transparente Stoffverblendung. Der Center sitzt mittig hinter der mikroperforierten Leinwand und spielt 2–3 cm hinter dem Stoff direkt durch sie hindurch.",
+      text: "Links und rechts stehen die Hauptlautsprecher neben der Leinwand, leicht zum Hörplatz angewinkelt. Der Center sitzt mittig wenige Zentimeter hinter der mikroperforierten Fläche.",
       specs: {
         "L / R": "Nubert nuVero 110, seitlich der Leinwand",
         "Center": "Nubert nuVero Nova 12, hinter Leinwand",
@@ -133,7 +133,7 @@ if (tour) {
     "front-wide": {
       kicker: "Front Wide",
       title: "Erweiterte Frontbühne",
-      text: "Sitzen seitlich nach den Erstreflektions-Absorbern und erweitern die L/R-Bühne nach außen — der Übergang zwischen Front und Surround wird damit lückenlos.",
+      text: "Sitzen seitlich nach den Erstreflexions-Absorbern und erweitern die L/R-Bühne nach außen. Der Übergang zwischen Front und Surround wird dadurch geschlossener.",
       specs: {
         "Modell": "2× Nubert nuVero 50",
         "Position": "links und rechts vor den Surrounds",
@@ -143,7 +143,7 @@ if (tour) {
     surround: {
       kicker: "Surround L / R",
       title: "Seitliche Hülle",
-      text: "Direkt seitlich des Hörplatzes. Schließen den Raum klanglich um den Hörer — die Schaltstelle zwischen vorderer Bühne und hinteren Effekten.",
+      text: "Direkt seitlich des Hörplatzes. Sie verbinden die vordere Bühne mit den hinteren Effekten.",
       specs: {
         "Modell": "2× Nubert nuVero 70",
         "Position": "Seitenwand auf Hörhöhe",
@@ -183,7 +183,7 @@ if (tour) {
     vog: {
       kicker: "Voice of God",
       title: "Senkrecht über dem Hörplatz",
-      text: "Direkt über dem Sweet Spot. Sorgt für Effekte, die wirklich von oben kommen — Regen, Hubschrauber, Stimmen aus der Höhe.",
+      text: "Direkt über dem Sweet Spot. Deckt die senkrechte Höhenposition über dem Hörplatz ab.",
       specs: {
         "Modell": "Nubert nuLine WS-14",
         "Position": "Decke mittig über Reihe 1",
@@ -203,7 +203,7 @@ if (tour) {
     "bass-front": {
       kicker: "Front-DBA",
       title: "Acht Subwoofer in 50×70-cm-Gehäusen",
-      text: "Acht Scan-Speak-Chassis bilden das vordere Array des Double Bass Array. Jedes Chassis sitzt in einem 50×70 cm großen, hochkant stehenden Gehäuse; in diesem vorderen Gehäusebereich ist keine Dämmung eingezeichnet. Die Dämmung läuft um diese Kästen herum.",
+      text: "Acht Scan-Speak-Chassis bilden das vordere Array des Double Bass Array. Die hochkant stehenden Gehäuse sitzen in der Frontwand; die Dämmung läuft um sie herum.",
       specs: {
         "Chassis": "8× Scan-Speak 30W/4558T00",
         "Gehäuse": "50 × 70 cm, hochkant",
@@ -226,7 +226,7 @@ if (tour) {
     "front-wall-insulation": {
       kicker: "Frontwand-Dämmung",
       title: "Gefüllte 50-cm-Ständerwand",
-      text: "Die Frontständerwand ist nicht geschlossen beplankt, aber bis nach vorne um Center und alle Subwoofer-Gehäuse herum mit Dämmmaterial gefüllt. Die Dämmung endet an den 50×70-cm-Gehäusekanten; in den vorderen Gehäuseflächen ist keine Dämmung eingezeichnet. Dazwischen liegt 3.000 Pa·s/m², zur Betonwand bleiben 20 cm mit 10.000 Pa·s/m² Material.",
+      text: "Die Frontständerwand bleibt hinter der Leinwand offen und ist um Center und Subwoofer-Gehäuse herum gedämmt. Unterschiedliche Materialien übernehmen die Absorption vor und nahe der Betonwand.",
       specs: {
         "Wandtiefe": "50 cm",
         "Höhe": "2,35 m",
@@ -236,8 +236,8 @@ if (tour) {
       },
     },
     "early-reflection": {
-      kicker: "Erstreflektions-Absorber",
-      title: "Frühe Seitenreflexionen schlucken",
+      kicker: "Erstreflexions-Absorber",
+      title: "Frühe Seitenreflexionen kontrollieren",
       text: "Direkt seitlich nach der Front. Verhindert, dass frühe Reflexionen aus L/R den Direktklang verfälschen oder Lokalisation verwischen.",
       specs: {
         "Größe": "120 × 120 × 20 cm",
@@ -248,7 +248,7 @@ if (tour) {
     "side-absorbers": {
       kicker: "Seitliche Absorber",
       title: "Zweite Reflexionsstufe",
-      text: "Hinter den Front Wide Lautsprechern setzen weitere Glaswolle-Elemente die Absorption auf den Seiten fort, bevor die Surrounds beginnen.",
+      text: "Hinter den Front-Wide-Lautsprechern setzen weitere Glaswolle-Elemente die Absorption auf den Seiten fort, bevor die Surrounds beginnen.",
       specs: {
         "Größe": "100 × 100 × 20 cm",
         "Füllung": "Ursa Glaswolle",
@@ -347,7 +347,7 @@ if (tour) {
       text: "Der Projektor-Durchbruch sitzt mittig zwischen den seitlich angeordneten Diffusor- und Back-Surround-Feldern.",
       specs: {
         "Position": "zentral in der Rückwand",
-        "Bezug": "laut PDF über der mittleren Absorberzone",
+        "Bezug": "über der mittleren Absorberzone",
       },
     },
     "ceiling-front": {
