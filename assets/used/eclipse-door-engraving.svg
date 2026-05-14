@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240mm" height="95mm" viewBox="0 0 240 95" role="img" aria-labelledby="title desc">
+  <title id="title">ECLIPSE HOMECINEMA engraving logo</title>
+  <desc id="desc">One-color door plate logo based on the eclipse homepage brand mark.</desc>
+  <g id="engraving" fill="#111111" stroke="#111111" stroke-linecap="round" stroke-linejoin="round">
+    <g id="brand-mark" transform="translate(29 24)">
+      <rect x="0" y="0" width="47" height="47" rx="8.8" fill="none" stroke-width="3.2" />
+      <path
+        d="M11.573 5.931A11 11 0 1 0 24.427 23.069A11 11 0 0 1 11.573 5.931Z"
+        transform="scale(1.46875)"
+        stroke="none"
+      />
+    </g>
+
+    <g id="wordmark">
+      <text
+        x="88"
+        y="48.5"
+        font-family="Segoe UI, Arial, Helvetica, sans-serif"
+        font-size="24"
+        font-weight="760"
+        letter-spacing="1.8"
+      >ECLIPSE</text>
+      <path d="M89 57H211" fill="none" stroke-width="1.35" />
+      <text
+        x="89"
+        y="70.5"
+        font-family="Segoe UI, Arial, Helvetica, sans-serif"
+        font-size="7"
+        font-weight="720"
+        letter-spacing="4.1"
+      >HOMECINEMA</text>
+    </g>
+  </g>
+</svg>
