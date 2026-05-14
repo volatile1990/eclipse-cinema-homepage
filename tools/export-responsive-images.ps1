@@ -14,6 +14,7 @@ $RawDir = Join-Path $RepoRoot "assets\used\selected-raw"
 $TempDir = Join-Path ([System.IO.Path]::GetTempPath()) ("eclipse-cinema-export-" + [System.Guid]::NewGuid().ToString("N"))
 
 $images = @(
+  @{ Name = "cinema-room-hero-modified"; Aspect = "source"; Widths = @(900, 1200, 1672); Source = "assets\used\cinema-room-hero-modified.png" },
   @{ Name = "cinema-room-hero"; Aspect = "16:9"; Widths = @(1200, 1800, 2560) },
   @{ Name = "cinema-front-lounge-seats"; Aspect = "16:9"; Widths = @(900, 1400, 1800) },
   @{ Name = "cinema-screen-blue-violet-glow"; Aspect = "16:9"; Widths = @(900, 1200, 1800) },
