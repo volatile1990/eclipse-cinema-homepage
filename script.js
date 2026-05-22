@@ -474,6 +474,7 @@ if (tour) {
 
 const header = document.querySelector(".site-header");
 if (header) {
+  header.classList.add("has-scroll-state");
   const updateScrolled = () => {
     header.classList.toggle("is-scrolled", window.scrollY > 80);
   };

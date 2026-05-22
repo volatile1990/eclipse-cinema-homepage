@@ -10,15 +10,15 @@
   "background_color": "#05070b",
   "icons": [
     {
-      "src": "assets/used/eclipse-favicon.svg",
-      "type": "image/svg+xml",
-      "sizes": "any"
+      "src": "assets/used/eclipse-favicon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     },
     {
-      "src": "assets/used/eclipse-favicon-maskable.svg",
-      "type": "image/svg+xml",
-      "sizes": "any",
-      "purpose": "maskable"
+      "src": "assets/used/eclipse-favicon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ]
 }

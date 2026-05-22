@@ -160,9 +160,29 @@ button {
 .brand-mark {
   width: 2rem;
   height: 2rem;
-  background: url("assets/used/eclipse-favicon.svg") center/contain no-repeat;
-  border-radius: 18.75%;
-  box-shadow: 0 0 22px rgba(167, 165, 255, 0.2);
+  background: url("assets/used/eclipse-favicon-192.png") center/contain no-repeat;
+  filter: drop-shadow(0 0 8px rgba(247, 247, 255, 0.18));
+}
+
+.site-header .brand-logo {
+  display: block;
+  width: 6rem;
+  height: auto;
+  filter: drop-shadow(0 0 9px rgba(247, 247, 255, 0.16));
+  opacity: 1;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.site-header.has-scroll-state:not(.is-scrolled) .brand-logo {
+  opacity: 0;
+  transform: translateY(-0.15rem);
+}
+
+.site-header .brand:focus-visible .brand-logo {
+  opacity: 1;
+  transform: none;
 }
 
 .main-nav {
@@ -1497,6 +1517,10 @@ figcaption {
   .brand-mark {
     width: 1.7rem;
     height: 1.7rem;
+  }
+
+  .site-header .brand-logo {
+    width: 4.85rem;
   }
 
   .main-nav {
