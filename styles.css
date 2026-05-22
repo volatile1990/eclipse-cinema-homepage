@@ -19,6 +19,8 @@
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.44);
   --radius: 8px;
   --max: 1180px;
+  --header-height: 5.6rem;
+  --header-safe-top: env(safe-area-inset-top, 0px);
 }
 
 * {
@@ -27,6 +29,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + var(--header-safe-top));
 }
 
 body {
@@ -121,15 +124,16 @@ button {
   justify-content: space-between;
   gap: 1.5rem;
   width: min(100% - 2rem, var(--max));
+  min-height: calc(var(--header-height) + var(--header-safe-top));
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: calc(0.95rem + var(--header-safe-top)) 0 0.9rem;
 }
 
 .site-header::before {
   position: fixed;
   inset: 0 0 auto;
   z-index: -1;
-  height: 5.4rem;
+  height: calc(var(--header-height) + var(--header-safe-top));
   content: "";
   background: linear-gradient(180deg, rgba(5, 7, 11, 0.9), rgba(5, 7, 11, 0));
   pointer-events: none;
@@ -170,19 +174,15 @@ button {
   height: auto;
   filter: drop-shadow(0 0 9px rgba(247, 247, 255, 0.16));
   opacity: 1;
-  transition:
-    opacity 180ms ease,
-    transform 180ms ease;
+  transition: opacity 180ms ease;
 }
 
 .site-header.has-scroll-state:not(.is-scrolled) .brand-logo {
   opacity: 0;
-  transform: translateY(-0.15rem);
 }
 
 .site-header .brand:focus-visible .brand-logo {
   opacity: 1;
-  transform: none;
 }
 
 .main-nav {
@@ -1505,9 +1505,15 @@ figcaption {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --header-height: 6rem;
+  }
+
   .site-header {
     width: min(100% - 1.25rem, var(--max));
     gap: 0.85rem;
+    padding-top: calc(0.78rem + var(--header-safe-top));
+    padding-bottom: 0.72rem;
   }
 
   .brand {
