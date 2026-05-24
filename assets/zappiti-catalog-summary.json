@@ -1,69 +1,90 @@
 {
-  "generated_at": "2026-05-24T18:19:36+00:00",
+  "generated_at": "2026-05-24T18:33:56+00:00",
   "schema_version": 1,
   "sources": [
     {
-      "files": 0,
+      "files": 31,
       "libraries": [
         {
           "files": 0,
-          "message": "Library folder is not available.",
+          "message": "Cannot verify negotiate information without a session signing key. Authenticate with a non-guest or anonymous account or set require_secure_negotiate=False to disable the negotiation info verification checks.",
           "name": "FILME",
-          "reachable": false
+          "reachable": false,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 0
         },
         {
-          "files": 0,
-          "message": "Library folder is not available.",
+          "files": 5,
           "name": "SERIEN",
-          "reachable": false
+          "reachable": true,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 5
         },
         {
-          "files": 0,
-          "message": "Library folder is not available.",
+          "files": 26,
           "name": "DEMOS",
-          "reachable": false
+          "reachable": true,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 26
         }
       ],
       "message": "",
-      "mode": "mounted_path",
+      "mode": "smb",
       "name": "Zappiti1",
-      "path": "/media/Zappiti1",
+      "path": "\\\\192.168.1.91\\Volume_9a4a7d5c4a7d365b",
       "reachable": true
     },
     {
-      "files": 0,
+      "files": 19,
       "libraries": [
         {
           "files": 0,
-          "message": "Library folder is not available.",
+          "message": "Cannot verify negotiate information without a session signing key. Authenticate with a non-guest or anonymous account or set require_secure_negotiate=False to disable the negotiation info verification checks.",
           "name": "FILME",
-          "reachable": false
+          "reachable": false,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 0
         },
         {
-          "files": 0,
-          "message": "Library folder is not available.",
+          "files": 19,
           "name": "SERIEN",
-          "reachable": false
+          "reachable": true,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 19
         },
         {
           "files": 0,
-          "message": "Library folder is not available.",
+          "message": "[Error 2] [NtStatus 0xc0000034] No such file or directory: '\\\\192.168.1.91\\Volume_ca7a3d6d7a3d5801\\DEMOS'",
           "name": "DEMOS",
-          "reachable": false
+          "reachable": false,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 0
         }
       ],
       "message": "",
-      "mode": "mounted_path",
+      "mode": "smb",
       "name": "Zappiti2",
-      "path": "/media/Zappiti2",
+      "path": "\\\\192.168.1.91\\Volume_ca7a3d6d7a3d5801",
       "reachable": true
     }
   ],
   "stats": {
-    "by_kind": {},
-    "by_library": {},
+    "by_kind": {
+      "demo": 26,
+      "tv": 24
+    },
+    "by_library": {
+      "DEMOS": 26,
+      "SERIEN": 24
+    },
     "offline_sources": 0,
     "reachable_sources": 2,
-    "total": 0
+    "total": 50
   }
 }
