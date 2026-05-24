@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T10:10:55+00:00",
+  "generated_at": "2026-05-24T19:06:15+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -8,23 +8,32 @@
         {
           "files": 178,
           "name": "FILME",
-          "reachable": true
+          "reachable": true,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 178
         },
         {
           "files": 5,
           "name": "SERIEN",
-          "reachable": true
+          "reachable": true,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 5
         },
         {
           "files": 26,
           "name": "DEMOS",
-          "reachable": true
+          "reachable": true,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 26
         }
       ],
       "message": "",
-      "mode": "mounted_path",
+      "mode": "smb",
       "name": "Zappiti1",
-      "path": "/media/Zappiti1",
+      "path": "\\\\192.168.1.91\\Volume_9a4a7d5c4a7d365b",
       "reachable": true
     },
     {
@@ -33,24 +42,33 @@
         {
           "files": 125,
           "name": "FILME",
-          "reachable": true
+          "reachable": true,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 125
         },
         {
           "files": 19,
           "name": "SERIEN",
-          "reachable": true
+          "reachable": true,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 19
         },
         {
           "files": 0,
-          "message": "Library folder is not available.",
+          "message": "[Error 2] [NtStatus 0xc0000034] No such file or directory: '\\\\192.168.1.91\\Volume_ca7a3d6d7a3d5801\\DEMOS'",
           "name": "DEMOS",
-          "reachable": false
+          "reachable": false,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 0
         }
       ],
       "message": "",
-      "mode": "mounted_path",
+      "mode": "smb",
       "name": "Zappiti2",
-      "path": "/media/Zappiti2",
+      "path": "\\\\192.168.1.91\\Volume_ca7a3d6d7a3d5801",
       "reachable": true
     }
   ],
