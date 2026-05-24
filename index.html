@@ -106,6 +106,7 @@
       <nav class="main-nav" aria-label="Seitenbereiche">
         <a href="#raumtour">Raumtour</a>
         <a href="#erlebnis">Erlebnis</a>
+        <a href="#programm">Programm</a>
         <a href="#technik">Technik</a>
         <a href="#galerie">Galerie</a>
         <a href="#kontakt">Kontakt</a>
@@ -1010,6 +1011,82 @@
               </p>
             </div>
           </article>
+        </div>
+      </section>
+
+      <section class="section catalog-section" id="programm" data-reveal>
+        <div class="section-heading">
+          <p class="section-label">Programm</p>
+          <h2>Was auf die Leinwand kann.</h2>
+          <p>
+            Der lokale Zappiti-Katalog zeigt Filme, Serienfolgen und
+            Demo-Clips, die direkt im eclipse Kino präsentiert werden können.
+            Suche, Filter und Sortierung helfen dabei, schnell den passenden
+            Titel für den nächsten Abend zu finden.
+          </p>
+        </div>
+
+        <div class="catalog-shell" data-catalog data-catalog-src="assets/zappiti-catalog.min.json">
+          <div class="catalog-stats" aria-label="Zappiti-Katalog in Zahlen">
+            <div>
+              <strong data-catalog-stat="total">353</strong>
+              <span>Medien-Dateien</span>
+            </div>
+            <div>
+              <strong data-catalog-stat="movie">303</strong>
+              <span>Filme</span>
+            </div>
+            <div>
+              <strong data-catalog-stat="demo">26</strong>
+              <span>Demos</span>
+            </div>
+            <div>
+              <strong data-catalog-stat="tv">24</strong>
+              <span>Serienfolgen</span>
+            </div>
+          </div>
+
+          <div class="catalog-toolbar">
+            <div class="catalog-search">
+              <label class="sr-only" for="catalog-search">Programm durchsuchen</label>
+              <input
+                id="catalog-search"
+                type="search"
+                data-catalog-search
+                autocomplete="off"
+                placeholder="Titel suchen"
+              />
+            </div>
+            <div class="catalog-filters" role="group" aria-label="Medientyp filtern">
+              <button type="button" class="is-active" data-catalog-filter="all" aria-pressed="true">Alle</button>
+              <button type="button" data-catalog-filter="movie" aria-pressed="false">Filme</button>
+              <button type="button" data-catalog-filter="demo" aria-pressed="false">Demos</button>
+              <button type="button" data-catalog-filter="tv" aria-pressed="false">Serien</button>
+            </div>
+            <label class="catalog-select">
+              <span>Sortierung</span>
+              <select data-catalog-sort>
+                <option value="title">Titel A-Z</option>
+                <option value="recent">Zuletzt geändert</option>
+                <option value="resolution">Höchste Auflösung</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="catalog-meta">
+            <p data-catalog-status>Katalog wird geladen...</p>
+            <p data-catalog-updated></p>
+          </div>
+
+          <div class="catalog-list" data-catalog-results>
+            <p class="catalog-empty">Katalog wird geladen...</p>
+          </div>
+
+          <nav class="catalog-pagination" data-catalog-pagination hidden aria-label="Katalogseiten">
+            <button type="button" class="catalog-page-nav" data-catalog-prev>Zurück</button>
+            <div class="catalog-pages" data-catalog-pages></div>
+            <button type="button" class="catalog-page-nav" data-catalog-next>Weiter</button>
+          </nav>
         </div>
       </section>
 
