@@ -1019,7 +1019,7 @@
           <p class="section-label">Programm</p>
           <h2>Was auf die Leinwand kann.</h2>
           <p>
-            Der lokale Zappiti-Katalog zeigt Filme, Serienfolgen und
+            Die lokale Mediensammlung zeigt Filme, Serienfolgen und
             Demo-Clips, die direkt im eclipse Kino präsentiert werden können.
             Suche, Filter und Sortierung helfen dabei, schnell den passenden
             Titel für den nächsten Abend zu finden.
@@ -1027,7 +1027,7 @@
         </div>
 
         <div class="catalog-shell" data-catalog data-catalog-src="assets/zappiti-catalog.min.json">
-          <div class="catalog-stats" aria-label="Zappiti-Katalog in Zahlen">
+          <div class="catalog-stats" aria-label="Katalog in Zahlen">
             <div>
               <strong data-catalog-stat="total">353</strong>
               <span>Medien-Dateien</span>
@@ -1532,6 +1532,13 @@
         </div>
       </section>
     </main>
+
+    <dialog class="catalog-dialog" data-catalog-dialog aria-label="Programmdetails">
+      <form method="dialog" class="catalog-dialog-close-form">
+        <button type="submit" class="catalog-dialog-close" aria-label="Schließen">×</button>
+      </form>
+      <div class="catalog-dialog-body" data-catalog-dialog-body></div>
+    </dialog>
 
     <dialog class="lightbox" data-lightbox aria-label="Bildansicht">
       <form method="dialog" class="lightbox-close-form">

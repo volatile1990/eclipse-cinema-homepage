@@ -550,6 +550,8 @@ if (catalogRoot) {
   const prevButton = catalogRoot.querySelector("[data-catalog-prev]");
   const nextButton = catalogRoot.querySelector("[data-catalog-next]");
   const pagesEl = catalogRoot.querySelector("[data-catalog-pages]");
+  const catalogDialog = document.querySelector("[data-catalog-dialog]");
+  const catalogDialogBody = document.querySelector("[data-catalog-dialog-body]");
   const statEls = {
     total: catalogRoot.querySelector('[data-catalog-stat="total"]'),
     movie: catalogRoot.querySelector('[data-catalog-stat="movie"]'),
@@ -670,6 +672,12 @@ if (catalogRoot) {
     return "";
   };
 
+  const resolutionForItem = (item, video = {}) => {
+    const width = Number(video.width) || 0;
+    const height = Number(video.height) || 0;
+    return resolutionLabel(width, height) || item.screen_size || item.parsed?.screen_size || "";
+  };
+
   const durationLabel = (seconds) => {
     const totalSeconds = Number(seconds) || 0;
     if (!totalSeconds) return "";
@@ -680,6 +688,59 @@ if (catalogRoot) {
     }
     return `${Math.round(totalSeconds / 60)} min`;
   };
+
+  const minutesLabel = (minutes) => {
+    const totalMinutes = Number(minutes) || 0;
+    return totalMinutes ? `${Math.round(totalMinutes)} min` : "";
+  };
+
+  const formatBytes = (bytes) => {
+    const value = Number(bytes) || 0;
+    if (!value) return "";
+    const units = ["B", "KB", "MB", "GB", "TB"];
+    const exponent = Math.min(Math.floor(Math.log(value) / Math.log(1024)), units.length - 1);
+    const size = value / 1024 ** exponent;
+    return `${size.toLocaleString("de-DE", {
+      maximumFractionDigits: exponent > 2 ? 1 : 0,
+    })} ${units[exponent]}`;
+  };
+
+  const formatBitRate = (bitRate) => {
+    const value = Number(bitRate) || 0;
+    if (!value) return "";
+    return `${(value / 1_000_000).toLocaleString("de-DE", {
+      maximumFractionDigits: 1,
+    })} Mbit/s`;
+  };
+
+  const formatDate = (value) => {
+    if (!value) return "";
+    const date = new Date(value);
+    return Number.isNaN(date.getTime()) ? "" : dateFormat.format(date);
+  };
+
+  const decimalLabel = (value, digits = 1) => {
+    const number = Number(value);
+    if (!Number.isFinite(number)) return "";
+    return number.toLocaleString("de-DE", {
+      maximumFractionDigits: digits,
+      minimumFractionDigits: digits,
+    });
+  };
+
+  const ratingLabel = (metadata) => {
+    if (!metadata) return "";
+    if (metadata.imdb_rating) return `IMDb ${decimalLabel(metadata.imdb_rating, 1)}`;
+    if (metadata.vote_average) return `TMDb ${decimalLabel(metadata.vote_average, 1)}`;
+    return "";
+  };
+
+  const publicYearFor = (item) => item.metadata?.year || item.year || "";
+
+  const publicRuntimeFor = (item) =>
+    minutesLabel(item.metadata?.runtime_minutes) ||
+    minutesLabel(item.episode_metadata?.runtime_minutes) ||
+    durationLabel(item.media_info?.duration_seconds);
 
   const padEpisodeNumber = (value) => String(value).padStart(2, "0");
 
@@ -703,6 +764,7 @@ if (catalogRoot) {
     const code = season && episode ? `S${padEpisodeNumber(season)}E${padEpisodeNumber(episode)}` : "";
     const candidates = [
       item.episode_title,
+      item.episode_metadata?.title,
       item.parsed?.episode_title,
       item.parsed?.episodeName,
       item.parsed?.name,
@@ -737,6 +799,10 @@ if (catalogRoot) {
         label: episodeLabel(item),
         name: episodeName(item, seriesTitle),
         runtime: durationLabel(item.media_info?.duration_seconds),
+        airDate: formatDate(item.episode_metadata?.air_date),
+        overview: item.episode_metadata?.overview || "",
+        rating: ratingLabel(item.episode_metadata),
+        stillUrl: item.episode_metadata?.still_url || "",
         season: episodeNumberFor(item, "season"),
         sortTitle: fileTitle(item),
       }))
@@ -751,7 +817,8 @@ if (catalogRoot) {
     const primary = items[0] || {};
     const kind = forcedKind || primary.kind || "movie";
     const title = forcedTitle || titleFor(primary);
-    const years = unique(items.map((item) => item.year));
+    const metadata = primary.metadata || {};
+    const years = unique(items.map((item) => publicYearFor(item)));
     const episodes = kind === "tv" ? episodeDetails(items, title) : [];
     const videos = items.map((item) => item.media_info?.video).filter(Boolean);
     const bestVideo = videos
@@ -761,24 +828,32 @@ if (catalogRoot) {
     const height = Number(bestVideo.height) || 0;
     const modifiedMs = Math.max(...items.map((item) => Date.parse(item.modified_at) || 0));
     const mediaCount = items.length;
-    const resolution = resolutionLabel(width, height);
+    const resolution = resolutionForItem(primary, bestVideo);
     const videoCodec = labelCodec(bestVideo.codec);
     const audio = audioLabel(items);
-    const tags = unique([resolution, videoCodec, audio]);
+    const rating = ratingLabel(metadata);
+    const tags = unique([rating, resolution, videoCodec, audio]);
     const subtitleParts = [];
+    const genres = Array.isArray(metadata.genres) ? metadata.genres : [];
+    const genreSummary = genres.slice(0, 2).join(" / ");
 
     if (kind === "tv") {
       subtitleParts.push(`${mediaCount} ${mediaCount === 1 ? "Folge" : "Folgen"}`);
       const seasonCount = unique(episodes.map((episode) => episode.season)).length;
       if (seasonCount) subtitleParts.push(`${seasonCount} ${seasonCount === 1 ? "Staffel" : "Staffeln"}`);
+      if (years.length === 1) subtitleParts.push(String(years[0]));
     } else {
       if (years.length === 1) subtitleParts.push(String(years[0]));
-      const runtime = durationLabel(primary.media_info?.duration_seconds);
+      const runtime = publicRuntimeFor(primary);
       if (runtime) subtitleParts.push(runtime);
     }
+    if (genreSummary) subtitleParts.push(genreSummary);
 
     return {
+      id: `catalog-${primary.id || normalizeText(`${kind}-${title}`).replace(/\s+/g, "-")}`,
       kind,
+      items,
+      metadata,
       title,
       episodes,
       subtitle: subtitleParts.join(" · "),
@@ -860,9 +935,198 @@ if (catalogRoot) {
     return sortEntries(entries);
   };
 
+  const createElement = (tag, className, textContent) => {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    if (textContent !== undefined && textContent !== null) element.textContent = textContent;
+    return element;
+  };
+
+  const appendFactRows = (container, rows) => {
+    rows
+      .filter(([, value]) => value !== null && value !== undefined && value !== "")
+      .forEach(([label, value]) => {
+        const dt = document.createElement("dt");
+        dt.textContent = label;
+        const dd = document.createElement("dd");
+        dd.textContent = value;
+        container.append(dt, dd);
+      });
+  };
+
+  const tmdbUrl = (metadata, kind) => {
+    if (!metadata?.tmdb_id) return "";
+    return `https://www.themoviedb.org/${kind === "tv" ? "tv" : "movie"}/${metadata.tmdb_id}`;
+  };
+
+  const primaryVideo = (entry) =>
+    entry.items
+      .map((item) => item.media_info?.video)
+      .filter(Boolean)
+      .sort((a, b) => (Number(b.height) || 0) - (Number(a.height) || 0))[0] || {};
+
+  const audioSummary = (entry) => {
+    const streams = entry.items.flatMap((item) => item.media_info?.audio || []);
+    const labels = unique(
+      streams.map((stream) => {
+        const codec = labelCodec(stream.codec);
+        const channels = channelLabel(stream.channels);
+        return [codec, channels].filter(Boolean).join(" ");
+      }),
+    );
+    return labels.join(", ");
+  };
+
+  const openCatalogDetail = (entry) => {
+    if (!catalogDialog || !catalogDialogBody) return;
+
+    const metadata = entry.metadata || {};
+    const primary = entry.items[0] || {};
+    const video = primaryVideo(entry);
+    const genres = Array.isArray(metadata.genres) ? metadata.genres : [];
+    const title = metadata.title && normalizeText(metadata.title) !== normalizeText(entry.title)
+      ? `${entry.title} (${metadata.title})`
+      : entry.title;
+
+    catalogDialogBody.replaceChildren();
+
+    const hero = createElement("div", "catalog-detail-hero");
+    if (metadata.backdrop_url) hero.style.backgroundImage = `url("${metadata.backdrop_url}")`;
+
+    const posterWrap = createElement("div", "catalog-detail-poster");
+    if (metadata.poster_url) {
+      const poster = document.createElement("img");
+      poster.src = metadata.poster_url;
+      poster.alt = "";
+      poster.loading = "lazy";
+      posterWrap.append(poster);
+    } else {
+      posterWrap.append(createElement("span", null, entry.kind === "tv" ? "SERIE" : "FILM"));
+    }
+
+    const header = createElement("div", "catalog-detail-header");
+    const kicker = createElement("p", "catalog-detail-kicker", kindLabels[entry.kind] || entry.kind);
+    const headline = createElement("h3", null, title);
+    const metaLine = createElement(
+      "p",
+      "catalog-detail-meta",
+      [publicYearFor(primary), publicRuntimeFor(primary), genres.slice(0, 3).join(" / ")]
+        .filter(Boolean)
+        .join(" · "),
+    );
+    header.append(kicker, headline);
+    if (metaLine.textContent) header.append(metaLine);
+
+    const overview = metadata.overview ? createElement("p", "catalog-detail-overview", metadata.overview) : null;
+    if (overview) header.append(overview);
+
+    const links = createElement("div", "catalog-detail-links");
+    [
+      ["IMDb", metadata.imdb_id ? `https://www.imdb.com/title/${metadata.imdb_id}/` : ""],
+      ["TMDb", tmdbUrl(metadata, entry.kind)],
+      ["Website", metadata.homepage || ""],
+    ].forEach(([label, href]) => {
+      if (!href) return;
+      const link = document.createElement("a");
+      link.href = href;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.textContent = label;
+      links.append(link);
+    });
+    if (links.children.length) header.append(links);
+
+    hero.append(posterWrap, header);
+
+    const detailGrid = createElement("div", "catalog-detail-grid");
+    const filmFacts = createElement("section", "catalog-detail-card");
+    filmFacts.append(createElement("h4", null, "Filmdaten"));
+    const filmFactsList = createElement("dl", "catalog-detail-facts");
+    const availableSeasons = unique(entry.episodes.map((episode) => episode.season)).length;
+    const availableEpisodes = entry.episodes.length;
+    const databaseScope = [
+      metadata.number_of_seasons ? `${metadata.number_of_seasons} Staffeln` : "",
+      metadata.number_of_episodes ? `${metadata.number_of_episodes} Folgen` : "",
+    ]
+      .filter(Boolean)
+      .join(", ");
+
+    appendFactRows(filmFactsList, [
+      ["Originaltitel", metadata.original_title],
+      ["Veröffentlichung", formatDate(metadata.release_date)],
+      ["Genres", genres.join(", ")],
+      [
+        "Vorhanden",
+        entry.kind === "tv" && availableEpisodes
+          ? [
+              `${availableEpisodes} ${availableEpisodes === 1 ? "Folge" : "Folgen"}`,
+              availableSeasons ? `${availableSeasons} ${availableSeasons === 1 ? "Staffel" : "Staffeln"}` : "",
+            ]
+              .filter(Boolean)
+              .join(", ")
+          : "",
+      ],
+      ["Umfang", entry.kind === "tv" ? databaseScope : ""],
+      ["IMDb", metadata.imdb_rating ? `${decimalLabel(metadata.imdb_rating, 1)} (${numberFormat.format(metadata.imdb_votes || 0)} Stimmen)` : ""],
+      ["TMDb", metadata.vote_average ? `${decimalLabel(metadata.vote_average, 1)} (${numberFormat.format(metadata.vote_count || 0)} Stimmen)` : ""],
+    ]);
+    filmFacts.append(filmFactsList);
+
+    const techFacts = createElement("section", "catalog-detail-card");
+    techFacts.append(createElement("h4", null, "Mediendaten"));
+    const techFactsList = createElement("dl", "catalog-detail-facts");
+    appendFactRows(techFactsList, [
+      ["Auflösung", video.width && video.height ? `${video.width} × ${video.height}` : resolutionForItem(primary, video)],
+      ["Video", [labelCodec(video.codec), video.profile].filter(Boolean).join(" · ")],
+      ["Audio", audioSummary(entry)],
+      ["Bitrate", formatBitRate(primary.media_info?.bit_rate)],
+      ["Dateigröße", formatBytes(entry.items.reduce((sum, item) => sum + (Number(item.size_bytes) || 0), 0))],
+      ["Container", primary.extension?.replace(".", "").toUpperCase()],
+      ["Stand", formatDate(primary.modified_at)],
+    ]);
+    techFacts.append(techFactsList);
+    detailGrid.append(filmFacts, techFacts);
+
+    if (entry.episodes?.length) {
+      const episodeCard = createElement("section", "catalog-detail-card catalog-detail-episodes");
+      episodeCard.append(createElement("h4", null, "Folgen"));
+      const list = createElement("div", "catalog-detail-episode-list");
+      entry.episodes.forEach((episode) => {
+        const episodeRow = createElement("article", "catalog-detail-episode");
+        const code = createElement("strong", null, episode.label);
+        const content = createElement("div");
+        content.append(createElement("h5", null, episode.name));
+
+        const meta = createElement(
+          "p",
+          "catalog-detail-episode-meta",
+          [episode.airDate, episode.runtime, episode.rating].filter(Boolean).join(" · "),
+        );
+        if (meta.textContent) content.append(meta);
+        if (episode.overview) content.append(createElement("p", "catalog-detail-episode-overview", episode.overview));
+
+        episodeRow.append(code, content);
+        list.append(episodeRow);
+      });
+      episodeCard.append(list);
+      detailGrid.append(episodeCard);
+    }
+
+    catalogDialogBody.append(hero, detailGrid);
+
+    if (typeof catalogDialog.showModal === "function") {
+      catalogDialog.showModal();
+    } else {
+      catalogDialog.setAttribute("open", "");
+    }
+  };
+
   const createEntryElement = (entry) => {
     const article = document.createElement("article");
     article.className = "catalog-item";
+    article.tabIndex = 0;
+    article.dataset.catalogEntry = entry.id;
+    article.setAttribute("aria-label", `${entry.title} Details öffnen`);
 
     const main = document.createElement("div");
     main.className = "catalog-item-main";
@@ -894,6 +1158,15 @@ if (catalogRoot) {
       tag.textContent = tagText;
       tags.append(tag);
     });
+    const detailButton = document.createElement("button");
+    detailButton.type = "button";
+    detailButton.className = "catalog-detail-button";
+    detailButton.textContent = "Details";
+    detailButton.addEventListener("click", (event) => {
+      event.stopPropagation();
+      openCatalogDetail(entry);
+    });
+    tags.append(detailButton);
 
     article.append(main, tags);
 
@@ -958,6 +1231,16 @@ if (catalogRoot) {
       episodes.append(summary, episodePanel);
       article.append(episodes);
     }
+
+    article.addEventListener("click", (event) => {
+      if (event.target.closest("button, a, summary, select, input, textarea")) return;
+      openCatalogDetail(entry);
+    });
+    article.addEventListener("keydown", (event) => {
+      if (event.target !== article || (event.key !== "Enter" && event.key !== " ")) return;
+      event.preventDefault();
+      openCatalogDetail(entry);
+    });
 
     return article;
   };
@@ -1121,6 +1404,12 @@ if (catalogRoot) {
       state.sort = sortSelect.value;
       state.page = 1;
       renderCatalog();
+    });
+  }
+
+  if (catalogDialog) {
+    catalogDialog.addEventListener("click", (event) => {
+      if (event.target === catalogDialog) catalogDialog.close();
     });
   }
 
