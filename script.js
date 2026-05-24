@@ -816,8 +816,8 @@ if (catalogRoot) {
   const makeEntry = (items, forcedKind, forcedTitle) => {
     const primary = items[0] || {};
     const kind = forcedKind || primary.kind || "movie";
-    const title = forcedTitle || titleFor(primary);
     const metadata = primary.metadata || {};
+    const title = metadata.title || forcedTitle || titleFor(primary);
     const years = unique(items.map((item) => publicYearFor(item)));
     const episodes = kind === "tv" ? episodeDetails(items, title) : [];
     const videos = items.map((item) => item.media_info?.video).filter(Boolean);
@@ -984,9 +984,7 @@ if (catalogRoot) {
     const primary = entry.items[0] || {};
     const video = primaryVideo(entry);
     const genres = Array.isArray(metadata.genres) ? metadata.genres : [];
-    const title = metadata.title && normalizeText(metadata.title) !== normalizeText(entry.title)
-      ? `${entry.title} (${metadata.title})`
-      : entry.title;
+    const title = metadata.title || entry.title;
 
     catalogDialogBody.replaceChildren();
 
@@ -998,7 +996,6 @@ if (catalogRoot) {
       const poster = document.createElement("img");
       poster.src = metadata.poster_url;
       poster.alt = "";
-      poster.loading = "lazy";
       posterWrap.append(poster);
     } else {
       posterWrap.append(createElement("span", null, entry.kind === "tv" ? "SERIE" : "FILM"));
@@ -1430,7 +1427,7 @@ if (catalogRoot) {
         resultsEl.replaceChildren();
         const empty = document.createElement("p");
         empty.className = "catalog-empty";
-        empty.textContent = "Die Zappiti-Daten sind erst verfügbar, wenn die Seite über einen Webserver geladen wird.";
+        empty.textContent = "Die Katalogdaten sind erst verfügbar, wenn die Seite über einen Webserver geladen wird.";
         resultsEl.append(empty);
       }
       if (paginationEl) paginationEl.hidden = true;
