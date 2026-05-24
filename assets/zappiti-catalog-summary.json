@@ -1,24 +1,27 @@
 {
-  "generated_at": "2026-05-24T10:10:55+00:00",
+  "generated_at": "2026-05-24T16:10:59+00:00",
   "schema_version": 1,
   "sources": [
     {
-      "files": 209,
+      "files": 0,
       "libraries": [
         {
-          "files": 178,
+          "files": 0,
+          "message": "Library folder is not available.",
           "name": "FILME",
-          "reachable": true
+          "reachable": false
         },
         {
-          "files": 5,
+          "files": 0,
+          "message": "Library folder is not available.",
           "name": "SERIEN",
-          "reachable": true
+          "reachable": false
         },
         {
-          "files": 26,
+          "files": 0,
+          "message": "Library folder is not available.",
           "name": "DEMOS",
-          "reachable": true
+          "reachable": false
         }
       ],
       "message": "",
@@ -28,17 +31,19 @@
       "reachable": true
     },
     {
-      "files": 144,
+      "files": 0,
       "libraries": [
         {
-          "files": 125,
+          "files": 0,
+          "message": "Library folder is not available.",
           "name": "FILME",
-          "reachable": true
+          "reachable": false
         },
         {
-          "files": 19,
+          "files": 0,
+          "message": "Library folder is not available.",
           "name": "SERIEN",
-          "reachable": true
+          "reachable": false
         },
         {
           "files": 0,
@@ -55,18 +60,10 @@
     }
   ],
   "stats": {
-    "by_kind": {
-      "demo": 26,
-      "movie": 303,
-      "tv": 24
-    },
-    "by_library": {
-      "DEMOS": 26,
-      "FILME": 303,
-      "SERIEN": 24
-    },
+    "by_kind": {},
+    "by_library": {},
     "offline_sources": 0,
     "reachable_sources": 2,
-    "total": 353
+    "total": 0
   }
 }
