@@ -1260,16 +1260,16 @@ if (catalogRoot) {
     });
   };
 
-  const setPage = (page, shouldScroll = false) => {
+  const setPage = (page) => {
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
     state.page = page;
     state.pageJumpGap = null;
     renderCatalog();
-    if (shouldScroll) {
-      catalogRoot.scrollIntoView({
-        block: "start",
-        behavior: prefersReducedMotion ? "auto" : "smooth",
-      });
-    }
+    window.scrollTo({ left: scrollX, top: scrollY, behavior: "auto" });
+    requestAnimationFrame(() => {
+      window.scrollTo({ left: scrollX, top: scrollY, behavior: "auto" });
+    });
   };
 
   const renderPagination = (pageCount, totalEntries) => {
@@ -1282,8 +1282,8 @@ if (catalogRoot) {
 
     prevButton.disabled = state.page === 1;
     nextButton.disabled = state.page === pageCount;
-    prevButton.onclick = () => setPage(Math.max(1, state.page - 1), true);
-    nextButton.onclick = () => setPage(Math.min(pageCount, state.page + 1), true);
+    prevButton.onclick = () => setPage(Math.max(1, state.page - 1));
+    nextButton.onclick = () => setPage(Math.min(pageCount, state.page + 1));
 
     paginationItems(state.page, pageCount).forEach((item) => {
       if (typeof item === "object") {
@@ -1301,7 +1301,7 @@ if (catalogRoot) {
           }
 
           select.value = String(state.page);
-          select.addEventListener("change", () => setPage(Number(select.value), true));
+          select.addEventListener("change", () => setPage(Number(select.value)));
           select.addEventListener("blur", () => {
             if (state.pageJumpGap === item.id) {
               state.pageJumpGap = null;
@@ -1309,7 +1309,6 @@ if (catalogRoot) {
             }
           });
           pagesEl.append(select);
-          requestAnimationFrame(() => select.focus());
           return;
         }
 
@@ -1335,7 +1334,7 @@ if (catalogRoot) {
         pageButton.classList.add("is-active");
         pageButton.setAttribute("aria-current", "page");
       }
-      pageButton.addEventListener("click", () => setPage(item, true));
+      pageButton.addEventListener("click", () => setPage(item));
       pagesEl.append(pageButton);
     });
   };
