@@ -1206,16 +1206,22 @@ figcaption {
 
 .catalog-list {
   display: grid;
-  grid-auto-rows: minmax(6.6rem, auto);
+  grid-auto-rows: 9rem;
 }
 
 .catalog-item {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(15rem, auto);
+  grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "main tags"
+    "episodes tags";
   gap: 1rem;
   align-items: center;
   min-width: 0;
-  min-height: 6.6rem;
+  height: 9rem;
+  min-height: 0;
+  overflow: hidden;
   padding: 1rem 1.1rem;
   border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.012);
@@ -1235,7 +1241,13 @@ figcaption {
 }
 
 .catalog-item-main {
+  grid-area: main;
+  align-self: center;
   min-width: 0;
+}
+
+.catalog-item.has-episodes .catalog-item-main {
+  align-self: end;
 }
 
 .catalog-item-heading {
@@ -1298,6 +1310,7 @@ figcaption {
 }
 
 .catalog-tags {
+  grid-area: tags;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -1346,8 +1359,11 @@ figcaption {
 }
 
 .catalog-episodes {
-  grid-column: 1 / -1;
-  padding-top: 0.1rem;
+  grid-area: episodes;
+  align-self: start;
+  padding-top: 0;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .catalog-episodes summary {
@@ -2230,6 +2246,14 @@ figcaption {
   .catalog-toolbar,
   .catalog-item {
     grid-template-columns: 1fr;
+  }
+
+  .catalog-item {
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "main"
+      "tags"
+      "episodes";
   }
 
   .catalog-filters {
