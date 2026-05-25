@@ -1163,10 +1163,6 @@ if (catalogRoot) {
       event.stopPropagation();
       openCatalogDetail(entry);
     });
-    tags.append(detailButton);
-
-    article.append(main, tags);
-
     if (entry.episodes?.length) {
       article.classList.add("has-episodes");
 
@@ -1174,7 +1170,14 @@ if (catalogRoot) {
       episodes.className = "catalog-episodes";
 
       const summary = document.createElement("summary");
-      summary.textContent = "Folgen anzeigen";
+      summary.setAttribute("aria-label", "Folgen anzeigen");
+      const summaryFull = document.createElement("span");
+      summaryFull.className = "catalog-episodes-label-full";
+      summaryFull.textContent = "Folgen anzeigen";
+      const summaryShort = document.createElement("span");
+      summaryShort.className = "catalog-episodes-label-short";
+      summaryShort.textContent = "Folgen";
+      summary.append(summaryFull, summaryShort);
 
       const episodePanel = document.createElement("div");
       episodePanel.className = "catalog-episode-panel";
@@ -1226,11 +1229,14 @@ if (catalogRoot) {
       });
 
       episodes.append(summary, episodePanel);
-      article.append(episodes);
+      tags.append(episodes);
     }
 
+    tags.append(detailButton);
+    article.append(main, tags);
+
     article.addEventListener("click", (event) => {
-      if (event.target.closest("button, a, summary, select, input, textarea")) return;
+      if (event.target.closest("button, a, details, summary, select, input, textarea")) return;
       openCatalogDetail(entry);
     });
     article.addEventListener("keydown", (event) => {

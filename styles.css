@@ -1206,22 +1206,19 @@ figcaption {
 
 .catalog-list {
   display: grid;
-  grid-auto-rows: 9rem;
+  grid-auto-rows: 7rem;
 }
 
 .catalog-item {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(15rem, auto);
-  grid-template-rows: minmax(0, 1fr) auto;
-  grid-template-areas:
-    "main tags"
-    "episodes tags";
+  grid-template-areas: "main tags";
   gap: 1rem;
   align-items: center;
   min-width: 0;
-  height: 9rem;
+  height: 7rem;
   min-height: 0;
-  overflow: hidden;
+  overflow: visible;
   padding: 1rem 1.1rem;
   border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.012);
@@ -1244,10 +1241,6 @@ figcaption {
   grid-area: main;
   align-self: center;
   min-width: 0;
-}
-
-.catalog-item.has-episodes .catalog-item-main {
-  align-self: end;
 }
 
 .catalog-item-heading {
@@ -1310,9 +1303,11 @@ figcaption {
 
 .catalog-tags {
   grid-area: tags;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
   gap: 0.42rem;
 }
 
@@ -1358,24 +1353,29 @@ figcaption {
 }
 
 .catalog-episodes {
-  grid-area: episodes;
-  align-self: start;
-  padding-top: 0;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   min-height: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .catalog-episodes summary {
   width: fit-content;
-  min-height: 2rem;
-  padding: 0.35rem 0.65rem;
+  min-height: 1.72rem;
+  padding: 0.28rem 0.56rem;
   border: 1px solid rgba(105, 211, 124, 0.32);
   border-radius: 999px;
   background: rgba(105, 211, 124, 0.08);
   color: var(--green);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 740;
+  line-height: 1;
   cursor: pointer;
+}
+
+.catalog-episodes-label-short {
+  display: none;
 }
 
 .catalog-episodes summary:focus-visible {
@@ -1384,15 +1384,20 @@ figcaption {
 }
 
 .catalog-episode-panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  z-index: 20;
   display: grid;
   gap: 0.9rem;
+  width: min(24rem, calc(100vw - 2rem));
   max-height: min(22rem, 46vh);
-  margin-top: 0.72rem;
   overflow: auto;
   padding: 0.75rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: rgba(5, 7, 11, 0.28);
+  box-shadow: var(--shadow);
   scrollbar-color: rgba(107, 216, 255, 0.36) transparent;
 }
 
@@ -2248,11 +2253,18 @@ figcaption {
   }
 
   .catalog-item {
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto;
     grid-template-areas:
       "main"
-      "tags"
-      "episodes";
+      "tags";
+  }
+
+  .catalog-list {
+    grid-auto-rows: 8.25rem;
+  }
+
+  .catalog-item {
+    height: 8.25rem;
   }
 
   .catalog-filters {
@@ -2438,17 +2450,17 @@ figcaption {
   }
 
   .catalog-list {
-    grid-auto-rows: 14rem;
-    min-height: 140rem;
+    grid-auto-rows: 10.5rem;
+    min-height: 105rem;
   }
 
   .catalog-item {
-    height: 14rem;
+    height: 10.5rem;
     min-height: 0;
-    max-height: 14rem;
+    max-height: 10.5rem;
     align-content: center;
     gap: 0.72rem;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .catalog-item-heading {
@@ -2457,25 +2469,34 @@ figcaption {
   }
 
   .catalog-item-main p {
-    height: 2.42rem;
-    -webkit-line-clamp: 2;
+    height: auto;
+    -webkit-line-clamp: 1;
   }
 
   .catalog-tags {
-    max-height: 4.1rem;
-    overflow: hidden;
+    max-height: none;
+    overflow: visible;
   }
 
-  .catalog-episodes {
-    align-self: end;
-    padding-top: 0;
-    min-height: 0;
-    overflow: hidden;
+  .catalog-episodes-label-full {
+    display: none;
+  }
+
+  .catalog-episodes-label-short {
+    display: inline;
   }
 
   .catalog-episode-panel {
-    max-height: 4.6rem;
-    margin-top: 0.45rem;
+    position: fixed;
+    top: 50%;
+    right: 1rem;
+    left: 1rem;
+    z-index: 120;
+    width: auto;
+    max-height: min(70vh, 26rem);
+    margin-top: 0;
+    transform: translateY(-50%);
+    background: rgba(5, 7, 11, 0.98);
     padding: 0.45rem;
     gap: 0.45rem;
   }
