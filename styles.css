@@ -1206,6 +1206,7 @@ figcaption {
 
 .catalog-list {
   display: grid;
+  grid-auto-rows: minmax(6.6rem, auto);
 }
 
 .catalog-item {
@@ -1214,6 +1215,7 @@ figcaption {
   gap: 1rem;
   align-items: center;
   min-width: 0;
+  min-height: 6.6rem;
   padding: 1rem 1.1rem;
   border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.012);
@@ -1289,6 +1291,10 @@ figcaption {
   color: var(--muted);
   font-size: 0.86rem;
   line-height: 1.4;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .catalog-tags {
@@ -2406,6 +2412,38 @@ figcaption {
   .catalog-empty {
     padding-right: 0.9rem;
     padding-left: 0.9rem;
+  }
+
+  .catalog-list {
+    grid-auto-rows: 12.75rem;
+    min-height: 127.5rem;
+  }
+
+  .catalog-item {
+    min-height: 12.75rem;
+    align-content: center;
+    gap: 0.72rem;
+    overflow: hidden;
+  }
+
+  .catalog-item-heading {
+    align-content: flex-start;
+    gap: 0.48rem;
+  }
+
+  .catalog-item-main p {
+    height: 2.42rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .catalog-tags {
+    max-height: 4.1rem;
+    overflow: hidden;
+  }
+
+  .catalog-episodes {
+    align-self: end;
+    padding-top: 0;
   }
 
   .catalog-pagination {
