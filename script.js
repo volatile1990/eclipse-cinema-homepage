@@ -497,7 +497,6 @@ if (tour) {
 
 const header = document.querySelector(".site-header");
 if (header) {
-  header.classList.add("has-scroll-state");
   const updateScrolled = () => {
     header.classList.toggle("is-scrolled", window.scrollY > 80);
   };
@@ -1612,7 +1611,7 @@ if (contactCopy) {
     contactCopy.hidden = true;
   } else {
     contactCopy.hidden = false;
-    const label = contactCopy.querySelector(".contact-copy-label");
+    const label = contactCopy.querySelector(".contact-clipboard-label");
     const originalLabel = label ? label.textContent : "Adresse kopieren";
     let resetTimer = null;
 
