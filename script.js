@@ -422,15 +422,28 @@ if (tour) {
     infoHint.innerHTML = `Aktuelle Ansicht: <strong>${view}</strong> · ${layerSummary}`;
   };
 
-  const setView = (view) => {
+  const closeInfoSheet = () => {
+    tour.classList.remove("has-active-info");
+  };
+
+  const scrollViewIntoTrack = (btn) => {
+    const track = btn.parentElement;
+    if (!track || track.scrollWidth <= track.clientWidth) return;
+    const target = btn.offsetLeft - (track.clientWidth - btn.offsetWidth) / 2;
+    track.scrollTo({ left: Math.max(0, target), behavior: "smooth" });
+  };
+
+  const setView = (view, { fromUser = false } = {}) => {
     tour.dataset.view = view;
     plans.forEach((p) => p.classList.toggle("is-visible", p.dataset.plan === view));
     viewButtons.forEach((b) => {
       const isActive = b.dataset.view === view;
       b.classList.toggle("is-active", isActive);
       b.setAttribute("aria-selected", String(isActive));
+      if (isActive && fromUser) scrollViewIntoTrack(b);
     });
     hits.forEach((h) => h.classList.remove("is-active"));
+    closeInfoSheet();
     updateInfo(null);
     updateHint();
   };
@@ -449,10 +462,20 @@ if (tour) {
   const activateHit = (el) => {
     hits.forEach((h) => h.classList.toggle("is-active", h === el));
     updateInfo(el.dataset.info);
+    tour.classList.add("has-active-info");
   };
 
+  const infoCloseBtn = tour.querySelector("[data-tour-info-close]");
+  if (infoCloseBtn) {
+    infoCloseBtn.addEventListener("click", () => {
+      hits.forEach((h) => h.classList.remove("is-active"));
+      closeInfoSheet();
+      updateInfo(null);
+    });
+  }
+
   viewButtons.forEach((b) =>
-    b.addEventListener("click", () => setView(b.dataset.view)),
+    b.addEventListener("click", () => setView(b.dataset.view, { fromUser: true })),
   );
 
   layerButtons.forEach((b) =>
@@ -552,12 +575,6 @@ if (catalogRoot) {
   const pagesEl = catalogRoot.querySelector("[data-catalog-pages]");
   const catalogDialog = document.querySelector("[data-catalog-dialog]");
   const catalogDialogBody = document.querySelector("[data-catalog-dialog-body]");
-  const statEls = {
-    total: catalogRoot.querySelector('[data-catalog-stat="total"]'),
-    movie: catalogRoot.querySelector('[data-catalog-stat="movie"]'),
-    demo: catalogRoot.querySelector('[data-catalog-stat="demo"]'),
-    tv: catalogRoot.querySelector('[data-catalog-stat="tv"]'),
-  };
 
   const source = catalogRoot.dataset.catalogSrc;
   const pageSize = 10;
@@ -735,6 +752,11 @@ if (catalogRoot) {
     return "";
   };
 
+  const imdbRatingFor = (metadata) => {
+    const rating = Number(metadata?.imdb_rating);
+    return Number.isFinite(rating) && rating > 0 ? rating : 0;
+  };
+
   const publicYearFor = (item) => item.metadata?.year || item.year || "";
 
   const publicRuntimeFor = (item) =>
@@ -859,6 +881,7 @@ if (catalogRoot) {
       subtitle: subtitleParts.join(" · "),
       tags,
       height,
+      imdbRating: imdbRatingFor(metadata),
       modifiedMs,
       searchIndex: normalizeText(
         [
@@ -903,10 +926,18 @@ if (catalogRoot) {
   const updateStats = (data) => {
     const byKind = data.stats?.by_kind || {};
     const total = data.stats?.total ?? data.items?.length ?? 0;
-    if (statEls.total) statEls.total.textContent = numberFormat.format(total);
-    if (statEls.movie) statEls.movie.textContent = numberFormat.format(byKind.movie || 0);
-    if (statEls.demo) statEls.demo.textContent = numberFormat.format(byKind.demo || 0);
-    if (statEls.tv) statEls.tv.textContent = numberFormat.format(byKind.tv || 0);
+    const counts = {
+      all: total,
+      movie: byKind.movie || 0,
+      demo: byKind.demo || 0,
+      tv: byKind.tv || 0,
+    };
+    catalogRoot.querySelectorAll("[data-catalog-count]").forEach((el) => {
+      const key = el.dataset.catalogCount;
+      if (counts[key] !== undefined) {
+        el.textContent = `(${numberFormat.format(counts[key])})`;
+      }
+    });
 
     if (updatedEl && data.generated_at) {
       updatedEl.textContent = `Stand: ${dateFormat.format(new Date(data.generated_at))}`;
@@ -918,8 +949,8 @@ if (catalogRoot) {
       if (state.sort === "recent") {
         return b.modifiedMs - a.modifiedMs || collator.compare(a.title, b.title);
       }
-      if (state.sort === "resolution") {
-        return b.height - a.height || collator.compare(a.title, b.title);
+      if (state.sort === "imdb") {
+        return b.imdbRating - a.imdbRating || collator.compare(a.title, b.title);
       }
       return collator.compare(a.title, b.title);
     });
@@ -1389,12 +1420,31 @@ if (catalogRoot) {
     renderCatalog();
   };
 
+  const clearButton = catalogRoot.querySelector("[data-catalog-clear]");
+  const syncClearVisibility = () => {
+    if (!clearButton) return;
+    clearButton.hidden = !searchInput || !searchInput.value;
+  };
+
   if (searchInput) {
     searchInput.addEventListener("input", () => {
       state.query = searchInput.value;
       state.page = 1;
+      syncClearVisibility();
       renderCatalog();
     });
+  }
+
+  if (clearButton && searchInput) {
+    clearButton.addEventListener("click", () => {
+      searchInput.value = "";
+      state.query = "";
+      state.page = 1;
+      syncClearVisibility();
+      renderCatalog();
+      searchInput.focus();
+    });
+    syncClearVisibility();
   }
 
   filterButtons.forEach((button) => {
@@ -1425,11 +1475,13 @@ if (catalogRoot) {
       state.entries = prepareEntries(items);
       updateStats(data);
       renderCatalog();
+      if (resultsEl) resultsEl.removeAttribute("aria-busy");
     })
     .catch(() => {
       if (statusEl) statusEl.textContent = "Katalog konnte nicht geladen werden.";
       if (resultsEl) {
         resultsEl.replaceChildren();
+        resultsEl.removeAttribute("aria-busy");
         const empty = document.createElement("p");
         empty.className = "catalog-empty";
         empty.textContent = "Die Katalogdaten sind erst verfügbar, wenn die Seite über einen Webserver geladen wird.";
@@ -1507,10 +1559,82 @@ if (lightbox && galleryFigures.length && typeof lightbox.showModal === "function
       showAt(currentIndex + 1);
     }
   });
+
+  let touchStartX = null;
+  let touchStartY = null;
+  lightbox.addEventListener(
+    "touchstart",
+    (e) => {
+      if (e.touches.length !== 1) {
+        touchStartX = null;
+        return;
+      }
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    },
+    { passive: true },
+  );
+  lightbox.addEventListener(
+    "touchend",
+    (e) => {
+      if (touchStartX === null) return;
+      const touch = e.changedTouches[0];
+      const dx = touch.clientX - touchStartX;
+      const dy = touch.clientY - touchStartY;
+      touchStartX = null;
+      touchStartY = null;
+      if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return;
+      if (dx < 0 && currentIndex < galleryFigures.length - 1) {
+        showAt(currentIndex + 1);
+      } else if (dx > 0 && currentIndex > 0) {
+        showAt(currentIndex - 1);
+      }
+    },
+    { passive: true },
+  );
+
   lightbox.addEventListener("close", () => {
     lbImg.removeAttribute("src");
     lbImg.alt = "";
     lbCaption.textContent = "";
     currentIndex = -1;
   });
+}
+
+const contactCopy = document.querySelector("[data-contact-copy]");
+if (contactCopy) {
+  const supportsClipboard =
+    typeof navigator !== "undefined" &&
+    navigator.clipboard &&
+    typeof navigator.clipboard.writeText === "function";
+
+  if (!supportsClipboard) {
+    contactCopy.hidden = true;
+  } else {
+    contactCopy.hidden = false;
+    const label = contactCopy.querySelector(".contact-copy-label");
+    const originalLabel = label ? label.textContent : "Adresse kopieren";
+    let resetTimer = null;
+
+    contactCopy.addEventListener("click", async () => {
+      const text = contactCopy.dataset.clipboard || "";
+      if (!text) return;
+      try {
+        await navigator.clipboard.writeText(text);
+        contactCopy.classList.add("is-copied");
+        if (label) label.textContent = "Kopiert ✓";
+        if (resetTimer) clearTimeout(resetTimer);
+        resetTimer = setTimeout(() => {
+          contactCopy.classList.remove("is-copied");
+          if (label) label.textContent = originalLabel;
+        }, 1800);
+      } catch (error) {
+        if (label) label.textContent = "Kopieren fehlgeschlagen";
+        if (resetTimer) clearTimeout(resetTimer);
+        resetTimer = setTimeout(() => {
+          if (label) label.textContent = originalLabel;
+        }, 1800);
+      }
+    });
+  }
 }
