@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T14:27:11+00:00",
+  "generated_at": "2026-05-29T20:28:23+00:00",
   "items": [
     {
       "audio_codec": "Dolby Atmos",
@@ -1066,34 +1066,6 @@
       "imdb_votes": 180354,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 74823954,
-        "duration_seconds": 8668,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/ayDMYGUNVvXS76wQgFwTiUIDNb5.jpg",
         "genres": [
@@ -1431,34 +1403,6 @@
       "imdb_votes": 106897,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 71586734,
-        "duration_seconds": 5562,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/eSVu1FvGPy86TDo4hQbpuHx55DJ.jpg",
         "genres": [
@@ -1505,24 +1449,6 @@
       "imdb_votes": 82,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "aac",
-            "language": "und"
-          }
-        ],
-        "bit_rate": 4515295,
-        "duration_seconds": 63,
-        "video": {
-          "codec": "h264",
-          "height": 1080,
-          "pix_fmt": "yuv420p",
-          "profile": "High",
-          "width": 1920
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/rBUVRlyjNlgLFitfVwfvVgWq2pS.jpg",
         "genres": [
@@ -1854,44 +1780,6 @@
       "imdb_votes": 553808,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 63658883,
-        "duration_seconds": 8599,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/9QusGjxcYvfPD1THg6oW3RLeNn7.jpg",
         "genres": [
@@ -1937,39 +1825,6 @@
       "imdb_votes": 118309,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 71482061,
-        "duration_seconds": 7448,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/7S0bXv3BqCuPfImKRf5kkmBVYZR.jpg",
         "genres": [
@@ -2015,39 +1870,6 @@
       "imdb_votes": 217030,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 68347141,
-        "duration_seconds": 8459,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/jrudoaXcoLyHRPdolyOGemXgPEs.jpg",
         "genres": [
@@ -2157,44 +1979,6 @@
       "imdb_votes": 622801,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 56107775,
-        "duration_seconds": 11573,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/kJsPVzdyBrYHLomuNv5SJDXUQ2f.jpg",
         "genres": [
@@ -2431,39 +2215,6 @@
       "imdb_votes": 288708,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 62867786,
-        "duration_seconds": 8805,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/gxSVZCUlDd8upT1G2wdrUdz2hxG.jpg",
         "genres": [
@@ -2656,34 +2407,6 @@
       "imdb_votes": 26808,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "kor"
-          }
-        ],
-        "bit_rate": 20891314,
-        "duration_seconds": 5627,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/wlLdcK3Sm7zp0w1ZuVvnFlmcchM.jpg",
         "genres": [
@@ -3014,39 +2737,6 @@
       "imdb_votes": 48605,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 33464173,
-        "duration_seconds": 5567,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/pz7bGOUNJXyPKJ2GcJN6nhwBnCs.jpg",
         "genres": [
@@ -3094,24 +2784,6 @@
       "imdb_votes": 304110,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 47641002,
-        "duration_seconds": 7492,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg",
         "genres": [
@@ -3236,39 +2908,6 @@
       "imdb_votes": 380280,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 45225296,
-        "duration_seconds": 9678,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/83H0C66AcvkwpG2738VCTHMY9uv.jpg",
         "genres": [
@@ -3378,29 +3017,6 @@
       "imdb_votes": 5434,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 75953614,
-        "duration_seconds": 5686,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/mjV9gpXO2R2SOYI4ChJZiu6F1OE.jpg",
         "genres": [
@@ -3656,24 +3272,6 @@
       "imdb_votes": 90383,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 59161679,
-        "duration_seconds": 6059,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/1Yc5hIRh3skhsEKLbCHE7v1FBOa.jpg",
         "genres": [
@@ -3719,29 +3317,6 @@
       "imdb_votes": 209860,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 15875830,
-        "duration_seconds": 7066,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/hu4psJoKxDYezvvS4GlLF531fom.jpg",
         "genres": [
@@ -3788,34 +3363,6 @@
       "imdb_votes": 536905,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 75792750,
-        "duration_seconds": 7591,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/y2Ca1neKke2mGPMaHzlCNDVZqsK.jpg",
         "genres": [
@@ -3862,39 +3409,6 @@
       "imdb_votes": 208604,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 59499646,
-        "duration_seconds": 6833,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/hMANgfPHR1tRObNp2oPiOi9mMlz.jpg",
         "genres": [
@@ -4020,24 +3534,6 @@
       "imdb_votes": 63920,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 62119167,
-        "duration_seconds": 3008,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/ovggmAOu1IbPGTQE8lg4lBasNC7.jpg",
         "genres": [
@@ -4146,24 +3642,6 @@
       "imdb_votes": 1780,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 24931621,
-        "duration_seconds": 6302,
-        "video": {
-          "codec": "h264",
-          "height": 1080,
-          "pix_fmt": "yuv420p",
-          "profile": "High",
-          "width": 1920
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/cMW3hiXiGuAP6X3Nbjr7AvxEszc.jpg",
         "genres": [
@@ -4206,24 +3684,6 @@
       "imdb_votes": 5844,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 24191401,
-        "duration_seconds": 6213,
-        "video": {
-          "codec": "h264",
-          "height": 1080,
-          "pix_fmt": "yuv420p",
-          "profile": "High",
-          "width": 1920
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/4D0LwwHmhgd3R3nmln13wEEjKHL.jpg",
         "genres": [
@@ -4269,39 +3729,6 @@
       "imdb_votes": 277806,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 72424088,
-        "duration_seconds": 5257,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/8JPz1636hMcaADngF4H4KOxXfp1.jpg",
         "genres": [
@@ -4348,34 +3775,6 @@
       "imdb_votes": 102918,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 81903916,
-        "duration_seconds": 5253,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/lm4xH0YwFbVvTgdtau1thNK5S6J.jpg",
         "genres": [
@@ -4491,24 +3890,6 @@
       "imdb_votes": 684663,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 61843955,
-        "duration_seconds": 6915,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/qiBILuWhv7ipF0pxiEqIJdkQzj8.jpg",
         "genres": [
@@ -4556,24 +3937,6 @@
       "imdb_votes": 328632,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 50972779,
-        "duration_seconds": 8096,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/akNBILfG0vh7WhuzjA1bXfrgpYI.jpg",
         "genres": [
@@ -4744,34 +4107,6 @@
       "imdb_votes": 570509,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 27240235,
-        "duration_seconds": 7667,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/ufpeVEM64uZHPpzzeiDNIAdaeOD.jpg",
         "genres": [
@@ -5226,24 +4561,6 @@
       "imdb_votes": 2728,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 23998642,
-        "duration_seconds": 5223,
-        "video": {
-          "codec": "h264",
-          "height": 1080,
-          "pix_fmt": "yuv420p",
-          "profile": "High",
-          "width": 1920
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/l5Q3LcVlac6TpGsM0Zdvu9dhhc.jpg",
         "genres": [
@@ -5288,39 +4605,6 @@
       "imdb_votes": 1641275,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 61759099,
-        "duration_seconds": 10166,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/bdD39MpSVhKjxarTxLSfX6baoMP.jpg",
         "genres": [
@@ -5366,24 +4650,6 @@
       "imdb_votes": 20182,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 25942974,
-        "duration_seconds": 5462,
-        "video": {
-          "codec": "h264",
-          "height": 1080,
-          "pix_fmt": "yuv420p",
-          "profile": "High",
-          "width": 1920
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/ll1d1AXoQganpzphgUVuWGo3Nmi.jpg",
         "genres": [
@@ -5427,29 +4693,6 @@
       "imdb_votes": 2576,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 74827710,
-        "duration_seconds": 6325,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/pJkXQkjGoaEgBkxZBHxodzyieE5.jpg",
         "genres": [
@@ -5495,34 +4738,6 @@
       "imdb_votes": 146793,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 89373791,
-        "duration_seconds": 7233,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/qSP072apfe2EEcd5Qg9vGYy2OLw.jpg",
         "genres": [
@@ -5569,29 +4784,6 @@
       "imdb_votes": 518878,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 90405196,
-        "duration_seconds": 8379,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/bgkFOoXEQMRjKkCvgoj7smdGbuh.jpg",
         "genres": [
@@ -5638,34 +4830,6 @@
       "imdb_votes": 271737,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 90157786,
-        "duration_seconds": 7139,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/8YNNyQiPZlF9qv5EGOUK20mnXVk.jpg",
         "genres": [
@@ -6090,24 +5254,6 @@
       "id": "475ef7b8b0ae9906",
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 47331550,
-        "duration_seconds": 2715,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "modified_at": "2024-07-19T13:53:29+00:00",
       "parsed": {
         "container": "mkv",
@@ -6131,39 +5277,6 @@
       "imdb_votes": 142099,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 73222225,
-        "duration_seconds": 6145,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/jnnaCXTkJhwWcCJK8yZvAybrBvR.jpg",
         "genres": [
@@ -6462,39 +5575,6 @@
       "imdb_votes": 753121,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 58836099,
-        "duration_seconds": 9949,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg",
         "genres": [
@@ -6637,39 +5717,6 @@
       "imdb_votes": 274056,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 77104967,
-        "duration_seconds": 8048,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/AdBXP8e6K3FYdDrMx3Wr6WZqCYF.jpg",
         "genres": [
@@ -6716,24 +5763,6 @@
       "imdb_votes": 808456,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 60655846,
-        "duration_seconds": 6398,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/ddIkmH3TpR6XSc47jj0BrGK5Rbz.jpg",
         "genres": [
@@ -6842,34 +5871,6 @@
       "imdb_votes": 162337,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 62761542,
-        "duration_seconds": 6142,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/zB2NdJ75xpZRJhFtU7dUVAgD0cW.jpg",
         "genres": [
@@ -6915,39 +5916,6 @@
       "imdb_votes": 162337,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 67565072,
-        "duration_seconds": 6142,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/zB2NdJ75xpZRJhFtU7dUVAgD0cW.jpg",
         "genres": [
@@ -7068,29 +6036,6 @@
       "imdb_votes": 12259,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "kor"
-          }
-        ],
-        "bit_rate": 80679408,
-        "duration_seconds": 8439,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/fI8hv1IqWUIUjx4YRfl6TWhdqHW.jpg",
         "genres": [
@@ -7136,34 +6081,6 @@
       "imdb_votes": 270843,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 68910792,
-        "duration_seconds": 6936,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/ix9WYBqQ2xSZCgyeQ1vVdrbaFa4.jpg",
         "genres": [
@@ -7272,24 +6189,6 @@
       "imdb_votes": 168580,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 68852623,
-        "duration_seconds": 5787,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/7bWxAsNPv9CXHOhZbJVlj2KxgfP.jpg",
         "genres": [
@@ -7334,29 +6233,6 @@
       "imdb_votes": 640042,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 90177279,
-        "duration_seconds": 6481,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/uqOuJ50EtTj7kkDIXP8LCg7G45D.jpg",
         "genres": [
@@ -7401,24 +6277,6 @@
       "imdb_votes": 146461,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 54376346,
-        "duration_seconds": 8450,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg",
         "genres": [
@@ -8173,29 +7031,6 @@
       "imdb_votes": 87458,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 57196676,
-        "duration_seconds": 6013,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/z2uuQasY4gQJ8VDAFki746JWeQJ.jpg",
         "genres": [
@@ -8241,29 +7076,6 @@
       "imdb_votes": 221719,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 54930846,
-        "duration_seconds": 7079,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/jE5wVBRCGQzjHjvFUcYwGS4x0ux.jpg",
         "genres": [
@@ -8390,34 +7202,6 @@
       "imdb_votes": 345587,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 71255650,
-        "duration_seconds": 6556,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/nazre7z7MoUwAqimnrSlMlfLR5t.jpg",
         "genres": [
@@ -8464,34 +7248,6 @@
       "imdb_votes": 241245,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 56273279,
-        "duration_seconds": 7436,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/EnDlndEvw6Ptpp8HIwmRcSSNKQ.jpg",
         "genres": [
@@ -8538,34 +7294,6 @@
       "imdb_votes": 193263,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 58978209,
-        "duration_seconds": 6615,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/pEhXq18GVe1dg2ltplcxtGWfSje.jpg",
         "genres": [
@@ -8612,39 +7340,6 @@
       "imdb_votes": 1852182,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 54752982,
-        "duration_seconds": 10257,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/jhk6D8pim3yaByu1801kMoxXFaX.jpg",
         "genres": [
@@ -8906,39 +7601,6 @@
       "imdb_votes": 135813,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 80158128,
-        "duration_seconds": 6880,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/gvLG3Fnznkxl4SmYfcK8gUuqxM8.jpg",
         "genres": [
@@ -9273,39 +7935,6 @@
       "imdb_votes": 84605,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 79234715,
-        "duration_seconds": 7127,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/aiM3XxYE2JvW1vJ4AC6cI1RjAoT.jpg",
         "genres": [
@@ -9429,29 +8058,6 @@
       "imdb_votes": 50200,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 18634922,
-        "duration_seconds": 6176,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/8rft8A9nH43IReybFtYt21ezfMK.jpg",
         "genres": [
@@ -10356,34 +8962,6 @@
       "imdb_votes": 226902,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 73973841,
-        "duration_seconds": 5276,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/mJSe5dxKu8Sq0GfdjdWVqdGvzfV.jpg",
         "genres": [
@@ -10634,29 +9212,6 @@
       "imdb_votes": 73801,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 25817631,
-        "duration_seconds": 7075,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/1xhcEecvRJXQ2OAVO7l9btlrN6D.jpg",
         "genres": [
@@ -10893,29 +9448,6 @@
       "imdb_votes": 392184,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 49786106,
-        "duration_seconds": 7824,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/iwvP8XVpYVmJ3xfF9xdBi5uAOWl.jpg",
         "genres": [
@@ -10963,34 +9495,6 @@
       "imdb_votes": 193510,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 62693887,
-        "duration_seconds": 7088,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/ww1eIoywghjoMzRLRIcbJLuKnJH.jpg",
         "genres": [
@@ -11037,24 +9541,6 @@
       "imdb_votes": 257876,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 55731982,
-        "duration_seconds": 7389,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/7mHeyU0a538bgguOeF57I8ZroSk.jpg",
         "genres": [
@@ -11167,24 +9653,6 @@
       "imdb_votes": 412149,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 47947133,
-        "duration_seconds": 10221,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/7I6VUdPj6tQECNHdviJkUHD2u89.jpg",
         "genres": [
@@ -11675,29 +10143,6 @@
       "imdb_votes": 730185,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 61211470,
-        "duration_seconds": 7464,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/s5QfDFqRO6sjgPtKkjxD0WqXQef.jpg",
         "genres": [
@@ -11806,29 +10251,6 @@
       "imdb_votes": 246613,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 59423107,
-        "duration_seconds": 9641,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/698FjyzLdpgXmUSr63LaRwblTmx.jpg",
         "genres": [
@@ -12028,24 +10450,6 @@
       "imdb_votes": 119565,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 77568830,
-        "duration_seconds": 7020,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/bjIPzixuWnOzxDG25WaXKuy9lYZ.jpg",
         "genres": [
@@ -12092,39 +10496,6 @@
       "imdb_votes": 141715,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 86400221,
-        "duration_seconds": 6008,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/sANUefL2v8VI6fSfK3gWAG3XBt4.jpg",
         "genres": [
@@ -12242,24 +10613,6 @@
       "imdb_votes": 926,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 22091606,
-        "duration_seconds": 6159,
-        "video": {
-          "codec": "vc1",
-          "height": 1080,
-          "pix_fmt": "yuv420p",
-          "profile": "Advanced",
-          "width": 1920
-        }
-      },
       "metadata": {
         "genres": [
           "Drama",
@@ -12371,34 +10724,6 @@
       "imdb_votes": 359453,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 81615873,
-        "duration_seconds": 7309,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/nkC2qbZooCzb0koMq03MuQ1YqKo.jpg",
         "genres": [
@@ -12507,39 +10832,6 @@
       "imdb_votes": 182132,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 70256497,
-        "duration_seconds": 6110,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/qd4EKTuudkws9lW76Dn9C0tnuVA.jpg",
         "genres": [
@@ -12663,39 +10955,6 @@
       "imdb_votes": 179395,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 71916053,
-        "duration_seconds": 6473,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/k4TpF7wl1FMPzHRJNudODAm7h0P.jpg",
         "genres": [
@@ -13105,34 +11364,6 @@
       "imdb_votes": 228474,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 51933744,
-        "duration_seconds": 6793,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/ibKeXahq4JD63z6uWQphqoJLvNw.jpg",
         "genres": [
@@ -13472,24 +11703,6 @@
       "imdb_votes": 285036,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 68737350,
-        "duration_seconds": 5456,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/wKrxeY6lbu7KFBsWVcMH6M8avwr.jpg",
         "genres": [
@@ -13536,39 +11749,6 @@
       "imdb_votes": 518371,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 70216857,
-        "duration_seconds": 6612,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/eDtsTxALld2gPw9lO1hQIJXqMHu.jpg",
         "genres": [
@@ -13616,29 +11796,6 @@
       "imdb_votes": 231696,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "truehd",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 56312260,
-        "duration_seconds": 7415,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/xPNDRM50a58uvv1il2GVZrtWjkZ.jpg",
         "genres": [
@@ -13685,29 +11842,6 @@
       "imdb_votes": 425433,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "truehd",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 51037404,
-        "duration_seconds": 7524,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/bYKeB9uUcPmvikjouEEQ86uvPw9.jpg",
         "genres": [
@@ -13755,29 +11889,6 @@
       "imdb_votes": 328069,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 25768199,
-        "duration_seconds": 9806,
-        "video": {
-          "codec": "hevc",
-          "height": 1608,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/628Dep6AxEtDxjZoGP78TsOxYbK.jpg",
         "genres": [
@@ -13842,34 +11953,6 @@
       "imdb_votes": 420365,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 67883460,
-        "duration_seconds": 8844,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/5jnoAA74Qwb5w6B9FMvnc20n6Ie.jpg",
         "genres": [
@@ -13915,29 +11998,6 @@
       "imdb_votes": 565765,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 48322425,
-        "duration_seconds": 7975,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/hqyjzDRCs1N5gEsh2gklzPdsEFD.jpg",
         "genres": [
@@ -13984,34 +12044,6 @@
       "imdb_votes": 446456,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 49093849,
-        "duration_seconds": 7893,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/vYIUN5rrCncHFY8WvcuXQlM4hk5.jpg",
         "genres": [
@@ -14184,39 +12216,6 @@
       "imdb_votes": 153324,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 74500848,
-        "duration_seconds": 7701,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/rm2oMykm5nX6SzXFr7TGHkO6r8Z.jpg",
         "genres": [
@@ -14258,24 +12257,6 @@
       "id": "99a02621a81bfbab",
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 83596075,
-        "duration_seconds": 5297,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "modified_at": "2024-06-14T08:36:57+00:00",
       "parsed": {
         "container": "mkv",
@@ -14299,39 +12280,6 @@
       "imdb_votes": 92093,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 56010709,
-        "duration_seconds": 8047,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/zaX6d5GCtb2CmOH9jrHBl58xxBY.jpg",
         "genres": [
@@ -14454,39 +12402,6 @@
       "imdb_votes": 316719,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 67895898,
-        "duration_seconds": 7830,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/yRutvYkM3OP8N9oqqfjSK1VC7fs.jpg",
         "genres": [
@@ -14531,29 +12446,6 @@
       "imdb_votes": 21399,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 16986829,
-        "duration_seconds": 6160,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/vsHD4yu6eHTXfYBLyRRiuQIJmJe.jpg",
         "genres": [
@@ -14598,29 +12490,6 @@
       "imdb_votes": 8214,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "fre"
-          }
-        ],
-        "bit_rate": 83210141,
-        "duration_seconds": 6390,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/ks3WTeuEaenmMiizxXba65Rxpu1.jpg",
         "genres": [
@@ -14733,29 +12602,6 @@
       "imdb_votes": 1040634,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 65885280,
-        "duration_seconds": 10822,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/neeNHeXjMF5fXoCJRsOmkNGC7q.jpg",
         "genres": [
@@ -14801,34 +12647,6 @@
       "imdb_votes": 559432,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 70201874,
-        "duration_seconds": 7876,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/9X7Im1YuBhyHYVD8r7CAONPJR5k.jpg",
         "genres": [
@@ -14953,29 +12771,6 @@
       "imdb_votes": 4083,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 76800796,
-        "duration_seconds": 6066,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/rodjjIJ8oh9nuBp86PhojcYHTEN.jpg",
         "genres": [
@@ -15244,29 +13039,6 @@
       "imdb_votes": 10,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 26213876,
-        "duration_seconds": 6448,
-        "video": {
-          "codec": "hevc",
-          "height": 1596,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3832
-        }
-      },
       "metadata": {
         "genres": [
           "Drama"
@@ -15308,34 +13080,6 @@
       "imdb_votes": 163067,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 64295635,
-        "duration_seconds": 6417,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/b96OdaJce7Zu70NYe8vmlfOQUUN.jpg",
         "genres": [
@@ -15512,34 +13256,6 @@
       "imdb_votes": 188914,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 89012473,
-        "duration_seconds": 6949,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/gd2vQT8uMf1FAsiC0OdewL7XUFR.jpg",
         "genres": [
@@ -15587,34 +13303,6 @@
       "imdb_votes": 339026,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 93000259,
-        "duration_seconds": 6669,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/5tqBeCUaNHptScH3rBixjE5z2NV.jpg",
         "genres": [
@@ -16234,24 +13922,6 @@
       "imdb_votes": 101863,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 66851737,
-        "duration_seconds": 6405,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/cFcXilLbI7yjPIYB58AZiOyUnoh.jpg",
         "genres": [
@@ -16371,24 +14041,6 @@
       "imdb_votes": 275969,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 58583380,
-        "duration_seconds": 3497,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/zcySy6dnSmyqiichtDgO7AEeZoq.jpg",
         "genres": [
@@ -16502,39 +14154,6 @@
       "imdb_votes": 145505,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 65956335,
-        "duration_seconds": 7815,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/kQV9sV0IbastbU5FYxuYwxfMawz.jpg",
         "genres": [
@@ -16648,39 +14267,6 @@
       "imdb_votes": 1651004,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 51141361,
-        "duration_seconds": 8284,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/rbZvGN1A1QyZuoKzhCw8QPmf2q0.jpg",
         "genres": [
@@ -16723,24 +14309,6 @@
       "id": "2f878da304cf8929",
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 26829730,
-        "duration_seconds": 3508,
-        "video": {
-          "codec": "h264",
-          "height": 1080,
-          "pix_fmt": "yuv420p",
-          "profile": "High",
-          "width": 1920
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/mNVegKiLpJ683jpu1EOjdUZeEgi.jpg",
         "genres": [
@@ -16782,39 +14350,6 @@
       "imdb_votes": 145525,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 76076557,
-        "duration_seconds": 6144,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/oMKFQmoVgB69fyXfSMu0lGlHJP2.jpg",
         "genres": [
@@ -16861,34 +14396,6 @@
       "imdb_votes": 240791,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 82032172,
-        "duration_seconds": 6937,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/kMZIMqEXO5MFd5Y1Ha2jZZF4pvF.jpg",
         "genres": [
@@ -16933,39 +14440,6 @@
       "imdb_votes": 583066,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 69516647,
-        "duration_seconds": 5950,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/s2Cu1y9Al9RbwRU5blAH8wMCrBI.jpg",
         "genres": [
@@ -17013,29 +14487,6 @@
       "imdb_votes": 1809,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 54992612,
-        "duration_seconds": 2830,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/kfyLvdWaXlvXWSvKGYjA1JFxsAl.jpg",
         "genres": [
@@ -17322,29 +14773,6 @@
       "imdb_votes": 2656,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 67918884,
-        "duration_seconds": 6914,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/2shoIF4RPWV24uozeFnS9miOWv.jpg",
         "genres": [
@@ -17461,34 +14889,6 @@
       "imdb_votes": 230428,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 64525907,
-        "duration_seconds": 6078,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/eezsbzYPbYKjjh6E1XHDBNlLynh.jpg",
         "genres": [
@@ -17667,24 +15067,6 @@
       "imdb_votes": 134023,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 53149407,
-        "duration_seconds": 6276,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/srnI5CdeydB9E8WNOqblj0jRfSn.jpg",
         "genres": [
@@ -17730,24 +15112,6 @@
       "imdb_votes": 169790,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 58301955,
-        "duration_seconds": 6713,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/p26c040MErns7DJYhisa1CpVB5i.jpg",
         "genres": [
@@ -17920,34 +15284,6 @@
       "imdb_votes": 466678,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 63174555,
-        "duration_seconds": 7922,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/wNAfVj1ObGNye5fQM4tJXJGtU0.jpg",
         "genres": [
@@ -17993,34 +15329,6 @@
       "imdb_votes": 229690,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 54735125,
-        "duration_seconds": 7257,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/55eNvuXNumZ3oDmtcsJvzGhKyLZ.jpg",
         "genres": [
@@ -18066,29 +15374,6 @@
       "imdb_votes": 161928,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 25522253,
-        "duration_seconds": 6537,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/tC78Pck2YCsUAtEdZwuHYUFYtOj.jpg",
         "genres": [
@@ -18134,39 +15419,6 @@
       "imdb_votes": 55967,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 87694020,
-        "duration_seconds": 6263,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/rMvPXy8PUjj1o8o1pzgQbdNCsvj.jpg",
         "genres": [
@@ -18546,29 +15798,6 @@
       "imdb_votes": 154414,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 21344560,
-        "duration_seconds": 5412,
-        "video": {
-          "codec": "hevc",
-          "height": 1600,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3836
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/evo3crueRIK9Eutb3lnDLVbD2xD.jpg",
         "genres": [
@@ -18614,29 +15843,6 @@
       "imdb_votes": 4982,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 25450468,
-        "duration_seconds": 6668,
-        "video": {
-          "codec": "hevc",
-          "height": 1606,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/68t9YraLbv4BHikPmjcw7SOPJi3.jpg",
         "genres": [
@@ -18957,24 +16163,6 @@
       "imdb_votes": 105871,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 51658437,
-        "duration_seconds": 6583,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/wZS4xSfPtk1NPQnx9zsT5R2WhCu.jpg",
         "genres": [
@@ -19513,34 +16701,6 @@
       "imdb_votes": 461861,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 57594095,
-        "duration_seconds": 7124,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/jsoz1HlxczSuTx0mDl2h0lxy36l.jpg",
         "genres": [
@@ -19828,39 +16988,6 @@
       "id": "8109dd8742ea530a",
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 73590202,
-        "duration_seconds": 8607,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "modified_at": "2019-05-31T20:31:44+00:00",
       "parsed": {
         "container": "mp4",
@@ -19885,34 +17012,6 @@
       "imdb_votes": 719501,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 67310290,
-        "duration_seconds": 8607,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/wcTDxW9JEr9cORajaQLrv8ls9Ly.jpg",
         "genres": [
@@ -19959,39 +17058,6 @@
       "imdb_votes": 456345,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 72083504,
-        "duration_seconds": 9263,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/h3js4rulxzKMOokM2oO5Kr0mBZU.jpg",
         "genres": [
@@ -20039,39 +17105,6 @@
       "imdb_votes": 350135,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 68999825,
-        "duration_seconds": 9907,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/wxr4Z6E83h14CogsZOzDm1vuDX3.jpg",
         "genres": [
@@ -20119,39 +17152,6 @@
       "imdb_votes": 454675,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 72393144,
-        "duration_seconds": 8993,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/bH1bhjn37uA1zOPvyHbzJSvza7v.jpg",
         "genres": [
@@ -20263,29 +17263,6 @@
       "imdb_votes": 185843,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 71907372,
-        "duration_seconds": 6231,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/5yrQsEuuqc4s8t8nszLxAAGQpR2.jpg",
         "genres": [
@@ -20523,39 +17500,6 @@
       "imdb_votes": 209766,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          },
-          {
-            "channels": 8,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 57126494,
-        "duration_seconds": 8243,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/5rYnygKCkmqWuMv1O5yAnzGF8gV.jpg",
         "genres": [
@@ -20602,24 +17546,6 @@
       "imdb_votes": 307372,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 50898781,
-        "duration_seconds": 7896,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/d72ROyJqXQtw2OupW0l15eicRAF.jpg",
         "genres": [
@@ -20801,34 +17727,6 @@
       "imdb_votes": 27185,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 52804402,
-        "duration_seconds": 6827,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/uczbEzBD4jJ7EYxySarXeh2liF5.jpg",
         "genres": [
@@ -20875,29 +17773,6 @@
       "imdb_votes": 428837,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 90072982,
-        "duration_seconds": 6595,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/vjwuT8EzWY96W6nrJKZNI2WJU87.jpg",
         "genres": [
@@ -21048,24 +17923,6 @@
       "imdb_votes": 1157275,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "deu"
-          }
-        ],
-        "bit_rate": 52501323,
-        "duration_seconds": 6417,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/wbQa0EnWUyRzQ5d1pHLNRlmsCUP.jpg",
         "genres": [
@@ -21270,29 +18127,6 @@
       "imdb_votes": 3978,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 76222708,
-        "duration_seconds": 5280,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/q5awoAPmKvECUmuD5yGa64Em3XJ.jpg",
         "genres": [
@@ -21337,34 +18171,6 @@
       "imdb_votes": 224190,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          },
-          {
-            "channels": 6,
-            "codec": "ac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 78113579,
-        "duration_seconds": 6409,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/70Rm9ItxKuEKN8iu6rNjfwAYUCJ.jpg",
         "genres": [
@@ -21545,29 +18351,6 @@
       "imdb_votes": 492651,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 8,
-            "codec": "truehd",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 41200166,
-        "duration_seconds": 8638,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/sTQNRqLbfCXolrb5CizAW1dj528.jpg",
         "genres": [
@@ -21754,29 +18537,6 @@
       "imdb_votes": 764544,
       "kind": "movie",
       "library": "FILME",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 39752944,
-        "duration_seconds": 7903,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/yhp5Pt4GugkCs5mz63qWz5khHXe.jpg",
         "genres": [
@@ -22106,29 +18866,6 @@
       "id": "c8f925b164729c7b",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 60903862,
-        "duration_seconds": 3539,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/3URK0z9PzpVNJrGE7XOuyy6KFzk.jpg",
         "genres": [
@@ -22188,29 +18925,6 @@
       "id": "0163fd834aca7047",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 61248422,
-        "duration_seconds": 3901,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/3URK0z9PzpVNJrGE7XOuyy6KFzk.jpg",
         "genres": [
@@ -22270,29 +18984,6 @@
       "id": "8007fbd6626311f0",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 61258815,
-        "duration_seconds": 3712,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/3URK0z9PzpVNJrGE7XOuyy6KFzk.jpg",
         "genres": [
@@ -22352,29 +19043,6 @@
       "id": "a3ed38c0076e7cb2",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 53942161,
-        "duration_seconds": 3904,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/3URK0z9PzpVNJrGE7XOuyy6KFzk.jpg",
         "genres": [
@@ -22434,29 +19102,6 @@
       "id": "186c0c1a68ca8a76",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "dts",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 54089675,
-        "duration_seconds": 4298,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/3URK0z9PzpVNJrGE7XOuyy6KFzk.jpg",
         "genres": [
@@ -22936,29 +19581,6 @@
       "id": "293e3da9fc1451e7",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 22623808,
-        "duration_seconds": 2835,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/aTjbqMONy77fHJrIYu14g1F0d5h.jpg",
         "genres": [
@@ -23019,29 +19641,6 @@
       "id": "42accb8be3fa5ebc",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 22521271,
-        "duration_seconds": 2845,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/aTjbqMONy77fHJrIYu14g1F0d5h.jpg",
         "genres": [
@@ -23102,29 +19701,6 @@
       "id": "423382b97c764458",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 22618464,
-        "duration_seconds": 3049,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/aTjbqMONy77fHJrIYu14g1F0d5h.jpg",
         "genres": [
@@ -23185,29 +19761,6 @@
       "id": "41df1cd1b9b00f90",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 22633191,
-        "duration_seconds": 3077,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/aTjbqMONy77fHJrIYu14g1F0d5h.jpg",
         "genres": [
@@ -23268,29 +19821,6 @@
       "id": "474b9041e9a26eef",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 22715871,
-        "duration_seconds": 3443,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/aTjbqMONy77fHJrIYu14g1F0d5h.jpg",
         "genres": [
@@ -23351,29 +19881,6 @@
       "id": "d7aabc9d4cd7aa9a",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 22334587,
-        "duration_seconds": 2920,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/aTjbqMONy77fHJrIYu14g1F0d5h.jpg",
         "genres": [
@@ -23434,29 +19941,6 @@
       "id": "cf4e8f107e2b7c36",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 20537356,
-        "duration_seconds": 3439,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg",
         "genres": [
@@ -23518,29 +20002,6 @@
       "id": "6c6be2b894dd95ad",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 19091679,
-        "duration_seconds": 2814,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg",
         "genres": [
@@ -23602,29 +20063,6 @@
       "id": "e8ead8544f7307cb",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 19814530,
-        "duration_seconds": 2778,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg",
         "genres": [
@@ -23686,29 +20124,6 @@
       "id": "35026e54024f404a",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 20343888,
-        "duration_seconds": 2861,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg",
         "genres": [
@@ -23770,29 +20185,6 @@
       "id": "97af5b01ccebf917",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 19421201,
-        "duration_seconds": 3000,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg",
         "genres": [
@@ -23854,29 +20246,6 @@
       "id": "3a9b90e3d5ac7946",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 19676254,
-        "duration_seconds": 2897,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg",
         "genres": [
@@ -23938,29 +20307,6 @@
       "id": "536735b71c1ad6d6",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 20882570,
-        "duration_seconds": 2741,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg",
         "genres": [
@@ -24022,29 +20368,6 @@
       "id": "df584ae2d839931f",
       "kind": "tv",
       "library": "SERIEN",
-      "media_info": {
-        "audio": [
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "ger"
-          },
-          {
-            "channels": 6,
-            "codec": "eac3",
-            "language": "eng"
-          }
-        ],
-        "bit_rate": 20822558,
-        "duration_seconds": 3013,
-        "video": {
-          "codec": "hevc",
-          "height": 2160,
-          "pix_fmt": "yuv420p10le",
-          "profile": "Main 10",
-          "width": 3840
-        }
-      },
       "metadata": {
         "backdrop_url": "https://image.tmdb.org/t/p/w1280/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg",
         "genres": [
@@ -24126,17 +20449,17 @@
           "files": 125,
           "name": "FILME",
           "reachable": true,
-          "skipped_extension": 2,
+          "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 127
+          "visited_files": 125
         },
         {
           "files": 19,
           "name": "SERIEN",
           "reachable": true,
-          "skipped_extension": 2,
+          "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 21
+          "visited_files": 19
         },
         {
           "files": 0,
@@ -24148,9 +20471,9 @@
         }
       ],
       "message": "",
-      "mode": "mounted_path",
+      "mode": "smb",
       "name": "Zappiti2",
-      "path": "/media/Zappiti2",
+      "path": "\\\\192.168.1.91\\Volume_ca7a3d6d7a3d5801",
       "reachable": true
     }
   ],
