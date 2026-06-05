@@ -97,7 +97,21 @@
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="header-brand-text">eclipse</span>
       </a>
-      <nav class="main-nav" aria-label="Seitenbereiche">
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        data-nav-toggle
+      >
+        <span class="nav-toggle-box" aria-hidden="true">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Seitenbereiche" data-nav>
         <a href="#raumtour">Raumtour</a>
         <a href="#erlebnis">Erlebnis</a>
         <a href="#programm">Programm</a>
@@ -105,6 +119,7 @@
         <a href="#galerie">Galerie</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
+      <div class="nav-backdrop" data-nav-backdrop aria-hidden="true"></div>
     </header>
 
     <main id="top">
