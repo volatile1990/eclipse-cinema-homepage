@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T23:25:54+00:00",
+  "generated_at": "2026-06-08T23:26:45+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -9,31 +9,31 @@
           "files": 178,
           "name": "FILME",
           "reachable": true,
-          "skipped_extension": 2,
+          "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 180
+          "visited_files": 178
         },
         {
           "files": 5,
           "name": "SERIEN",
           "reachable": true,
-          "skipped_extension": 4,
+          "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 12
+          "visited_files": 5
         },
         {
           "files": 26,
           "name": "DEMOS",
           "reachable": true,
-          "skipped_extension": 2,
+          "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 28
+          "visited_files": 26
         }
       ],
       "message": "",
-      "mode": "mounted_path",
+      "mode": "smb",
       "name": "Zappiti1",
-      "path": "/media/Zappiti1",
+      "path": "\\\\192.168.1.91\\Volume_9a4a7d5c4a7d365b",
       "reachable": true
     },
     {
@@ -43,17 +43,17 @@
           "files": 125,
           "name": "FILME",
           "reachable": true,
-          "skipped_extension": 2,
+          "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 127
+          "visited_files": 125
         },
         {
           "files": 19,
           "name": "SERIEN",
           "reachable": true,
-          "skipped_extension": 2,
+          "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 21
+          "visited_files": 19
         },
         {
           "files": 0,
@@ -65,9 +65,9 @@
         }
       ],
       "message": "",
-      "mode": "mounted_path",
+      "mode": "smb",
       "name": "Zappiti2",
-      "path": "/media/Zappiti2",
+      "path": "\\\\192.168.1.91\\Volume_ca7a3d6d7a3d5801",
       "reachable": true
     }
   ],
