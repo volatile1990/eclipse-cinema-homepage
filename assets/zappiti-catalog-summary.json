@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T13:44:20+00:00",
+  "generated_at": "2026-06-12T19:46:29+00:00",
   "schema_version": 1,
   "sources": [
     {
@@ -37,15 +37,15 @@
       "reachable": true
     },
     {
-      "files": 144,
+      "files": 145,
       "libraries": [
         {
-          "files": 125,
+          "files": 126,
           "name": "FILME",
           "reachable": true,
           "skipped_extension": 2,
           "skipped_size": 0,
-          "visited_files": 127
+          "visited_files": 128
         },
         {
           "files": 19,
@@ -74,16 +74,16 @@
   "stats": {
     "by_kind": {
       "demo": 26,
-      "movie": 303,
+      "movie": 304,
       "tv": 24
     },
     "by_library": {
       "DEMOS": 26,
-      "FILME": 303,
+      "FILME": 304,
       "SERIEN": 24
     },
     "offline_sources": 0,
     "reachable_sources": 2,
-    "total": 353
+    "total": 354
   }
 }

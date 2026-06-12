@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T13:44:20+00:00",
+  "generated_at": "2026-06-12T19:46:29+00:00",
   "items": [
     {
       "audio_codec": "Dolby Atmos",
@@ -2144,6 +2144,70 @@
       "size_bytes": 39030989643,
       "source": "Zappiti1",
       "title": "Avatar Aufbruch nach Pandora",
+      "year": null
+    },
+    {
+      "display_path": "Zappiti2/FILME/Avatar Fire And Ash.mkv",
+      "extension": ".mkv",
+      "file_name": "Avatar Fire And Ash.mkv",
+      "id": "f0a647238f0557ee",
+      "imdb_id": "tt1757678",
+      "imdb_rating": 7.2,
+      "imdb_url": "https://www.imdb.com/title/tt1757678/",
+      "imdb_votes": 173220,
+      "kind": "movie",
+      "library": "FILME",
+      "media_info": {
+        "audio": [
+          {
+            "channels": 8,
+            "codec": "eac3",
+            "language": "deu"
+          }
+        ],
+        "bit_rate": 48841973,
+        "duration_seconds": 11841,
+        "video": {
+          "codec": "hevc",
+          "height": 2160,
+          "pix_fmt": "yuv420p10le",
+          "profile": "Main 10",
+          "width": 3840
+        }
+      },
+      "metadata": {
+        "backdrop_url": "https://image.tmdb.org/t/p/w1280/u8DU5fkLoM5tTRukzPC31oGPxaQ.jpg",
+        "genres": [
+          "Science Fiction",
+          "Abenteuer",
+          "Fantasy"
+        ],
+        "homepage": "https://www.disney.de/filme/avatar-fire-and-ash",
+        "imdb_id": "tt1757678",
+        "imdb_rating": 7.2,
+        "imdb_votes": 173220,
+        "original_title": "Avatar: Fire and Ash",
+        "overview": "Nach dem verheerenden Krieg gegen die RDA und dem Verlust ihres ältesten Sohnes sehen sich Jake Sully und Neytiri mit einer neuen Bedrohung auf Pandora konfrontiert: dem Aschvolk, einem gewalttätigen und machthungrigen Na'vi-Stamm unter der Führung des skrupellosen Varang. Jakes Familie muss in einem Konflikt, der sie an ihre emotionalen und physischen Grenzen bringt, um ihr Überleben und die Zukunft von Pandora kämpfen.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/lE9KpVwgeWHMwgwkNaeH5nEFh20.jpg",
+        "provider": "tmdb",
+        "release_date": "2025-12-17",
+        "runtime_minutes": 197,
+        "title": "Avatar: Fire and Ash",
+        "tmdb_id": 83533,
+        "vote_average": 7.571,
+        "vote_count": 3412,
+        "year": 2025
+      },
+      "modified_at": "2026-06-12T16:49:02+00:00",
+      "parsed": {
+        "container": "mkv",
+        "title": "Avatar Fire And Ash",
+        "type": "movie"
+      },
+      "relative_path": "FILME/Avatar Fire And Ash.mkv",
+      "size_bytes": 72295004200,
+      "source": "Zappiti2",
+      "title": "Avatar Fire And Ash",
       "year": null
     },
     {
@@ -24120,15 +24184,15 @@
       "reachable": true
     },
     {
-      "files": 144,
+      "files": 145,
       "libraries": [
         {
-          "files": 125,
+          "files": 126,
           "name": "FILME",
           "reachable": true,
           "skipped_extension": 2,
           "skipped_size": 0,
-          "visited_files": 127
+          "visited_files": 128
         },
         {
           "files": 19,
@@ -24157,16 +24221,16 @@
   "stats": {
     "by_kind": {
       "demo": 26,
-      "movie": 303,
+      "movie": 304,
       "tv": 24
     },
     "by_library": {
       "DEMOS": 26,
-      "FILME": 303,
+      "FILME": 304,
       "SERIEN": 24
     },
     "offline_sources": 0,
     "reachable_sources": 2,
-    "total": 353
+    "total": 354
   }
 }
