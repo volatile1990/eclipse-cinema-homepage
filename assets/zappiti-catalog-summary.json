@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-13T19:53:39+00:00",
+  "generated_at": "2026-06-14T01:54:45+00:00",
   "schema_version": 1,
   "sources": [
     {
-      "files": 209,
+      "files": 210,
       "libraries": [
         {
           "files": 178,
@@ -22,12 +22,12 @@
           "visited_files": 5
         },
         {
-          "files": 26,
+          "files": 27,
           "name": "DEMOS",
           "reachable": true,
           "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 26
+          "visited_files": 27
         }
       ],
       "message": "",
@@ -37,7 +37,7 @@
       "reachable": true
     },
     {
-      "files": 145,
+      "files": 147,
       "libraries": [
         {
           "files": 126,
@@ -56,12 +56,12 @@
           "visited_files": 21
         },
         {
-          "files": 0,
+          "files": 2,
           "name": "DEMOS",
           "reachable": true,
           "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 0
+          "visited_files": 2
         }
       ],
       "message": "",
@@ -73,17 +73,17 @@
   ],
   "stats": {
     "by_kind": {
-      "demo": 26,
+      "demo": 29,
       "movie": 304,
       "tv": 24
     },
     "by_library": {
-      "DEMOS": 26,
+      "DEMOS": 29,
       "FILME": 304,
       "SERIEN": 24
     },
     "offline_sources": 0,
     "reachable_sources": 2,
-    "total": 354
+    "total": 357
   }
 }

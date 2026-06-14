@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T19:53:39+00:00",
+  "generated_at": "2026-06-14T01:54:45+00:00",
   "items": [
     {
       "audio_codec": "Dolby Atmos",
@@ -41,6 +41,43 @@
       "size_bytes": 561867475,
       "source": "Zappiti1",
       "title": "Art Of India",
+      "year": null
+    },
+    {
+      "display_path": "Zappiti2/DEMOS/AV Sync Film.mkv",
+      "extension": ".mkv",
+      "file_name": "AV Sync Film.mkv",
+      "id": "9e3c26b62fb93685",
+      "kind": "demo",
+      "library": "DEMOS",
+      "media_info": {
+        "audio": [
+          {
+            "channels": 2,
+            "codec": "ac3",
+            "language": "eng"
+          }
+        ],
+        "bit_rate": 3442614,
+        "duration_seconds": 60,
+        "video": {
+          "codec": "h264",
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "profile": "High",
+          "width": 1920
+        }
+      },
+      "modified_at": "2017-12-15T11:03:56+00:00",
+      "parsed": {
+        "container": "mkv",
+        "title": "AV Sync Film",
+        "type": "movie"
+      },
+      "relative_path": "DEMOS/AV Sync Film.mkv",
+      "size_bytes": 25844996,
+      "source": "Zappiti2",
+      "title": "AV Sync Film",
       "year": null
     },
     {
@@ -493,6 +530,76 @@
       "size_bytes": 1327426623,
       "source": "Zappiti1",
       "title": "The Wild",
+      "year": null
+    },
+    {
+      "display_path": "Zappiti1/DEMOS/Audio_Video_Sync_23,98_HEVC_2160p-by_PhotoJoseph.mov",
+      "extension": ".mov",
+      "file_name": "Audio_Video_Sync_23,98_HEVC_2160p-by_PhotoJoseph.mov",
+      "id": "233b7f7cc4f96163",
+      "kind": "demo",
+      "library": "DEMOS",
+      "modified_at": "2026-06-13T21:42:06+00:00",
+      "parsed": {
+        "container": "mov",
+        "mimetype": "video/quicktime",
+        "release_group": "PhotoJoseph",
+        "screen_size": "2160p",
+        "title": "Video Sync 23,98",
+        "type": "movie",
+        "video_codec": "H.265",
+        "video_profile": "High Efficiency Video Coding"
+      },
+      "relative_path": "DEMOS/Audio_Video_Sync_23,98_HEVC_2160p-by_PhotoJoseph.mov",
+      "screen_size": "2160p",
+      "size_bytes": 143658982,
+      "source": "Zappiti1",
+      "title": "Video Sync 23,98",
+      "video_codec": "H.265",
+      "year": null
+    },
+    {
+      "display_path": "Zappiti2/DEMOS/Audio_Video_Sync_59,94_HEVC_2160p-by_PhotoJoseph.mov",
+      "extension": ".mov",
+      "file_name": "Audio_Video_Sync_59,94_HEVC_2160p-by_PhotoJoseph.mov",
+      "id": "eab34dd61d3c8c0e",
+      "kind": "demo",
+      "library": "DEMOS",
+      "media_info": {
+        "audio": [
+          {
+            "channels": 2,
+            "codec": "pcm_s24le",
+            "language": "und"
+          }
+        ],
+        "bit_rate": 51742436,
+        "duration_seconds": 120,
+        "video": {
+          "codec": "hevc",
+          "height": 2160,
+          "pix_fmt": "yuv420p10le",
+          "profile": "Main 10",
+          "width": 3840
+        }
+      },
+      "modified_at": "2026-06-13T21:19:58+00:00",
+      "parsed": {
+        "container": "mov",
+        "mimetype": "video/quicktime",
+        "release_group": "PhotoJoseph",
+        "screen_size": "2160p",
+        "title": "Video Sync 59,94",
+        "type": "movie",
+        "video_codec": "H.265",
+        "video_profile": "High Efficiency Video Coding"
+      },
+      "relative_path": "DEMOS/Audio_Video_Sync_59,94_HEVC_2160p-by_PhotoJoseph.mov",
+      "screen_size": "2160p",
+      "size_bytes": 776912688,
+      "source": "Zappiti2",
+      "title": "Video Sync 59,94",
+      "video_codec": "H.265",
       "year": null
     },
     {
@@ -1430,10 +1537,15 @@
             "channels": 8,
             "codec": "eac3",
             "language": "deu"
+          },
+          {
+            "channels": 6,
+            "codec": "ac3",
+            "language": "eng"
           }
         ],
-        "bit_rate": 48841973,
-        "duration_seconds": 11841,
+        "bit_rate": 49457554,
+        "duration_seconds": 11840,
         "video": {
           "codec": "hevc",
           "height": 2160,
@@ -1465,14 +1577,14 @@
         "vote_count": 3412,
         "year": 2025
       },
-      "modified_at": "2026-06-12T16:49:02+00:00",
+      "modified_at": "2026-06-13T21:43:16+00:00",
       "parsed": {
         "container": "mkv",
         "title": "Avatar Fire And Ash",
         "type": "movie"
       },
       "relative_path": "FILME/Avatar Fire And Ash.mkv",
-      "size_bytes": 72295004200,
+      "size_bytes": 73201730251,
       "source": "Zappiti2",
       "title": "Avatar Fire And Ash",
       "year": null
@@ -19273,7 +19385,7 @@
   "schema_version": 1,
   "sources": [
     {
-      "files": 209,
+      "files": 210,
       "libraries": [
         {
           "files": 178,
@@ -19292,12 +19404,12 @@
           "visited_files": 5
         },
         {
-          "files": 26,
+          "files": 27,
           "name": "DEMOS",
           "reachable": true,
           "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 26
+          "visited_files": 27
         }
       ],
       "message": "",
@@ -19307,7 +19419,7 @@
       "reachable": true
     },
     {
-      "files": 145,
+      "files": 147,
       "libraries": [
         {
           "files": 126,
@@ -19326,12 +19438,12 @@
           "visited_files": 21
         },
         {
-          "files": 0,
+          "files": 2,
           "name": "DEMOS",
           "reachable": true,
           "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 0
+          "visited_files": 2
         }
       ],
       "message": "",
@@ -19343,17 +19455,17 @@
   ],
   "stats": {
     "by_kind": {
-      "demo": 26,
+      "demo": 29,
       "movie": 304,
       "tv": 24
     },
     "by_library": {
-      "DEMOS": 26,
+      "DEMOS": 29,
       "FILME": 304,
       "SERIEN": 24
     },
     "offline_sources": 0,
     "reachable_sources": 2,
-    "total": 354
+    "total": 357
   }
 }
