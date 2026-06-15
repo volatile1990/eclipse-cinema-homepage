@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-06-11T17:28:08+00:00",
+  "generated_at": "2026-06-14T07:55:50+00:00",
   "schema_version": 1,
   "sources": [
     {
-      "files": 209,
+      "files": 210,
       "libraries": [
         {
           "files": 178,
           "name": "FILME",
           "reachable": true,
-          "skipped_extension": 2,
+          "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 180
+          "visited_files": 178
         },
         {
           "files": 5,
           "name": "SERIEN",
           "reachable": true,
-          "skipped_extension": 4,
+          "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 12
+          "visited_files": 5
         },
         {
-          "files": 26,
+          "files": 27,
           "name": "DEMOS",
           "reachable": true,
-          "skipped_extension": 2,
+          "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 28
+          "visited_files": 27
         }
       ],
       "message": "",
-      "mode": "mounted_path",
+      "mode": "smb",
       "name": "Zappiti1",
-      "path": "/media/Zappiti1",
+      "path": "\\\\192.168.1.91\\Volume_9a4a7d5c4a7d365b",
       "reachable": true
     },
     {
-      "files": 144,
+      "files": 147,
       "libraries": [
         {
-          "files": 125,
+          "files": 126,
           "name": "FILME",
           "reachable": true,
           "skipped_extension": 2,
           "skipped_size": 0,
-          "visited_files": 127
+          "visited_files": 128
         },
         {
           "files": 19,
@@ -56,12 +56,12 @@
           "visited_files": 21
         },
         {
-          "files": 0,
+          "files": 2,
           "name": "DEMOS",
           "reachable": true,
           "skipped_extension": 0,
           "skipped_size": 0,
-          "visited_files": 0
+          "visited_files": 2
         }
       ],
       "message": "",
@@ -73,17 +73,17 @@
   ],
   "stats": {
     "by_kind": {
-      "demo": 26,
-      "movie": 303,
+      "demo": 29,
+      "movie": 304,
       "tv": 24
     },
     "by_library": {
-      "DEMOS": 26,
-      "FILME": 303,
+      "DEMOS": 29,
+      "FILME": 304,
       "SERIEN": 24
     },
     "offline_sources": 0,
     "reachable_sources": 2,
-    "total": 353
+    "total": 357
   }
 }
