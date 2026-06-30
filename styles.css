@@ -331,8 +331,18 @@ button {
 .hero-shade {
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(5, 7, 11, 0.22) 0%, rgba(5, 7, 11, 0.08) 42%, transparent 70%),
-    linear-gradient(180deg, transparent 68%, rgba(5, 7, 11, 0.18) 100%);
+    linear-gradient(
+      90deg,
+      rgba(5, 7, 11, 0.94) 0%,
+      rgba(5, 7, 11, 0.66) 35%,
+      rgba(5, 7, 11, 0.1) 78%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5, 7, 11, 0.2) 0%,
+      rgba(5, 7, 11, 0.24) 58%,
+      var(--bg) 100%
+    );
 }
 
 .hero-content {
@@ -2508,6 +2518,17 @@ figcaption {
 
   .hero {
     min-height: 88svh;
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 7, 11, 0.18),
+        rgba(5, 7, 11, 0.88) 78%,
+        #05070b 100%
+      ),
+      linear-gradient(90deg, rgba(5, 7, 11, 0.72), rgba(5, 7, 11, 0.18));
   }
 
   .facts dl,
