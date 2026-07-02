@@ -113,9 +113,9 @@
       </button>
       <nav id="main-nav" class="main-nav" aria-label="Seitenbereiche" data-nav>
         <a href="#raumtour">Raumtour</a>
-        <a href="#erlebnis">Erlebnis</a>
-        <a href="#programm">Programm</a>
+        <a href="#akustik">Akustik</a>
         <a href="#technik">Technik</a>
+        <a href="#programm">Programm</a>
         <a href="#galerie">Galerie</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
@@ -205,53 +205,6 @@
             </dd>
           </div>
         </dl>
-      </section>
-
-      <section class="section intro-section" data-reveal>
-        <div class="section-copy">
-          <p class="section-label">Konzept</p>
-          <h2>Ein Raum, der Filmton ernst nimmt.</h2>
-          <p>
-            eclipse ist kein Wohnzimmer mit großer Leinwand, sondern ein
-            dedizierter Kinoraum. Bildgröße, Sitzpositionen, Lautsprecher und
-            Akustik wurden zusammen geplant, damit die Technik nicht im Raum
-            steht, sondern in ihm verschwindet.
-          </p>
-          <p>
-            Sichtbar bleibt ein dunkler, ruhiger Raum; die technische Arbeit
-            passiert hinter den Oberflächen.
-          </p>
-        </div>
-        <figure class="feature-media">
-          <picture>
-            <source
-              type="image/avif"
-              srcset="
-                assets/used/responsive/cinema-front-lounge-seats-900.avif 900w,
-                assets/used/responsive/cinema-front-lounge-seats-1400.avif 1400w,
-                assets/used/responsive/cinema-front-lounge-seats-1800.avif 1800w
-              "
-              sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
-            />
-            <source
-              type="image/webp"
-              srcset="
-                assets/used/responsive/cinema-front-lounge-seats-900.webp 900w,
-                assets/used/responsive/cinema-front-lounge-seats-1400.webp 1400w,
-                assets/used/responsive/cinema-front-lounge-seats-1800.webp 1800w
-              "
-              sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
-            />
-            <img
-              src="assets/used/responsive/cinema-front-lounge-seats-1400.webp"
-              alt="Blick über die vorderen Lounge-Sessel auf die 21:9-Leinwand"
-              loading="lazy"
-            />
-          </picture>
-          <figcaption>
-            Vordere Sitzreihe mit direktem Blick auf die Cinemascope-Front
-          </figcaption>
-        </figure>
       </section>
 
       <section class="section explorer-section" id="raumtour" data-reveal>
@@ -918,54 +871,9 @@
         </div>
       </section>
 
-      <section class="section experience-section" id="erlebnis" data-reveal>
-        <div class="section-heading">
-          <p class="section-label">Erlebnis</p>
-          <h2>Was den Raum ausmacht.</h2>
-          <p>
-            Im fertigen Raum sieht man vor allem Leinwand, Sitzebenen und
-            Licht. Die eigentliche Konstruktion liegt dahinter: Frontwand,
-            Bassarrays, Absorber, Diffusoren und Bespannungen.
-          </p>
-        </div>
-
-        <div class="experience-grid">
-          <article class="experience-card">
-            <picture>
-              <source
-                type="image/avif"
-                srcset="
-                  assets/used/responsive/cinema-screen-blue-violet-glow-900.avif 900w,
-                  assets/used/responsive/cinema-screen-blue-violet-glow-1200.avif 1200w,
-                  assets/used/responsive/cinema-screen-blue-violet-glow-1800.avif 1800w
-                "
-                sizes="(max-width: 760px) calc(100vw - 1.25rem), 33vw"
-              />
-              <source
-                type="image/webp"
-                srcset="
-                  assets/used/responsive/cinema-screen-blue-violet-glow-900.webp 900w,
-                  assets/used/responsive/cinema-screen-blue-violet-glow-1200.webp 1200w,
-                  assets/used/responsive/cinema-screen-blue-violet-glow-1800.webp 1800w
-                "
-                sizes="(max-width: 760px) calc(100vw - 1.25rem), 33vw"
-              />
-              <img
-                src="assets/used/responsive/cinema-screen-blue-violet-glow-900.webp"
-                alt="21:9-Leinwand mit blau-violetter Lichtstimmung"
-                loading="lazy"
-              />
-            </picture>
-            <div>
-              <h3>Cinemascope-Front</h3>
-              <p>
-                Die 332 cm breite 21:9-Leinwand prägt den Raum. Durch die
-                mikroperforierte Fläche kann der Center direkt aus dem Bild
-                spielen, ohne optisch sichtbar zu sein.
-              </p>
-            </div>
-          </article>
-          <article class="experience-card">
+      <section class="section acoustic-section" id="akustik" data-reveal>
+        <div class="acoustic-media">
+          <figure class="feature-media">
             <picture>
               <source
                 type="image/avif"
@@ -973,7 +881,7 @@
                   assets/used/responsive/cinema-front-wall-open-900.avif 900w,
                   assets/used/responsive/cinema-front-wall-open-1055.avif 1055w
                 "
-                sizes="(max-width: 760px) calc(100vw - 1.25rem), 33vw"
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
               />
               <source
                 type="image/webp"
@@ -981,175 +889,49 @@
                   assets/used/responsive/cinema-front-wall-open-900.webp 900w,
                   assets/used/responsive/cinema-front-wall-open-1055.webp 1055w
                 "
-                sizes="(max-width: 760px) calc(100vw - 1.25rem), 33vw"
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
               />
               <img
                 src="assets/used/responsive/cinema-front-wall-open-1055.webp"
-                alt="Geöffnete Frontwand mit Lautsprechern und Subwoofern"
+                alt="Geöffnete Frontwand mit Lautsprechern, Subwoofern und Dämmung"
                 loading="lazy"
               />
             </picture>
-            <div>
-              <h3>Unsichtbarer Aufwand</h3>
-              <p>
-                Hinter der fertigen Oberfläche steckt eine komplette Frontwand
-                mit Lautsprechern, Subwoofern und akustischer Behandlung. Im
-                Betrieb wird das als präzise Front, kontrollierter Bass und
-                ruhiger Raum hörbar.
-              </p>
-            </div>
-          </article>
-          <article class="experience-card">
+            <figcaption>
+              Die offene Frontwand vor der Bespannung: Subwoofer, Lautsprecher
+              und Dämmung
+            </figcaption>
+          </figure>
+          <figure class="feature-media">
             <picture>
               <source
                 type="image/avif"
                 srcset="
-                  assets/used/responsive/cinema-two-level-seating-900.avif 900w,
-                  assets/used/responsive/cinema-two-level-seating-1200.avif 1200w,
-                  assets/used/responsive/cinema-two-level-seating-1800.avif 1800w
+                  assets/used/responsive/cinema-rear-wall-open-900.avif 900w,
+                  assets/used/responsive/cinema-rear-wall-open-1400.avif 1400w
                 "
-                sizes="(max-width: 760px) calc(100vw - 1.25rem), 33vw"
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
               />
               <source
                 type="image/webp"
                 srcset="
-                  assets/used/responsive/cinema-two-level-seating-900.webp 900w,
-                  assets/used/responsive/cinema-two-level-seating-1200.webp 1200w,
-                  assets/used/responsive/cinema-two-level-seating-1800.webp 1800w
+                  assets/used/responsive/cinema-rear-wall-open-900.webp 900w,
+                  assets/used/responsive/cinema-rear-wall-open-1400.webp 1400w
                 "
-                sizes="(max-width: 760px) calc(100vw - 1.25rem), 33vw"
+                sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
               />
               <img
-                src="assets/used/responsive/cinema-two-level-seating-900.webp"
-                alt="Vordere Lounge-Sessel vor dem umgebauten Podest und der hinteren Sitzreihe"
+                src="assets/used/responsive/cinema-rear-wall-open-1400.webp"
+                alt="Offene Rückwand im Bau mit acht Subwoofern, Back-Surround-Lautsprechern und 1D-Diffusoren"
                 loading="lazy"
               />
             </picture>
-            <div>
-              <h3>Zwei Ebenen, sechs Plätze</h3>
-              <p>
-                Die Hauptreihe liegt vorne auf der Hörposition. Vier zusätzliche
-                Plätze stehen erhöht auf dem Podest, damit Gäste über die erste
-                Reihe hinweg auf die Leinwand sehen.
-              </p>
-            </div>
-          </article>
+            <figcaption>
+              Die offene Rückwand im Bau: Rück-DBA, Back Surrounds und
+              1D-Diffusoren
+            </figcaption>
+          </figure>
         </div>
-      </section>
-
-      <section class="section catalog-section" id="programm" data-reveal>
-        <div class="section-heading">
-          <p class="section-label">Programm</p>
-          <h2>Was auf die Leinwand kann.</h2>
-          <p>
-            Die lokale Mediensammlung zeigt Filme, Serienfolgen und
-            Demo-Clips, die direkt im eclipse Kino präsentiert werden können.
-            Suche, Filter und Sortierung helfen dabei, schnell den passenden
-            Titel für den nächsten Abend zu finden.
-          </p>
-        </div>
-
-        <div class="catalog-shell" data-catalog data-catalog-src="assets/zappiti-catalog.min.json">
-          <div class="catalog-toolbar">
-            <div class="catalog-search">
-              <label class="sr-only" for="catalog-search">Programm durchsuchen</label>
-              <svg
-                class="catalog-search-icon"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <circle cx="11" cy="11" r="6.4" fill="none" stroke="currentColor" stroke-width="1.8"/>
-                <line x1="16" y1="16" x2="20.5" y2="20.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              </svg>
-              <input
-                id="catalog-search"
-                type="search"
-                data-catalog-search
-                autocomplete="off"
-                placeholder="Titel suchen"
-              />
-              <button
-                type="button"
-                class="catalog-search-clear"
-                data-catalog-clear
-                aria-label="Suche leeren"
-                hidden
-              >×</button>
-            </div>
-            <div class="catalog-filters" role="group" aria-label="Medientyp filtern">
-              <button type="button" class="is-active" data-catalog-filter="all" aria-pressed="true">Alle <span class="catalog-filter-count" data-catalog-count="all">(353)</span></button>
-              <button type="button" data-catalog-filter="movie" aria-pressed="false">Filme <span class="catalog-filter-count" data-catalog-count="movie">(303)</span></button>
-              <button type="button" data-catalog-filter="demo" aria-pressed="false">Demos <span class="catalog-filter-count" data-catalog-count="demo">(26)</span></button>
-              <button type="button" data-catalog-filter="tv" aria-pressed="false">Serien <span class="catalog-filter-count" data-catalog-count="tv">(24)</span></button>
-            </div>
-            <label class="catalog-select">
-              <span>Sortierung</span>
-              <select data-catalog-sort>
-                <option value="title">Titel A-Z</option>
-                <option value="recent">Zuletzt geändert</option>
-                <option value="imdb">IMDb-Bewertung</option>
-              </select>
-            </label>
-          </div>
-
-          <div class="catalog-meta">
-            <p data-catalog-status>Katalog wird geladen...</p>
-            <p data-catalog-updated></p>
-          </div>
-
-          <div class="catalog-list" data-catalog-results aria-busy="true">
-            <div class="catalog-skeleton-item" aria-hidden="true"></div>
-            <div class="catalog-skeleton-item" aria-hidden="true"></div>
-            <div class="catalog-skeleton-item" aria-hidden="true"></div>
-            <div class="catalog-skeleton-item" aria-hidden="true"></div>
-            <div class="catalog-skeleton-item" aria-hidden="true"></div>
-            <div class="catalog-skeleton-item" aria-hidden="true"></div>
-            <div class="catalog-skeleton-item" aria-hidden="true"></div>
-            <div class="catalog-skeleton-item" aria-hidden="true"></div>
-            <div class="catalog-skeleton-item" aria-hidden="true"></div>
-            <div class="catalog-skeleton-item" aria-hidden="true"></div>
-          </div>
-
-          <nav class="catalog-pagination" data-catalog-pagination hidden aria-label="Katalogseiten">
-            <button type="button" class="catalog-page-nav" data-catalog-prev>Zurück</button>
-            <div class="catalog-pages" data-catalog-pages></div>
-            <button type="button" class="catalog-page-nav" data-catalog-next>Weiter</button>
-          </nav>
-        </div>
-      </section>
-
-      <section class="section acoustic-section" id="akustik" data-reveal>
-        <figure class="feature-media">
-          <picture>
-            <source
-              type="image/avif"
-              srcset="
-                assets/used/responsive/cinema-acoustic-side-wall-900.avif 900w,
-                assets/used/responsive/cinema-acoustic-side-wall-1400.avif 1400w,
-                assets/used/responsive/cinema-acoustic-side-wall-1800.avif 1800w
-              "
-              sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
-            />
-            <source
-              type="image/webp"
-              srcset="
-                assets/used/responsive/cinema-acoustic-side-wall-900.webp 900w,
-                assets/used/responsive/cinema-acoustic-side-wall-1400.webp 1400w,
-                assets/used/responsive/cinema-acoustic-side-wall-1800.webp 1800w
-              "
-              sizes="(max-width: 760px) calc(100vw - 1.25rem), 50vw"
-            />
-            <img
-              src="assets/used/responsive/cinema-acoustic-side-wall-1400.webp"
-              alt="Seitliche Akustikwand mit indirektem Licht, Lounge-Sesseln und Podest"
-              loading="lazy"
-            />
-          </picture>
-          <figcaption>
-            Akustische Elemente verschwinden hinter dunklen Flächen und Licht
-          </figcaption>
-        </figure>
         <div class="section-copy">
           <p class="section-label">Akustik</p>
           <h2>Kontrolle, ohne dass der Raum steril wirkt.</h2>
@@ -1188,6 +970,14 @@
               </p>
             </article>
             <article>
+              <h3>Rückwand als zweites Bassarray</h3>
+              <p>
+                Acht weitere Subwoofer spiegeln die Front und löschen die
+                Bassreflexion an der Rückwand aus. Zwischen den Gehäusen
+                sitzen Back Surrounds, Dämmung und 1D-Diffusoren.
+              </p>
+            </article>
+            <article>
               <h3>Restlicht und Oberfläche</h3>
               <p>
                 Dunkle Stoffe im Frontbereich reduzieren Streulicht; akustisch
@@ -1210,117 +1000,8 @@
           </p>
         </div>
 
-        <div class="component-grid">
-          <article class="component-card wide">
-            <img
-              src="assets/used/equipment-stormaudio-isp-elite-mk2.webp"
-              alt="StormAudio ISP Elite MK2 24-Kanal Vorstufe"
-              loading="lazy"
-            />
-            <div>
-              <span>Signalzentrale</span>
-              <h3>StormAudio ISP Elite MK2 24ch</h3>
-              <p>
-                Dekodiert, routet und entzerrt die 24 Kanäle; Dirac ART bindet
-                Lautsprecher und Basssystem zusammen.
-              </p>
-            </div>
-          </article>
-          <article class="component-card">
-            <img
-              src="assets/used/equipment-jvc-nz7-projector.png"
-              alt="JVC NZ7 Projektor"
-              loading="lazy"
-            />
-            <div>
-              <span>Bild</span>
-              <h3>JVC NZ7</h3>
-              <p>Laserprojektor für die 332 cm breite Cinemascope-Leinwand.</p>
-            </div>
-          </article>
-          <article class="component-card wide">
-            <img
-              src="assets/used/equipment-lumagen-radiance-pro-4242.png"
-              alt="Lumagen Radiance Pro 4242 Videoprozessor"
-              loading="lazy"
-            />
-            <div>
-              <span>Bildverarbeitung</span>
-              <h3>Lumagen Radiance Pro 4242</h3>
-              <p>
-                Skaliert alle Quellen und rechnet HDR dynamisch auf den
-                Projektor um. Steuert das CinemaScope-Format der 21:9-Leinwand
-                und kalibriert das Bild per 3D-LUT.
-              </p>
-            </div>
-          </article>
-          <article class="component-card">
-            <img
-              src="assets/used/equipment-nubert-nuvero-110-front-speaker.png"
-              alt="Nubert nuVero 110 Lautsprecher"
-              loading="lazy"
-            />
-            <div>
-              <span>Front L/R</span>
-              <h3>Nubert nuVero 110</h3>
-              <p>Linker und rechter Hauptkanal hinter der Frontbespannung.</p>
-            </div>
-          </article>
-          <article class="component-card">
-            <img
-              src="assets/used/equipment-nubert-nuvero-nova-12-center.png"
-              alt="Nubert nuVero Nova 12 Center"
-              loading="lazy"
-            />
-            <div>
-              <span>Center</span>
-              <h3>nuVero Nova 12</h3>
-              <p>Sitzt wenige Zentimeter hinter der mikroperforierten Leinwand.</p>
-            </div>
-          </article>
-          <article class="component-card">
-            <img
-              src="assets/used/equipment-nubert-nuvero-70-surround.png"
-              alt="Nubert nuVero 70 Surroundlautsprecher"
-              loading="lazy"
-            />
-            <div>
-              <span>Surround</span>
-              <h3>nuVero 70</h3>
-              <p>Seitliche Kanäle auf Hörhöhe für das Surroundfeld.</p>
-            </div>
-          </article>
-          <article class="component-card">
-            <img
-              src="assets/used/equipment-scan-speak-30w4558t00-subwoofer.png"
-              alt="Scan-Speak 30W/4558T00 Subwoofer-Chassis"
-              loading="lazy"
-            />
-            <div>
-              <span>DBA</span>
-              <h3>Scan-Speak 30W/4558T00</h3>
-              <p>16 Chassis arbeiten als Double Bass Array in Front- und Rückwand.</p>
-            </div>
-          </article>
-          <article class="component-card wide">
-            <img
-              src="assets/used/equipment-apollon-1et400a-amplifier.png"
-              alt="Apollon 1ET400A Endstufe"
-              loading="lazy"
-            />
-            <div>
-              <span>Endstufen</span>
-              <h3>Apollon, IOTAVX und TSA 4-700</h3>
-              <p>
-                Separate Verstärker für Front, Surrounds, Höhenkanäle und alle
-                Subwoofer-Gruppen.
-              </p>
-            </div>
-          </article>
-        </div>
-
         <div class="rack-explorer" data-rack data-rack-state="closed">
-          <div class="rack-heading">
+          <div class="tech-subheading">
             <h3>Das Rack: alles an einem Ort.</h3>
             <p>
               Strom, Zuspieler, Bild- und Tonverarbeitung und sämtliche
@@ -1460,6 +1141,164 @@
             </aside>
           </div>
           </div>
+        </div>
+
+        <div class="tech-subheading">
+          <h3>Im Raum verbaut.</h3>
+          <p>
+            Was nicht im Rack steckt, arbeitet unsichtbar im Raum: der
+            Projektor hinter der Rückwand, die Lautsprecher hinter Leinwand
+            und Bespannung, die 16 Subwoofer-Chassis in den Wänden.
+          </p>
+        </div>
+
+        <div class="component-grid">
+          <article class="component-card wide">
+            <img
+              src="assets/used/equipment-jvc-nz7-projector.png"
+              alt="JVC NZ7 Projektor"
+              loading="lazy"
+            />
+            <div>
+              <span>Bild</span>
+              <h3>JVC NZ7</h3>
+              <p>
+                Laserprojektor hinter der Rückwand: Er wirft das Bild durch
+                den Projektor-Durchbruch auf die 332 cm breite
+                Cinemascope-Leinwand.
+              </p>
+            </div>
+          </article>
+          <article class="component-card">
+            <img
+              src="assets/used/equipment-nubert-nuvero-110-front-speaker.png"
+              alt="Nubert nuVero 110 Lautsprecher"
+              loading="lazy"
+            />
+            <div>
+              <span>Front L/R</span>
+              <h3>Nubert nuVero 110</h3>
+              <p>Linker und rechter Hauptkanal hinter der Frontbespannung.</p>
+            </div>
+          </article>
+          <article class="component-card">
+            <img
+              src="assets/used/equipment-nubert-nuvero-nova-12-center.png"
+              alt="Nubert nuVero Nova 12 Center"
+              loading="lazy"
+            />
+            <div>
+              <span>Center</span>
+              <h3>nuVero Nova 12</h3>
+              <p>Sitzt wenige Zentimeter hinter der mikroperforierten Leinwand.</p>
+            </div>
+          </article>
+          <article class="component-card">
+            <img
+              src="assets/used/equipment-nubert-nuvero-70-surround.png"
+              alt="Nubert nuVero 70 Surroundlautsprecher"
+              loading="lazy"
+            />
+            <div>
+              <span>Surround</span>
+              <h3>nuVero 70</h3>
+              <p>Seitliche Kanäle auf Hörhöhe für das Surroundfeld.</p>
+            </div>
+          </article>
+          <article class="component-card">
+            <img
+              src="assets/used/equipment-scan-speak-30w4558t00-subwoofer.png"
+              alt="Scan-Speak 30W/4558T00 Subwoofer-Chassis"
+              loading="lazy"
+            />
+            <div>
+              <span>DBA</span>
+              <h3>Scan-Speak 30W/4558T00</h3>
+              <p>16 Chassis arbeiten als Double Bass Array in Front- und Rückwand.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section catalog-section" id="programm" data-reveal>
+        <div class="section-heading">
+          <p class="section-label">Programm</p>
+          <h2>Was auf die Leinwand kann.</h2>
+          <p>
+            Die lokale Mediensammlung zeigt Filme, Serienfolgen und
+            Demo-Clips, die direkt im eclipse Kino präsentiert werden können.
+            Suche, Filter und Sortierung helfen dabei, schnell den passenden
+            Titel für den nächsten Abend zu finden.
+          </p>
+        </div>
+
+        <div class="catalog-shell" data-catalog data-catalog-src="assets/zappiti-catalog.min.json">
+          <div class="catalog-toolbar">
+            <div class="catalog-search">
+              <label class="sr-only" for="catalog-search">Programm durchsuchen</label>
+              <svg
+                class="catalog-search-icon"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="11" cy="11" r="6.4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="16" y1="16" x2="20.5" y2="20.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+              <input
+                id="catalog-search"
+                type="search"
+                data-catalog-search
+                autocomplete="off"
+                placeholder="Titel suchen"
+              />
+              <button
+                type="button"
+                class="catalog-search-clear"
+                data-catalog-clear
+                aria-label="Suche leeren"
+                hidden
+              >×</button>
+            </div>
+            <div class="catalog-filters" role="group" aria-label="Medientyp filtern">
+              <button type="button" class="is-active" data-catalog-filter="all" aria-pressed="true">Alle <span class="catalog-filter-count" data-catalog-count="all">(353)</span></button>
+              <button type="button" data-catalog-filter="movie" aria-pressed="false">Filme <span class="catalog-filter-count" data-catalog-count="movie">(303)</span></button>
+              <button type="button" data-catalog-filter="demo" aria-pressed="false">Demos <span class="catalog-filter-count" data-catalog-count="demo">(26)</span></button>
+              <button type="button" data-catalog-filter="tv" aria-pressed="false">Serien <span class="catalog-filter-count" data-catalog-count="tv">(24)</span></button>
+            </div>
+            <label class="catalog-select">
+              <span>Sortierung</span>
+              <select data-catalog-sort>
+                <option value="title">Titel A-Z</option>
+                <option value="recent">Zuletzt geändert</option>
+                <option value="imdb">IMDb-Bewertung</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="catalog-meta">
+            <p data-catalog-status>Katalog wird geladen...</p>
+            <p data-catalog-updated></p>
+          </div>
+
+          <div class="catalog-list" data-catalog-results aria-busy="true">
+            <div class="catalog-skeleton-item" aria-hidden="true"></div>
+            <div class="catalog-skeleton-item" aria-hidden="true"></div>
+            <div class="catalog-skeleton-item" aria-hidden="true"></div>
+            <div class="catalog-skeleton-item" aria-hidden="true"></div>
+            <div class="catalog-skeleton-item" aria-hidden="true"></div>
+            <div class="catalog-skeleton-item" aria-hidden="true"></div>
+            <div class="catalog-skeleton-item" aria-hidden="true"></div>
+            <div class="catalog-skeleton-item" aria-hidden="true"></div>
+            <div class="catalog-skeleton-item" aria-hidden="true"></div>
+            <div class="catalog-skeleton-item" aria-hidden="true"></div>
+          </div>
+
+          <nav class="catalog-pagination" data-catalog-pagination hidden aria-label="Katalogseiten">
+            <button type="button" class="catalog-page-nav" data-catalog-prev>Zurück</button>
+            <div class="catalog-pages" data-catalog-pages></div>
+            <button type="button" class="catalog-page-nav" data-catalog-next>Weiter</button>
+          </nav>
         </div>
       </section>
 
