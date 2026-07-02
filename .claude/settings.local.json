@@ -32,7 +32,16 @@
       "Bash(node -e \"const css=require\\('fs'\\).readFileSync\\('d:/Projects/eclipse-cinema-homepage/styles.css','utf8'\\);let depth=0,line=1;for\\(const c of css\\){if\\(c==='\\\\n'\\)line++;if\\(c==='{'\\)depth++;if\\(c==='}'\\)depth--;if\\(depth<0\\){console.error\\('Unbalanced } at line',line\\);process.exit\\(1\\)}}if\\(depth!==0\\){console.error\\('Unbalanced { \\(depth='+depth+'\\)'\\);process.exit\\(1\\)}console.log\\('CSS OK'\\)\")",
       "Bash(node -e \"const css=require\\('fs'\\).readFileSync\\('d:/Projects/eclipse-cinema-homepage/styles.css','utf8'\\);let depth=0;for\\(const c of css\\){if\\(c==='{'\\)depth++;if\\(c==='}'\\)depth--}console.log\\(depth===0?'CSS OK':'BROKEN'\\)\")",
       "Bash(node -e \"const css=require\\('fs'\\).readFileSync\\('d:/Projects/eclipse-cinema-homepage/styles.css','utf8'\\);let d=0;for\\(const c of css\\){if\\(c==='{'\\)d++;if\\(c==='}'\\)d--}console.log\\(d===0?'CSS OK':'BROKEN '+d\\)\")",
-      "PowerShell(Get-ChildItem assets, assets\\\\used -File | Select-Object Name, Length; \\(Get-ChildItem assets\\\\used\\\\responsive -File | Measure-Object -Sum Length\\).Sum / 1MB)"
+      "PowerShell(Get-ChildItem assets, assets\\\\used -File | Select-Object Name, Length; \\(Get-ChildItem assets\\\\used\\\\responsive -File | Measure-Object -Sum Length\\).Sum / 1MB)",
+      "Bash(command -v magick ffmpeg cwebp avifenc)",
+      "Bash(magick -version)",
+      "Bash(magick images/rack_open.JPG -auto-orient -resize \"900x2936^\" -gravity center -extent 900x2936 -quality 82 used/responsive/equipment-rack-open-900.webp)",
+      "Bash(magick images/rack_open.JPG -auto-orient -resize \"450x1468^\" -gravity center -extent 450x1468 -quality 82 used/responsive/equipment-rack-open-450.webp)",
+      "Bash(magick images/rack_closed.JPG -auto-orient -resize \"900x2936^\" -gravity center -extent 900x2936 -quality 82 used/responsive/equipment-rack-closed-900.webp)",
+      "Bash(magick images/rack_closed.JPG -auto-orient -resize \"450x1468^\" -gravity center -extent 450x1468 -quality 82 used/responsive/equipment-rack-closed-450.webp)",
+      "Bash(magick images/rack_open.JPG -auto-orient -resize \"900x2936^\" -gravity center -extent 900x2936 -quality 55 used/responsive/equipment-rack-open-900.avif)",
+      "Skill(run)",
+      "Skill(run:*)"
     ]
   },
   "model": "claude-opus-4-7",

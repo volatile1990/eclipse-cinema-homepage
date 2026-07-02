@@ -495,6 +495,196 @@ if (tour) {
   setView(tour.dataset.view || "top");
 }
 
+const rack = document.querySelector("[data-rack]");
+
+if (rack) {
+  const rackKicker = rack.querySelector("[data-rack-kicker]");
+  const rackTitle = rack.querySelector("[data-rack-title]");
+  const rackText = rack.querySelector("[data-rack-text]");
+  const rackSpecs = rack.querySelector("[data-rack-specs]");
+  const rackHint = rack.querySelector("[data-rack-hint]");
+  const rackViewButtons = rack.querySelectorAll("[data-rack-view]");
+  const rackHotspots = [...rack.querySelectorAll(".rack-hotspot")];
+  const rackHotspotsWrap = rack.querySelector("[data-rack-hotspots]");
+  const rackCoverTrigger = rack.querySelector("[data-rack-open-trigger]");
+  const rackCloseBtn = rack.querySelector("[data-rack-info-close]");
+  const rackClosedImg = rack.querySelector(".rack-img-closed");
+  const rackOpenImg = rack.querySelector(".rack-img-open");
+
+  const rackStates = {
+    closed: {
+      kicker: "Rack",
+      title: "Hinter dem Stoff",
+      text: "Im Alltag zeigt das Rack nur eine ruhige, dunkle Stofffront. Öffne die Abdeckung, um die neun Geräteebenen dahinter zu sehen.",
+      hint: "Tipp: Ein Klick auf das Bild öffnet die Abdeckung.",
+    },
+    open: {
+      kicker: "Rack · offen",
+      title: "Neun Ebenen Technik",
+      text: "Vom Netzfilter oben bis zu den Bass-Endstufen unten hat jede Ebene eine Aufgabe. Tippe ein Gerät an, um Details zu sehen.",
+      hint: "Die nummerierten Punkte markieren die Geräte.",
+    },
+  };
+
+  const rackDevices = {
+    dynavox: {
+      kicker: "Ebene 1 · Strom",
+      title: "Dynavox X7000",
+      text: "Netzfilter am Kopf des Racks: Er glättet Störungen aus dem Stromnetz, bevor sie die empfindlichen Zuspieler erreichen. Die rote Anzeige zeigt die anliegende Netzspannung.",
+      specs: {
+        "Aufgabe": "Netzfilterung",
+        "Anzeige": "Netzspannung",
+      },
+    },
+    oehlbach: {
+      kicker: "Ebene 2 · Strom",
+      title: "Oehlbach XXL Powerstation 909",
+      text: "Verteilt gefilterten Strom an die Geräte im Rack. Zwei Tasten schalten getrennte Gerätegruppen, das runde Display überwacht die Netzspannung.",
+      specs: {
+        "Aufgabe": "Netzfilter & Verteilung",
+        "Schaltgruppen": "2 (Power 1 / Power 2)",
+        "Anzeige": "Netzspannung",
+      },
+    },
+    lumagen: {
+      kicker: "Ebene 3 · Bildverarbeitung",
+      title: "Lumagen Radiance Pro 4242",
+      text: "Sitzt zwischen Zuspielern und Projektor: skaliert alle Quellen, rechnet HDR dynamisch für den JVC um und steuert das CinemaScope-Format der 21:9-Leinwand.",
+      specs: {
+        "HDR": "dynamisches Tone Mapping",
+        "Kalibrierung": "3D-LUT",
+        "Leinwand": "21:9-Formatsteuerung",
+      },
+    },
+    zidoo: {
+      kicker: "Ebene 4 · Quelle",
+      title: "Zidoo Z3000 Pro",
+      text: "Der Medienplayer der Anlage: Von hier startet die lokale Sammlung aus Filmen, Serien und Demo-Clips — das komplette Programm der Mediathek.",
+      specs: {
+        "Inhalte": "Filme, Serien, Demos",
+        "Signalweg": "über Lumagen zum JVC",
+      },
+    },
+    storm: {
+      kicker: "Ebene 5 · Signalzentrale",
+      title: "StormAudio ISP Elite MK2",
+      text: "Die 24-Kanal-Vorstufe dekodiert Dolby Atmos und DTS:X, routet alle Lautsprecher- und Basskanäle und entzerrt den Raum. Dirac ART bindet Lautsprecher und Double Bass Array in eine gemeinsame Einmessung ein.",
+      specs: {
+        "Kanäle": "24",
+        "Einmessung": "Dirac Live + ART",
+        "Formate": "Dolby Atmos, DTS:X",
+      },
+    },
+    apollon: {
+      kicker: "Ebene 6 · Endstufe",
+      title: "Apollon 1ET400A 8-Kanal",
+      text: "Acht Purifi-Eigentakt-Module in einem Gehäuse treiben die Hauptebene: Front, Center, Front Wides und Surrounds.",
+      specs: {
+        "Module": "8× Purifi 1ET400A",
+        "Prinzip": "Class D (Eigentakt)",
+        "Treibt": "Front-, Wide- & Surround-Ebene",
+      },
+    },
+    iotavx7: {
+      kicker: "Ebene 7 · Endstufe",
+      title: "IOTAVX AVXP 7-230",
+      text: "Sieben Endstufenkanäle für die Effektebene: Die Back Surrounds sowie die vorderen und seitlichen Höhenkanäle laufen über diese Endstufe.",
+      specs: {
+        "Kanäle": "7",
+        "Treibt": "Back Surrounds & Heights",
+      },
+    },
+    iotavx1: {
+      kicker: "Ebene 8 · Endstufe",
+      title: "IOTAVX AVXP1",
+      text: "Endstufe für die hinteren Deckenkanäle — unter anderem den Voice-of-God-Lautsprecher direkt über dem Hörplatz.",
+      specs: {
+        "Kanäle": "2",
+        "Treibt": "Voice of God & Top Surround Back",
+      },
+    },
+    tamps: {
+      kicker: "Ebene 9 · Bass-Endstufen",
+      title: "4× the t.amp TSA 4-700",
+      text: "Vier PA-Endstufen mit je vier Kanälen ergeben 16 Endstufenkanäle — einer für jeden Subwoofer des Double Bass Array. Delay und Phase der Arrays steuert die StormAudio.",
+      specs: {
+        "Geräte": "4× TSA 4-700",
+        "Kanäle": "16 (4 × 4)",
+        "Treibt": "DBA mit 16 Subwoofern",
+      },
+    },
+  };
+
+  const renderRackInfo = (data) => {
+    rackKicker.textContent = data.kicker;
+    rackTitle.textContent = data.title;
+    rackText.textContent = data.text;
+    rackHint.textContent =
+      data.hint || rackStates[rack.dataset.rackState]?.hint || "";
+
+    rackSpecs.replaceChildren();
+    if (data.specs) {
+      Object.entries(data.specs).forEach(([k, v]) => {
+        const dt = document.createElement("dt");
+        dt.textContent = k;
+        const dd = document.createElement("dd");
+        dd.textContent = v;
+        rackSpecs.append(dt, dd);
+      });
+    }
+  };
+
+  const clearRackActive = () => {
+    rackHotspots.forEach((h) => h.classList.remove("is-active"));
+    rack.classList.remove("has-active-info");
+  };
+
+  const setRackState = (state) => {
+    rack.dataset.rackState = state;
+    rackViewButtons.forEach((b) => {
+      const isActive = b.dataset.rackView === state;
+      b.classList.toggle("is-active", isActive);
+      b.setAttribute("aria-selected", String(isActive));
+    });
+    rackClosedImg.setAttribute("aria-hidden", String(state === "open"));
+    rackOpenImg.setAttribute("aria-hidden", String(state === "closed"));
+    if (rackHotspotsWrap) rackHotspotsWrap.inert = state === "closed";
+    if (rackCoverTrigger) rackCoverTrigger.inert = state === "open";
+    clearRackActive();
+    renderRackInfo(rackStates[state]);
+  };
+
+  const activateRackDevice = (btn) => {
+    rackHotspots.forEach((h) => h.classList.toggle("is-active", h === btn));
+    renderRackInfo(rackDevices[btn.dataset.device] || rackStates.open);
+    rack.classList.add("has-active-info");
+  };
+
+  rackViewButtons.forEach((b) =>
+    b.addEventListener("click", () => setRackState(b.dataset.rackView)),
+  );
+
+  if (rackCoverTrigger) {
+    rackCoverTrigger.addEventListener("click", () => {
+      setRackState("open");
+      if (rackHotspots[0]) rackHotspots[0].focus({ preventScroll: true });
+    });
+  }
+
+  rackHotspots.forEach((btn) =>
+    btn.addEventListener("click", () => activateRackDevice(btn)),
+  );
+
+  if (rackCloseBtn) {
+    rackCloseBtn.addEventListener("click", () => {
+      clearRackActive();
+      renderRackInfo(rackStates[rack.dataset.rackState] || rackStates.closed);
+    });
+  }
+
+  setRackState(rack.dataset.rackState || "closed");
+}
+
 const header = document.querySelector(".site-header");
 if (header) {
   const updateScrolled = () => {

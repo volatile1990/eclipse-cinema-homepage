@@ -1318,6 +1318,149 @@
             </div>
           </article>
         </div>
+
+        <div class="rack-explorer" data-rack data-rack-state="closed">
+          <div class="rack-heading">
+            <h3>Das Rack: alles an einem Ort.</h3>
+            <p>
+              Strom, Zuspieler, Bild- und Tonverarbeitung und sämtliche
+              Endstufen stapeln sich auf neun Ebenen — im Betrieb verschwindet
+              alles hinter einer schwarzen Stoffabdeckung. Öffne das Rack und
+              tippe ein Gerät an, um zu sehen, was es macht.
+            </p>
+          </div>
+          <div class="rack-shell">
+          <div class="rack-controls">
+            <div class="tour-views" role="tablist" aria-label="Rack mit oder ohne Abdeckung zeigen">
+              <button type="button" role="tab" data-rack-view="closed" class="is-active" aria-selected="true">Mit Abdeckung</button>
+              <button type="button" role="tab" data-rack-view="open" aria-selected="false">Offen</button>
+            </div>
+          </div>
+          <div class="rack-stage">
+            <div class="rack-canvas">
+              <div class="rack-frame">
+                <picture class="rack-img rack-img-closed">
+                  <source
+                    type="image/avif"
+                    srcset="
+                      assets/used/responsive/equipment-rack-closed-450.avif 450w,
+                      assets/used/responsive/equipment-rack-closed-900.avif 900w
+                    "
+                    sizes="(max-width: 760px) 244px, 296px"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      assets/used/responsive/equipment-rack-closed-450.webp 450w,
+                      assets/used/responsive/equipment-rack-closed-900.webp 900w
+                    "
+                    sizes="(max-width: 760px) 244px, 296px"
+                  />
+                  <img
+                    src="assets/used/responsive/equipment-rack-closed-900.webp"
+                    alt="Technik-Rack mit schwarzer Stoffabdeckung, dahinter schemenhaft die Geräte"
+                    loading="lazy"
+                    width="900"
+                    height="2936"
+                  />
+                </picture>
+                <picture class="rack-img rack-img-open" aria-hidden="true">
+                  <source
+                    type="image/avif"
+                    srcset="
+                      assets/used/responsive/equipment-rack-open-450.avif 450w,
+                      assets/used/responsive/equipment-rack-open-900.avif 900w
+                    "
+                    sizes="(max-width: 760px) 244px, 296px"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      assets/used/responsive/equipment-rack-open-450.webp 450w,
+                      assets/used/responsive/equipment-rack-open-900.webp 900w
+                    "
+                    sizes="(max-width: 760px) 244px, 296px"
+                  />
+                  <img
+                    src="assets/used/responsive/equipment-rack-open-900.webp"
+                    alt="Offenes Technik-Rack mit Netzfiltern, Videoprozessor, Vorstufe und Endstufen auf neun Ebenen"
+                    loading="lazy"
+                    width="900"
+                    height="2936"
+                  />
+                </picture>
+                <button
+                  type="button"
+                  class="rack-cover-trigger"
+                  data-rack-open-trigger
+                  aria-label="Stoffabdeckung öffnen und Geräte zeigen"
+                >
+                  <span class="rack-cover-hint">Abdeckung öffnen</span>
+                </button>
+                <div class="rack-hotspots" data-rack-hotspots>
+                  <button type="button" class="rack-hotspot" data-device="dynavox" style="top: 7.4%; height: 3.8%" aria-label="Dynavox X7000 Netzfilter">
+                    <span class="rack-hotspot-dot" aria-hidden="true">1</span>
+                    <span class="rack-hotspot-label" aria-hidden="true">Dynavox X7000</span>
+                  </button>
+                  <button type="button" class="rack-hotspot" data-device="oehlbach" style="top: 14%; height: 3.8%" aria-label="Oehlbach XXL Powerstation 909">
+                    <span class="rack-hotspot-dot" aria-hidden="true">2</span>
+                    <span class="rack-hotspot-label" aria-hidden="true">Oehlbach Powerstation</span>
+                  </button>
+                  <button type="button" class="rack-hotspot" data-device="lumagen" style="top: 20.7%; height: 3%" aria-label="Lumagen Radiance Pro 4242 Videoprozessor">
+                    <span class="rack-hotspot-dot" aria-hidden="true">3</span>
+                    <span class="rack-hotspot-label" aria-hidden="true">Lumagen Radiance Pro</span>
+                  </button>
+                  <button type="button" class="rack-hotspot" data-device="zidoo" style="top: 26.5%; height: 2.8%" aria-label="Zidoo Z3000 Pro Medienplayer">
+                    <span class="rack-hotspot-dot" aria-hidden="true">4</span>
+                    <span class="rack-hotspot-label" aria-hidden="true">Zidoo Z3000 Pro</span>
+                  </button>
+                  <button type="button" class="rack-hotspot" data-device="storm" style="top: 32%; height: 8.4%" aria-label="StormAudio ISP Elite MK2 Vorstufe">
+                    <span class="rack-hotspot-dot" aria-hidden="true">5</span>
+                    <span class="rack-hotspot-label" aria-hidden="true">StormAudio ISP Elite</span>
+                  </button>
+                  <button type="button" class="rack-hotspot" data-device="apollon" style="top: 45%; height: 8.5%" aria-label="Apollon 1ET400A 8-Kanal-Endstufe">
+                    <span class="rack-hotspot-dot" aria-hidden="true">6</span>
+                    <span class="rack-hotspot-label" aria-hidden="true">Apollon 1ET400A</span>
+                  </button>
+                  <button type="button" class="rack-hotspot" data-device="iotavx7" style="top: 55.5%; height: 9.8%" aria-label="IOTAVX AVXP 7-230 Endstufe">
+                    <span class="rack-hotspot-dot" aria-hidden="true">7</span>
+                    <span class="rack-hotspot-label" aria-hidden="true">IOTAVX AVXP 7-230</span>
+                  </button>
+                  <button type="button" class="rack-hotspot" data-device="iotavx1" style="top: 68%; height: 9.4%" aria-label="IOTAVX AVXP1 Endstufe">
+                    <span class="rack-hotspot-dot" aria-hidden="true">8</span>
+                    <span class="rack-hotspot-label" aria-hidden="true">IOTAVX AVXP1</span>
+                  </button>
+                  <button type="button" class="rack-hotspot" data-device="tamps" style="top: 81%; height: 15.8%" aria-label="Vier t.amp TSA 4-700 Endstufen für das Double Bass Array">
+                    <span class="rack-hotspot-dot" aria-hidden="true">9</span>
+                    <span class="rack-hotspot-label" aria-hidden="true">4× t.amp TSA 4-700</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <aside class="tour-info rack-info" aria-live="polite">
+              <button
+                type="button"
+                class="tour-info-close"
+                data-rack-info-close
+                aria-label="Detail schließen"
+              >×</button>
+              <div class="rack-info-body">
+                <span class="info-kicker" data-rack-kicker>Rack</span>
+                <h3 class="info-title" data-rack-title>Hinter dem Stoff</h3>
+                <p class="info-text" data-rack-text>
+                  Im Alltag zeigt das Rack nur eine ruhige, dunkle Stofffront.
+                  Öffne die Abdeckung, um die neun Geräteebenen dahinter zu
+                  sehen.
+                </p>
+                <dl class="info-specs" data-rack-specs></dl>
+                <p class="info-hint" data-rack-hint>
+                  Tipp: Ein Klick auf das Bild öffnet die Abdeckung.
+                </p>
+              </div>
+            </aside>
+          </div>
+          </div>
+        </div>
       </section>
 
       <section class="section gallery-section" id="galerie" data-reveal>

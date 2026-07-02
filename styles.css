@@ -2107,6 +2107,270 @@ figcaption {
   font-size: 1.13rem;
 }
 
+.rack-explorer {
+  margin-top: 3.4rem;
+}
+
+.rack-heading {
+  max-width: 46rem;
+  margin-bottom: 1.5rem;
+}
+
+.rack-heading h3 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.35rem, 2.6vw, 1.7rem);
+  line-height: 1.2;
+}
+
+.rack-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.rack-shell {
+  overflow: clip;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(
+      circle at 78% 14%,
+      rgba(107, 216, 255, 0.08),
+      transparent 22rem
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.rack-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.rack-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 23rem);
+  gap: 1px;
+  background: var(--line);
+}
+
+.rack-canvas {
+  display: grid;
+  place-items: center;
+  padding: 1.8rem 1.6rem;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(107, 216, 255, 0.04) 0,
+      transparent 30%,
+      transparent 70%,
+      rgba(240, 161, 68, 0.03) 100%
+    ),
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(107, 216, 255, 0.06),
+      transparent 18rem
+    ),
+    rgba(5, 7, 11, 0.62);
+}
+
+.rack-frame {
+  position: relative;
+  width: min(100%, 18.5rem);
+  aspect-ratio: 450 / 1468;
+}
+
+.rack-img {
+  position: absolute;
+  inset: 0;
+  transition: opacity 520ms ease;
+}
+
+.rack-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+[data-rack-state="closed"] .rack-img-open {
+  opacity: 0;
+}
+
+[data-rack-state="open"] .rack-img-closed {
+  opacity: 0;
+}
+
+.rack-cover-trigger {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  transition: opacity 320ms ease, visibility 320ms ease;
+}
+
+.rack-cover-hint {
+  padding: 0.5rem 1.05rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgba(5, 7, 11, 0.72);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 720;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rack-cover-hint {
+    animation: rack-hint-pulse 2.6s ease-in-out infinite;
+  }
+}
+
+@keyframes rack-hint-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(107, 216, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 22px 2px rgba(107, 216, 255, 0.24);
+  }
+}
+
+.rack-cover-trigger:hover .rack-cover-hint,
+.rack-cover-trigger:focus-visible .rack-cover-hint {
+  border-color: var(--cyan);
+  background: rgba(107, 216, 255, 0.14);
+}
+
+.rack-cover-trigger:focus-visible {
+  outline: 2px solid rgba(107, 216, 255, 0.6);
+  outline-offset: 2px;
+}
+
+[data-rack-state="open"] .rack-cover-trigger {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.rack-hotspots {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 300ms ease 240ms, visibility 300ms ease 240ms;
+}
+
+[data-rack-state="closed"] .rack-hotspots {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition-delay: 0ms;
+}
+
+.rack-hotspot {
+  position: absolute;
+  left: 13%;
+  width: 74%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: 1px solid rgba(107, 216, 255, 0.2);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.rack-hotspot:hover,
+.rack-hotspot:focus-visible {
+  border-color: rgba(107, 216, 255, 0.8);
+  background: rgba(107, 216, 255, 0.08);
+  box-shadow: 0 0 14px rgba(107, 216, 255, 0.2);
+  outline: none;
+}
+
+.rack-hotspot.is-active {
+  border-color: var(--cyan);
+  background: rgba(107, 216, 255, 0.12);
+  box-shadow: 0 0 18px rgba(107, 216, 255, 0.3);
+}
+
+.rack-hotspot-dot {
+  display: grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-left: -0.7rem;
+  border: 1px solid rgba(107, 216, 255, 0.65);
+  border-radius: 999px;
+  background: rgba(5, 7, 11, 0.88);
+  color: var(--cyan);
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.rack-hotspot:hover .rack-hotspot-dot,
+.rack-hotspot:focus-visible .rack-hotspot-dot,
+.rack-hotspot.is-active .rack-hotspot-dot {
+  background: var(--cyan);
+  color: #05070b;
+}
+
+.rack-hotspot-label {
+  margin-left: 0.55rem;
+  padding: 0.14rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(5, 7, 11, 0.8);
+  color: var(--text);
+  font-size: 0.72rem;
+  font-weight: 720;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 160ms ease, transform 160ms ease;
+  pointer-events: none;
+}
+
+.rack-hotspot:hover .rack-hotspot-label,
+.rack-hotspot:focus-visible .rack-hotspot-label,
+.rack-hotspot.is-active .rack-hotspot-label {
+  opacity: 1;
+  transform: none;
+}
+
+.rack-info {
+  min-height: 0;
+  padding: 0;
+}
+
+.rack-info-body {
+  position: sticky;
+  top: calc(var(--header-height) + var(--header-safe-top) + 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-height: 24rem;
+  padding: 1.8rem 1.7rem;
+}
+
 .gallery-section {
   border-top: 1px solid var(--line);
 }
@@ -2654,6 +2918,32 @@ figcaption {
     grid-column: span 1;
   }
 
+  .rack-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .rack-canvas {
+    padding: 1.4rem 1rem;
+  }
+
+  .rack-frame {
+    width: min(100%, 15.25rem);
+  }
+
+  .rack-hotspot-label {
+    display: none;
+  }
+
+  .rack-info-body {
+    position: static;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .rack-explorer.has-active-info .tour-info {
+    transform: translateY(0);
+  }
+
   .catalog-toolbar,
   .catalog-item {
     grid-template-columns: 1fr;
@@ -3025,6 +3315,7 @@ figcaption {
 [data-reveal].is-visible {
   opacity: 1;
   transform: none;
+  will-change: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
