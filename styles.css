@@ -2810,8 +2810,13 @@ figcaption {
 
   .tour-views {
     align-self: stretch;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
     flex-wrap: nowrap;
     overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-padding-inline: 0.25rem;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
@@ -2832,8 +2837,13 @@ figcaption {
   }
 
   .tour-layers {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
     flex-wrap: nowrap;
     overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-padding-inline: 0.05rem;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
