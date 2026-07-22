@@ -55,7 +55,7 @@
   padding: 1.2rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(17, 23, 34, 0.72);
+  background: rgba(25, 25, 32, 0.72);
   backdrop-filter: blur(14px);
 }
 
@@ -133,7 +133,7 @@
 .legal-section a:not(.button) {
   color: var(--cyan);
   text-decoration: underline;
-  text-decoration-color: rgba(107, 216, 255, 0.4);
+  text-decoration-color: rgba(232, 176, 75, 0.4);
   text-underline-offset: 0.18em;
 }
 
@@ -148,7 +148,7 @@
   margin: 1.2rem 0;
   padding: 1.1rem 1.2rem;
   border-left: 3px solid var(--cyan);
-  background: rgba(107, 216, 255, 0.06);
+  background: rgba(232, 176, 75, 0.06);
   color: var(--text);
   font-style: normal;
 }
@@ -156,9 +156,9 @@
 .legal-note {
   margin: 1.35rem 0;
   padding: 1.1rem 1.2rem;
-  border: 1px solid rgba(107, 216, 255, 0.28);
+  border: 1px solid rgba(232, 176, 75, 0.28);
   border-radius: var(--radius);
-  background: rgba(107, 216, 255, 0.07);
+  background: rgba(232, 176, 75, 0.07);
 }
 
 .legal-note strong {
@@ -189,7 +189,7 @@
   padding: 0.85rem 1rem 0.85rem 3.7rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(17, 23, 34, 0.58);
+  background: rgba(25, 25, 32, 0.58);
 }
 
 .legal-steps li::before {
@@ -201,7 +201,7 @@
   width: 2rem;
   height: 2rem;
   border-radius: 999px;
-  background: rgba(107, 216, 255, 0.14);
+  background: rgba(232, 176, 75, 0.14);
   color: var(--cyan);
   content: counter(legal-step);
   font-size: 0.86rem;
@@ -268,5 +268,114 @@
 
   .legal-definition-list dd + dt {
     margin-top: 0.6rem;
+  }
+}
+
+/* Match the public app pages to the Eclipse app/controller visual system. */
+.legal-page {
+  width: min(100% - 2.5rem, var(--max));
+  padding-top: calc(var(--header-height) + var(--header-safe-top) + 4.5rem);
+}
+
+.legal-hero {
+  max-width: 62rem;
+}
+
+.legal-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.legal-kicker::after {
+  width: 2.25rem;
+  height: 1px;
+  background: rgba(232, 176, 75, 0.46);
+  content: "";
+}
+
+.legal-hero h1 {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.legal-layout {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.legal-toc {
+  padding: 1rem;
+  border-color: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-panel);
+  background: var(--card-gradient);
+  box-shadow: var(--panel-shadow);
+}
+
+.legal-toc a {
+  min-height: 44px;
+  padding: 0.65rem 0.7rem;
+  border-radius: 10px;
+}
+
+.legal-toc a:hover,
+.legal-toc a:focus-visible {
+  background: rgba(232, 176, 75, 0.09);
+  color: var(--accent-light);
+}
+
+.legal-section {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.legal-section h2 {
+  max-width: none;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.legal-section a:not(.button) {
+  color: var(--accent-light);
+  text-decoration-color: rgba(232, 176, 75, 0.4);
+}
+
+.legal-address,
+.legal-note,
+.legal-steps li {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: var(--panel-gradient);
+}
+
+.legal-address {
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-panel) var(--radius-panel) 0;
+}
+
+.legal-note,
+.legal-steps li {
+  border-radius: var(--radius-panel);
+}
+
+.legal-steps li {
+  min-height: 64px;
+  padding: 1rem 1rem 1rem 4rem;
+}
+
+.legal-steps li::before {
+  top: 0.82rem;
+  left: 0.9rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: rgba(232, 176, 75, 0.13);
+  color: var(--accent-light);
+}
+
+@media (max-width: 640px) {
+  .legal-page {
+    width: min(100% - 1.25rem, var(--max));
+    padding-top: calc(var(--header-height) + var(--header-safe-top) + 2.5rem);
   }
 }
