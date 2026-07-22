@@ -2675,13 +2675,6 @@ figcaption {
   margin-top: 0.25rem;
 }
 
-.site-footer .footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.2rem 0.55rem;
-}
-
 .site-footer a {
   color: var(--cyan);
 }
@@ -3298,9 +3291,6 @@ figcaption {
     text-align: left;
   }
 
-  .site-footer .footer-links {
-    justify-content: flex-start;
-  }
 }
 
 [data-reveal] {
