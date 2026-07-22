@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "eclipse-cinema-portal-";
-const CACHE_NAME = `${CACHE_PREFIX}de207a10951e8e80c6aac1bbc963a5f6`;
+const CACHE_NAME = `${CACHE_PREFIX}b5d72ef06f2bb67963c378fa9e5ea11e`;
 const APP_SHELL_URL = "/portal/index.html";
 const PRECACHE_URLS = [
   "/portal/",
@@ -7,7 +7,7 @@ const PRECACHE_URLS = [
   "/portal/favicon.ico",
   "/portal/icon.png",
   "/portal/manifest.webmanifest",
-  "/portal/_expo/static/js/web/entry-de207a10951e8e80c6aac1bbc963a5f6.js",
+  "/portal/_expo/static/js/web/entry-b5d72ef06f2bb67963c378fa9e5ea11e.js",
   "/portal/assets/assets/apple-sign-in-logo-white.42ff957f8c4ef88cc510340502cd40a1.png",
   "/portal/assets/assets/google-sign-in-logo.2bbfebc5c3db0d7a97b8cf8fe25cc8c8.png"
 ];
