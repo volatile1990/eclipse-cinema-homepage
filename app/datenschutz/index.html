@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Datenschutz der Eclipse Cinema App · eclipse homecinema</title>
+    <title>Datenschutz von Eclipse Cinema App und Webportal · eclipse homecinema</title>
     <meta
       name="description"
-      content="Datenschutzhinweise für die mobile Eclipse Cinema App, ihre Konten, Mitgliederfunktionen und den optionalen Wiedergabeimport."
+      content="Datenschutzhinweise für die Eclipse Cinema App und das Webportal, ihre Konten, Mitgliederfunktionen und den optionalen mobilen Wiedergabeimport."
     />
     <meta name="robots" content="noindex, nofollow, noarchive" />
     <meta name="theme-color" content="#05070b" />
@@ -47,12 +47,12 @@
 
     <main id="content" class="legal-page">
       <header class="legal-hero">
-        <p class="legal-kicker">Eclipse Cinema App</p>
+        <p class="legal-kicker">Eclipse Cinema App &amp; Webportal</p>
         <h1>Datenschutz</h1>
         <p class="legal-lead">
-          Diese Hinweise erklären, welche personenbezogenen Daten die mobile
-          Eclipse Cinema App verarbeitet, wofür sie benötigt werden und welche
-          Rechte Nutzerinnen und Nutzer haben.
+          Diese Hinweise erklären, welche personenbezogenen Daten die Eclipse
+          Cinema App und das Webportal verarbeiten, wofür sie benötigt werden
+          und welche Rechte Nutzerinnen und Nutzer haben.
         </p>
         <p class="legal-meta">Stand: 22. Juli 2026</p>
       </header>
@@ -90,16 +90,18 @@
             <h2>2. Geltungsbereich</h2>
             <p>
               Diese Datenschutzerklärung gilt für die mobile App „Eclipse
-              Cinema“ für Android und iOS sowie für die zugehörigen
-              Informationsseiten unter <strong>eclipse-homecinema.de/app/</strong>.
-              Die App begleitet ein privates Heimkino mit öffentlichem Programm,
+              Cinema“ für Android und iOS, das Webportal unter
+              <strong>eclipse-homecinema.de/portal/</strong> sowie die
+              zugehörigen Informationsseiten unter
+              <strong>eclipse-homecinema.de/app/</strong>. App und Webportal
+              begleiten ein privates Heimkino mit öffentlichem Programm,
               freiwilligen Benutzerkonten, Mitgliederfunktionen und einem
               getrennten Administrationsbereich.
             </p>
             <div class="legal-note">
               <strong>Keine Werbung und kein Nutzertracking</strong>
-              Die App enthält derzeit keine Werbe-, Analyse-, Crash-Tracking-
-              oder Push-Benachrichtigungs-SDKs. Es findet keine Profilbildung zu
+              App und Webportal enthalten derzeit keine Werbe-, Analyse- oder
+              Crash-Tracking-SDKs. Es findet keine Profilbildung zu
               Werbezwecken statt.
             </div>
           </section>
@@ -237,10 +239,11 @@
             <p>
               Die E-Mail-Adresse und ein Anzeigename sind für ein Konto
               erforderlich. Profilbild, freiwillige Nachrichten,
-              Filmbegründungen, Social Login und Home-Assistant-Konfiguration
-              sind optional. Es findet keine ausschließlich automatisierte
-              Entscheidung mit rechtlicher oder ähnlich erheblicher Wirkung
-              statt.
+              Filmbegründungen und Social Login sind optional. Die ausschließlich
+              in der mobilen Admin-App verfügbare Home-Assistant-Konfiguration
+              ist ebenfalls optional und nicht Bestandteil des Webportals. Es
+              findet keine ausschließlich automatisierte Entscheidung mit
+              rechtlicher oder ähnlich erheblicher Wirkung statt.
             </p>
           </section>
 
@@ -280,8 +283,10 @@
 
             <h3>GitHub Pages</h3>
             <p>
-              Die öffentlichen Informationsseiten werden über GitHub Pages von
-              GitHub, Inc. bereitgestellt. Es sind keine eigenen Analyse- oder
+              Die öffentlichen Informationsseiten und das Webportal werden über
+              GitHub Pages von GitHub, Inc. bereitgestellt. Dabei fallen die
+              üblichen technischen Abrufdaten wie IP-Adresse, Zeitpunkt und
+              angeforderte Datei an. Es sind keine eigenen Analyse- oder
               Marketingdienste eingebunden. Weitere Informationen:
               <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">Datenschutz bei GitHub</a>.
             </p>
@@ -310,33 +315,38 @@
             <h2>6. Lokale Speicherung auf dem Gerät</h2>
             <ul>
               <li>
-                Die Supabase-Sitzung wird im App-Speicher gespeichert, damit eine
-                erneute Anmeldung nicht bei jedem Start erforderlich ist.
+                Die Supabase-Sitzung wird im App-Speicher beziehungsweise im
+                lokalen Browserspeicher gespeichert, damit eine erneute
+                Anmeldung nicht bei jedem Start erforderlich ist.
               </li>
               <li>
                 Öffentliches Programm kann höchstens 14 Tage und eigene
                 Anmeldungen können nutzergetrennt höchstens sieben Tage als
-                Offlinecache gespeichert werden.
+                Offlinecache gespeichert werden. Im Browser speichert ein
+                Service Worker zusätzlich die Portal-Shell und statische
+                Programmdateien für einen erneuten Offline-Aufruf.
               </li>
               <li>
                 Kurzlebige OAuth-Diagnosemarker aus Anbieter und Startzeit
                 verfallen nach höchstens zehn Minuten.
               </li>
               <li>
-                Home-Assistant-Adresse und Token liegen bis zur manuellen
-                Entfernung beziehungsweise In-App-Kontolöschung ausschließlich
-                im gerätegebundenen SecureStore. Android-Backups dieser
-                App-Daten sind deaktiviert.
+                Home-Assistant-Adresse und Token können ausschließlich in der
+                mobilen Admin-App bis zur manuellen Entfernung beziehungsweise
+                In-App-Kontolöschung im gerätegebundenen SecureStore liegen.
+                Das Webportal verarbeitet oder speichert diese Daten nicht.
+                Android-Backups dieser App-Daten sind deaktiviert.
               </li>
             </ul>
             <p>
               Bei Abmeldung, Kontolöschung und Nutzerwechsel versucht die App,
               nutzerbezogene Caches zu entfernen. Weitere lokale App-Daten
-              können nach den Möglichkeiten des jeweiligen Betriebssystems
-              entfernt werden. Eine gespeicherte Home-Assistant-Konfiguration
-              kann der Betreiber nicht aus der Ferne löschen; ihr Token sollte
-              im eigenen Home Assistant widerrufen werden, wenn die App nicht
-              mehr erreichbar ist.
+              können nach den Möglichkeiten des jeweiligen Betriebssystems oder
+              durch Löschen der Website-Daten im Browser entfernt werden. Eine
+              in der mobilen App gespeicherte Home-Assistant-Konfiguration kann
+              der Betreiber nicht aus der Ferne löschen; ihr Token sollte im
+              eigenen Home Assistant widerrufen werden, wenn die App nicht mehr
+              erreichbar ist.
             </p>
           </section>
 
@@ -413,7 +423,7 @@
         <span>eclipse</span>
       </a>
       <div>
-        <p>Eclipse Cinema App · eclipse-homecinema.de</p>
+        <p>Eclipse Cinema · App &amp; Webportal · eclipse-homecinema.de</p>
         <p><a href="mailto:markuscmueller7@googlemail.com">markuscmueller7@googlemail.com</a></p>
       </div>
     </footer>

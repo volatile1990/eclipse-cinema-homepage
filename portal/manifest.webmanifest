@@ -1,0 +1,19 @@
+{
+  "name": "Eclipse Cinema Portal",
+  "short_name": "Eclipse Cinema",
+  "description": "Programm, Filmvorschläge und Mitgliederbereich des privaten Eclipse Cinema.",
+  "start_url": "/portal/",
+  "scope": "/portal/",
+  "display": "standalone",
+  "background_color": "#05070b",
+  "theme_color": "#05070b",
+  "lang": "de-DE",
+  "icons": [
+    {
+      "src": "/portal/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
