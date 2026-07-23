@@ -1,3 +1,43 @@
 assets/used/selected-raw/
 assets/used/selected-developed/
+# Local photo originals used only to generate web-ready derivatives.
+assets/images/
+assets/used/_original/
+assets/used/IMG_4776.DNG
+assets/used/IMG_4788.DNG
+assets/used/IMG_4791.DNG
+assets/used/IMG_E4749.JPG
+assets/used/IMG_E4785.JPG
+assets/used/IMG_E4795.JPG
+assets/used/IMG_E4806.JPG
+assets/used/IMG_E4811.JPG
+
+# Explicit unpublished masters and obsolete references. Keep this list narrow so
+# future web-ready assets in assets/used remain visible to Git.
+assets/used/cinema-acoustic-side-wall.webp
+assets/used/cinema-diffuser-magenta-detail.webp
+assets/used/cinema-entry-diffuser-detail.webp
+assets/used/cinema-front-lounge-seats.webp
+assets/used/cinema-front-wall-open.webp
+assets/used/cinema-lounge-depth.webp
+assets/used/cinema-room-hero-modified.png
+assets/used/cinema-room-hero.webp
+assets/used/cinema-screen-blue-violet-glow.webp
+assets/used/cinema-side-seats-cupholders.webp
+assets/used/cinema-two-level-seating.webp
+assets/used/eclipse-door-engraving-preview.png
+assets/used/eclipse-door-engraving-preview.svg
+assets/used/eclipse-door-engraving.svg
+assets/used/eclipse-favicon-maskable.svg
+assets/used/eclipse-favicon.svg
+assets/used/eclipse-logo-clean-cropped.svg
+assets/used/equipment-apollon-1et400a-amplifier.png
+assets/used/equipment-lumagen-radiance-pro-4242.png
+assets/used/equipment-stormaudio-isp-elite-mk2.webp
+
+# Never place private catalog exports in the published repository.
+assets/zappiti-catalog.private*.json
 /portal-app/
+
+# Local assistant/project permissions can contain machine-specific paths.
+.claude/settings.local.json

@@ -8,11 +8,14 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+# Master photos are intentionally local and ignored by Git. Only stripped,
+# responsive derivatives from $OutputDir belong in the public deployment.
 $RepoRoot = Split-Path -Parent $PSScriptRoot
 $OutputDir = Join-Path $RepoRoot "assets\used\responsive"
 $DevelopedDir = Join-Path $RepoRoot "assets\used\selected-developed"
 $RawDir = Join-Path $RepoRoot "assets\used\selected-raw"
 $TempDir = Join-Path ([System.IO.Path]::GetTempPath()) ("eclipse-cinema-export-" + [System.Guid]::NewGuid().ToString("N"))
+$StagingDir = Join-Path $OutputDir (".export-" + [System.Guid]::NewGuid().ToString("N"))
 
 $images = @(
   @{
@@ -51,7 +54,9 @@ $images = @(
   @{ Name = "cinema-entry-diffuser-detail"; Aspect = "4:5"; Widths = @(720, 900, 1200) },
   @{ Name = "cinema-lounge-depth"; Aspect = "16:9"; Widths = @(900, 1200, 1800) },
   @{ Name = "cinema-diffuser-magenta-detail"; Aspect = "4:5"; Widths = @(720, 900, 1200) },
-  @{ Name = "cinema-side-seats-cupholders"; Aspect = "4:5"; Widths = @(720, 900, 1200) }
+  @{ Name = "cinema-side-seats-cupholders"; Aspect = "4:5"; Widths = @(720, 900, 1200) },
+  @{ Name = "equipment-rack-closed"; Aspect = "source"; Widths = @(450, 900); Source = "assets\images\rack_closed.JPG"; WebpQuality = 84; AvifQuality = 55 },
+  @{ Name = "equipment-rack-open"; Aspect = "source"; Widths = @(450, 900); Source = "assets\images\rack_open.JPG"; WebpQuality = 84; AvifQuality = 55 }
 )
 
 function Resolve-RepoPath {
@@ -120,6 +125,15 @@ if ($Only.Count -gt 0) {
 New-Item -ItemType Directory -Force $OutputDir | Out-Null
 New-Item -ItemType Directory -Force $TempDir | Out-Null
 
+$resolvedOutputDir = [System.IO.Path]::GetFullPath($OutputDir).TrimEnd([System.IO.Path]::DirectorySeparatorChar)
+$resolvedStagingDir = [System.IO.Path]::GetFullPath($StagingDir)
+$expectedPrefix = $resolvedOutputDir + [System.IO.Path]::DirectorySeparatorChar
+if (-not $resolvedStagingDir.StartsWith($expectedPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+  throw "Refusing to create an export staging directory outside the output directory: $resolvedStagingDir"
+}
+
+New-Item -ItemType Directory -Force $StagingDir | Out-Null
+
 try {
   foreach ($image in $images) {
     $name = $image.Name
@@ -127,6 +141,8 @@ try {
     $maxWidth = ($image.Widths | Measure-Object -Maximum).Maximum
     $master = Join-Path $TempDir ($name + "-master.tif")
     $developArgs = @()
+    $imageWebpQuality = if ($image.ContainsKey("WebpQuality")) { $image.WebpQuality } else { $WebpQuality }
+    $imageAvifQuality = if ($image.ContainsKey("AvifQuality")) { $image.AvifQuality } else { $AvifQuality }
 
     if ($image.ContainsKey("DevelopArgs")) {
       $developArgs = $image.DevelopArgs
@@ -159,6 +175,8 @@ try {
     foreach ($width in $image.Widths) {
       $webp = Join-Path $OutputDir ("$name-$width.webp")
       $avif = Join-Path $OutputDir ("$name-$width.avif")
+      $stagedWebp = Join-Path $StagingDir ("$name-$width.webp")
+      $stagedAvif = Join-Path $StagingDir ("$name-$width.avif")
 
       if ($image.Aspect -eq "source") {
         $resize = "${width}x>"
@@ -173,9 +191,9 @@ try {
         "-resize", $resize,
         "-unsharp", "0x0.45+0.32+0.015",
         "-strip",
-        "-quality", $WebpQuality,
+        "-quality", $imageWebpQuality,
         "-define", "webp:method=6",
-        $webp
+        $stagedWebp
       )
 
       Invoke-Magick @(
@@ -185,13 +203,21 @@ try {
         "-unsharp", "0x0.45+0.32+0.015",
         "-strip",
         "-depth", "10",
-        "-quality", $AvifQuality,
+        "-quality", $imageAvifQuality,
         "-define", "heic:speed=$AvifSpeed",
-        $avif
+        $stagedAvif
       )
+
+      # Encode away from the live asset path, then replace each file with a
+      # same-volume rename so a failed encoder can never truncate production.
+      Move-Item -LiteralPath $stagedWebp -Destination $webp -Force
+      Move-Item -LiteralPath $stagedAvif -Destination $avif -Force
     }
   }
 } finally {
+  if (Test-Path $StagingDir) {
+    Remove-Item -LiteralPath $StagingDir -Recurse -Force
+  }
   if (Test-Path $TempDir) {
     Remove-Item -LiteralPath $TempDir -Recurse -Force
   }

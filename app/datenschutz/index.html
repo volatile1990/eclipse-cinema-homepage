@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-src 'none'; script-src 'self'; style-src 'self'; font-src 'self' data:; img-src 'self' data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'"
+    />
+    <meta name="referrer" content="no-referrer" />
     <title>Datenschutz von Eclipse Cinema App und Webportal · eclipse homecinema</title>
     <meta
       name="description"
@@ -14,9 +19,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../assets/used/eclipse-favicon-32.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="../../assets/used/eclipse-favicon-192.png" />
     <link rel="manifest" href="../../site.webmanifest" />
-    <link rel="stylesheet" href="../../styles.css" />
-    <link rel="stylesheet" href="../app-pages.css" />
-    <script src="../../script.js" defer></script>
+    <link rel="stylesheet" href="../../styles.css?v=779571dfd7f3" />
+    <link rel="stylesheet" href="../app-pages.css?v=4980046acfa2" />
+    <script src="../../script.js?v=51a83c8eff9d" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">Zum Inhalt springen</a>
@@ -54,7 +59,7 @@
           Cinema App und das Webportal verarbeiten, wofür sie benötigt werden
           und welche Rechte Nutzerinnen und Nutzer haben.
         </p>
-        <p class="legal-meta">Stand: 22. Juli 2026</p>
+        <p class="legal-meta">Stand: 23. Juli 2026</p>
       </header>
 
       <div class="legal-layout">
@@ -168,12 +173,23 @@
 
             <h3>3.4 Filmdaten und Suche</h3>
             <p>
-              Suchbegriffe sowie aufgerufene Film- oder Serien-IDs werden über
-              eine serverseitige Funktion an The Movie Database (TMDB)
-              übermittelt. E-Mail-Adresse und Nutzer-ID werden vom
-              Anwendungscode nicht an TMDB weitergegeben. Zum Schutz vor
+              Im Mitgliederportal werden Suchbegriffe sowie aufgerufene Film-
+              oder Serien-IDs über eine serverseitige Funktion an The Movie
+              Database (TMDB) übermittelt. E-Mail-Adresse und Nutzer-ID werden
+              vom Anwendungscode nicht an TMDB weitergegeben. Zum Schutz vor
               Missbrauch wird aus Nutzer-ID oder Client-IP ein gesalzener Hash
               für ein zeitlich begrenztes Rate Limit gebildet.
+            </p>
+            <p>
+              Die öffentliche Homepage stellt einen statischen, bereinigten
+              Programmkatalog bereit. Beim Anzeigen des Katalogs und beim
+              Öffnen von Programmdetails können Poster- und Hintergrundbilder direkt von
+              <code>image.tmdb.org</code> abgerufen werden. Dabei erhält TMDB
+              beziehungsweise dessen Auslieferungsdienst technisch notwendige
+              Abrufdaten wie IP-Adresse, Zeitpunkt, Bildadresse sowie Browser-
+              Informationen. Die Referrer-Richtlinie der Homepage unterbindet
+              die Übermittlung der aufgerufenen Seitenadresse. E-Mail-Adresse
+              und App-Nutzer-ID sind in diesen Bildabrufen nicht enthalten.
             </p>
 
             <h3>3.5 Read-only Wiedergabeimport</h3>
@@ -275,9 +291,14 @@
 
             <h3>TMDB</h3>
             <p>
-              TMDB liefert Film- und Serieninformationen. Anfragen erfolgen
-              über den serverseitigen Proxy ohne Übermittlung von E-Mail-Adresse
-              oder App-Nutzer-ID. Weitere Informationen:
+              TMDB liefert Film- und Serieninformationen. Such- und
+              Detailanfragen des Mitgliederportals erfolgen über den
+              serverseitigen Proxy ohne Übermittlung von E-Mail-Adresse oder
+              App-Nutzer-ID. Poster und Hintergrundbilder des öffentlichen
+              Programmkatalogs können dagegen direkt von
+              <code>image.tmdb.org</code> geladen werden; hierbei fallen die in
+              Abschnitt 3.4 beschriebenen technischen Abrufdaten an. Weitere
+              Informationen:
               <a href="https://www.themoviedb.org/privacy-policy">Datenschutz bei TMDB</a>.
             </p>
 
@@ -377,6 +398,10 @@
               bleiben; Verweise auf gelöschte Personen werden entfernt oder
               anonymisiert.
             </p>
+            <div class="legal-actions">
+              <a class="button primary" href="../konto-loeschen/">Konto löschen</a>
+              <a class="button secondary" href="../support/">Support kontaktieren</a>
+            </div>
           </section>
 
           <section class="legal-section" id="rechte">

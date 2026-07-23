@@ -10,7 +10,7 @@
 - `404.html` liefert für direkte `/portal/**`-Aufrufe die SPA-Shell aus.
 - `.nojekyll` hält die Expo-Assets unter `/portal/_expo/` erreichbar.
 
-Der Portal-Quellcode wird bewusst nicht in dieses öffentliche Repository übernommen. Der aktuelle Export basiert auf dem privaten App-Commit `ffbf5ade3e422c621e4d35811b1bed095ff03f4a` und enthält keine Home-Assistant-Anbindung.
+Der Portal-Quellcode liegt lokal im ignorierten Verzeichnis `portal-app/` und wird nicht als Quelltext veröffentlicht. Getrackt wird ausschließlich der für den Browser erzeugte Export unter `portal/`.
 
 ## Betrieb
 
@@ -21,4 +21,11 @@ GitHub Pages kann weiterhin direkt aus dem Root der veröffentlichten Branch ber
 
 Der Browser-Build enthält ausschließlich die öffentlichen Supabase- und OAuth-Clientwerte. Service-Role-, TMDB-, E-Mail- und Home-Assistant-Secrets dürfen nie in den Webexport gelangen.
 
-Nach einem neuen Portalexport müssen `portal/index.html`, `portal/auth/callback.html`, `404.html` und der Cache-Name beziehungsweise Bundlepfad in `portal/sw.js` gemeinsam aktualisiert werden.
+Ein neuer Portalexport wird aus dem Repository-Root mit zwei Schritten erzeugt und synchronisiert:
+
+```powershell
+npm --prefix portal-app run export:web
+powershell -NoProfile -ExecutionPolicy Bypass -File tools/sync-portal-export.ps1
+```
+
+Das Synchronisationsskript aktualisiert den gehashten Bundlepfad in `404.html` und `portal/sw.js`, übernimmt die OAuth-Callback-Shell und erzeugt 200-fähige HTML-Aliase für alle stabilen Portalrouten. Datenabhängige Detailrouten verwenden weiterhin die SPA-Shell aus `404.html`.

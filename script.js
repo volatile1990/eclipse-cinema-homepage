@@ -1,3 +1,6 @@
+document.documentElement.classList.remove("no-js");
+document.documentElement.classList.add("js");
+
 const tour = document.querySelector("[data-tour]");
 
 if (tour) {
@@ -10,6 +13,13 @@ if (tour) {
   const layerButtons = tour.querySelectorAll(".tour-layers [data-layer]");
   const plans = tour.querySelectorAll(".plan");
   const hits = tour.querySelectorAll(".hit");
+  const infoPanel = tour.querySelector(".tour-info");
+  const infoCloseBtn = tour.querySelector("[data-tour-info-close]");
+  const hotspotSelect = tour.querySelector("[data-tour-hotspot-select]");
+  const compactTourQuery = window.matchMedia("(max-width: 980px)");
+  let activeHit = null;
+  let infoReturnTarget = null;
+  let pickerHits = [];
 
   const defaults = {
     top: {
@@ -320,6 +330,16 @@ if (tour) {
         "Front": "Binary Diffusor",
       },
     },
+    "right-wall-treatment": {
+      kicker: "Rechte Wand",
+      title: "Akustische Verkleidung im Sockelbereich",
+      text: "Der untere Bereich der rechten Wand ist akustisch verkleidet. Anders als links befindet sich dahinter kein Heizkörper; die Fläche führt die Gestaltung und akustische Wirkung der Seitenwand fort.",
+      specs: {
+        "Größe": "200 × 57 cm",
+        "Aufbau": "Absorber und Binary-Diffusorfront",
+        "Besonderheit": "ohne Heizkörper",
+      },
+    },
     door: {
       kicker: "Tür",
       title: "Eingang im hinteren Wanddrittel",
@@ -422,30 +442,79 @@ if (tour) {
     infoHint.innerHTML = `Aktuelle Ansicht: <strong>${view}</strong> · ${layerSummary}`;
   };
 
-  const closeInfoSheet = () => {
+  const syncInfoPanelAvailability = () => {
+    if (!infoPanel) return;
+    const isHiddenSheet = compactTourQuery.matches && !tour.classList.contains("has-active-info");
+    infoPanel.inert = isHiddenSheet;
+    if (isHiddenSheet) {
+      infoPanel.setAttribute("aria-hidden", "true");
+    } else {
+      infoPanel.removeAttribute("aria-hidden");
+    }
+  };
+
+  const closeInfoSheet = ({ restoreFocus = false, resetInfo = false } = {}) => {
+    const returnTarget = infoReturnTarget;
     tour.classList.remove("has-active-info");
+    hits.forEach((hit) => hit.classList.remove("is-active"));
+    activeHit = null;
+    infoReturnTarget = null;
+    if (resetInfo) updateInfo(null);
+    syncInfoPanelAvailability();
+    if (restoreFocus && returnTarget?.isConnected) {
+      requestAnimationFrame(() => returnTarget.focus({ preventScroll: true }));
+    }
   };
 
   const scrollViewIntoTrack = (btn) => {
     const track = btn.parentElement;
     if (!track || track.scrollWidth <= track.clientWidth) return;
     const target = btn.offsetLeft - (track.clientWidth - btn.offsetWidth) / 2;
-    track.scrollTo({ left: Math.max(0, target), behavior: "smooth" });
+    track.scrollTo({
+      left: Math.max(0, target),
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+    });
+  };
+
+  const syncHotspotPicker = () => {
+    if (!hotspotSelect) return;
+    const visiblePlan = tour.querySelector(`.plan[data-plan="${tour.dataset.view}"]`);
+    pickerHits = visiblePlan
+      ? [...visiblePlan.querySelectorAll(".hit")].filter(
+          (hit) => !hit.closest(".plan-layer.is-off"),
+        )
+      : [];
+    hotspotSelect.replaceChildren();
+    const placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = "Element auswählen …";
+    hotspotSelect.append(placeholder);
+    pickerHits.forEach((hit, index) => {
+      const option = document.createElement("option");
+      option.value = String(index);
+      option.textContent = hit.getAttribute("aria-label") || info[hit.dataset.info]?.title || "Element";
+      hotspotSelect.append(option);
+    });
+    hotspotSelect.value = "";
   };
 
   const setView = (view, { fromUser = false } = {}) => {
     tour.dataset.view = view;
-    plans.forEach((p) => p.classList.toggle("is-visible", p.dataset.plan === view));
+    plans.forEach((p) => {
+      const isVisible = p.dataset.plan === view;
+      p.classList.toggle("is-visible", isVisible);
+      p.setAttribute("aria-hidden", String(!isVisible));
+    });
     viewButtons.forEach((b) => {
       const isActive = b.dataset.view === view;
       b.classList.toggle("is-active", isActive);
-      b.setAttribute("aria-selected", String(isActive));
+      b.setAttribute("aria-pressed", String(isActive));
       if (isActive && fromUser) scrollViewIntoTrack(b);
     });
-    hits.forEach((h) => h.classList.remove("is-active"));
     closeInfoSheet();
     updateInfo(null);
     updateHint();
+    syncHotspotPicker();
   };
 
   const toggleLayer = (layer) => {
@@ -453,24 +522,40 @@ if (tour) {
     const wasOn = btn.getAttribute("aria-pressed") === "true";
     const newState = !wasOn;
     btn.setAttribute("aria-pressed", String(newState));
-    tour
-      .querySelectorAll(`.plan-layer[data-layer="${layer}"]`)
-      .forEach((g) => g.classList.toggle("is-off", !newState));
+    tour.querySelectorAll(`.plan-layer[data-layer="${layer}"]`).forEach((group) => {
+      group.classList.toggle("is-off", !newState);
+      group.setAttribute("aria-hidden", String(!newState));
+      group.querySelectorAll(".hit").forEach((hit) => {
+        hit.setAttribute("tabindex", newState ? "0" : "-1");
+        if (newState) {
+          hit.removeAttribute("aria-hidden");
+        } else {
+          hit.setAttribute("aria-hidden", "true");
+        }
+      });
+    });
+    if (!newState && activeHit?.closest(`.plan-layer[data-layer="${layer}"]`)) {
+      closeInfoSheet({ resetInfo: true });
+    }
     updateHint();
+    syncHotspotPicker();
   };
 
-  const activateHit = (el) => {
+  const activateHit = (el, returnTarget = el) => {
     hits.forEach((h) => h.classList.toggle("is-active", h === el));
     updateInfo(el.dataset.info);
+    activeHit = el;
+    infoReturnTarget = returnTarget;
     tour.classList.add("has-active-info");
+    syncInfoPanelAvailability();
+    if (compactTourQuery.matches && infoCloseBtn) {
+      requestAnimationFrame(() => infoCloseBtn.focus({ preventScroll: true }));
+    }
   };
 
-  const infoCloseBtn = tour.querySelector("[data-tour-info-close]");
   if (infoCloseBtn) {
     infoCloseBtn.addEventListener("click", () => {
-      hits.forEach((h) => h.classList.remove("is-active"));
-      closeInfoSheet();
-      updateInfo(null);
+      closeInfoSheet({ restoreFocus: true, resetInfo: true });
     });
   }
 
@@ -492,7 +577,38 @@ if (tour) {
     });
   });
 
+  if (hotspotSelect) {
+    hotspotSelect.addEventListener("change", () => {
+      const index = Number(hotspotSelect.value);
+      const hit = hotspotSelect.value === "" ? null : pickerHits[index];
+      if (hit) activateHit(hit, hotspotSelect);
+    });
+  }
+
+  tour.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && tour.classList.contains("has-active-info")) {
+      event.preventDefault();
+      closeInfoSheet({ restoreFocus: true, resetInfo: true });
+    } else if (
+      event.key === "Tab" &&
+      compactTourQuery.matches &&
+      tour.classList.contains("has-active-info") &&
+      infoCloseBtn
+    ) {
+      event.preventDefault();
+      infoCloseBtn.focus();
+    }
+  });
+
+  const handleCompactTourChange = () => syncInfoPanelAvailability();
+  if (compactTourQuery.addEventListener) {
+    compactTourQuery.addEventListener("change", handleCompactTourChange);
+  } else if (compactTourQuery.addListener) {
+    compactTourQuery.addListener(handleCompactTourChange);
+  }
+
   setView(tour.dataset.view || "top");
+  syncInfoPanelAvailability();
 }
 
 const rack = document.querySelector("[data-rack]");
@@ -508,8 +624,11 @@ if (rack) {
   const rackHotspotsWrap = rack.querySelector("[data-rack-hotspots]");
   const rackCoverTrigger = rack.querySelector("[data-rack-open-trigger]");
   const rackCloseBtn = rack.querySelector("[data-rack-info-close]");
+  const rackInfoPanel = rack.querySelector(".rack-info");
   const rackClosedImg = rack.querySelector(".rack-img-closed");
   const rackOpenImg = rack.querySelector(".rack-img-open");
+  const compactRackQuery = window.matchMedia("(max-width: 980px)");
+  let rackReturnTarget = null;
 
   const rackStates = {
     closed: {
@@ -634,9 +753,26 @@ if (rack) {
     }
   };
 
-  const clearRackActive = () => {
+  const syncRackInfoAvailability = () => {
+    if (!rackInfoPanel) return;
+    const isHiddenSheet = compactRackQuery.matches && !rack.classList.contains("has-active-info");
+    rackInfoPanel.inert = isHiddenSheet;
+    if (isHiddenSheet) {
+      rackInfoPanel.setAttribute("aria-hidden", "true");
+    } else {
+      rackInfoPanel.removeAttribute("aria-hidden");
+    }
+  };
+
+  const clearRackActive = ({ restoreFocus = false } = {}) => {
+    const returnTarget = rackReturnTarget;
     rackHotspots.forEach((h) => h.classList.remove("is-active"));
     rack.classList.remove("has-active-info");
+    rackReturnTarget = null;
+    syncRackInfoAvailability();
+    if (restoreFocus && returnTarget?.isConnected && !returnTarget.inert) {
+      requestAnimationFrame(() => returnTarget.focus({ preventScroll: true }));
+    }
   };
 
   const setRackState = (state) => {
@@ -644,7 +780,7 @@ if (rack) {
     rackViewButtons.forEach((b) => {
       const isActive = b.dataset.rackView === state;
       b.classList.toggle("is-active", isActive);
-      b.setAttribute("aria-selected", String(isActive));
+      b.setAttribute("aria-pressed", String(isActive));
     });
     rackClosedImg.setAttribute("aria-hidden", String(state === "open"));
     rackOpenImg.setAttribute("aria-hidden", String(state === "closed"));
@@ -652,12 +788,18 @@ if (rack) {
     if (rackCoverTrigger) rackCoverTrigger.inert = state === "open";
     clearRackActive();
     renderRackInfo(rackStates[state]);
+    syncRackInfoAvailability();
   };
 
   const activateRackDevice = (btn) => {
     rackHotspots.forEach((h) => h.classList.toggle("is-active", h === btn));
     renderRackInfo(rackDevices[btn.dataset.device] || rackStates.open);
+    rackReturnTarget = btn;
     rack.classList.add("has-active-info");
+    syncRackInfoAvailability();
+    if (compactRackQuery.matches && rackCloseBtn) {
+      requestAnimationFrame(() => rackCloseBtn.focus({ preventScroll: true }));
+    }
   };
 
   rackViewButtons.forEach((b) =>
@@ -677,12 +819,36 @@ if (rack) {
 
   if (rackCloseBtn) {
     rackCloseBtn.addEventListener("click", () => {
-      clearRackActive();
+      clearRackActive({ restoreFocus: true });
       renderRackInfo(rackStates[rack.dataset.rackState] || rackStates.closed);
     });
   }
 
+  rack.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && rack.classList.contains("has-active-info")) {
+      event.preventDefault();
+      clearRackActive({ restoreFocus: true });
+      renderRackInfo(rackStates[rack.dataset.rackState] || rackStates.closed);
+    } else if (
+      event.key === "Tab" &&
+      compactRackQuery.matches &&
+      rack.classList.contains("has-active-info") &&
+      rackCloseBtn
+    ) {
+      event.preventDefault();
+      rackCloseBtn.focus();
+    }
+  });
+
+  const handleCompactRackChange = () => syncRackInfoAvailability();
+  if (compactRackQuery.addEventListener) {
+    compactRackQuery.addEventListener("change", handleCompactRackChange);
+  } else if (compactRackQuery.addListener) {
+    compactRackQuery.addListener(handleCompactRackChange);
+  }
+
   setRackState(rack.dataset.rackState || "closed");
+  syncRackInfoAvailability();
 }
 
 const header = document.querySelector(".site-header");
@@ -700,16 +866,31 @@ const navBackdrop = document.querySelector("[data-nav-backdrop]");
 if (header && navToggle && navEl) {
   const mql = window.matchMedia("(max-width: 980px)");
 
-  const setNavOpen = (open) => {
-    header.classList.toggle("nav-open", open);
-    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
-    navToggle.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen");
-    document.body.classList.toggle("nav-locked", open && mql.matches);
+  const setNavOpen = (open, { focusMenu = false, restoreFocus = false } = {}) => {
+    const isMobile = mql.matches;
+    const shouldOpen = Boolean(open && isMobile);
+    header.classList.toggle("nav-open", shouldOpen);
+    navToggle.setAttribute("aria-expanded", shouldOpen ? "true" : "false");
+    navToggle.setAttribute("aria-label", shouldOpen ? "Menü schließen" : "Menü öffnen");
+    document.body.classList.toggle("nav-locked", shouldOpen);
+    navEl.inert = isMobile && !shouldOpen;
+    if (isMobile && !shouldOpen) {
+      navEl.setAttribute("aria-hidden", "true");
+    } else {
+      navEl.removeAttribute("aria-hidden");
+    }
+    if (navBackdrop) navBackdrop.setAttribute("aria-hidden", String(!shouldOpen));
+
+    if (shouldOpen && focusMenu) {
+      requestAnimationFrame(() => navEl.querySelector("a")?.focus({ preventScroll: true }));
+    } else if (!shouldOpen && restoreFocus) {
+      requestAnimationFrame(() => navToggle.focus({ preventScroll: true }));
+    }
   };
 
   navToggle.addEventListener("click", () => {
     const isOpen = header.classList.contains("nav-open");
-    setNavOpen(!isOpen);
+    setNavOpen(!isOpen, { focusMenu: !isOpen });
   });
 
   navEl.querySelectorAll("a[href^='#']").forEach((link) => {
@@ -719,26 +900,43 @@ if (header && navToggle && navEl) {
   });
 
   if (navBackdrop) {
-    navBackdrop.addEventListener("click", () => setNavOpen(false));
+    navBackdrop.addEventListener("click", () => setNavOpen(false, { restoreFocus: true }));
   }
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && header.classList.contains("nav-open")) {
+      e.preventDefault();
       setNavOpen(false);
       navToggle.focus();
+      return;
+    }
+
+    if (e.key === "Tab" && mql.matches && header.classList.contains("nav-open")) {
+      const focusable = [navToggle, ...navEl.querySelectorAll("a[href]")].filter(
+        (element) => !element.hidden && element.getAttribute("aria-hidden") !== "true",
+      );
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
   });
 
   const handleMqlChange = () => {
-    if (!mql.matches && header.classList.contains("nav-open")) {
-      setNavOpen(false);
-    }
+    setNavOpen(false);
   };
   if (mql.addEventListener) {
     mql.addEventListener("change", handleMqlChange);
   } else if (mql.addListener) {
     mql.addListener(handleMqlChange);
   }
+  setNavOpen(false);
 }
 
 const reveals = document.querySelectorAll("[data-reveal]");
@@ -781,7 +979,13 @@ if (navLinks.length && "IntersectionObserver" in window) {
     if (id === activeId) return;
     activeId = id;
     linksByHash.forEach((link, key) => {
-      link.classList.toggle("is-active", key === id);
+      const isActive = key === id;
+      link.classList.toggle("is-active", isActive);
+      if (isActive) {
+        link.setAttribute("aria-current", "location");
+      } else {
+        link.removeAttribute("aria-current");
+      }
     });
   };
 
@@ -796,6 +1000,32 @@ if (navLinks.length && "IntersectionObserver" in window) {
   );
   sections.forEach((s) => spy.observe(s));
 }
+
+const horizontalTracks = document.querySelectorAll("[data-scroll-track]");
+horizontalTracks.forEach((track) => {
+  const syncScrollState = () => {
+    const hasOverflow = track.scrollWidth > track.clientWidth + 2;
+    track.classList.toggle("has-overflow", hasOverflow);
+    track.classList.toggle("at-start", !hasOverflow || track.scrollLeft <= 2);
+    track.classList.toggle(
+      "at-end",
+      !hasOverflow || track.scrollLeft + track.clientWidth >= track.scrollWidth - 2,
+    );
+    if (hasOverflow) {
+      track.dataset.scrollHint = "Weitere Optionen horizontal scrollen";
+    } else {
+      delete track.dataset.scrollHint;
+    }
+  };
+  track.addEventListener("scroll", syncScrollState, { passive: true });
+  if ("ResizeObserver" in window) {
+    const resizeObserver = new ResizeObserver(syncScrollState);
+    resizeObserver.observe(track);
+  } else {
+    window.addEventListener("resize", syncScrollState, { passive: true });
+  }
+  requestAnimationFrame(syncScrollState);
+});
 
 const catalogRoot = document.querySelector("[data-catalog]");
 if (catalogRoot) {
@@ -829,6 +1059,22 @@ if (catalogRoot) {
     demo: "Demo",
     tv: "Serie",
   };
+  const allowedFilters = new Set(["all", "movie", "demo", "tv"]);
+  const allowedSorts = new Set(["title", "imdb"]);
+  const readCatalogUrlState = () => {
+    const params = new URLSearchParams(window.location.search);
+    const filter = params.get("type") || "all";
+    const sort = params.get("sort") || "title";
+    const page = Number.parseInt(params.get("page") || "1", 10);
+    return {
+      filter: allowedFilters.has(filter) ? filter : "all",
+      query: (params.get("q") || "").slice(0, 200),
+      sort: allowedSorts.has(sort) ? sort : "title",
+      page: Number.isFinite(page) && page > 0 ? page : 1,
+      detail: (params.get("detail") || "").slice(0, 160),
+    };
+  };
+  const initialUrlState = readCatalogUrlState();
   const codecLabels = {
     ac3: "Dolby Digital",
     aac: "AAC",
@@ -849,11 +1095,32 @@ if (catalogRoot) {
   };
   const state = {
     entries: [],
-    filter: "all",
-    query: "",
-    sort: "title",
-    page: 1,
+    filter: initialUrlState.filter,
+    query: initialUrlState.query,
+    sort: initialUrlState.sort,
+    page: initialUrlState.page,
+    detail: initialUrlState.detail,
     pageJumpGap: null,
+  };
+  let catalogLoaded = false;
+  let catalogLoading = false;
+  let detailHistoryOwned = false;
+  let queryUrlTimer = null;
+
+  const syncCatalogUrl = (mode = "replace") => {
+    const url = new URL(window.location.href);
+    ["q", "type", "sort", "page", "detail"].forEach((name) => url.searchParams.delete(name));
+    if (state.query) url.searchParams.set("q", state.query);
+    if (state.filter !== "all") url.searchParams.set("type", state.filter);
+    if (state.sort !== "title") url.searchParams.set("sort", state.sort);
+    if (state.page > 1) url.searchParams.set("page", String(state.page));
+    if (state.detail) url.searchParams.set("detail", state.detail);
+    if (url.href === window.location.href) return;
+    window.history[mode === "push" ? "pushState" : "replaceState"](
+      { catalog: true },
+      "",
+      url,
+    );
   };
 
   const normalizeText = (value) =>
@@ -867,17 +1134,8 @@ if (catalogRoot) {
 
   const escapeRegex = (value) => String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-  const fileTitle = (item) => {
-    const file = item.file_name || item.relative_path?.split(/[\\/]/).pop() || "";
-    return file
-      .replace(/\.[^.]+$/, "")
-      .replace(/[._-]+/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-  };
-
   const titleFor = (item) =>
-    [item.title, item.parsed?.title, item.parsed?.alternative_title, fileTitle(item)]
+    [item.metadata?.title, item.title]
       .map((value) => String(value || "").trim())
       .find(Boolean) || "Unbekannter Titel";
 
@@ -928,7 +1186,7 @@ if (catalogRoot) {
   const resolutionForItem = (item, video = {}) => {
     const width = Number(video.width) || 0;
     const height = Number(video.height) || 0;
-    return resolutionLabel(width, height) || item.screen_size || item.parsed?.screen_size || "";
+    return resolutionLabel(width, height) || item.screen_size || "";
   };
 
   const durationLabel = (seconds) => {
@@ -945,17 +1203,6 @@ if (catalogRoot) {
   const minutesLabel = (minutes) => {
     const totalMinutes = Number(minutes) || 0;
     return totalMinutes ? `${Math.round(totalMinutes)} min` : "";
-  };
-
-  const formatBytes = (bytes) => {
-    const value = Number(bytes) || 0;
-    if (!value) return "";
-    const units = ["B", "KB", "MB", "GB", "TB"];
-    const exponent = Math.min(Math.floor(Math.log(value) / Math.log(1024)), units.length - 1);
-    const size = value / 1024 ** exponent;
-    return `${size.toLocaleString("de-DE", {
-      maximumFractionDigits: exponent > 2 ? 1 : 0,
-    })} ${units[exponent]}`;
   };
 
   const formatBitRate = (bitRate) => {
@@ -1003,7 +1250,7 @@ if (catalogRoot) {
   const padEpisodeNumber = (value) => String(value).padStart(2, "0");
 
   const episodeNumberFor = (item, key) => {
-    const value = item[key] ?? item.parsed?.[key];
+    const value = item[key];
     const number = Number(value);
     return Number.isFinite(number) && number > 0 ? number : null;
   };
@@ -1013,7 +1260,7 @@ if (catalogRoot) {
     const episode = episodeNumberFor(item, "episode");
     if (season && episode) return `S${padEpisodeNumber(season)}E${padEpisodeNumber(episode)}`;
     if (episode) return `Folge ${episode}`;
-    return fileTitle(item);
+    return "Episode";
   };
 
   const episodeName = (item, seriesTitle) => {
@@ -1023,10 +1270,7 @@ if (catalogRoot) {
     const candidates = [
       item.episode_title,
       item.episode_metadata?.title,
-      item.parsed?.episode_title,
-      item.parsed?.episodeName,
-      item.parsed?.name,
-      fileTitle(item),
+      item.title,
     ];
 
     for (const candidate of candidates) {
@@ -1062,7 +1306,7 @@ if (catalogRoot) {
         rating: ratingLabel(item.episode_metadata),
         stillUrl: item.episode_metadata?.still_url || "",
         season: episodeNumberFor(item, "season"),
-        sortTitle: fileTitle(item),
+        sortTitle: item.episode_metadata?.title || item.title || "",
       }))
       .sort(
         (a, b) =>
@@ -1084,7 +1328,6 @@ if (catalogRoot) {
       .sort((a, b) => (Number(b.height) || 0) - (Number(a.height) || 0))[0] || {};
     const width = Number(bestVideo.width) || 0;
     const height = Number(bestVideo.height) || 0;
-    const modifiedMs = Math.max(...items.map((item) => Date.parse(item.modified_at) || 0));
     const mediaCount = items.length;
     const resolution = resolutionForItem(primary, bestVideo);
     const videoCodec = labelCodec(bestVideo.codec);
@@ -1118,17 +1361,14 @@ if (catalogRoot) {
       tags,
       height,
       imdbRating: imdbRatingFor(metadata),
-      modifiedMs,
       searchIndex: normalizeText(
         [
           title,
           ...years,
           ...tags,
+          ...genres,
+          metadata.original_title,
           ...episodes.flatMap((episode) => [episode.label, episode.name]),
-          ...items.flatMap((item) => [
-            item.file_name,
-            item.parsed?.alternative_title,
-          ]),
         ].join(" "),
       ),
     };
@@ -1160,10 +1400,12 @@ if (catalogRoot) {
   };
 
   const updateStats = (data) => {
-    const byKind = data.stats?.by_kind || {};
-    const total = data.stats?.total ?? data.items?.length ?? 0;
+    const byKind = state.entries.reduce((counts, entry) => {
+      counts[entry.kind] = (counts[entry.kind] || 0) + 1;
+      return counts;
+    }, {});
     const counts = {
-      all: total,
+      all: state.entries.length,
       movie: byKind.movie || 0,
       demo: byKind.demo || 0,
       tv: byKind.tv || 0,
@@ -1182,9 +1424,6 @@ if (catalogRoot) {
 
   const sortEntries = (entries) =>
     entries.slice().sort((a, b) => {
-      if (state.sort === "recent") {
-        return b.modifiedMs - a.modifiedMs || collator.compare(a.title, b.title);
-      }
       if (state.sort === "imdb") {
         return b.imdbRating - a.imdbRating || collator.compare(a.title, b.title);
       }
@@ -1244,7 +1483,7 @@ if (catalogRoot) {
     return labels.join(", ");
   };
 
-  const openCatalogDetail = (entry) => {
+  const openCatalogDetail = (entry, { historyMode = "push" } = {}) => {
     if (!catalogDialog || !catalogDialogBody) return;
 
     const metadata = entry.metadata || {};
@@ -1254,6 +1493,7 @@ if (catalogRoot) {
     const title = metadata.title || entry.title;
 
     catalogDialogBody.replaceChildren();
+    catalogDialog.dataset.catalogEntry = entry.id;
 
     const hero = createElement("div", "catalog-detail-hero");
     if (metadata.backdrop_url) hero.style.backgroundImage = `url("${metadata.backdrop_url}")`;
@@ -1294,7 +1534,7 @@ if (catalogRoot) {
       const link = document.createElement("a");
       link.href = href;
       link.target = "_blank";
-      link.rel = "noopener";
+      link.rel = "noopener noreferrer";
       link.textContent = label;
       links.append(link);
     });
@@ -1344,9 +1584,6 @@ if (catalogRoot) {
       ["Video", [labelCodec(video.codec), video.profile].filter(Boolean).join(" · ")],
       ["Audio", audioSummary(entry)],
       ["Bitrate", formatBitRate(primary.media_info?.bit_rate)],
-      ["Dateigröße", formatBytes(entry.items.reduce((sum, item) => sum + (Number(item.size_bytes) || 0), 0))],
-      ["Container", primary.extension?.replace(".", "").toUpperCase()],
-      ["Stand", formatDate(primary.modified_at)],
     ]);
     techFacts.append(techFactsList);
     detailGrid.append(filmFacts, techFacts);
@@ -1379,18 +1616,21 @@ if (catalogRoot) {
     catalogDialogBody.append(hero, detailGrid);
 
     if (typeof catalogDialog.showModal === "function") {
-      catalogDialog.showModal();
+      if (!catalogDialog.open) catalogDialog.showModal();
     } else {
       catalogDialog.setAttribute("open", "");
+    }
+    state.detail = entry.id;
+    if (historyMode) {
+      detailHistoryOwned = historyMode === "push";
+      syncCatalogUrl(historyMode);
     }
   };
 
   const createEntryElement = (entry) => {
     const article = document.createElement("article");
     article.className = "catalog-item";
-    article.tabIndex = 0;
     article.dataset.catalogEntry = entry.id;
-    article.setAttribute("aria-label", `${entry.title} Details öffnen`);
 
     const main = document.createElement("div");
     main.className = "catalog-item-main";
@@ -1506,12 +1746,6 @@ if (catalogRoot) {
       if (event.target.closest("button, a, details, summary, select, input, textarea")) return;
       openCatalogDetail(entry);
     });
-    article.addEventListener("keydown", (event) => {
-      if (event.target !== article || (event.key !== "Enter" && event.key !== " ")) return;
-      event.preventDefault();
-      openCatalogDetail(entry);
-    });
-
     return article;
   };
 
@@ -1533,16 +1767,21 @@ if (catalogRoot) {
     });
   };
 
-  const setPage = (page) => {
-    const scrollX = window.scrollX;
-    const scrollY = window.scrollY;
+  const setPage = (page, { historyMode = "push", moveFocus = true } = {}) => {
+    if (!Number.isFinite(page) || page < 1) return;
     state.page = page;
     state.pageJumpGap = null;
     renderCatalog();
-    window.scrollTo({ left: scrollX, top: scrollY, behavior: "auto" });
-    requestAnimationFrame(() => {
-      window.scrollTo({ left: scrollX, top: scrollY, behavior: "auto" });
-    });
+    if (historyMode) syncCatalogUrl(historyMode);
+    if (moveFocus && resultsEl) {
+      requestAnimationFrame(() => {
+        resultsEl.focus({ preventScroll: true });
+        resultsEl.scrollIntoView({
+          block: "start",
+          behavior: "instant",
+        });
+      });
+    }
   };
 
   const renderPagination = (pageCount, totalEntries) => {
@@ -1645,15 +1884,17 @@ if (catalogRoot) {
     renderPagination(pageCount, entries.length);
   };
 
-  const setFilter = (filter) => {
-    state.filter = filter;
+  const setFilter = (filter, { historyMode = "push" } = {}) => {
+    state.filter = allowedFilters.has(filter) ? filter : "all";
     state.page = 1;
     filterButtons.forEach((button) => {
-      const isActive = button.dataset.catalogFilter === filter;
+      const isActive = button.dataset.catalogFilter === state.filter;
       button.classList.toggle("is-active", isActive);
       button.setAttribute("aria-pressed", String(isActive));
     });
-    renderCatalog();
+    if (catalogLoaded) renderCatalog();
+    loadCatalog();
+    if (historyMode) syncCatalogUrl(historyMode);
   };
 
   const clearButton = catalogRoot.querySelector("[data-catalog-clear]");
@@ -1662,12 +1903,93 @@ if (catalogRoot) {
     clearButton.hidden = !searchInput || !searchInput.value;
   };
 
+  const syncCatalogControls = () => {
+    if (searchInput) searchInput.value = state.query;
+    if (sortSelect) sortSelect.value = state.sort;
+    filterButtons.forEach((button) => {
+      const isActive = button.dataset.catalogFilter === state.filter;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+    syncClearVisibility();
+  };
+
+  let suppressNextDialogCloseSync = false;
+  const syncDialogFromState = () => {
+    if (!catalogDialog) return;
+    if (!state.detail) {
+      if (catalogDialog.open) {
+        detailHistoryOwned = false;
+        suppressNextDialogCloseSync = true;
+        catalogDialog.close();
+      }
+      return;
+    }
+    const entry = state.entries.find((candidate) => candidate.id === state.detail);
+    if (!entry) {
+      state.detail = "";
+      syncCatalogUrl("replace");
+      return;
+    }
+    if (catalogDialog.open && catalogDialog.dataset.catalogEntry === entry.id) return;
+    openCatalogDetail(entry, { historyMode: null });
+  };
+
+  const showCatalogLoadError = () => {
+    catalogLoading = false;
+    if (statusEl) statusEl.textContent = "Katalog konnte nicht geladen werden.";
+    if (resultsEl) {
+      resultsEl.replaceChildren();
+      resultsEl.removeAttribute("aria-busy");
+      const message = document.createElement("p");
+      message.className = "catalog-empty";
+      message.textContent = "Die Programmdaten sind momentan nicht erreichbar.";
+      const retry = document.createElement("button");
+      retry.type = "button";
+      retry.className = "catalog-retry";
+      retry.textContent = "Erneut versuchen";
+      retry.addEventListener("click", () => loadCatalog({ force: true }));
+      resultsEl.append(message, retry);
+    }
+    if (paginationEl) paginationEl.hidden = true;
+  };
+
+  const loadCatalog = ({ force = false } = {}) => {
+    if (catalogLoading || (catalogLoaded && !force)) return;
+    catalogLoading = true;
+    if (statusEl) statusEl.textContent = "Katalog wird geladen …";
+    if (resultsEl) resultsEl.setAttribute("aria-busy", "true");
+
+    fetch(source)
+      .then((response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      })
+      .then((data) => {
+        const items = Array.isArray(data.items) ? data.items : [];
+        state.entries = prepareEntries(items);
+        catalogLoaded = true;
+        catalogLoading = false;
+        updateStats(data);
+        renderCatalog();
+        syncCatalogUrl("replace");
+        if (resultsEl) resultsEl.removeAttribute("aria-busy");
+        syncDialogFromState();
+      })
+      .catch(showCatalogLoadError);
+  };
+
+  syncCatalogControls();
+
   if (searchInput) {
     searchInput.addEventListener("input", () => {
-      state.query = searchInput.value;
+      state.query = searchInput.value.slice(0, 200);
       state.page = 1;
       syncClearVisibility();
-      renderCatalog();
+      if (catalogLoaded) renderCatalog();
+      loadCatalog();
+      if (queryUrlTimer) clearTimeout(queryUrlTimer);
+      queryUrlTimer = setTimeout(() => syncCatalogUrl("replace"), 180);
     });
   }
 
@@ -1677,10 +1999,11 @@ if (catalogRoot) {
       state.query = "";
       state.page = 1;
       syncClearVisibility();
-      renderCatalog();
+      if (catalogLoaded) renderCatalog();
+      loadCatalog();
+      syncCatalogUrl("push");
       searchInput.focus();
     });
-    syncClearVisibility();
   }
 
   filterButtons.forEach((button) => {
@@ -1691,7 +2014,9 @@ if (catalogRoot) {
     sortSelect.addEventListener("change", () => {
       state.sort = sortSelect.value;
       state.page = 1;
-      renderCatalog();
+      if (catalogLoaded) renderCatalog();
+      loadCatalog();
+      syncCatalogUrl("push");
     });
   }
 
@@ -1699,32 +2024,55 @@ if (catalogRoot) {
     catalogDialog.addEventListener("click", (event) => {
       if (event.target === catalogDialog) catalogDialog.close();
     });
+    catalogDialog.addEventListener("close", () => {
+      delete catalogDialog.dataset.catalogEntry;
+      if (suppressNextDialogCloseSync) {
+        suppressNextDialogCloseSync = false;
+        return;
+      }
+      state.detail = "";
+      if (detailHistoryOwned) {
+        detailHistoryOwned = false;
+        window.history.back();
+      } else {
+        syncCatalogUrl("replace");
+      }
+    });
   }
 
-  fetch(source)
-    .then((response) => {
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      return response.json();
-    })
-    .then((data) => {
-      const items = Array.isArray(data.items) ? data.items : [];
-      state.entries = prepareEntries(items);
-      updateStats(data);
+  window.addEventListener("popstate", () => {
+    const urlState = readCatalogUrlState();
+    state.filter = urlState.filter;
+    state.query = urlState.query;
+    state.sort = urlState.sort;
+    state.page = urlState.page;
+    state.detail = urlState.detail;
+    state.pageJumpGap = null;
+    syncCatalogControls();
+    if (catalogLoaded) {
       renderCatalog();
-      if (resultsEl) resultsEl.removeAttribute("aria-busy");
-    })
-    .catch(() => {
-      if (statusEl) statusEl.textContent = "Katalog konnte nicht geladen werden.";
-      if (resultsEl) {
-        resultsEl.replaceChildren();
-        resultsEl.removeAttribute("aria-busy");
-        const empty = document.createElement("p");
-        empty.className = "catalog-empty";
-        empty.textContent = "Die Katalogdaten sind erst verfügbar, wenn die Seite über einen Webserver geladen wird.";
-        resultsEl.append(empty);
-      }
-      if (paginationEl) paginationEl.hidden = true;
-    });
+      syncDialogFromState();
+    } else {
+      loadCatalog();
+    }
+  });
+
+  const hasCatalogDeepLink =
+    window.location.hash === "#programm" ||
+    Boolean(state.query || state.detail || state.filter !== "all" || state.sort !== "title" || state.page > 1);
+  if (hasCatalogDeepLink || !("IntersectionObserver" in window)) {
+    loadCatalog();
+  } else {
+    const catalogObserver = new IntersectionObserver(
+      (entries, observer) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        observer.disconnect();
+        loadCatalog();
+      },
+      { rootMargin: "700px 0px" },
+    );
+    catalogObserver.observe(catalogRoot);
+  }
 }
 
 const lightbox = document.querySelector("[data-lightbox]");

@@ -1,14 +1,19 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: blob: https://image.tmdb.org; media-src 'self'; connect-src 'self'; worker-src 'self' blob:; manifest-src 'self'"
+    />
     <title>eclipse — Privates Heimkino mit 332 cm Cinemascope-Leinwand</title>
     <meta
       name="description"
       content="eclipse ist ein privater Kinoraum mit 332 cm Cinemascope-Leinwand, 24-Kanal-Ton, Double Bass Array und akustisch geplanter Front-, Seiten- und Deckenbehandlung."
     />
     <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="referrer" content="no-referrer" />
     <meta name="theme-color" content="#05070B" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://eclipse-homecinema.de/" />
@@ -44,7 +49,7 @@
       type="image/avif"
       fetchpriority="high"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=779571dfd7f3" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -88,12 +93,12 @@
         ]
       }
     </script>
-    <script src="script.js" defer></script>
+    <script src="script.js?v=51a83c8eff9d" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#top">Zum Inhalt springen</a>
     <header class="site-header" aria-label="Hauptnavigation">
-      <a class="header-brand" href="#top" aria-label="Zum Anfang">
+      <a class="header-brand" href="#top" aria-label="eclipse – zum Anfang">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="header-brand-text">eclipse</span>
       </a>
@@ -222,15 +227,15 @@
 
         <div class="room-tour" data-tour data-view="top">
           <div class="tour-controls">
-            <div class="tour-views" role="tablist" aria-label="Ansicht wechseln">
-              <button type="button" role="tab" data-view="top" class="is-active" aria-selected="true">Draufsicht</button>
-              <button type="button" role="tab" data-view="front" aria-selected="false">Frontwand</button>
-              <button type="button" role="tab" data-view="rear" aria-selected="false">Rückwand</button>
-              <button type="button" role="tab" data-view="side-left" aria-selected="false">Seite L</button>
-              <button type="button" role="tab" data-view="side-right" aria-selected="false">Seite R</button>
-              <button type="button" role="tab" data-view="ceiling" aria-selected="false">Decke</button>
+            <div class="tour-views" role="group" aria-label="Ansicht wechseln" data-scroll-track>
+              <button type="button" data-view="top" class="is-active" aria-pressed="true">Draufsicht</button>
+              <button type="button" data-view="front" aria-pressed="false">Frontwand</button>
+              <button type="button" data-view="rear" aria-pressed="false">Rückwand</button>
+              <button type="button" data-view="side-left" aria-pressed="false">Seite L</button>
+              <button type="button" data-view="side-right" aria-pressed="false">Seite R</button>
+              <button type="button" data-view="ceiling" aria-pressed="false">Decke</button>
             </div>
-            <div class="tour-layers" aria-label="Layer ein- und ausblenden">
+            <div class="tour-layers" role="group" aria-label="Layer ein- und ausblenden" data-scroll-track>
               <button type="button" data-layer="seats" aria-pressed="true">
                 <span class="dot dot-seats" aria-hidden="true"></span>Sitze
               </button>
@@ -317,7 +322,7 @@
                 data-plan="top"
                 viewBox="-32 -28 540 632"
                 preserveAspectRatio="xMidYMid meet"
-                role="img"
+                role="group"
                 aria-label="Draufsicht des Heimkinos mit Sitzen, Lautsprechern, Bassarrays und Akustikzonen"
               >
                 <g class="plan-base">
@@ -326,6 +331,12 @@
                   <rect x="0" y="530" width="472" height="30" class="wall-stud"/>
                   <rect x="41" y="50" width="390" height="480" class="wall-interior"/>
                   <line x1="236" y1="50" x2="236" y2="530" class="axis"/>
+                </g>
+
+                <g class="plan-interactions">
+                  <g class="hit" data-info="screen" role="button" tabindex="0" aria-label="Cinemascope-Leinwand">
+                    <rect x="70" y="48" width="332" height="3.5" class="screen-line hit-shape"/>
+                  </g>
                 </g>
 
                 <g class="plan-layer" data-layer="acoustics">
@@ -430,9 +441,6 @@
                 </g>
 
                 <g class="plan-annotations" aria-hidden="true">
-                  <g class="hit" data-info="screen" role="button" tabindex="0" aria-label="Cinemascope-Leinwand">
-                    <rect x="70" y="48" width="332" height="3.5" class="screen-line hit-shape"/>
-                  </g>
                   <g class="dim">
                     <line x1="-14" y1="50" x2="-14" y2="300"/>
                     <line x1="-17" y1="50" x2="-11" y2="50"/>
@@ -461,7 +469,7 @@
                 data-plan="front"
                 viewBox="-32 -32 540 412"
                 preserveAspectRatio="xMidYMid meet"
-                role="img"
+                role="group"
                 aria-label="Frontansicht der Frontwand mit Leinwand, Dämmung, Lautsprechern und Subwoofern"
               >
                 <g class="plan-base">
@@ -472,6 +480,12 @@
                 <g class="plan-layer" data-layer="acoustics">
                   <g class="hit" data-info="front-wall-insulation" role="button" tabindex="0" aria-label="Dämmung in der Frontständerwand" mask="url(#front-insulation-cutouts)">
                     <rect x="0" y="0" width="472" height="235" class="front-insulation hit-shape"/>
+                  </g>
+                </g>
+
+                <g class="plan-interactions">
+                  <g class="hit" data-info="screen" role="button" tabindex="0" aria-label="Cinemascope-Leinwand 332 cm">
+                    <rect x="70" y="80" width="332" height="139" rx="2" class="screen-front hit-shape"/>
                   </g>
                 </g>
 
@@ -505,9 +519,6 @@
                 </g>
 
                 <g class="plan-annotations" aria-hidden="true">
-                  <g class="hit" data-info="screen" role="button" tabindex="0" aria-label="Cinemascope-Leinwand 332 cm">
-                    <rect x="70" y="80" width="332" height="139" rx="2" class="screen-front hit-shape"/>
-                  </g>
                   <text x="236" y="-12" class="plan-text-label" text-anchor="middle">Frontwand</text>
                   <text x="236" y="276" class="plan-text-label" text-anchor="middle">Boden</text>
                   <g class="dim">
@@ -536,7 +547,7 @@
                 data-plan="rear"
                 viewBox="-32 -32 540 412"
                 preserveAspectRatio="xMidYMid meet"
-                role="img"
+                role="group"
                 aria-label="Rückansicht der Rückwand mit Rück-DBA, Back Surrounds, Projektor-Durchbruch, Absorbern und 1D-Diffusoren"
               >
                 <g class="plan-base">
@@ -613,7 +624,7 @@
                 data-plan="side-left"
                 viewBox="-40 -40 640 340"
                 preserveAspectRatio="xMidYMid meet"
-                role="img"
+                role="group"
                 aria-label="Linke Seitenwand von innen — Front rechts, Rückwand links"
               >
                 <g class="plan-base">
@@ -692,7 +703,7 @@
                 data-plan="side-right"
                 viewBox="-40 -40 640 340"
                 preserveAspectRatio="xMidYMid meet"
-                role="img"
+                role="group"
                 aria-label="Rechte Seitenwand von innen — akustisch symmetrisch zur linken, mit Tür im hinteren Bereich"
               >
                 <g class="plan-base">
@@ -727,7 +738,7 @@
                     <line x1="455" y1="105" x2="505" y2="105" class="grid-fine"/>
                     <line x1="455" y1="155" x2="505" y2="155" class="grid-fine"/>
                   </g>
-                  <g class="hit" data-info="heater" role="button" tabindex="0" aria-label="Akustikverkleidung im unteren Bereich, symmetrisch zur linken Wand">
+                  <g class="hit" data-info="right-wall-treatment" role="button" tabindex="0" aria-label="Akustische Verkleidung im unteren Bereich der rechten Wand">
                     <rect x="160" y="178" width="200" height="57" fill="url(#hatch-binary)" class="hit-shape acoustic-heater"/>
                     <line x1="160" y1="184" x2="350" y2="184" class="heater-slot"/>
                     <line x1="160" y1="229" x2="350" y2="229" class="heater-slot"/>
@@ -776,7 +787,7 @@
                 data-plan="ceiling"
                 viewBox="-32 -28 540 632"
                 preserveAspectRatio="xMidYMid meet"
-                role="img"
+                role="group"
                 aria-label="Decke von unten gesehen mit Absorbern, 2D-Diffusor-Feld und Deckenlautsprechern"
               >
                 <g class="plan-base">
@@ -847,9 +858,15 @@
                   </g>
                 </g>
               </svg>
+              <label class="tour-hotspot-picker">
+                <span>Element im Plan</span>
+                <select data-tour-hotspot-select>
+                  <option value="">Element auswählen …</option>
+                </select>
+              </label>
             </div>
 
-            <aside class="tour-info" aria-live="polite">
+            <aside class="tour-info" role="region" aria-labelledby="tour-info-title" aria-live="polite">
               <button
                 type="button"
                 class="tour-info-close"
@@ -857,7 +874,7 @@
                 aria-label="Detail schließen"
               >×</button>
               <span class="info-kicker" data-info-kicker>Draufsicht</span>
-              <h3 class="info-title" data-info-title>Der Raum als Kinosaal</h3>
+              <h3 class="info-title" id="tour-info-title" data-info-title>Der Raum als Kinosaal</h3>
               <p class="info-text" data-info-text>
                 Sitze, Lautsprecher, Bassarrays und Akustikelemente sind
                 einzeln markiert. Tippe ein Element an, um Details und Maße
@@ -1013,9 +1030,9 @@
           </div>
           <div class="rack-shell">
           <div class="rack-controls">
-            <div class="tour-views" role="tablist" aria-label="Rack mit oder ohne Abdeckung zeigen">
-              <button type="button" role="tab" data-rack-view="closed" class="is-active" aria-selected="true">Mit Abdeckung</button>
-              <button type="button" role="tab" data-rack-view="open" aria-selected="false">Offen</button>
+            <div class="tour-views" role="group" aria-label="Rack mit oder ohne Abdeckung zeigen" data-scroll-track>
+              <button type="button" data-rack-view="closed" class="is-active" aria-pressed="true">Mit Abdeckung</button>
+              <button type="button" data-rack-view="open" aria-pressed="false">Offen</button>
             </div>
           </div>
           <div class="rack-stage">
@@ -1119,7 +1136,7 @@
                 </div>
               </div>
             </div>
-            <aside class="tour-info rack-info" aria-live="polite">
+            <aside class="tour-info rack-info" role="region" aria-labelledby="rack-info-title" aria-live="polite">
               <button
                 type="button"
                 class="tour-info-close"
@@ -1128,7 +1145,7 @@
               >×</button>
               <div class="rack-info-body">
                 <span class="info-kicker" data-rack-kicker>Rack</span>
-                <h3 class="info-title" data-rack-title>Hinter dem Stoff</h3>
+                <h3 class="info-title" id="rack-info-title" data-rack-title>Hinter dem Stoff</h3>
                 <p class="info-text" data-rack-text>
                   Im Alltag zeigt das Rack nur eine ruhige, dunkle Stofffront.
                   Öffne die Abdeckung, um die neun Geräteebenen dahinter zu
@@ -1155,11 +1172,11 @@
 
         <div class="component-grid">
           <article class="component-card wide">
-            <img
-              src="assets/used/equipment-jvc-nz7-projector.png"
-              alt="JVC NZ7 Projektor"
-              loading="lazy"
-            />
+            <picture>
+              <source type="image/avif" srcset="assets/used/equipment-jvc-nz7-projector.avif" />
+              <source type="image/webp" srcset="assets/used/equipment-jvc-nz7-projector.webp" />
+              <img src="assets/used/equipment-jvc-nz7-projector.png" alt="JVC NZ7 Projektor" loading="lazy" />
+            </picture>
             <div>
               <span>Bild</span>
               <h3>JVC NZ7</h3>
@@ -1171,11 +1188,11 @@
             </div>
           </article>
           <article class="component-card">
-            <img
-              src="assets/used/equipment-nubert-nuvero-110-front-speaker.png"
-              alt="Nubert nuVero 110 Lautsprecher"
-              loading="lazy"
-            />
+            <picture>
+              <source type="image/avif" srcset="assets/used/equipment-nubert-nuvero-110-front-speaker.avif" />
+              <source type="image/webp" srcset="assets/used/equipment-nubert-nuvero-110-front-speaker.webp" />
+              <img src="assets/used/equipment-nubert-nuvero-110-front-speaker.png" alt="Nubert nuVero 110 Lautsprecher" loading="lazy" />
+            </picture>
             <div>
               <span>Front L/R</span>
               <h3>Nubert nuVero 110</h3>
@@ -1183,11 +1200,11 @@
             </div>
           </article>
           <article class="component-card">
-            <img
-              src="assets/used/equipment-nubert-nuvero-nova-12-center.png"
-              alt="Nubert nuVero Nova 12 Center"
-              loading="lazy"
-            />
+            <picture>
+              <source type="image/avif" srcset="assets/used/equipment-nubert-nuvero-nova-12-center.avif" />
+              <source type="image/webp" srcset="assets/used/equipment-nubert-nuvero-nova-12-center.webp" />
+              <img src="assets/used/equipment-nubert-nuvero-nova-12-center.png" alt="Nubert nuVero Nova 12 Center" loading="lazy" />
+            </picture>
             <div>
               <span>Center</span>
               <h3>nuVero Nova 12</h3>
@@ -1195,11 +1212,11 @@
             </div>
           </article>
           <article class="component-card">
-            <img
-              src="assets/used/equipment-nubert-nuvero-70-surround.png"
-              alt="Nubert nuVero 70 Surroundlautsprecher"
-              loading="lazy"
-            />
+            <picture>
+              <source type="image/avif" srcset="assets/used/equipment-nubert-nuvero-70-surround.avif" />
+              <source type="image/webp" srcset="assets/used/equipment-nubert-nuvero-70-surround.webp" />
+              <img src="assets/used/equipment-nubert-nuvero-70-surround.png" alt="Nubert nuVero 70 Surroundlautsprecher" loading="lazy" />
+            </picture>
             <div>
               <span>Surround</span>
               <h3>nuVero 70</h3>
@@ -1207,11 +1224,11 @@
             </div>
           </article>
           <article class="component-card">
-            <img
-              src="assets/used/equipment-scan-speak-30w4558t00-subwoofer.png"
-              alt="Scan-Speak 30W/4558T00 Subwoofer-Chassis"
-              loading="lazy"
-            />
+            <picture>
+              <source type="image/avif" srcset="assets/used/equipment-scan-speak-30w4558t00-subwoofer.avif" />
+              <source type="image/webp" srcset="assets/used/equipment-scan-speak-30w4558t00-subwoofer.webp" />
+              <img src="assets/used/equipment-scan-speak-30w4558t00-subwoofer.png" alt="Scan-Speak 30W/4558T00 Subwoofer-Chassis" loading="lazy" />
+            </picture>
             <div>
               <span>DBA</span>
               <h3>Scan-Speak 30W/4558T00</h3>
@@ -1233,7 +1250,7 @@
           </p>
         </div>
 
-        <div class="catalog-shell" data-catalog data-catalog-src="assets/zappiti-catalog.min.json">
+        <div class="catalog-shell" data-catalog data-catalog-src="assets/zappiti-catalog.min.json?v=814ccb70e3fe">
           <div class="catalog-toolbar">
             <div class="catalog-search">
               <label class="sr-only" for="catalog-search">Programm durchsuchen</label>
@@ -1262,27 +1279,26 @@
               >×</button>
             </div>
             <div class="catalog-filters" role="group" aria-label="Medientyp filtern">
-              <button type="button" class="is-active" data-catalog-filter="all" aria-pressed="true">Alle <span class="catalog-filter-count" data-catalog-count="all">(353)</span></button>
+              <button type="button" class="is-active" data-catalog-filter="all" aria-pressed="true">Alle <span class="catalog-filter-count" data-catalog-count="all">(338)</span></button>
               <button type="button" data-catalog-filter="movie" aria-pressed="false">Filme <span class="catalog-filter-count" data-catalog-count="movie">(303)</span></button>
-              <button type="button" data-catalog-filter="demo" aria-pressed="false">Demos <span class="catalog-filter-count" data-catalog-count="demo">(26)</span></button>
-              <button type="button" data-catalog-filter="tv" aria-pressed="false">Serien <span class="catalog-filter-count" data-catalog-count="tv">(24)</span></button>
+              <button type="button" data-catalog-filter="demo" aria-pressed="false">Demos <span class="catalog-filter-count" data-catalog-count="demo">(30)</span></button>
+              <button type="button" data-catalog-filter="tv" aria-pressed="false">Serien <span class="catalog-filter-count" data-catalog-count="tv">(5)</span></button>
             </div>
             <label class="catalog-select">
               <span>Sortierung</span>
               <select data-catalog-sort>
                 <option value="title">Titel A-Z</option>
-                <option value="recent">Zuletzt geändert</option>
                 <option value="imdb">IMDb-Bewertung</option>
               </select>
             </label>
           </div>
 
           <div class="catalog-meta">
-            <p data-catalog-status>Katalog wird geladen...</p>
+            <p data-catalog-status role="status" aria-live="polite" aria-atomic="true">Katalog wird geladen, sobald er sichtbar wird.</p>
             <p data-catalog-updated></p>
           </div>
 
-          <div class="catalog-list" data-catalog-results aria-busy="true">
+          <div class="catalog-list" data-catalog-results role="region" aria-busy="true" tabindex="-1" aria-label="Programmergebnisse">
             <div class="catalog-skeleton-item" aria-hidden="true"></div>
             <div class="catalog-skeleton-item" aria-hidden="true"></div>
             <div class="catalog-skeleton-item" aria-hidden="true"></div>
@@ -1564,7 +1580,7 @@
               <img
                 src="assets/used/responsive/cinema-platform-blue-green-1200.webp"
                 data-full="assets/used/responsive/cinema-platform-blue-green-1800.webp"
-                alt="Seitlicher Blick auf Podest, Lounge-Sessel und blau-gruene Stufenbeleuchtung"
+                alt="Seitlicher Blick auf Podest, Lounge-Sessel und blau-grüne Stufenbeleuchtung"
                 loading="lazy"
               />
             </picture>
@@ -1651,7 +1667,7 @@
               <img
                 src="assets/used/responsive/cinema-front-row-warm-screen-900.webp"
                 data-full="assets/used/responsive/cinema-front-row-warm-screen-1200.webp"
-                alt="Blick von der Seite ueber die Sitzreihe auf die warm beleuchtete Leinwand"
+                alt="Blick von der Seite über die Sitzreihe auf die warm beleuchtete Leinwand"
                 loading="lazy"
               />
             </picture>
@@ -1738,7 +1754,7 @@
               <img
                 src="assets/used/responsive/cinema-front-row-magenta-screen-900.webp"
                 data-full="assets/used/responsive/cinema-front-row-magenta-screen-1200.webp"
-                alt="Seitlicher Blick ueber Lounge-Sessel auf eine magenta beleuchtete Leinwand"
+                alt="Seitlicher Blick über Lounge-Sessel auf eine magenta beleuchtete Leinwand"
                 loading="lazy"
               />
             </picture>
@@ -1804,13 +1820,18 @@
     </dialog>
 
     <footer class="site-footer">
-      <a class="brand" href="#top" aria-label="Zurück zum Anfang">
+      <a class="brand" href="#top" aria-label="eclipse – zurück zum Anfang">
         <span class="brand-mark" aria-hidden="true"></span>
         <span>eclipse</span>
       </a>
       <div>
         <p>Privates Heimkino · eclipse-homecinema.de</p>
         <p><a href="mailto:markuscmueller7@googlemail.com">markuscmueller7@googlemail.com</a></p>
+        <nav class="footer-links" aria-label="Rechtliches und Hilfe">
+          <a href="/app/impressum/">Impressum</a>
+          <a href="/app/datenschutz/">Datenschutz</a>
+          <a href="/app/support/">Support</a>
+        </nav>
       </div>
     </footer>
   </body>

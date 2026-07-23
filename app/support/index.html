@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-src 'none'; script-src 'self'; style-src 'self'; font-src 'self' data:; img-src 'self' data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'"
+    />
+    <meta name="referrer" content="no-referrer" />
     <title>Support für Eclipse Cinema · eclipse homecinema</title>
     <meta
       name="description"
@@ -14,9 +19,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../assets/used/eclipse-favicon-32.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="../../assets/used/eclipse-favicon-192.png" />
     <link rel="manifest" href="../../site.webmanifest" />
-    <link rel="stylesheet" href="../../styles.css" />
-    <link rel="stylesheet" href="../app-pages.css" />
-    <script src="../../script.js" defer></script>
+    <link rel="stylesheet" href="../../styles.css?v=779571dfd7f3" />
+    <link rel="stylesheet" href="../app-pages.css?v=4980046acfa2" />
+    <script src="../../script.js?v=51a83c8eff9d" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">Zum Inhalt springen</a>
@@ -147,6 +152,10 @@
               direkt in der App oder über den öffentlichen externen Löschweg
               entfernt werden.
             </p>
+            <div class="legal-actions">
+              <a class="button primary" href="../konto-loeschen/">Zur Kontolöschung</a>
+              <a class="button secondary" href="../datenschutz/">Datenschutzerklärung</a>
+            </div>
           </section>
         </article>
       </div>
