@@ -3409,22 +3409,6 @@ body {
   color: var(--text);
 }
 
-.main-nav a.portal-nav-link {
-  min-height: 44px;
-  padding: 0.55rem 0.85rem;
-  border: 1px solid rgba(232, 176, 75, 0.48);
-  border-radius: var(--radius);
-  background: rgba(232, 176, 75, 0.09);
-  color: var(--accent-light);
-}
-
-.main-nav a.portal-nav-link:hover,
-.main-nav a.portal-nav-link:focus-visible {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: #09090d;
-}
-
 .nav-toggle {
   width: 44px;
   height: 44px;
@@ -4266,14 +4250,6 @@ figcaption {
   .main-nav a.is-active {
     border-bottom-color: rgba(255, 255, 255, 0.08);
     color: var(--accent-light);
-  }
-
-  .main-nav a.portal-nav-link {
-    justify-content: center;
-    margin-top: 1rem;
-    border: 1px solid var(--accent);
-    background: var(--accent);
-    color: #09090d;
   }
 
   .hero-shade {
