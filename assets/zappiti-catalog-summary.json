@@ -1,14 +1,89 @@
 {
-  "schema_version": 2,
-  "generated_at": "2026-06-14",
-  "stats": {
-    "total": 338,
-    "by_kind": {
-      "movie": 303,
-      "demo": 30,
-      "tv": 5
+  "generated_at": "2026-08-08T19:09:16+00:00",
+  "schema_version": 1,
+  "sources": [
+    {
+      "files": 147,
+      "libraries": [
+        {
+          "files": 126,
+          "name": "FILME",
+          "reachable": true,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 126
+        },
+        {
+          "files": 2,
+          "name": "DEMOS",
+          "reachable": true,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 2
+        },
+        {
+          "files": 19,
+          "name": "SERIEN",
+          "reachable": true,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 19
+        }
+      ],
+      "message": "",
+      "mode": "smb",
+      "name": "Zidoo1",
+      "path": "\\\\192.168.1.56\\Share\\CA7A3D6D7A3D5801",
+      "reachable": true
     },
-    "media_items": 357,
-    "tv_episodes": 24
+    {
+      "files": 210,
+      "libraries": [
+        {
+          "files": 178,
+          "name": "FILME",
+          "reachable": true,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 178
+        },
+        {
+          "files": 27,
+          "name": "DEMOS",
+          "reachable": true,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 27
+        },
+        {
+          "files": 5,
+          "name": "SERIEN",
+          "reachable": true,
+          "skipped_extension": 0,
+          "skipped_size": 0,
+          "visited_files": 5
+        }
+      ],
+      "message": "",
+      "mode": "smb",
+      "name": "Zidoo2",
+      "path": "\\\\192.168.1.56\\Share\\9A4A7D5C4A7D365B",
+      "reachable": true
+    }
+  ],
+  "stats": {
+    "by_kind": {
+      "demo": 29,
+      "movie": 304,
+      "tv": 24
+    },
+    "by_library": {
+      "DEMOS": 29,
+      "FILME": 304,
+      "SERIEN": 24
+    },
+    "offline_sources": 0,
+    "reachable_sources": 2,
+    "total": 357
   }
 }
